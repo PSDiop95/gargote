@@ -36,10 +36,21 @@ namespace Gargote.Core
         }
     }
 
+    /// <summary>Upgrade FCFA d'une ville (§6) : multiplie les revenus d'un commerce ou de tous. Remis à zéro à chaque relance.</summary>
+    public sealed class CashUpgradeDefinition
+    {
+        public string Id;
+        /// <summary>Index du commerce visé, ou −1 pour tous les commerces.</summary>
+        public int BusinessIndex = -1;
+        public double RevenueMultiplier = 3;
+        public double Cost;
+    }
+
     public sealed class CityDefinition
     {
         public string Id;
         public BusinessDefinition[] Businesses = Array.Empty<BusinessDefinition>();
+        public CashUpgradeDefinition[] Upgrades = Array.Empty<CashUpgradeDefinition>();
         /// <summary>Objectif de ville : gains cumulés à atteindre pour débloquer la ville suivante.</summary>
         public double GoalLifetimeEarnings;
         public double StartingMoney;
@@ -55,6 +66,14 @@ namespace Gargote.Core
             {
                 b.Validate();
                 if (!ids.Add(b.Id)) throw new ArgumentException(Id + ": duplicate business id " + b.Id);
+            }
+            if (Upgrades == null) Upgrades = Array.Empty<CashUpgradeDefinition>();
+            var upgradeIds = new HashSet<string>();
+            foreach (var u in Upgrades)
+            {
+                if (u == null || string.IsNullOrEmpty(u.Id) || !upgradeIds.Add(u.Id)) throw new ArgumentException(Id + ": invalid or duplicate upgrade id.");
+                if (u.BusinessIndex >= Businesses.Length || u.BusinessIndex < -1) throw new ArgumentException(Id + ": upgrade " + u.Id + " targets no business.");
+                if (u.Cost <= 0 || u.RevenueMultiplier < 1) throw new ArgumentException(Id + ": upgrade " + u.Id + " has invalid cost or multiplier.");
             }
             if (GoalLifetimeEarnings <= 0) throw new ArgumentException(Id + ": goal must be > 0.");
             if (StartingMoney < 0) throw new ArgumentException(Id + ": starting money must be >= 0.");
@@ -91,6 +110,32 @@ namespace Gargote.Core
         public bool AppliesOffline = true;
     }
 
+    /// <summary>Bonus de bienvenue appliqué à tous les revenus en arrivant dans une nouvelle ville.</summary>
+    public sealed class WelcomeBonusConfig
+    {
+        public double Multiplier = 1;
+        public double DurationSeconds;
+    }
+
+    /// <summary>Effets des upgrades d'étoiles de confort (§6 « Upgrades Étoiles »).</summary>
+    public enum StarUpgradeEffect
+    {
+        /// <summary>Les gérants restent embauchés après une relance de la ville.</summary>
+        KeepManagers = 1,
+        /// <summary>Achat automatique de chaque commerce jusqu'au premier palier.</summary>
+        AutoBuyFirstMilestone = 2,
+        /// <summary>Bouton « racheter comme avant » : remonte vers les niveaux d'avant la relance.</summary>
+        RebuyPrevious = 3,
+    }
+
+    public sealed class StarUpgradeDefinition
+    {
+        public string Id;
+        public StarUpgradeEffect Effect;
+        /// <summary>Étoiles dépensées pour l'acheter (elles cessent de compter dans le multiplicateur).</summary>
+        public long CostStars;
+    }
+
     /// <summary>Valeur des rewarded : pleine jusqu'à N par jour, puis décroissante (§8.1, « sans forcer »).</summary>
     public sealed class RewardedConfig
     {
@@ -111,6 +156,9 @@ namespace Gargote.Core
         public OfflineConfig Offline = new OfflineConfig();
         public AdBoostConfig AdBoost = new AdBoostConfig();
         public RewardedConfig Rewarded = new RewardedConfig();
+        public WelcomeBonusConfig Welcome = new WelcomeBonusConfig();
+        /// <summary>Période de l'achat automatique (upgrade d'étoiles), en secondes de jeu.</summary>
+        public double AutoBuyIntervalSeconds = 0.5;
 
         public void Validate()
         {
@@ -148,9 +196,25 @@ namespace Gargote.Core
         /// dans la ville en cours (1 = toutes les étoiles comptent pleinement partout).
         /// </summary>
         public double CityCarryOver = 1;
+        /// <summary>
+        /// En arrivant dans une nouvelle ville, le multiplicateur effectif ne descend pas sous ce ratio de sa valeur
+        /// juste avant le voyage (plancher valable pour toute la ville). 0 = pas de plancher.
+        /// </summary>
+        public double TravelMultiplierFloorRatio;
+        public StarUpgradeDefinition[] StarUpgrades = Array.Empty<StarUpgradeDefinition>();
+        /// <summary>
+        /// Avec l'upgrade « racheter comme avant » : fonds de départ d'une relance = ce nombre de secondes du revenu
+        /// d'avant la relance (hors boosts temporaires, au moins l'argent de départ de la ville), pour racheter tout de suite.
+        /// </summary>
+        public double RebuyStartingFundSeconds;
 
         public void Validate()
         {
+            if (StarUpgrades == null) StarUpgrades = Array.Empty<StarUpgradeDefinition>();
+            foreach (var u in StarUpgrades)
+                if (u == null || string.IsNullOrEmpty(u.Id) || u.CostStars < 0) throw new ArgumentException("Invalid star upgrade.");
+            if (TravelMultiplierFloorRatio < 0 || TravelMultiplierFloorRatio > 1)
+                throw new ArgumentException("TravelMultiplierFloorRatio must be in [0, 1].");
             if (K <= 0 || Threshold <= 0) throw new ArgumentException("Prestige K and Threshold must be > 0.");
             if (BonusPerStar < 0) throw new ArgumentException("BonusPerStar must be >= 0.");
             if (SoftCapStars < 0 || SoftCapExponent <= 0 || SoftCapExponent > 1)

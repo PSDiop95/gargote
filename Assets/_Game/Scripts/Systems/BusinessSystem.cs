@@ -43,10 +43,22 @@ namespace Gargote.Systems
         public event Action<int> GlobalMilestoneReached;
 
         private double _globalMultiplier = 1d;
+        private readonly CashUpgradeDefinition[] _upgrades;
+        private readonly bool[] _upgradeOwned;
+        private double _cashGlobalMultiplier = 1d;
+        /// <summary>Multiplicateur appliqué à tous les commerces : paliers globaux × upgrades FCFA « tous ».</summary>
+        private double _allMultiplier = 1d;
+
+        /// <summary>Upgrade FCFA acheté (index).</summary>
+        public event Action<int> UpgradeBought;
 
         public int GlobalMilestonesReached { get; private set; }
         /// <summary>Multiplicateur de revenus des paliers globaux (appliqué à tous les commerces).</summary>
         public double GlobalMilestoneMultiplier => _globalMultiplier;
+        /// <summary>Multiplicateur des upgrades FCFA qui visent tous les commerces.</summary>
+        public double CashGlobalMultiplier => _cashGlobalMultiplier;
+        /// <summary>Tout ce qui multiplie tous les commerces de la ville (paliers globaux et upgrades « tous »).</summary>
+        public double AllBusinessesMultiplier => _allMultiplier;
 
         public BusinessSystem(CityDefinition city, EconomyConfig config, EconomySystem economy)
         {
@@ -55,6 +67,8 @@ namespace Gargote.Systems
             _states = new BusinessState[city.Businesses.Length];
             for (int i = 0; i < _states.Length; i++)
                 _states[i] = new BusinessState(city.Businesses[i], i, config);
+            _upgrades = city.Upgrades ?? Array.Empty<CashUpgradeDefinition>();
+            _upgradeOwned = new bool[_upgrades.Length];
         }
 
         public int Count => _states.Length;
@@ -92,7 +106,7 @@ namespace Gargote.Systems
                     s.IsRunning = false;
                 }
 
-                double multiplier = completions * _economy.GlobalRevenueMultiplier * _globalMultiplier *
+                double multiplier = completions * _economy.GlobalRevenueMultiplier * _allMultiplier *
                                     DayNight.Multiplier(s.Definition.Affinity, hourOfDay, _config.DayNight);
                 BigDouble earned = s.RevenuePerCycle * multiplier;
                 _economy.Earn(earned);
@@ -181,6 +195,7 @@ namespace Gargote.Systems
             bool increased = reached > GlobalMilestonesReached;
             GlobalMilestonesReached = reached;
             _globalMultiplier = Math.Pow(_config.GlobalMilestoneMultiplier, reached);
+            _allMultiplier = _globalMultiplier * _cashGlobalMultiplier;
             if (raiseEvents && increased) GlobalMilestoneReached?.Invoke(reached);
         }
 
@@ -215,7 +230,7 @@ namespace Gargote.Systems
                 if (!s.HasManager || s.Level <= 0) continue;
                 total += s.RevenuePerSecond * DayNight.AverageMultiplier(s.Definition.Affinity, _config.DayNight);
             }
-            return total * (_economy.PermanentMultiplier * _globalMultiplier);
+            return total * (_economy.PermanentMultiplier * _allMultiplier);
         }
 
         /// <summary>Revenu par seconde de tous les commerces débloqués (joueur actif), multiplicateurs globaux inclus.</summary>
@@ -228,13 +243,145 @@ namespace Gargote.Systems
                 if (s.Level <= 0) continue;
                 total += s.RevenuePerSecond * DayNight.AverageMultiplier(s.Definition.Affinity, _config.DayNight);
             }
-            return total * (_economy.GlobalRevenueMultiplier * _globalMultiplier);
+            return total * (_economy.GlobalRevenueMultiplier * _allMultiplier);
         }
 
-        internal void ResetAll()
+        internal void ResetAll(bool keepManagers = false)
         {
-            for (int i = 0; i < _states.Length; i++) _states[i].Reset(_config);
+            for (int i = 0; i < _states.Length; i++) _states[i].Reset(_config, keepManagers);
+            for (int i = 0; i < _upgradeOwned.Length; i++) _upgradeOwned[i] = false;
+            _cashGlobalMultiplier = 1d;
+            _allMultiplier = _globalMultiplier * _cashGlobalMultiplier;
             RecomputeGlobalMilestones(false);
+        }
+
+        // --- Upgrades FCFA (§6) ---
+
+        public int UpgradeCount => _upgrades.Length;
+        public CashUpgradeDefinition Upgrade(int index) => _upgrades[index];
+        public bool OwnsUpgrade(int index) => _upgradeOwned[index];
+
+        /// <summary>Un upgrade de commerce n'est proposé qu'une fois ce commerce débloqué.</summary>
+        public bool IsUpgradeAvailable(int index)
+        {
+            if (_upgradeOwned[index]) return false;
+            int target = _upgrades[index].BusinessIndex;
+            return target < 0 || _states[target].Level > 0;
+        }
+
+        public BigDouble UpgradeCost(int index) => BigDouble.FromDouble(_upgrades[index].Cost);
+
+        public bool BuyUpgrade(int index)
+        {
+            if (!IsUpgradeAvailable(index) || !_economy.TrySpend(UpgradeCost(index))) return false;
+            ApplyUpgrade(index);
+            UpgradeBought?.Invoke(index);
+            return true;
+        }
+
+        private void ApplyUpgrade(int index)
+        {
+            var u = _upgrades[index];
+            _upgradeOwned[index] = true;
+            if (u.BusinessIndex < 0)
+            {
+                _cashGlobalMultiplier *= u.RevenueMultiplier;
+                _allMultiplier = _globalMultiplier * _cashGlobalMultiplier;
+            }
+            else
+            {
+                var s = _states[u.BusinessIndex];
+                s.LocalRevenueMultiplier *= u.RevenueMultiplier;
+                s.Recompute(_config);
+            }
+        }
+
+        /// <summary>Upgrades possédés (pour « racheter comme avant »).</summary>
+        public bool[] UpgradesSnapshot() => (bool[])_upgradeOwned.Clone();
+
+        /// <summary>Rachète, du moins cher au plus cher, les upgrades marqués dans <paramref name="owned"/>.</summary>
+        public bool RebuyUpgrades(bool[] owned)
+        {
+            if (owned == null) return false;
+            bool any = false;
+            // Les upgrades sont définis par coût croissant : l'ordre des index suffit.
+            for (int u = 0; u < Math.Min(owned.Length, _upgrades.Length); u++)
+                if (owned[u] && IsUpgradeAvailable(u) && _economy.CanAfford(UpgradeCost(u))) any |= BuyUpgrade(u);
+            return any;
+        }
+
+        public bool IsBelowUpgrades(bool[] owned)
+        {
+            if (owned == null) return false;
+            for (int u = 0; u < Math.Min(owned.Length, _upgrades.Length); u++)
+                if (owned[u] && !_upgradeOwned[u]) return true;
+            return false;
+        }
+
+        internal string[] OwnedUpgradeIds()
+        {
+            int n = 0;
+            for (int i = 0; i < _upgradeOwned.Length; i++) if (_upgradeOwned[i]) n++;
+            var ids = new string[n];
+            for (int i = 0, k = 0; i < _upgradeOwned.Length; i++) if (_upgradeOwned[i]) ids[k++] = _upgrades[i].Id;
+            return ids;
+        }
+
+        internal void RestoreUpgrades(string[] ownedIds)
+        {
+            if (ownedIds == null) return;
+            for (int i = 0; i < _upgrades.Length; i++)
+                if (!_upgradeOwned[i] && Array.IndexOf(ownedIds, _upgrades[i].Id) >= 0) ApplyUpgrade(i);
+        }
+
+        /// <summary>Niveaux actuels (pour « racheter comme avant »).</summary>
+        public long[] LevelsSnapshot()
+        {
+            var levels = new long[_states.Length];
+            for (int i = 0; i < levels.Length; i++) levels[i] = _states[i].Level;
+            return levels;
+        }
+
+        /// <summary>
+        /// Achète, commerce par commerce, autant de niveaux que possible sans dépasser <paramref name="targetLevel"/>.
+        /// Zéro allocation. Renvoie vrai si au moins un niveau a été acheté.
+        /// </summary>
+        public bool AutoBuyToLevel(long targetLevel)
+        {
+            bool any = false;
+            for (int i = 0; i < _states.Length; i++)
+                any |= BuyTowards(i, targetLevel);
+            return any;
+        }
+
+        /// <summary>
+        /// « Racheter comme avant » : remonte chaque commerce vers <paramref name="levels"/>, en commençant par les
+        /// commerces les plus rentables (les derniers), dans la limite de l'argent disponible.
+        /// </summary>
+        public bool RebuyTowards(long[] levels)
+        {
+            if (levels == null) return false;
+            bool any = false;
+            for (int i = Math.Min(levels.Length, _states.Length) - 1; i >= 0; i--)
+                any |= BuyTowards(i, levels[i]);
+            return any;
+        }
+
+        public bool IsBelow(long[] levels)
+        {
+            if (levels == null) return false;
+            for (int i = 0; i < Math.Min(levels.Length, _states.Length); i++)
+                if (_states[i].Level < levels[i]) return true;
+            return false;
+        }
+
+        private bool BuyTowards(int index, long target)
+        {
+            var s = _states[index];
+            if (s.Level >= target) return false;
+            long n = EconomyMath.MaxAffordable(s.Definition.BaseCost, s.Definition.Growth, s.Level, _economy.Money);
+            if (n <= 0) return false;
+            return BuyLevels(index, Math.Min(n, target - s.Level));
         }
 
         internal void Restore(int index, long level, bool hasManager, bool isRunning, double progress)

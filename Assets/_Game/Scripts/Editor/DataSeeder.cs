@@ -43,6 +43,9 @@ namespace Gargote.EditorTools
             economy.adBoostDurationSeconds = e.adBoostDurationSeconds;
             economy.adBoostMaxStackSeconds = e.adBoostMaxStackSeconds;
             economy.adBoostAppliesOffline = e.adBoostAppliesOffline;
+            economy.welcomeMultiplier = e.welcomeMultiplier;
+            economy.welcomeDurationSeconds = e.welcomeDurationSeconds;
+            economy.autoBuyIntervalSeconds = e.autoBuyIntervalSeconds;
             EditorUtility.SetDirty(economy);
 
             var prestige = LoadOrCreate<PrestigeConfigAsset>(GargotePaths.PrestigeConfig);
@@ -53,6 +56,18 @@ namespace Gargote.EditorTools
             prestige.softCapStars = seed.prestige.softCapStars;
             prestige.softCapExponent = seed.prestige.softCapExponent > 0 ? seed.prestige.softCapExponent : 0.5;
             prestige.cityCarryOver = seed.prestige.cityCarryOver;
+            prestige.travelMultiplierFloorRatio = seed.prestige.travelMultiplierFloorRatio;
+            prestige.rebuyStartingFundSeconds = seed.prestige.rebuyStartingFundSeconds;
+            var upgrades = seed.prestige.starUpgrades ?? new StarUpgradeSeed[0];
+            prestige.starUpgrades = new PrestigeConfigAsset.StarUpgradeEntry[upgrades.Length];
+            for (int u = 0; u < upgrades.Length; u++)
+                prestige.starUpgrades[u] = new PrestigeConfigAsset.StarUpgradeEntry
+                {
+                    id = upgrades[u].id,
+                    displayName = upgrades[u].displayName,
+                    effect = StarUpgradeSeed.ParseEffect(upgrades[u].effect),
+                    costStars = upgrades[u].costStars,
+                };
             EditorUtility.SetDirty(prestige);
 
             var cities = new CityDefinitionAsset[seed.cities.Length];
@@ -82,6 +97,23 @@ namespace Gargote.EditorTools
                     business.affinity = BusinessSeed.ParseAffinity(bs.affinity);
                     EditorUtility.SetDirty(business);
                     city.businesses[b] = business;
+                }
+                var upgradeSeeds = citySeed.upgrades ?? new UpgradeSeed[0];
+                city.upgrades = new CityDefinitionAsset.CashUpgradeEntry[upgradeSeeds.Length];
+                for (int u = 0; u < upgradeSeeds.Length; u++)
+                {
+                    var us = upgradeSeeds[u];
+                    int target = string.IsNullOrEmpty(us.business) || us.business == "all"
+                        ? -1
+                        : System.Array.FindIndex(citySeed.businesses, b => b.id == us.business);
+                    city.upgrades[u] = new CityDefinitionAsset.CashUpgradeEntry
+                    {
+                        id = us.id,
+                        displayName = us.displayName,
+                        business = target >= 0 ? city.businesses[target] : null,
+                        multiplier = us.multiplier,
+                        cost = us.cost,
+                    };
                 }
                 EditorUtility.SetDirty(city);
                 cities[c] = city;

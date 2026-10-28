@@ -22,7 +22,10 @@ namespace Gargote.Systems
 
         public bool IsAdBoostActive => AdBoostRemainingSeconds > 0d;
         public double AdBoostMultiplier => IsAdBoostActive ? _config.AdBoost.Multiplier : 1d;
-        public double GlobalRevenueMultiplier => PermanentMultiplier * AdBoostMultiplier;
+        /// <summary>Bonus de bienvenue restant dans la ville en cours (secondes).</summary>
+        public double WelcomeRemainingSeconds { get; private set; }
+        public double WelcomeMultiplier => WelcomeRemainingSeconds > 0d ? _config.Welcome.Multiplier : 1d;
+        public double GlobalRevenueMultiplier => PermanentMultiplier * AdBoostMultiplier * WelcomeMultiplier;
 
         public event Action<BigDouble> MoneyChanged;
 
@@ -72,11 +75,16 @@ namespace Gargote.Systems
         {
             if (seconds <= 0d) return;
             AdBoostRemainingSeconds = Math.Max(0d, AdBoostRemainingSeconds - seconds);
+            WelcomeRemainingSeconds = Math.Max(0d, WelcomeRemainingSeconds - seconds);
         }
 
-        internal void ResetRun(double startingMoney)
+        internal void StartWelcomeBonus() => WelcomeRemainingSeconds = Math.Max(0d, _config.Welcome.DurationSeconds);
+
+        internal void ResetRun(double startingMoney) => ResetRun(BigDouble.FromDouble(startingMoney));
+
+        internal void ResetRun(BigDouble startingMoney)
         {
-            Money = BigDouble.FromDouble(startingMoney);
+            Money = startingMoney;
             RunEarnings = BigDouble.Zero;
             MoneyChanged?.Invoke(Money);
         }
@@ -87,8 +95,10 @@ namespace Gargote.Systems
             CityLifetimeEarnings = BigDouble.Zero;
         }
 
-        internal void Restore(BigDouble money, BigDouble run, BigDouble city, BigDouble total, double boostRemaining)
+        internal void Restore(BigDouble money, BigDouble run, BigDouble city, BigDouble total, double boostRemaining,
+            double welcomeRemaining)
         {
+            WelcomeRemainingSeconds = Math.Max(0d, Math.Min(welcomeRemaining, _config.Welcome.DurationSeconds));
             Money = money;
             RunEarnings = run;
             CityLifetimeEarnings = city;

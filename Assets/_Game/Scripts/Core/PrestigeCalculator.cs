@@ -42,6 +42,17 @@ namespace Gargote.Core
         public static double EffectiveStars(long currentCityStars, long previousCitiesStars, PrestigeConfig config) =>
             EffectiveStars(currentCityStars + config.CityCarryOver * previousCitiesStars, config);
 
+        /// <summary>
+        /// Idem, après dépense d'étoiles en upgrades : la dépense est prise d'abord sur les villes précédentes
+        /// (qui ne comptent qu'en partie), puis sur la ville en cours.
+        /// </summary>
+        public static double EffectiveStars(long currentCityStars, long previousCitiesStars, long spentStars, PrestigeConfig config)
+        {
+            long fromPrevious = Math.Min(Math.Max(0L, spentStars), previousCitiesStars);
+            long fromCurrent = Math.Max(0L, spentStars - fromPrevious);
+            return EffectiveStars(Math.Max(0L, currentCityStars - fromCurrent), previousCitiesStars - fromPrevious, config);
+        }
+
         public static double RevenueMultiplier(long totalStars, PrestigeConfig config) =>
             1d + EffectiveStars((double)totalStars, config) * config.BonusPerStar;
 

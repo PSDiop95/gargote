@@ -19,6 +19,9 @@ Statut : `à relire` → `validé` / `à corriger` (avec commentaire du relecteu
 | Monnaie | `Money` / FCFA | FCFA | à relire | Affichage « 1,23K FCFA » |
 | Prestige | `TotalStars` | Étoiles Teranga | à relire | |
 
+| Upgrades FCFA | `dakar_up_01` … `dakar_up_40` | « Upgrade NN (à nommer) » | à nommer | 40 upgrades génériques (x2 un commerce, un sur cinq x2 tous) ; noms à proposer, ex. « Bouteille de gaz neuve », « Charbon de qualité », « Car rapide de livraison » (§6) |
+| Upgrades d'étoiles | `gerants_fideles`, `commis_automatique`, `comme_avant` | Gérants fidèles, Commis automatique, Comme avant | à relire | Confort du prestige |
+
 ## À venir (M3/M4)
 
 Gérants (Tonton Modou, Badara le Baye Fall, Ndèye la reine de la nuit, Adja Fatou, Oustaz Grill, Aïda Pastels,

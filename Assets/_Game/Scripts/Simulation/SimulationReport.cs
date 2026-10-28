@@ -32,6 +32,10 @@ namespace Gargote.Simulation
         /// <summary>Multiplicateur de revenus des étoiles (rendements décroissants inclus).</summary>
         public double StarMultiplier;
         public double GlobalMilestoneMultiplier;
+        /// <summary>Nombre d'upgrades FCFA possédés dans le run en cours.</summary>
+        public int CashUpgrades;
+        /// <summary>Bonus de bienvenue actif (1 = aucun).</summary>
+        public double WelcomeMultiplier;
         public int CityIndex;
         public int Prestiges;
         public int AdsWatched;
@@ -58,6 +62,14 @@ namespace Gargote.Simulation
         public double LongestWallMinutes;
         public string LongestWallAfter;
         public double LongestWallAtActiveMinutes;
+        /// <summary>Multiplicateur après / avant chaque voyage.</summary>
+        public readonly List<double> TravelRatios = new List<double>();
+        /// <summary>Voyages où le bonus de bienvenue s'est bien appliqué.</summary>
+        public int WelcomeApplied;
+        /// <summary>Temps de remontée (min actives) après chaque relance faite avec tous les upgrades de confort.</summary>
+        public readonly List<double> ComfortRecoveries = new List<double>();
+        /// <summary>Temps de remontée après les relances faites sans le confort complet (information).</summary>
+        public readonly List<double> EarlyRecoveries = new List<double>();
 
         public SimulationEvent FirstEvent(string kind, string detail = null)
         {
@@ -117,8 +129,8 @@ namespace Gargote.Simulation
         public void WriteTimelineCsv(TextWriter w)
         {
             w.WriteLine("profile,day,session,elapsed_hours,active_minutes,money,log10_money,city_lifetime,log10_city_lifetime," +
-                        "log10_total_lifetime,income_per_s,log10_income_per_s,stars,star_multiplier,global_milestone_multiplier," +
-                        "city_index,prestiges,ads_watched,managers,total_levels,cauris");
+                        "log10_total_lifetime,income_per_s,log10_income_per_s,stars,star_multiplier,global_milestone_multiplier,welcome_multiplier," +
+                        "city_index,prestiges,ads_watched,managers,total_levels,cash_upgrades,cauris");
             foreach (var p in Profiles)
                 foreach (var s in p.Snapshots)
                     w.WriteLine(string.Join(",",
@@ -128,10 +140,11 @@ namespace Gargote.Simulation
                         NumberFormatter.Format(s.CityLifetimeEarnings, '.'), L(s.CityLifetimeEarnings),
                         L(s.TotalLifetimeEarnings),
                         NumberFormatter.Format(s.IncomePerSecond, '.'), L(s.IncomePerSecond),
-                        s.Stars.ToString(CultureInfo.InvariantCulture), F(s.StarMultiplier), F(s.GlobalMilestoneMultiplier),
+                        s.Stars.ToString(CultureInfo.InvariantCulture), F(s.StarMultiplier), F(s.GlobalMilestoneMultiplier), F(s.WelcomeMultiplier),
                         s.CityIndex.ToString(CultureInfo.InvariantCulture),
                         s.Prestiges.ToString(CultureInfo.InvariantCulture), s.AdsWatched.ToString(CultureInfo.InvariantCulture),
                         s.ManagersHired.ToString(CultureInfo.InvariantCulture), s.TotalLevels.ToString(CultureInfo.InvariantCulture),
+                        s.CashUpgrades.ToString(CultureInfo.InvariantCulture),
                         "0")); // cauris : sources (missions, succès, coffres) arrivent en M3
         }
 

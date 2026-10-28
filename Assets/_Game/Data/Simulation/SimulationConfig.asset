@@ -18,6 +18,7 @@ MonoBehaviour:
     prestigeWhenGainRatio: 1
     prestigeWhenStalledMinutes: 15
     stalledGainRatio: 0
+    upgradeMaxShareOfStars: 1
     adBoostRewatchBelowHours: 1
     maxBoostAdsPerDay: 2
     offlineAdMinAwayMinutes: 60
@@ -26,11 +27,12 @@ MonoBehaviour:
       costMultiplier: 1000
       revenueMultiplier: 1000
       goalMultiplier: 10000
-      starThresholdMultiplier: 1000
+      starThresholdMultiplier: 1500
+      upgradeCostMultiplier: 1
       goalMultipliers:
-      - 10000
-      - 10000
-      - 10000
+      - 200000
+      - 50000
+      - 100000
     profiles:
     - name: occasionnel_pub
       sessionsPerDay: 3
@@ -130,7 +132,7 @@ MonoBehaviour:
       firstPrestigeMinDay: 2
       firstPrestigeMaxDay: 3
       cityMinDays:
-      - 5
+      - 6
       - 14
       - 30
       cityMaxDays:
@@ -141,7 +143,11 @@ MonoBehaviour:
       minAdsPerDay: 4
       maxAdsPerDay: 8
       maxAdGapRatio: 1.6
-      maxStarMultiplier: 50
+      maxStarMultiplier: 600
       starMultiplierDay: 30
       spacedUnlockIndex: 5
       minUnlockSpacingMinutes: 3
+      minTravelFloorRatio: 0.3
+      recoveryShare: 0.5
+      maxRecoveryMinutes: 10
+      recoveryMinMultiplierGain: 0.1

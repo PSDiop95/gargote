@@ -43,10 +43,11 @@ namespace Gargote.Systems
             if (Progress > CycleSeconds && !HasManager) Progress = CycleSeconds;
         }
 
-        internal void Reset(EconomyConfig config)
+        internal void Reset(EconomyConfig config, bool keepManager = false)
         {
             Level = 0;
-            HasManager = false;
+            HasManager = keepManager && HasManager;
+            LocalRevenueMultiplier = 1d;
             IsRunning = false;
             Progress = 0d;
             Recompute(config);

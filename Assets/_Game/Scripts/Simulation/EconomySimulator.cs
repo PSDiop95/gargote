@@ -77,6 +77,7 @@ namespace Gargote.Simulation
                 b.ManagerHired += i => { managers++; Record("manager", b[i].Definition.Id, true); };
                 b.MilestoneReached += (i, count) =>
                     Record("milestone", b[i].Definition.Id + "@" + config.Milestones[count - 1].ToString(CultureInfo.InvariantCulture), true);
+                b.UpgradeBought += i => Record("upgrade", b.Upgrade(i).Id, true);
                 b.GlobalMilestoneReached += count =>
                     Record("global_milestone", "all@" + config.GlobalMilestones[count - 1].ToString(CultureInfo.InvariantCulture), true);
             }
@@ -103,6 +104,8 @@ namespace Gargote.Simulation
                     IncomePerSecond = session.Businesses.TotalIncomePerSecond(),
                     Stars = session.Prestige.TotalStars, StarMultiplier = session.Prestige.RevenueMultiplier,
                     GlobalMilestoneMultiplier = session.Businesses.GlobalMilestoneMultiplier,
+                    WelcomeMultiplier = economy.WelcomeMultiplier,
+                    CashUpgrades = CountOwnedUpgrades(session.Businesses),
                     CityIndex = session.CityIndex,
                     Prestiges = session.Prestige.PrestigeCount, AdsWatched = adsTotal,
                     ManagersHired = managers, TotalLevels = levels,
@@ -171,7 +174,7 @@ namespace Gargote.Simulation
                         if (sinceDecision >= profile.DecisionIntervalSeconds)
                         {
                             sinceDecision = 0d;
-                            Decide(session, profile, random, Record, (active - lastObjective) / 60d, state);
+                            Decide(session, profile, random, Record, (active - lastObjective) / 60d, active / 60d, state, result);
                         }
 
                         if (active / 60d >= nextSnapshotActive)
@@ -202,16 +205,36 @@ namespace Gargote.Simulation
         {
             public bool PrestigeAnnounced;
             public bool GoalAnnounced;
+            public bool Recovering;
+            public bool RecoveryWithComfort;
+            public double RecoveryStartMinutes;
+            public BigDouble RecoveryTarget;
+        }
+
+        private static bool OwnsAllUpgrades(PrestigeSystem prestige)
+        {
+            for (int i = 0; i < prestige.UpgradeCount; i++)
+                if (!prestige.Owns(i)) return false;
+            return prestige.UpgradeCount > 0;
         }
 
         private void Decide(GameSession session, PlayerProfile profile, Random random,
-            Action<string, string, bool> record, double stalledMinutes, DecisionState state)
+            Action<string, string, bool> record, double stalledMinutes, double activeMinutes, DecisionState state,
+            ProfileResult result)
         {
             var businesses = session.Businesses;
             var economy = session.Economy;
+            var prestige = session.Prestige;
 
-            // 1. Gérants en priorité (automatisation = moins de taps, gains hors ligne).
+            // 0. Upgrades d'étoiles de confort, dans l'ordre, dès qu'ils sont abordables.
+            // Le joueur n'en achète un que s'il coûte au plus UpgradeMaxShareOfStars de ses étoiles disponibles.
+            for (int i = 0; i < prestige.UpgradeCount; i++)
+                if (!prestige.Owns(i) && prestige.Upgrade(i).CostStars <= prestige.AvailableStars * _settings.UpgradeMaxShareOfStars &&
+                    session.BuyStarUpgrade(i)) record("star_upgrade", prestige.Upgrade(i).Id, true);
+
+            // 1. Gérants en priorité (automatisation = moins de taps, gains hors ligne), puis « racheter comme avant ».
             HireManagers(businesses, economy);
+            if (session.CanRebuyPrevious) session.RebuyPrevious();
 
             // 2. Achats selon la politique du joueur.
             for (int n = 0; n < MaxPurchasesPerDecision; n++)
@@ -230,6 +253,15 @@ namespace Gargote.Simulation
                 HireManagers(businesses, economy);
             }
 
+            // Temps de remontée après une relance : revenu ≥ part cible du revenu d'avant.
+            if (state.Recovering && businesses.TotalIncomePerSecond() >= state.RecoveryTarget)
+            {
+                double minutes = activeMinutes - state.RecoveryStartMinutes;
+                (state.RecoveryWithComfort ? result.ComfortRecoveries : result.EarlyRecoveries).Add(minutes);
+                record("recovery", minutes.ToString("0.##", CultureInfo.InvariantCulture) + (state.RecoveryWithComfort ? " comfort" : " early"), false);
+                state.Recovering = false;
+            }
+
             // 3. Objectif de ville / prestige.
             if (!state.GoalAnnounced && session.IsCityGoalReached)
             {
@@ -239,7 +271,13 @@ namespace Gargote.Simulation
             if (session.IsCityGoalReached && session.HasNextCity)
             {
                 long gained = session.StarsToGain;
+                double multiplierBefore = prestige.RevenueMultiplier;
                 session.PerformPrestige(true);
+                result.TravelRatios.Add(prestige.RevenueMultiplier / multiplierBefore);
+                var welcome = _definitions.Economy.Welcome;
+                if (economy.WelcomeMultiplier == welcome.Multiplier && economy.WelcomeRemainingSeconds == welcome.DurationSeconds)
+                    result.WelcomeApplied++;
+                state.Recovering = false;
                 state.GoalAnnounced = false;
                 state.PrestigeAnnounced = false;
                 record("city_enter", session.City.Id, true);
@@ -260,10 +298,29 @@ namespace Gargote.Simulation
                            toGain >= Math.Max(1L, (long)Math.Ceiling(owned * _settings.StalledGainRatio));
             if (doubles || stalled)
             {
+                if (state.Recovering) // relance avant d'avoir remonté : comptée comme non remontée
+                {
+                    (state.RecoveryWithComfort ? result.ComfortRecoveries : result.EarlyRecoveries).Add(double.PositiveInfinity);
+                    record("recovery", "never" + (state.RecoveryWithComfort ? " comfort" : " early"), false);
+                }
+                double multiplierBefore = prestige.RevenueMultiplier;
+                BigDouble incomeBefore = businesses.TotalIncomePerSecond();
                 session.PerformPrestige(false);
+                // Remontée mesurée seulement pour une relance qui vaut le coup (gain de multiplicateur suffisant).
+                state.Recovering = prestige.RevenueMultiplier >= multiplierBefore * (1d + _settings.Targets.RecoveryMinMultiplierGain);
+                state.RecoveryWithComfort = OwnsAllUpgrades(prestige);
+                state.RecoveryStartMinutes = activeMinutes;
+                state.RecoveryTarget = incomeBefore * _settings.Targets.RecoveryShare;
                 state.PrestigeAnnounced = false;
                 record("prestige", "+" + toGain.ToString(CultureInfo.InvariantCulture) + " stars (replay " + session.City.Id + ")", true);
             }
+        }
+
+        private static int CountOwnedUpgrades(BusinessSystem businesses)
+        {
+            int n = 0;
+            for (int u = 0; u < businesses.UpgradeCount; u++) if (businesses.OwnsUpgrade(u)) n++;
+            return n;
         }
 
         private static void HireManagers(BusinessSystem businesses, EconomySystem economy)
@@ -275,14 +332,21 @@ namespace Gargote.Simulation
 
         private static bool BuyCheapest(BusinessSystem businesses, EconomySystem economy)
         {
-            int best = -1;
+            int best = -1, bestUpgrade = -1;
             BigDouble bestCost = BigDouble.Zero;
             for (int i = 0; i < businesses.Count; i++)
             {
                 var q = businesses.Quote(i, BuyMode.One);
                 if (best < 0 || q.Cost < bestCost) { best = i; bestCost = q.Cost; }
             }
-            return best >= 0 && economy.CanAfford(bestCost) && businesses.BuyLevels(best, 1);
+            for (int u = 0; u < businesses.UpgradeCount; u++)
+            {
+                if (!businesses.IsUpgradeAvailable(u)) continue;
+                var c = businesses.UpgradeCost(u);
+                if (c < bestCost) { bestUpgrade = u; bestCost = c; }
+            }
+            if (!economy.CanAfford(bestCost)) return false;
+            return bestUpgrade >= 0 ? businesses.BuyUpgrade(bestUpgrade) : businesses.BuyLevels(best, 1);
         }
 
         private static bool BuyRandom(BusinessSystem businesses, EconomySystem economy, Random random)
@@ -290,12 +354,19 @@ namespace Gargote.Simulation
             int affordable = 0;
             for (int i = 0; i < businesses.Count; i++)
                 if (businesses.Quote(i, BuyMode.One).Affordable) affordable++;
+            for (int u = 0; u < businesses.UpgradeCount; u++)
+                if (businesses.IsUpgradeAvailable(u) && economy.CanAfford(businesses.UpgradeCost(u))) affordable++;
             if (affordable == 0) return false;
             int pick = random.Next(affordable);
             for (int i = 0; i < businesses.Count; i++)
             {
                 if (!businesses.Quote(i, BuyMode.One).Affordable) continue;
                 if (pick-- == 0) return businesses.BuyLevels(i, 1);
+            }
+            for (int u = 0; u < businesses.UpgradeCount; u++)
+            {
+                if (!businesses.IsUpgradeAvailable(u) || !economy.CanAfford(businesses.UpgradeCost(u))) continue;
+                if (pick-- == 0) return businesses.BuyUpgrade(u);
             }
             return false;
         }
@@ -343,17 +414,17 @@ namespace Gargote.Simulation
                     gap, " min", t.MinUnlockSpacingMinutes, double.MaxValue, optimal, ">= " + Fmt(t.MinUnlockSpacingMinutes, " min"));
             }
 
-            // Cibles en jours calendaires : « jour 5-7 » couvre du début du jour 5 à la fin du jour 7.
+            // Cibles en jours : bornes strictes sur la valeur exacte (jour 1,0 = début de la première journée),
+            // sans arrondi ni journée calendaire de tolérance.
             var possible = r.FirstEvent("prestige_possible");
-            Check("first_prestige_possible_day", possible?.Day, " d", t.FirstPrestigeMinDay, t.FirstPrestigeMaxDay + 0.999, reference,
-                Fmt(t.FirstPrestigeMinDay, "") + "-" + Fmt(t.FirstPrestigeMaxDay, " d"));
+            Check("first_prestige_possible_day", possible?.Day, " d", t.FirstPrestigeMinDay, t.FirstPrestigeMaxDay, reference);
 
             var cityEnters = r.Events.FindAll(e => e.Kind == "city_enter");
             for (int c = 0; c < t.CityMinDays.Length; c++)
             {
                 double? day = c < cityEnters.Count ? cityEnters[c].Day : (double?)null;
                 Check("city" + (c + 2).ToString(CultureInfo.InvariantCulture) + "_day", day, " d",
-                    t.CityMinDays[c], t.CityMaxDays[c] + 0.999, reference, Fmt(t.CityMinDays[c], "") + "-" + Fmt(t.CityMaxDays[c], " d"));
+                    t.CityMinDays[c], t.CityMaxDays[c], reference);
             }
 
             // Prestiges libres par ville (le prestige reste fréquent à l'intérieur d'une ville).
@@ -374,6 +445,39 @@ namespace Gargote.Simulation
                 starSnapshot?.StarMultiplier, "x", 0, t.MaxStarMultiplier, reference);
 
             Check("longest_wall_active_minutes", r.LongestWallMinutes, " min", 0, t.MaxWallMinutes);
+
+            // Arrivée dans une nouvelle ville : plancher du multiplicateur et bonus de bienvenue.
+            if (r.TravelRatios.Count > 0)
+            {
+                double min = double.MaxValue;
+                foreach (double ratio in r.TravelRatios) if (ratio < min) min = ratio;
+                Check("travel_multiplier_ratio_min", min + 1e-9, "", t.MinTravelFloorRatio, double.MaxValue, true,
+                    ">= " + Fmt(t.MinTravelFloorRatio, ""));
+                var welcome = _definitions.Economy.Welcome;
+                r.Checks.Add(new TargetCheck
+                {
+                    Profile = name, Metric = "welcome_bonus_on_arrival",
+                    Value = r.WelcomeApplied.ToString(CultureInfo.InvariantCulture) + "/" + r.TravelRatios.Count.ToString(CultureInfo.InvariantCulture),
+                    Target = "x" + Fmt(welcome.Multiplier, "") + " " + Fmt(welcome.DurationSeconds / 60d, " min") + " each arrival",
+                    Pass = r.WelcomeApplied == r.TravelRatios.Count && welcome.Multiplier > 1 && welcome.DurationSeconds > 0,
+                });
+            }
+
+            // Temps de remontée après une relance (upgrades de confort achetés) : jugé pour les joueurs optimaux.
+            if (r.ComfortRecoveries.Count > 0)
+            {
+                var sorted = new List<double>(r.ComfortRecoveries);
+                sorted.Sort();
+                double worst = sorted[sorted.Count - 1];
+                Check("prestige_recovery_max_minutes", double.IsInfinity(worst) ? (double?)null : worst, " min",
+                    0, t.MaxRecoveryMinutes, optimal);
+                Check("prestige_recovery_median_minutes", sorted[sorted.Count / 2], " min", 0, 0, false);
+                Check("prestige_recoveries_measured", sorted.Count, "", 0, 0, false);
+            }
+            else
+            {
+                Check("prestige_recovery_max_minutes", null, " min", 0, t.MaxRecoveryMinutes, optimal && r.Profile.IsReference);
+            }
 
             if (r.Profile.WatchesAds)
             {
@@ -453,11 +557,22 @@ namespace Gargote.Simulation
                         BaseCost = d.BaseCost * cost, ManagerCost = d.ManagerCost * cost, BaseRevenue = d.BaseRevenue * revenue,
                     };
                 }
+                var upgrades = new CashUpgradeDefinition[template.Upgrades.Length];
+                for (int u = 0; u < upgrades.Length; u++)
+                {
+                    var d = template.Upgrades[u];
+                    upgrades[u] = new CashUpgradeDefinition
+                    {
+                        Id = d.Id, BusinessIndex = d.BusinessIndex, RevenueMultiplier = d.RevenueMultiplier,
+                        Cost = d.Cost * cost * Math.Pow(scaling.UpgradeCostMultiplier, step),
+                    };
+                }
                 double baseThreshold = template.StarThreshold > 0 ? template.StarThreshold : source.Prestige.Threshold;
                 cities.Add(new CityDefinition
                 {
                     Id = "city" + (i + 1).ToString(CultureInfo.InvariantCulture) + "_proxy",
                     Businesses = businesses,
+                    Upgrades = upgrades,
                     GoalLifetimeEarnings = template.GoalLifetimeEarnings * scaling.GoalFactor(step),
                     StartingMoney = template.StartingMoney * cost,
                     StarThreshold = baseThreshold * Math.Pow(scaling.StarThresholdMultiplier, step),

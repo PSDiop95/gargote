@@ -1,89 +1,125 @@
 profile,metric,value,target,pass
 occasionnel_pub,first_manager_active_minutes,2.44 min,<= 3 min,OK
-occasionnel_pub,business4_active_minutes,6.57 min,<= 15 min,OK
+occasionnel_pub,business4_active_minutes,6.64 min,<= 15 min,OK
 occasionnel_pub,fataya_nems_to_restaurant_teranga_minutes,6 min,>= 3 min,OK
-occasionnel_pub,first_prestige_possible_day,3.54 d,info,OK
-occasionnel_pub,city2_day,14.33 d,info,OK
-occasionnel_pub,city3_day,34.33 d,info,OK
+occasionnel_pub,first_prestige_possible_day,3.33 d,info,OK
+occasionnel_pub,city2_day,11.33 d,info,OK
+occasionnel_pub,city3_day,28.33 d,info,OK
 occasionnel_pub,city4_day,never,info,OK
-occasionnel_pub,replays_in_city1,4,info,OK
-occasionnel_pub,replays_in_city2,7,info,OK
-occasionnel_pub,star_multiplier_day30,11.16x,info,OK
+occasionnel_pub,replays_in_city1,5,info,OK
+occasionnel_pub,replays_in_city2,14,info,OK
+occasionnel_pub,star_multiplier_day30,62.65x,info,OK
 occasionnel_pub,longest_wall_active_minutes,15.01 min,<= 30 min,OK
+occasionnel_pub,travel_multiplier_ratio_min,0.3,>= 0.3,OK
+occasionnel_pub,welcome_bonus_on_arrival,2/2,x3 60 min each arrival,OK
+occasionnel_pub,prestige_recovery_max_minutes,0.02 min,<= 10 min,OK
+occasionnel_pub,prestige_recovery_median_minutes,0.02 min,info,OK
+occasionnel_pub,prestige_recoveries_measured,21,info,OK
 occasionnel_pub,rewarded_per_day,4.98,>= 4 (indicatif <= 8),OK
 occasionnel_sans_pub,first_manager_active_minutes,2.44 min,<= 3 min,OK
-occasionnel_sans_pub,business4_active_minutes,6.57 min,<= 15 min,OK
+occasionnel_sans_pub,business4_active_minutes,6.64 min,<= 15 min,OK
 occasionnel_sans_pub,fataya_nems_to_restaurant_teranga_minutes,12 min,>= 3 min,OK
-occasionnel_sans_pub,first_prestige_possible_day,4.54 d,info,OK
-occasionnel_sans_pub,city2_day,22.33 d,info,OK
-occasionnel_sans_pub,city3_day,never,info,OK
+occasionnel_sans_pub,first_prestige_possible_day,3.75 d,info,OK
+occasionnel_sans_pub,city2_day,17.33 d,info,OK
+occasionnel_sans_pub,city3_day,43.75 d,info,OK
 occasionnel_sans_pub,city4_day,never,info,OK
-occasionnel_sans_pub,replays_in_city1,5,info,OK
-occasionnel_sans_pub,star_multiplier_day30,3.31x,info,OK
+occasionnel_sans_pub,replays_in_city1,7,info,OK
+occasionnel_sans_pub,replays_in_city2,23,info,OK
+occasionnel_sans_pub,star_multiplier_day30,57.79x,info,OK
 occasionnel_sans_pub,longest_wall_active_minutes,15.01 min,<= 30 min,OK
-occasionnel_sans_pub,ad_gap_city2_ratio,1.56x,<= 1.6x,OK
-occasionnel_sans_pub,ad_gap_prestiges_day30,1.38x,<= 1.6x,OK
+occasionnel_sans_pub,travel_multiplier_ratio_min,0.3,>= 0.3,OK
+occasionnel_sans_pub,welcome_bonus_on_arrival,2/2,x3 60 min each arrival,OK
+occasionnel_sans_pub,prestige_recovery_max_minutes,0.02 min,<= 10 min,OK
+occasionnel_sans_pub,prestige_recovery_median_minutes,0.02 min,info,OK
+occasionnel_sans_pub,prestige_recoveries_measured,17,info,OK
+occasionnel_sans_pub,ad_gap_city2_ratio,1.53x,<= 1.6x,OK
+occasionnel_sans_pub,ad_gap_prestiges_day30,1.28x,<= 1.6x,OK
 regulier_pub,first_manager_active_minutes,2.44 min,<= 3 min,OK
-regulier_pub,business4_active_minutes,6.57 min,<= 15 min,OK
+regulier_pub,business4_active_minutes,6.64 min,<= 15 min,OK
 regulier_pub,fataya_nems_to_restaurant_teranga_minutes,7 min,>= 3 min,OK
-regulier_pub,first_prestige_possible_day,2.44 d,2-3 d,OK
-regulier_pub,city2_day,7.54 d,5-7 d,OK
-regulier_pub,city3_day,17.65 d,14-18 d,OK
-regulier_pub,city4_day,34.75 d,30-40 d,OK
-regulier_pub,replays_in_city1,4,info,OK
-regulier_pub,replays_in_city2,8,info,OK
-regulier_pub,replays_in_city3,16,info,OK
-regulier_pub,star_multiplier_day30,28.98x,<= 50x,OK
+regulier_pub,first_prestige_possible_day,2.33 d,2-3 d,OK
+regulier_pub,city2_day,6.33 d,6-7 d,OK
+regulier_pub,city3_day,14.54 d,14-18 d,OK
+regulier_pub,city4_day,38.44 d,30-40 d,OK
+regulier_pub,replays_in_city1,5,info,OK
+regulier_pub,replays_in_city2,14,info,OK
+regulier_pub,replays_in_city3,41,info,OK
+regulier_pub,star_multiplier_day30,537.09x,<= 600x,OK
 regulier_pub,longest_wall_active_minutes,15.01 min,<= 30 min,OK
+regulier_pub,travel_multiplier_ratio_min,0.3,>= 0.3,OK
+regulier_pub,welcome_bonus_on_arrival,3/3,x3 60 min each arrival,OK
+regulier_pub,prestige_recovery_max_minutes,0.02 min,<= 10 min,OK
+regulier_pub,prestige_recovery_median_minutes,0.02 min,info,OK
+regulier_pub,prestige_recoveries_measured,25,info,OK
 regulier_pub,rewarded_per_day,7.98,>= 4 (indicatif <= 8),OK
 regulier_sans_pub,first_manager_active_minutes,2.44 min,<= 3 min,OK
-regulier_sans_pub,business4_active_minutes,6.57 min,<= 15 min,OK
+regulier_sans_pub,business4_active_minutes,6.64 min,<= 15 min,OK
 regulier_sans_pub,fataya_nems_to_restaurant_teranga_minutes,7 min,>= 3 min,OK
-regulier_sans_pub,first_prestige_possible_day,2.65 d,info,OK
-regulier_sans_pub,city2_day,11.54 d,info,OK
-regulier_sans_pub,city3_day,28.85 d,info,OK
+regulier_sans_pub,first_prestige_possible_day,2.44 d,info,OK
+regulier_sans_pub,city2_day,8.65 d,info,OK
+regulier_sans_pub,city3_day,21.75 d,info,OK
 regulier_sans_pub,city4_day,never,info,OK
-regulier_sans_pub,replays_in_city1,5,info,OK
-regulier_sans_pub,replays_in_city2,11,info,OK
-regulier_sans_pub,star_multiplier_day30,4.12x,info,OK
+regulier_sans_pub,replays_in_city1,7,info,OK
+regulier_sans_pub,replays_in_city2,23,info,OK
+regulier_sans_pub,star_multiplier_day30,151.42x,info,OK
 regulier_sans_pub,longest_wall_active_minutes,15.01 min,<= 30 min,OK
-regulier_sans_pub,ad_gap_city2_ratio,1.53x,<= 1.6x,OK
-regulier_sans_pub,ad_gap_prestiges_day30,1.42x,<= 1.6x,OK
+regulier_sans_pub,travel_multiplier_ratio_min,0.3,>= 0.3,OK
+regulier_sans_pub,welcome_bonus_on_arrival,2/2,x3 60 min each arrival,OK
+regulier_sans_pub,prestige_recovery_max_minutes,0.02 min,<= 10 min,OK
+regulier_sans_pub,prestige_recovery_median_minutes,0.02 min,info,OK
+regulier_sans_pub,prestige_recoveries_measured,20,info,OK
+regulier_sans_pub,ad_gap_city2_ratio,1.37x,<= 1.6x,OK
+regulier_sans_pub,ad_gap_prestiges_day30,0.98x,<= 1.6x,OK
 accro_pub,first_manager_active_minutes,2.44 min,<= 3 min,OK
-accro_pub,business4_active_minutes,6.57 min,<= 15 min,OK
-accro_pub,fataya_nems_to_restaurant_teranga_minutes,16.11 min,>= 3 min,OK
-accro_pub,first_prestige_possible_day,1.85 d,info,OK
-accro_pub,city2_day,7.49 d,info,OK
-accro_pub,city3_day,19.75 d,info,OK
-accro_pub,city4_day,42.65 d,info,OK
-accro_pub,replays_in_city1,7,info,OK
-accro_pub,replays_in_city2,19,info,OK
-accro_pub,replays_in_city3,47,info,OK
-accro_pub,star_multiplier_day30,18.42x,info,OK
-accro_pub,longest_wall_active_minutes,24 min,<= 30 min,OK
+accro_pub,business4_active_minutes,6.64 min,<= 15 min,OK
+accro_pub,fataya_nems_to_restaurant_teranga_minutes,16.02 min,>= 3 min,OK
+accro_pub,first_prestige_possible_day,1.7 d,info,OK
+accro_pub,city2_day,4.39 d,info,OK
+accro_pub,city3_day,11.33 d,info,OK
+accro_pub,city4_day,37.44 d,info,OK
+accro_pub,replays_in_city1,9,info,OK
+accro_pub,replays_in_city2,38,info,OK
+accro_pub,replays_in_city3,142,info,OK
+accro_pub,star_multiplier_day30,614.22x,info,OK
+accro_pub,longest_wall_active_minutes,15.19 min,<= 30 min,OK
+accro_pub,travel_multiplier_ratio_min,0.3,>= 0.3,OK
+accro_pub,welcome_bonus_on_arrival,3/3,x3 60 min each arrival,OK
+accro_pub,prestige_recovery_max_minutes,0.02 min,<= 10 min,OK
+accro_pub,prestige_recovery_median_minutes,0.02 min,info,OK
+accro_pub,prestige_recoveries_measured,19,info,OK
 accro_pub,rewarded_per_day,13.96,>= 4 (indicatif <= 8),OK
 accro_sans_pub,first_manager_active_minutes,2.44 min,<= 3 min,OK
-accro_sans_pub,business4_active_minutes,6.57 min,<= 15 min,OK
-accro_sans_pub,fataya_nems_to_restaurant_teranga_minutes,16.11 min,>= 3 min,OK
-accro_sans_pub,first_prestige_possible_day,2.33 d,info,OK
-accro_sans_pub,city2_day,10.54 d,info,OK
-accro_sans_pub,city3_day,29.33 d,info,OK
+accro_sans_pub,business4_active_minutes,6.64 min,<= 15 min,OK
+accro_sans_pub,fataya_nems_to_restaurant_teranga_minutes,16.02 min,>= 3 min,OK
+accro_sans_pub,first_prestige_possible_day,1.8 d,info,OK
+accro_sans_pub,city2_day,5.39 d,info,OK
+accro_sans_pub,city3_day,14.91 d,info,OK
 accro_sans_pub,city4_day,never,info,OK
-accro_sans_pub,replays_in_city1,10,info,OK
-accro_sans_pub,replays_in_city2,25,info,OK
-accro_sans_pub,star_multiplier_day30,4.24x,info,OK
-accro_sans_pub,longest_wall_active_minutes,24 min,<= 30 min,OK
-accro_sans_pub,ad_gap_city2_ratio,1.41x,<= 1.6x,OK
-accro_sans_pub,ad_gap_prestiges_day30,1.23x,<= 1.6x,OK
+accro_sans_pub,replays_in_city1,11,info,OK
+accro_sans_pub,replays_in_city2,55,info,OK
+accro_sans_pub,star_multiplier_day30,286.79x,info,OK
+accro_sans_pub,longest_wall_active_minutes,22.39 min,<= 30 min,OK
+accro_sans_pub,travel_multiplier_ratio_min,0.3,>= 0.3,OK
+accro_sans_pub,welcome_bonus_on_arrival,2/2,x3 60 min each arrival,OK
+accro_sans_pub,prestige_recovery_max_minutes,0.02 min,<= 10 min,OK
+accro_sans_pub,prestige_recovery_median_minutes,0.02 min,info,OK
+accro_sans_pub,prestige_recoveries_measured,21,info,OK
+accro_sans_pub,ad_gap_city2_ratio,1.23x,<= 1.6x,OK
+accro_sans_pub,ad_gap_prestiges_day30,0.98x,<= 1.6x,OK
 sous_optimal,first_manager_active_minutes,4.6 min,info,OK
-sous_optimal,business4_active_minutes,14.94 min,info,OK
+sous_optimal,business4_active_minutes,14.04 min,info,OK
 sous_optimal,fataya_nems_to_restaurant_teranga_minutes,28 min,info,OK
-sous_optimal,first_prestige_possible_day,3.44 d,info,OK
-sous_optimal,city2_day,14.85 d,info,OK
-sous_optimal,city3_day,36.86 d,info,OK
+sous_optimal,first_prestige_possible_day,3.33 d,info,OK
+sous_optimal,city2_day,9.65 d,info,OK
+sous_optimal,city3_day,26.85 d,info,OK
 sous_optimal,city4_day,never,info,OK
-sous_optimal,replays_in_city1,6,info,OK
-sous_optimal,replays_in_city2,12,info,OK
-sous_optimal,star_multiplier_day30,9.27x,info,OK
-sous_optimal,longest_wall_active_minutes,21 min,<= 30 min,OK
+sous_optimal,replays_in_city1,7,info,OK
+sous_optimal,replays_in_city2,20,info,OK
+sous_optimal,star_multiplier_day30,67.94x,info,OK
+sous_optimal,longest_wall_active_minutes,15.03 min,<= 30 min,OK
+sous_optimal,travel_multiplier_ratio_min,0.3,>= 0.3,OK
+sous_optimal,welcome_bonus_on_arrival,2/2,x3 60 min each arrival,OK
+sous_optimal,prestige_recovery_max_minutes,0.03 min,info,OK
+sous_optimal,prestige_recovery_median_minutes,0.03 min,info,OK
+sous_optimal,prestige_recoveries_measured,22,info,OK
 sous_optimal,rewarded_per_day,7.73,>= 4 (indicatif <= 8),OK

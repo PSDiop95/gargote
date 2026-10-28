@@ -33,3 +33,6 @@ MonoBehaviour:
   adBoostAppliesOffline: 0
   rewardedFullValuePerDay: 8
   rewardedDecayPerExtraAd: 0.5
+  welcomeMultiplier: 3
+  welcomeDurationSeconds: 3600
+  autoBuyIntervalSeconds: 0.5

@@ -46,6 +46,8 @@ namespace Gargote.Simulation
         public bool adBoostAppliesOffline = true;
         public int rewardedFullValuePerDay;
         public double rewardedDecayPerExtraAd;
+        public double welcomeMultiplier = 1, welcomeDurationSeconds;
+        public double autoBuyIntervalSeconds = 0.5;
 
         public EconomyConfig ToConfig() => new EconomyConfig
         {
@@ -75,6 +77,8 @@ namespace Gargote.Simulation
             {
                 FullValuePerDay = rewardedFullValuePerDay, DecayPerExtraAd = rewardedDecayPerExtraAd,
             },
+            Welcome = new WelcomeBonusConfig { Multiplier = welcomeMultiplier, DurationSeconds = welcomeDurationSeconds },
+            AutoBuyIntervalSeconds = autoBuyIntervalSeconds,
         };
     }
 
@@ -85,13 +89,49 @@ namespace Gargote.Simulation
         public long minStarsToPrestige;
         public double softCapStars, softCapExponent;
         public double cityCarryOver = 1;
+        public double travelMultiplierFloorRatio;
+        public double rebuyStartingFundSeconds;
+        public StarUpgradeSeed[] starUpgrades;
 
-        public PrestigeConfig ToConfig() => new PrestigeConfig
+        public PrestigeConfig ToConfig()
         {
-            K = k, Threshold = threshold, BonusPerStar = bonusPerStar, MinStarsToPrestige = minStarsToPrestige,
-            SoftCapStars = softCapStars, SoftCapExponent = softCapExponent > 0 ? softCapExponent : 0.5,
-            CityCarryOver = cityCarryOver,
+            var cfg = new PrestigeConfig
+            {
+                K = k, Threshold = threshold, BonusPerStar = bonusPerStar, MinStarsToPrestige = minStarsToPrestige,
+                SoftCapStars = softCapStars, SoftCapExponent = softCapExponent > 0 ? softCapExponent : 0.5,
+                CityCarryOver = cityCarryOver, TravelMultiplierFloorRatio = travelMultiplierFloorRatio,
+                RebuyStartingFundSeconds = rebuyStartingFundSeconds,
+                StarUpgrades = new StarUpgradeDefinition[starUpgrades?.Length ?? 0],
+            };
+            for (int i = 0; i < cfg.StarUpgrades.Length; i++) cfg.StarUpgrades[i] = starUpgrades[i].ToDefinition();
+            return cfg;
+        }
+    }
+
+    [Serializable]
+    public sealed class StarUpgradeSeed
+    {
+        public string id;
+        public string displayName;
+        /// <summary>"keep_managers", "auto_buy_first_milestone" ou "rebuy_previous".</summary>
+        public string effect;
+        public long costStars;
+
+        public StarUpgradeDefinition ToDefinition() => new StarUpgradeDefinition
+        {
+            Id = id, Effect = ParseEffect(effect), CostStars = costStars,
         };
+
+        public static StarUpgradeEffect ParseEffect(string value)
+        {
+            switch ((value ?? "").ToLowerInvariant())
+            {
+                case "keep_managers": return StarUpgradeEffect.KeepManagers;
+                case "auto_buy_first_milestone": return StarUpgradeEffect.AutoBuyFirstMilestone;
+                case "rebuy_previous": return StarUpgradeEffect.RebuyPrevious;
+                default: throw new ArgumentException("Unknown star upgrade effect: " + value);
+            }
+        }
     }
 
     [Serializable]
@@ -103,6 +143,7 @@ namespace Gargote.Simulation
         public double startingMoney;
         public double starThreshold;
         public BusinessSeed[] businesses;
+        public UpgradeSeed[] upgrades;
 
         public CityDefinition ToDefinition()
         {
@@ -113,8 +154,32 @@ namespace Gargote.Simulation
                 Businesses = new BusinessDefinition[businesses.Length],
             };
             for (int i = 0; i < businesses.Length; i++) def.Businesses[i] = businesses[i].ToDefinition();
+            def.Upgrades = new CashUpgradeDefinition[upgrades?.Length ?? 0];
+            for (int i = 0; i < def.Upgrades.Length; i++)
+            {
+                var u = upgrades[i];
+                int target = -1;
+                if (!string.IsNullOrEmpty(u.business) && u.business != "all")
+                {
+                    target = Array.FindIndex(businesses, b => b.id == u.business);
+                    if (target < 0) throw new ArgumentException(id + ": upgrade " + u.id + " targets unknown business " + u.business);
+                }
+                def.Upgrades[i] = new CashUpgradeDefinition { Id = u.id, BusinessIndex = target, RevenueMultiplier = u.multiplier, Cost = u.cost };
+            }
             return def;
         }
+    }
+
+    [Serializable]
+    public sealed class UpgradeSeed
+    {
+        public string id;
+        /// <summary>Nom affiché (à valider dans docs/CULTURE_REVIEW.md).</summary>
+        public string displayName;
+        /// <summary>Id du commerce visé, ou "all".</summary>
+        public string business;
+        public double multiplier;
+        public double cost;
     }
 
     [Serializable]
@@ -151,6 +216,7 @@ namespace Gargote.Simulation
         public double prestigeWhenGainRatio;
         public double prestigeWhenStalledMinutes;
         public double stalledGainRatio;
+        public double upgradeMaxShareOfStars = 0.25;
         public double adBoostRewatchBelowHours;
         public int maxBoostAdsPerDay;
         public double offlineAdMinAwayMinutes;
@@ -166,6 +232,7 @@ namespace Gargote.Simulation
                 CostMultiplier = proxyCityScaling.costMultiplier, RevenueMultiplier = proxyCityScaling.revenueMultiplier,
                 GoalMultiplier = proxyCityScaling.goalMultiplier, StarThresholdMultiplier = proxyCityScaling.starThresholdMultiplier,
                 GoalMultipliers = proxyCityScaling.goalMultipliers ?? Array.Empty<double>(),
+                UpgradeCostMultiplier = proxyCityScaling.upgradeCostMultiplier,
             };
 
         public SimulationSettings ToSettings()
@@ -174,6 +241,7 @@ namespace Gargote.Simulation
             {
                 Days = days, TickSeconds = tickSeconds, PrestigeWhenGainRatio = prestigeWhenGainRatio,
                 PrestigeWhenStalledMinutes = prestigeWhenStalledMinutes, StalledGainRatio = stalledGainRatio,
+                UpgradeMaxShareOfStars = upgradeMaxShareOfStars,
                 AdBoostRewatchBelowHours = adBoostRewatchBelowHours,
                 MaxBoostAdsPerDay = maxBoostAdsPerDay,
                 OfflineAdMinAwayMinutes = offlineAdMinAwayMinutes,
@@ -190,6 +258,9 @@ namespace Gargote.Simulation
                     MaxAdGapRatio = targets.maxAdGapRatio,
                     MaxStarMultiplier = targets.maxStarMultiplier, StarMultiplierDay = targets.starMultiplierDay,
                     SpacedUnlockIndex = targets.spacedUnlockIndex, MinUnlockSpacingMinutes = targets.minUnlockSpacingMinutes,
+                    MinTravelFloorRatio = targets.minTravelFloorRatio, RecoveryShare = targets.recoveryShare,
+                    MaxRecoveryMinutes = targets.maxRecoveryMinutes,
+                    RecoveryMinMultiplierGain = targets.recoveryMinMultiplierGain,
                 },
             };
             for (int i = 0; i < profiles.Length; i++)
@@ -222,6 +293,7 @@ namespace Gargote.Simulation
     public sealed class ProxyScalingSeed
     {
         public double costMultiplier, revenueMultiplier, goalMultiplier, starThresholdMultiplier;
+        public double upgradeCostMultiplier = 1;
         public double[] goalMultipliers;
     }
 
@@ -253,5 +325,6 @@ namespace Gargote.Simulation
         public int starMultiplierDay;
         public int spacedUnlockIndex;
         public double minUnlockSpacingMinutes;
+        public double minTravelFloorRatio, recoveryShare, maxRecoveryMinutes, recoveryMinMultiplierGain;
     }
 }

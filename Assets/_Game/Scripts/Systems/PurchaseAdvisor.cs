@@ -11,19 +11,23 @@ namespace Gargote.Systems
         public readonly BigDouble Cost;
         /// <summary>Secondes (depuis maintenant) pour que l'achat soit rentabilisé, attente comprise.</summary>
         public readonly double Score;
+        /// <summary>Index de l'upgrade FCFA suggéré, ou −1.</summary>
+        public readonly int UpgradeIndex;
 
         public const int AllBusinesses = -2;
 
-        public PurchaseSuggestion(int businessIndex, long count, BigDouble cost, double score)
+        public PurchaseSuggestion(int businessIndex, long count, BigDouble cost, double score, int upgradeIndex = -1)
         {
             BusinessIndex = businessIndex;
             Count = count;
             Cost = cost;
             Score = score;
+            UpgradeIndex = upgradeIndex;
         }
 
-        public bool IsValid => BusinessIndex >= 0 || BusinessIndex == AllBusinesses;
-        public bool IsGlobalMilestone => BusinessIndex == AllBusinesses;
+        public bool IsUpgrade => UpgradeIndex >= 0;
+        public bool IsValid => IsUpgrade || BusinessIndex >= 0 || BusinessIndex == AllBusinesses;
+        public bool IsGlobalMilestone => !IsUpgrade && BusinessIndex == AllBusinesses;
         public static readonly PurchaseSuggestion None = new PurchaseSuggestion(-1, 0, BigDouble.Zero, double.PositiveInfinity);
     }
 
@@ -37,7 +41,7 @@ namespace Gargote.Systems
         public static PurchaseSuggestion FindBestLevels(BusinessSystem businesses, EconomySystem economy, EconomyConfig config)
         {
             BigDouble income = businesses.TotalIncomePerSecond();
-            double global = economy.GlobalRevenueMultiplier * businesses.GlobalMilestoneMultiplier;
+            double global = economy.GlobalRevenueMultiplier * businesses.AllBusinessesMultiplier;
             var best = PurchaseSuggestion.None;
 
             for (int i = 0; i < businesses.Count; i++)
@@ -49,13 +53,40 @@ namespace Gargote.Systems
                     Consider(economy, config, s, next - s.Level, income, global, ref best);
             }
             ConsiderGlobalMilestone(businesses, economy, config, income, global, ref best);
+            ConsiderUpgrades(businesses, economy, config, income, global, ref best);
             return best;
+        }
+
+        private static void ConsiderUpgrades(BusinessSystem businesses, EconomySystem economy, EconomyConfig config,
+            BigDouble income, double global, ref PurchaseSuggestion best)
+        {
+            BigDouble raw = BigDouble.Zero;
+            for (int i = 0; i < businesses.Count; i++)
+                raw += businesses[i].RevenuePerSecond * DayNight.AverageMultiplier(businesses[i].Definition.Affinity, config.DayNight);
+
+            for (int u = 0; u < businesses.UpgradeCount; u++)
+            {
+                if (!businesses.IsUpgradeAvailable(u)) continue;
+                var def = businesses.Upgrade(u);
+                BigDouble gain;
+                if (def.BusinessIndex < 0) gain = raw * (global * (def.RevenueMultiplier - 1d));
+                else
+                {
+                    var s = businesses[def.BusinessIndex];
+                    gain = s.RevenuePerSecond * (global * (def.RevenueMultiplier - 1d) *
+                                                 DayNight.AverageMultiplier(s.Definition.Affinity, config.DayNight));
+                }
+                BigDouble cost = businesses.UpgradeCost(u);
+                double score = Score(economy, cost, gain, income);
+                if (score < best.Score) best = new PurchaseSuggestion(def.BusinessIndex, 0, cost, score, u);
+            }
         }
 
         /// <summary>Exécute une suggestion. Faux si elle n'est plus abordable.</summary>
         public static bool Apply(BusinessSystem businesses, EconomySystem economy, PurchaseSuggestion suggestion)
         {
             if (!suggestion.IsValid || !economy.CanAfford(suggestion.Cost)) return false;
+            if (suggestion.IsUpgrade) return businesses.BuyUpgrade(suggestion.UpgradeIndex);
             if (!suggestion.IsGlobalMilestone) return businesses.BuyLevels(suggestion.BusinessIndex, suggestion.Count);
 
             bool any = false;

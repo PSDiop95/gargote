@@ -46,14 +46,27 @@ namespace Gargote.Core
         /// Le boost actif s'applique à la portion de l'absence qu'il couvre.
         /// </summary>
         public static OfflineResult Compute(BigDouble managedIncomePerSecond, double elapsedSeconds, double capSeconds,
-            double efficiency, double boostRemainingSeconds, double boostMultiplier)
+            double efficiency, double boostRemainingSeconds, double boostMultiplier) =>
+            Compute(managedIncomePerSecond, elapsedSeconds, capSeconds, efficiency, boostRemainingSeconds, boostMultiplier, 0d, 1d);
+
+        /// <summary>
+        /// Variante à deux bonus temporisés (ex. boost rewarded + bonus de bienvenue), chacun couvrant le début de
+        /// l'absence ; là où ils se chevauchent, leurs multiplicateurs se multiplient.
+        /// </summary>
+        public static OfflineResult Compute(BigDouble managedIncomePerSecond, double elapsedSeconds, double capSeconds,
+            double efficiency, double boostARemaining, double boostAMultiplier, double boostBRemaining, double boostBMultiplier)
         {
             if (elapsedSeconds <= 0d || managedIncomePerSecond.IsZero || efficiency <= 0d)
                 return new OfflineResult(Math.Max(0d, elapsedSeconds), 0d, BigDouble.Zero);
 
             double credited = Math.Min(elapsedSeconds, Math.Max(0d, capSeconds));
-            double boosted = Math.Min(credited, Math.Max(0d, boostRemainingSeconds));
-            double weightedSeconds = credited + boosted * (boostMultiplier - 1d);
+            double a = Math.Min(credited, Math.Max(0d, boostARemaining));
+            double b = Math.Min(credited, Math.Max(0d, boostBRemaining));
+            double both = Math.Min(a, b);
+            double weightedSeconds = (credited - Math.Max(a, b))
+                                     + both * boostAMultiplier * boostBMultiplier
+                                     + (a - both) * boostAMultiplier
+                                     + (b - both) * boostBMultiplier;
             var earnings = managedIncomePerSecond * (weightedSeconds * efficiency);
             return new OfflineResult(elapsedSeconds, credited, earnings);
         }

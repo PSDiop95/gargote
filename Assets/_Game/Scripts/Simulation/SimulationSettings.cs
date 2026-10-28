@@ -51,11 +51,19 @@ namespace Gargote.Simulation
         /// <summary>Joueur sans pub au plus N fois plus lent (arrivée en ville 2, prestiges).</summary>
         public double MaxAdGapRatio = 1.6;
         /// <summary>Multiplicateur des étoiles maximal pour le joueur de référence au jour donné.</summary>
-        public double MaxStarMultiplier = 50;
+        public double MaxStarMultiplier = 600;
         public int StarMultiplierDay = 30;
         /// <summary>Écart minimal entre les déblocages des commerces SpacedUnlockIndex et SpacedUnlockIndex+1.</summary>
         public int SpacedUnlockIndex = 5;
         public double MinUnlockSpacingMinutes = 3;
+        /// <summary>À l'arrivée dans une ville : multiplicateur après / avant le voyage, au minimum.</summary>
+        public double MinTravelFloorRatio = 0.3;
+        /// <summary>Après une relance (confort acheté), retrouver cette part du revenu d'avant…</summary>
+        public double RecoveryShare = 0.5;
+        /// <summary>…en au plus ce temps de jeu actif.</summary>
+        public double MaxRecoveryMinutes = 10;
+        /// <summary>Seules les relances qui augmentent le multiplicateur d'au moins ce ratio sont mesurées.</summary>
+        public double RecoveryMinMultiplierGain = 0.1;
     }
 
     public sealed class ProxyCityScaling
@@ -67,6 +75,8 @@ namespace Gargote.Simulation
         /// <summary>Multiplicateur d'objectif propre à chaque nouvelle ville (remplace GoalMultiplier quand fourni).</summary>
         public double[] GoalMultipliers = Array.Empty<double>();
         public double StarThresholdMultiplier = 1;
+        /// <summary>Surcoût des upgrades FCFA par ville successive (en plus du multiplicateur de coût).</summary>
+        public double UpgradeCostMultiplier = 1;
 
         /// <summary>Multiplicateur d'objectif cumulé de la ville située <paramref name="step"/> crans après la dernière ville réelle.</summary>
         public double GoalFactor(int step)
@@ -87,6 +97,8 @@ namespace Gargote.Simulation
         /// <summary>…ou quand il n'a atteint aucun objectif depuis ce temps actif et que le gain ≥ StalledGainRatio × étoiles.</summary>
         public double PrestigeWhenStalledMinutes = 15;
         public double StalledGainRatio = 0.25;
+        /// <summary>Part maximale des étoiles disponibles que le joueur accepte de dépenser pour un upgrade.</summary>
+        public double UpgradeMaxShareOfStars = 0.25;
         /// <summary>Le joueur reprend un boost x2 4 h en début de session si le boost restant est sous ce seuil (h).</summary>
         public double AdBoostRewatchBelowHours = 1;
         /// <summary>Nombre maximal de boosts x2 4 h regardés par jour (un joueur réel ne relance pas à chaque session).</summary>

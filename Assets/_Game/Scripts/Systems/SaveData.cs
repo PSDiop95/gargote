@@ -31,6 +31,15 @@ namespace Gargote.Systems
         public int RewardedDayKey;
         public int RewardedCountToday;
 
+        public long StarsSpent;
+        public string[] OwnedStarUpgrades = Array.Empty<string>();
+        public double MultiplierFloor = 1d;
+        public double WelcomeRemainingSeconds;
+        /// <summary>Niveaux d'avant la dernière relance (« racheter comme avant »), null si aucun.</summary>
+        public long[] PreviousLevels;
+        /// <summary>Upgrades FCFA achetés dans la ville en cours (run en cours).</summary>
+        public string[] OwnedCashUpgrades = Array.Empty<string>();
+
         public BusinessSaveData[] Businesses = Array.Empty<BusinessSaveData>();
     }
 

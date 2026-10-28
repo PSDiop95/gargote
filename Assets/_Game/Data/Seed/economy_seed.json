@@ -53,7 +53,10 @@
     "globalMilestoneMultiplier": 1.25,
     "rewardedFullValuePerDay": 8,
     "rewardedDecayPerExtraAd": 0.5,
-    "adBoostAppliesOffline": false
+    "adBoostAppliesOffline": false,
+    "welcomeMultiplier": 3,
+    "welcomeDurationSeconds": 3600,
+    "autoBuyIntervalSeconds": 0.5
   },
   "prestige": {
     "k": 1,
@@ -62,13 +65,35 @@
     "minStarsToPrestige": 15,
     "softCapStars": 0,
     "softCapExponent": 0.5,
-    "cityCarryOver": 0.1
+    "cityCarryOver": 0.1,
+    "travelMultiplierFloorRatio": 0.3,
+    "starUpgrades": [
+      {
+        "id": "gerants_fideles",
+        "displayName": "Gérants fidèles",
+        "effect": "keep_managers",
+        "costStars": 5
+      },
+      {
+        "id": "commis_automatique",
+        "displayName": "Commis automatique",
+        "effect": "auto_buy_first_milestone",
+        "costStars": 10
+      },
+      {
+        "id": "comme_avant",
+        "displayName": "Comme avant",
+        "effect": "rebuy_previous",
+        "costStars": 20
+      }
+    ],
+    "rebuyStartingFundSeconds": 28800
   },
   "cities": [
     {
       "id": "dakar",
       "displayName": "Dakar",
-      "goalLifetimeEarnings": 1.15e+17,
+      "goalLifetimeEarnings": 1.5e+18,
       "startingMoney": 100.0,
       "businesses": [
         {
@@ -152,7 +177,289 @@
           "affinity": "none"
         }
       ],
-      "starThreshold": 0
+      "starThreshold": 0,
+      "upgrades": [
+        {
+          "id": "dakar_up_01",
+          "displayName": "Upgrade 01 (à nommer)",
+          "business": "forokh_thiaya",
+          "multiplier": 2.0,
+          "cost": 100000.0
+        },
+        {
+          "id": "dakar_up_02",
+          "displayName": "Upgrade 02 (à nommer)",
+          "business": "tangana",
+          "multiplier": 2.0,
+          "cost": 3000000.0
+        },
+        {
+          "id": "dakar_up_03",
+          "displayName": "Upgrade 03 (à nommer)",
+          "business": "maiga",
+          "multiplier": 2.0,
+          "cost": 90000000.0
+        },
+        {
+          "id": "dakar_up_04",
+          "displayName": "Upgrade 04 (à nommer)",
+          "business": "gargote",
+          "multiplier": 2.0,
+          "cost": 2700000000.0
+        },
+        {
+          "id": "dakar_up_05",
+          "displayName": "Upgrade 05 (à nommer)",
+          "business": "all",
+          "multiplier": 2.0,
+          "cost": 81000000000.0
+        },
+        {
+          "id": "dakar_up_06",
+          "displayName": "Upgrade 06 (à nommer)",
+          "business": "dibiterie",
+          "multiplier": 2.0,
+          "cost": 2430000000000.0
+        },
+        {
+          "id": "dakar_up_07",
+          "displayName": "Upgrade 07 (à nommer)",
+          "business": "fataya_nems",
+          "multiplier": 2.0,
+          "cost": 72900000000000.0
+        },
+        {
+          "id": "dakar_up_08",
+          "displayName": "Upgrade 08 (à nommer)",
+          "business": "restaurant_teranga",
+          "multiplier": 2.0,
+          "cost": 2190000000000000.0
+        },
+        {
+          "id": "dakar_up_09",
+          "displayName": "Upgrade 09 (à nommer)",
+          "business": "traiteur_evenements",
+          "multiplier": 2.0,
+          "cost": 6.56e+16
+        },
+        {
+          "id": "dakar_up_10",
+          "displayName": "Upgrade 10 (à nommer)",
+          "business": "all",
+          "multiplier": 2.0,
+          "cost": 1.97e+18
+        },
+        {
+          "id": "dakar_up_11",
+          "displayName": "Upgrade 11 (à nommer)",
+          "business": "forokh_thiaya",
+          "multiplier": 2.0,
+          "cost": 5.9e+19
+        },
+        {
+          "id": "dakar_up_12",
+          "displayName": "Upgrade 12 (à nommer)",
+          "business": "tangana",
+          "multiplier": 2.0,
+          "cost": 1.77e+21
+        },
+        {
+          "id": "dakar_up_13",
+          "displayName": "Upgrade 13 (à nommer)",
+          "business": "maiga",
+          "multiplier": 2.0,
+          "cost": 5.31e+22
+        },
+        {
+          "id": "dakar_up_14",
+          "displayName": "Upgrade 14 (à nommer)",
+          "business": "gargote",
+          "multiplier": 2.0,
+          "cost": 1.59e+24
+        },
+        {
+          "id": "dakar_up_15",
+          "displayName": "Upgrade 15 (à nommer)",
+          "business": "all",
+          "multiplier": 2.0,
+          "cost": 4.78e+25
+        },
+        {
+          "id": "dakar_up_16",
+          "displayName": "Upgrade 16 (à nommer)",
+          "business": "dibiterie",
+          "multiplier": 2.0,
+          "cost": 1.43e+27
+        },
+        {
+          "id": "dakar_up_17",
+          "displayName": "Upgrade 17 (à nommer)",
+          "business": "fataya_nems",
+          "multiplier": 2.0,
+          "cost": 4.3e+28
+        },
+        {
+          "id": "dakar_up_18",
+          "displayName": "Upgrade 18 (à nommer)",
+          "business": "restaurant_teranga",
+          "multiplier": 2.0,
+          "cost": 1.29e+30
+        },
+        {
+          "id": "dakar_up_19",
+          "displayName": "Upgrade 19 (à nommer)",
+          "business": "traiteur_evenements",
+          "multiplier": 2.0,
+          "cost": 3.87e+31
+        },
+        {
+          "id": "dakar_up_20",
+          "displayName": "Upgrade 20 (à nommer)",
+          "business": "all",
+          "multiplier": 2.0,
+          "cost": 1.16e+33
+        },
+        {
+          "id": "dakar_up_21",
+          "displayName": "Upgrade 21 (à nommer)",
+          "business": "forokh_thiaya",
+          "multiplier": 2.0,
+          "cost": 3.49e+34
+        },
+        {
+          "id": "dakar_up_22",
+          "displayName": "Upgrade 22 (à nommer)",
+          "business": "tangana",
+          "multiplier": 2.0,
+          "cost": 1.05e+36
+        },
+        {
+          "id": "dakar_up_23",
+          "displayName": "Upgrade 23 (à nommer)",
+          "business": "maiga",
+          "multiplier": 2.0,
+          "cost": 3.14e+37
+        },
+        {
+          "id": "dakar_up_24",
+          "displayName": "Upgrade 24 (à nommer)",
+          "business": "gargote",
+          "multiplier": 2.0,
+          "cost": 9.41e+38
+        },
+        {
+          "id": "dakar_up_25",
+          "displayName": "Upgrade 25 (à nommer)",
+          "business": "all",
+          "multiplier": 2.0,
+          "cost": 2.82e+40
+        },
+        {
+          "id": "dakar_up_26",
+          "displayName": "Upgrade 26 (à nommer)",
+          "business": "dibiterie",
+          "multiplier": 2.0,
+          "cost": 8.47e+41
+        },
+        {
+          "id": "dakar_up_27",
+          "displayName": "Upgrade 27 (à nommer)",
+          "business": "fataya_nems",
+          "multiplier": 2.0,
+          "cost": 2.54e+43
+        },
+        {
+          "id": "dakar_up_28",
+          "displayName": "Upgrade 28 (à nommer)",
+          "business": "restaurant_teranga",
+          "multiplier": 2.0,
+          "cost": 7.63e+44
+        },
+        {
+          "id": "dakar_up_29",
+          "displayName": "Upgrade 29 (à nommer)",
+          "business": "traiteur_evenements",
+          "multiplier": 2.0,
+          "cost": 2.29e+46
+        },
+        {
+          "id": "dakar_up_30",
+          "displayName": "Upgrade 30 (à nommer)",
+          "business": "all",
+          "multiplier": 2.0,
+          "cost": 6.86e+47
+        },
+        {
+          "id": "dakar_up_31",
+          "displayName": "Upgrade 31 (à nommer)",
+          "business": "forokh_thiaya",
+          "multiplier": 2.0,
+          "cost": 2.06e+49
+        },
+        {
+          "id": "dakar_up_32",
+          "displayName": "Upgrade 32 (à nommer)",
+          "business": "tangana",
+          "multiplier": 2.0,
+          "cost": 6.18e+50
+        },
+        {
+          "id": "dakar_up_33",
+          "displayName": "Upgrade 33 (à nommer)",
+          "business": "maiga",
+          "multiplier": 2.0,
+          "cost": 1.85e+52
+        },
+        {
+          "id": "dakar_up_34",
+          "displayName": "Upgrade 34 (à nommer)",
+          "business": "gargote",
+          "multiplier": 2.0,
+          "cost": 5.56e+53
+        },
+        {
+          "id": "dakar_up_35",
+          "displayName": "Upgrade 35 (à nommer)",
+          "business": "all",
+          "multiplier": 2.0,
+          "cost": 1.67e+55
+        },
+        {
+          "id": "dakar_up_36",
+          "displayName": "Upgrade 36 (à nommer)",
+          "business": "dibiterie",
+          "multiplier": 2.0,
+          "cost": 5e+56
+        },
+        {
+          "id": "dakar_up_37",
+          "displayName": "Upgrade 37 (à nommer)",
+          "business": "fataya_nems",
+          "multiplier": 2.0,
+          "cost": 1.5e+58
+        },
+        {
+          "id": "dakar_up_38",
+          "displayName": "Upgrade 38 (à nommer)",
+          "business": "restaurant_teranga",
+          "multiplier": 2.0,
+          "cost": 4.5e+59
+        },
+        {
+          "id": "dakar_up_39",
+          "displayName": "Upgrade 39 (à nommer)",
+          "business": "traiteur_evenements",
+          "multiplier": 2.0,
+          "cost": 1.35e+61
+        },
+        {
+          "id": "dakar_up_40",
+          "displayName": "Upgrade 40 (à nommer)",
+          "business": "all",
+          "multiplier": 2.0,
+          "cost": 4.05e+62
+        }
+      ]
     }
   ],
   "simulation": {
@@ -282,7 +589,7 @@
       "minAdsPerDay": 4,
       "maxAdsPerDay": 8,
       "cityMinDays": [
-        5,
+        6,
         14,
         30
       ],
@@ -292,21 +599,26 @@
         40
       ],
       "maxAdGapRatio": 1.6,
-      "maxStarMultiplier": 50,
+      "maxStarMultiplier": 600,
       "starMultiplierDay": 30,
       "spacedUnlockIndex": 5,
-      "minUnlockSpacingMinutes": 3
+      "minUnlockSpacingMinutes": 3,
+      "minTravelFloorRatio": 0.3,
+      "recoveryShare": 0.5,
+      "maxRecoveryMinutes": 10,
+      "recoveryMinMultiplierGain": 0.1
     },
     "proxyCityScaling": {
       "costMultiplier": 1000,
       "revenueMultiplier": 1000,
       "goalMultiplier": 10000,
-      "starThresholdMultiplier": 1000,
+      "starThresholdMultiplier": 1500.0,
       "goalMultipliers": [
-        10000,
-        10000,
-        10000
+        200000.0,
+        50000.0,
+        100000.0
       ]
-    }
+    },
+    "upgradeMaxShareOfStars": 1
   }
 }

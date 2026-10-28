@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Gargote.Data::Gargote.Data.CityDefinitionAsset
   id: dakar
   displayName: Dakar
-  goalLifetimeEarnings: 1.15e+17
+  goalLifetimeEarnings: 1.5e+18
   startingMoney: 100
   starThreshold: 0
   businesses:
@@ -26,3 +26,204 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 52f51c8e22b4959449ff14db3bdbb5ca, type: 2}
   - {fileID: 11400000, guid: 1ef1c2444c395fb4c802965fb1b588fc, type: 2}
   - {fileID: 11400000, guid: c209e7d6c8252444a869f421ff6533eb, type: 2}
+  upgrades:
+  - id: dakar_up_01
+    displayName: "Upgrade 01 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: e1e073aa18a567e40995e4fa5d9615d1, type: 2}
+    multiplier: 2
+    cost: 100000
+  - id: dakar_up_02
+    displayName: "Upgrade 02 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 0f5e8dbedaa515244ae6b35e47734fe5, type: 2}
+    multiplier: 2
+    cost: 3000000
+  - id: dakar_up_03
+    displayName: "Upgrade 03 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: fcd5f20f995f0ae478c34256b641ab0b, type: 2}
+    multiplier: 2
+    cost: 90000000
+  - id: dakar_up_04
+    displayName: "Upgrade 04 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 45e400568d7ccb045ac1e848e5814107, type: 2}
+    multiplier: 2
+    cost: 2700000000
+  - id: dakar_up_05
+    displayName: "Upgrade 05 (\xE0 nommer)"
+    business: {fileID: 0}
+    multiplier: 2
+    cost: 81000000000
+  - id: dakar_up_06
+    displayName: "Upgrade 06 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: c15ed926776e6544dab7c3556743cbea, type: 2}
+    multiplier: 2
+    cost: 2430000000000
+  - id: dakar_up_07
+    displayName: "Upgrade 07 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 52f51c8e22b4959449ff14db3bdbb5ca, type: 2}
+    multiplier: 2
+    cost: 72900000000000
+  - id: dakar_up_08
+    displayName: "Upgrade 08 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 1ef1c2444c395fb4c802965fb1b588fc, type: 2}
+    multiplier: 2
+    cost: 2190000000000000
+  - id: dakar_up_09
+    displayName: "Upgrade 09 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: c209e7d6c8252444a869f421ff6533eb, type: 2}
+    multiplier: 2
+    cost: 65600000000000000
+  - id: dakar_up_10
+    displayName: "Upgrade 10 (\xE0 nommer)"
+    business: {fileID: 0}
+    multiplier: 2
+    cost: 1.97e+18
+  - id: dakar_up_11
+    displayName: "Upgrade 11 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: e1e073aa18a567e40995e4fa5d9615d1, type: 2}
+    multiplier: 2
+    cost: 5.9e+19
+  - id: dakar_up_12
+    displayName: "Upgrade 12 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 0f5e8dbedaa515244ae6b35e47734fe5, type: 2}
+    multiplier: 2
+    cost: 1.77e+21
+  - id: dakar_up_13
+    displayName: "Upgrade 13 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: fcd5f20f995f0ae478c34256b641ab0b, type: 2}
+    multiplier: 2
+    cost: 5.31e+22
+  - id: dakar_up_14
+    displayName: "Upgrade 14 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 45e400568d7ccb045ac1e848e5814107, type: 2}
+    multiplier: 2
+    cost: 1.59e+24
+  - id: dakar_up_15
+    displayName: "Upgrade 15 (\xE0 nommer)"
+    business: {fileID: 0}
+    multiplier: 2
+    cost: 4.78e+25
+  - id: dakar_up_16
+    displayName: "Upgrade 16 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: c15ed926776e6544dab7c3556743cbea, type: 2}
+    multiplier: 2
+    cost: 1.43e+27
+  - id: dakar_up_17
+    displayName: "Upgrade 17 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 52f51c8e22b4959449ff14db3bdbb5ca, type: 2}
+    multiplier: 2
+    cost: 4.3e+28
+  - id: dakar_up_18
+    displayName: "Upgrade 18 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 1ef1c2444c395fb4c802965fb1b588fc, type: 2}
+    multiplier: 2
+    cost: 1.29e+30
+  - id: dakar_up_19
+    displayName: "Upgrade 19 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: c209e7d6c8252444a869f421ff6533eb, type: 2}
+    multiplier: 2
+    cost: 3.87e+31
+  - id: dakar_up_20
+    displayName: "Upgrade 20 (\xE0 nommer)"
+    business: {fileID: 0}
+    multiplier: 2
+    cost: 1.16e+33
+  - id: dakar_up_21
+    displayName: "Upgrade 21 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: e1e073aa18a567e40995e4fa5d9615d1, type: 2}
+    multiplier: 2
+    cost: 3.49e+34
+  - id: dakar_up_22
+    displayName: "Upgrade 22 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 0f5e8dbedaa515244ae6b35e47734fe5, type: 2}
+    multiplier: 2
+    cost: 1.05e+36
+  - id: dakar_up_23
+    displayName: "Upgrade 23 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: fcd5f20f995f0ae478c34256b641ab0b, type: 2}
+    multiplier: 2
+    cost: 3.14e+37
+  - id: dakar_up_24
+    displayName: "Upgrade 24 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 45e400568d7ccb045ac1e848e5814107, type: 2}
+    multiplier: 2
+    cost: 9.41e+38
+  - id: dakar_up_25
+    displayName: "Upgrade 25 (\xE0 nommer)"
+    business: {fileID: 0}
+    multiplier: 2
+    cost: 2.82e+40
+  - id: dakar_up_26
+    displayName: "Upgrade 26 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: c15ed926776e6544dab7c3556743cbea, type: 2}
+    multiplier: 2
+    cost: 8.47e+41
+  - id: dakar_up_27
+    displayName: "Upgrade 27 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 52f51c8e22b4959449ff14db3bdbb5ca, type: 2}
+    multiplier: 2
+    cost: 2.54e+43
+  - id: dakar_up_28
+    displayName: "Upgrade 28 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 1ef1c2444c395fb4c802965fb1b588fc, type: 2}
+    multiplier: 2
+    cost: 7.63e+44
+  - id: dakar_up_29
+    displayName: "Upgrade 29 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: c209e7d6c8252444a869f421ff6533eb, type: 2}
+    multiplier: 2
+    cost: 2.29e+46
+  - id: dakar_up_30
+    displayName: "Upgrade 30 (\xE0 nommer)"
+    business: {fileID: 0}
+    multiplier: 2
+    cost: 6.86e+47
+  - id: dakar_up_31
+    displayName: "Upgrade 31 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: e1e073aa18a567e40995e4fa5d9615d1, type: 2}
+    multiplier: 2
+    cost: 2.06e+49
+  - id: dakar_up_32
+    displayName: "Upgrade 32 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 0f5e8dbedaa515244ae6b35e47734fe5, type: 2}
+    multiplier: 2
+    cost: 6.18e+50
+  - id: dakar_up_33
+    displayName: "Upgrade 33 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: fcd5f20f995f0ae478c34256b641ab0b, type: 2}
+    multiplier: 2
+    cost: 1.85e+52
+  - id: dakar_up_34
+    displayName: "Upgrade 34 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 45e400568d7ccb045ac1e848e5814107, type: 2}
+    multiplier: 2
+    cost: 5.56e+53
+  - id: dakar_up_35
+    displayName: "Upgrade 35 (\xE0 nommer)"
+    business: {fileID: 0}
+    multiplier: 2
+    cost: 1.67e+55
+  - id: dakar_up_36
+    displayName: "Upgrade 36 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: c15ed926776e6544dab7c3556743cbea, type: 2}
+    multiplier: 2
+    cost: 5e+56
+  - id: dakar_up_37
+    displayName: "Upgrade 37 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 52f51c8e22b4959449ff14db3bdbb5ca, type: 2}
+    multiplier: 2
+    cost: 1.5e+58
+  - id: dakar_up_38
+    displayName: "Upgrade 38 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 1ef1c2444c395fb4c802965fb1b588fc, type: 2}
+    multiplier: 2
+    cost: 4.5e+59
+  - id: dakar_up_39
+    displayName: "Upgrade 39 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: c209e7d6c8252444a869f421ff6533eb, type: 2}
+    multiplier: 2
+    cost: 1.35e+61
+  - id: dakar_up_40
+    displayName: "Upgrade 40 (\xE0 nommer)"
+    business: {fileID: 0}
+    multiplier: 2
+    cost: 4.05e+62

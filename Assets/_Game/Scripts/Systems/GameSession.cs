@@ -10,6 +10,9 @@ namespace Gargote.Systems
     public sealed class GameSession
     {
         private readonly GameDefinitions _definitions;
+        private double _autoBuyTimer;
+        private long[] _previousLevels;
+        private bool[] _previousUpgrades;
 
         public EconomySystem Economy { get; }
         public PrestigeSystem Prestige { get; }
@@ -43,10 +46,49 @@ namespace Gargote.Systems
         public long StarsToGain => Prestige.StarsToGain(Economy.CityLifetimeEarnings);
         public bool CanPrestige => Prestige.CanPrestige(Economy.CityLifetimeEarnings);
 
+        /// <summary>Niveaux juste avant la dernière relance (bouton « racheter comme avant »), ou null.</summary>
+        public long[] PreviousLevels => _previousLevels;
+        public bool CanRebuyPrevious => Prestige.Has(StarUpgradeEffect.RebuyPrevious) &&
+                                         (Businesses.IsBelow(_previousLevels) || Businesses.IsBelowUpgrades(_previousUpgrades));
+
         public void Tick(double deltaSeconds, double hourOfDay)
         {
             Businesses.Tick(deltaSeconds, hourOfDay);
             Economy.ConsumeBoostTime(deltaSeconds);
+
+            if (!Prestige.Has(StarUpgradeEffect.AutoBuyFirstMilestone)) return;
+            _autoBuyTimer += deltaSeconds;
+            if (_autoBuyTimer < _definitions.Economy.AutoBuyIntervalSeconds) return;
+            _autoBuyTimer = 0d;
+            var milestones = _definitions.Economy.Milestones;
+            if (milestones.Length > 0) Businesses.AutoBuyToLevel(milestones[0]);
+        }
+
+        /// <summary>Achète un upgrade d'étoiles (les étoiles dépensées ne comptent plus dans le multiplicateur).</summary>
+        public bool BuyStarUpgrade(int index)
+        {
+            if (!Prestige.TryBuyUpgrade(index)) return false;
+            Economy.PermanentMultiplier = Prestige.RevenueMultiplier;
+            return true;
+        }
+
+        private BigDouble StartingFundForReplay(BigDouble incomeBefore)
+        {
+            BigDouble start = BigDouble.FromDouble(City.StartingMoney);
+            double seconds = _definitions.Prestige.RebuyStartingFundSeconds;
+            if (seconds <= 0d || !Prestige.Has(StarUpgradeEffect.RebuyPrevious)) return start;
+            return BigDouble.Max(start, incomeBefore * seconds);
+        }
+
+        /// <summary>Bouton « racheter comme avant » (upgrade d'étoiles requis).</summary>
+        public bool RebuyPrevious()
+        {
+            if (!Prestige.Has(StarUpgradeEffect.RebuyPrevious)) return false;
+            // Upgrades d'abord (peu chers, gros effet), puis niveaux, puis les upgrades devenus abordables.
+            bool any = Businesses.RebuyUpgrades(_previousUpgrades);
+            any |= Businesses.RebuyTowards(_previousLevels);
+            any |= Businesses.RebuyUpgrades(_previousUpgrades);
+            return any;
         }
 
         /// <summary>
@@ -58,18 +100,25 @@ namespace Gargote.Systems
             if (moveToNextCity && (!IsCityGoalReached || !HasNextCity)) return false;
             if (!moveToNextCity && !CanPrestige) return false;
 
+            // Revenu d'avant la relance, hors boosts temporaires (pub, bienvenue).
+            BigDouble incomeBefore = Businesses.TotalIncomePerSecond() / (Economy.AdBoostMultiplier * Economy.WelcomeMultiplier);
             long gained = Prestige.Claim(Economy.CityLifetimeEarnings, moveToNextCity);
             Economy.PermanentMultiplier = Prestige.RevenueMultiplier;
 
             if (moveToNextCity)
             {
+                _previousLevels = null;
+                _previousUpgrades = null;
                 EnterCity(CityIndex + 1);
                 Economy.ResetCity(City.StartingMoney);
+                Economy.StartWelcomeBonus();
             }
             else
             {
-                Businesses.ResetAll();
-                Economy.ResetRun(City.StartingMoney);
+                _previousLevels = Businesses.LevelsSnapshot();
+                _previousUpgrades = Businesses.UpgradesSnapshot();
+                Businesses.ResetAll(Prestige.Has(StarUpgradeEffect.KeepManagers));
+                Economy.ResetRun(StartingFundForReplay(incomeBefore));
             }
             Prestiged?.Invoke(gained, moveToNextCity);
             return true;
@@ -79,8 +128,10 @@ namespace Gargote.Systems
         {
             var offline = _definitions.Economy.Offline;
             var boost = _definitions.Economy.AdBoost;
+            // ManagedIncomePerSecond inclut le multiplicateur permanent ; boost et bienvenue s'appliquent à la part couverte.
             return OfflineCalculator.Compute(Businesses.ManagedIncomePerSecond(), elapsedSeconds, capSeconds,
-                offline.Efficiency, boost.AppliesOffline ? Economy.AdBoostRemainingSeconds : 0d, boost.Multiplier);
+                offline.Efficiency, boost.AppliesOffline ? Economy.AdBoostRemainingSeconds : 0d, boost.Multiplier,
+                Economy.WelcomeRemainingSeconds, _definitions.Economy.Welcome.Multiplier);
         }
 
         /// <summary>Crédite les gains hors ligne (multiplicateur x2 rewarded, x3 pass…) et consomme le boost écoulé.</summary>
@@ -120,6 +171,12 @@ namespace Gargote.Systems
                 PrestigeCount = Prestige.PrestigeCount,
                 RewardedDayKey = Rewarded.DayKey,
                 RewardedCountToday = Rewarded.CountToday,
+                StarsSpent = Prestige.StarsSpent,
+                OwnedStarUpgrades = Prestige.OwnedUpgradeIds(),
+                MultiplierFloor = Prestige.MultiplierFloor,
+                WelcomeRemainingSeconds = Economy.WelcomeRemainingSeconds,
+                PreviousLevels = _previousLevels,
+                OwnedCashUpgrades = Businesses.OwnedUpgradeIds(),
                 Businesses = new BusinessSaveData[Businesses.Count],
             };
             for (int i = 0; i < Businesses.Count; i++)
@@ -146,12 +203,14 @@ namespace Gargote.Systems
             if (cityIndex < 0) cityIndex = Math.Max(0, Math.Min(data.CityIndex, _definitions.Cities.Length - 1));
             EnterCity(cityIndex);
 
-            Prestige.Restore(data.TotalStars, data.CurrentCityStars, data.ClaimedStarsForCity, data.PrestigeCount);
+            Prestige.Restore(data.TotalStars, data.CurrentCityStars, data.ClaimedStarsForCity, data.PrestigeCount,
+                data.StarsSpent, data.OwnedStarUpgrades, data.MultiplierFloor);
+            _previousLevels = data.PreviousLevels;
             Rewarded.Restore(data.RewardedDayKey, data.RewardedCountToday);
             Economy.PermanentMultiplier = Prestige.RevenueMultiplier;
             Economy.Restore(ParseOrZero(data.Money), ParseOrZero(data.RunEarnings),
                 ParseOrZero(data.CityLifetimeEarnings), ParseOrZero(data.TotalLifetimeEarnings),
-                data.AdBoostRemainingSeconds);
+                data.AdBoostRemainingSeconds, data.WelcomeRemainingSeconds);
 
             if (data.Businesses == null) return;
             foreach (var b in data.Businesses)
@@ -160,6 +219,7 @@ namespace Gargote.Systems
                 int index = Businesses.IndexOf(b.Id);
                 if (index >= 0) Businesses.Restore(index, b.Level, b.HasManager, b.IsRunning, b.Progress);
             }
+            Businesses.RestoreUpgrades(data.OwnedCashUpgrades);
         }
 
         private void EnterCity(int index)

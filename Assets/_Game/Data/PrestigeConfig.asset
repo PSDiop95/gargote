@@ -19,3 +19,18 @@ MonoBehaviour:
   softCapStars: 0
   softCapExponent: 0.5
   cityCarryOver: 0.1
+  travelMultiplierFloorRatio: 0.3
+  starUpgrades:
+  - id: gerants_fideles
+    displayName: "G\xE9rants fid\xE8les"
+    effect: 1
+    costStars: 5
+  - id: commis_automatique
+    displayName: Commis automatique
+    effect: 2
+    costStars: 10
+  - id: comme_avant
+    displayName: Comme avant
+    effect: 3
+    costStars: 20
+  rebuyStartingFundSeconds: 28800

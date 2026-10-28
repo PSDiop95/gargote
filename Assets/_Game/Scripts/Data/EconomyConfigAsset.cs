@@ -40,6 +40,14 @@ namespace Gargote.Data
         public int rewardedFullValuePerDay = 8;
         public double rewardedDecayPerExtraAd = 0.5;
 
+        [Header("Arrivée dans une nouvelle ville")]
+        public double welcomeMultiplier = 3;
+        public double welcomeDurationSeconds = 3600;
+
+        [Header("Confort du prestige")]
+        [Tooltip("Période de l'achat automatique jusqu'au premier palier (upgrade d'étoiles)")]
+        public double autoBuyIntervalSeconds = 0.5;
+
         public EconomyConfig ToConfig() => new EconomyConfig
         {
             Milestones = (long[])milestones.Clone(),
@@ -75,6 +83,12 @@ namespace Gargote.Data
                 FullValuePerDay = rewardedFullValuePerDay,
                 DecayPerExtraAd = rewardedDecayPerExtraAd,
             },
+            Welcome = new WelcomeBonusConfig
+            {
+                Multiplier = welcomeMultiplier,
+                DurationSeconds = welcomeDurationSeconds,
+            },
+            AutoBuyIntervalSeconds = autoBuyIntervalSeconds,
         };
     }
 }
