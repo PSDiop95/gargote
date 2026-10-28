@@ -1,0 +1,19 @@
+{
+    "name": "Gargote.Simulation",
+    "rootNamespace": "Gargote.Simulation",
+    "references": [
+        "Gargote.Core",
+        "Gargote.Systems"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": true
+}

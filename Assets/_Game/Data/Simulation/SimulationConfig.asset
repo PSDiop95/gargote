@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b6830f098a792478b35bf06801444c, type: 3}
+  m_Name: SimulationConfig
+  m_EditorClassIdentifier: Gargote.Editor::Gargote.EditorTools.SimulationConfigAsset
+  settings:
+    days: 45
+    tickSeconds: 0.1
+    prestigeWhenGainRatio: 1
+    prestigeWhenStalledMinutes: 15
+    stalledGainRatio: 0
+    adBoostRewatchBelowHours: 1
+    maxBoostAdsPerDay: 2
+    offlineAdMinAwayMinutes: 60
+    proxyCities: 4
+    proxyCityScaling:
+      costMultiplier: 1000
+      revenueMultiplier: 1000
+      goalMultiplier: 10000
+      starThresholdMultiplier: 1000
+      goalMultipliers:
+      - 10000
+      - 10000
+      - 10000
+    profiles:
+    - name: occasionnel_pub
+      sessionsPerDay: 3
+      sessionMinutes: 6
+      firstSessionMinutes: 15
+      watchesAds: 1
+      isReference: 0
+      purchases: optimal
+      boostSkipChance: 0
+      seed: 0
+      wakeHour: 8
+      sleepHour: 23
+      tapReactionSeconds: 0.3
+      decisionIntervalSeconds: 1
+    - name: occasionnel_sans_pub
+      sessionsPerDay: 3
+      sessionMinutes: 6
+      firstSessionMinutes: 15
+      watchesAds: 0
+      isReference: 0
+      purchases: optimal
+      boostSkipChance: 0
+      seed: 0
+      wakeHour: 8
+      sleepHour: 23
+      tapReactionSeconds: 0.3
+      decisionIntervalSeconds: 1
+    - name: regulier_pub
+      sessionsPerDay: 6
+      sessionMinutes: 7
+      firstSessionMinutes: 20
+      watchesAds: 1
+      isReference: 1
+      purchases: optimal
+      boostSkipChance: 0
+      seed: 0
+      wakeHour: 8
+      sleepHour: 23
+      tapReactionSeconds: 0.3
+      decisionIntervalSeconds: 1
+    - name: regulier_sans_pub
+      sessionsPerDay: 6
+      sessionMinutes: 7
+      firstSessionMinutes: 20
+      watchesAds: 0
+      isReference: 0
+      purchases: optimal
+      boostSkipChance: 0
+      seed: 0
+      wakeHour: 8
+      sleepHour: 23
+      tapReactionSeconds: 0.3
+      decisionIntervalSeconds: 1
+    - name: accro_pub
+      sessionsPerDay: 12
+      sessionMinutes: 8
+      firstSessionMinutes: 30
+      watchesAds: 1
+      isReference: 0
+      purchases: optimal
+      boostSkipChance: 0
+      seed: 0
+      wakeHour: 8
+      sleepHour: 23
+      tapReactionSeconds: 0.3
+      decisionIntervalSeconds: 1
+    - name: accro_sans_pub
+      sessionsPerDay: 12
+      sessionMinutes: 8
+      firstSessionMinutes: 30
+      watchesAds: 0
+      isReference: 0
+      purchases: optimal
+      boostSkipChance: 0
+      seed: 0
+      wakeHour: 8
+      sleepHour: 23
+      tapReactionSeconds: 0.3
+      decisionIntervalSeconds: 1
+    - name: sous_optimal
+      sessionsPerDay: 6
+      sessionMinutes: 7
+      firstSessionMinutes: 20
+      watchesAds: 1
+      isReference: 0
+      purchases: cheapest
+      boostSkipChance: 0.5
+      seed: 7
+      wakeHour: 8
+      sleepHour: 23
+      tapReactionSeconds: 0.5
+      decisionIntervalSeconds: 2
+    targets:
+      firstManagerMaxMinutes: 3
+      fourthBusinessIndex: 3
+      fourthBusinessMaxMinutes: 15
+      firstPrestigeMinDay: 2
+      firstPrestigeMaxDay: 3
+      cityMinDays:
+      - 5
+      - 14
+      - 30
+      cityMaxDays:
+      - 7
+      - 18
+      - 40
+      maxWallMinutes: 30
+      minAdsPerDay: 4
+      maxAdsPerDay: 8
+      maxAdGapRatio: 1.6
+      maxStarMultiplier: 50
+      starMultiplierDay: 30
+      spacedUnlockIndex: 5
+      minUnlockSpacingMinutes: 3

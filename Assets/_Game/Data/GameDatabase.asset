@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a8a3027e5b38a49a59d68233a59abb, type: 3}
+  m_Name: GameDatabase
+  m_EditorClassIdentifier: Gargote.Data::Gargote.Data.GameDatabase
+  cities:
+  - {fileID: 11400000, guid: 56586d930355adc4983a6cd282eea476, type: 2}
+  economy: {fileID: 11400000, guid: d7209a4862b70e441831de289e7e825e, type: 2}
+  prestige: {fileID: 11400000, guid: 92e59e0754dcc964583d716828f1a4dc, type: 2}

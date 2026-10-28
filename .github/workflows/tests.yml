@@ -1,0 +1,42 @@
+# CI des tests EditMode + simulation économique (game-ci).
+# Secrets requis : UNITY_LICENSE (ou UNITY_SERIAL), UNITY_EMAIL, UNITY_PASSWORD.
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  editmode:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - uses: actions/cache@v4
+        with:
+          path: Library
+          key: Library-${{ hashFiles('Packages/packages-lock.json') }}
+          restore-keys: Library-
+
+      - name: EditMode tests (economy, save, 30-day simulation)
+        uses: game-ci/unity-test-runner@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          testMode: editmode
+          artifactsPath: test-results
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          checkName: EditMode results
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results-and-simulation
+          path: |
+            test-results
+            Tools/simulation/output

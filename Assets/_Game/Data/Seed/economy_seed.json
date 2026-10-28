@@ -1,0 +1,312 @@
+{
+  "economy": {
+    "milestones": [
+      25,
+      50,
+      100,
+      200,
+      300,
+      400,
+      500,
+      750,
+      1000,
+      1250,
+      1500,
+      1750,
+      2000,
+      2500,
+      3000,
+      3500,
+      4000,
+      4500,
+      5000,
+      6000,
+      7000,
+      8000,
+      9000,
+      10000
+    ],
+    "milestoneSpeedMultiplier": 2,
+    "minCycleSeconds": 0.1,
+    "dayLengthSeconds": 1440,
+    "morningStartHour": 6,
+    "morningEndHour": 11,
+    "nightStartHour": 19,
+    "nightEndHour": 2,
+    "affinityMultiplier": 2,
+    "offlineBaseCapSeconds": 7200,
+    "offlineMaxCapSeconds": 43200,
+    "offlineEfficiency": 1,
+    "offlineAdMultiplier": 1.75,
+    "adBoostMultiplier": 1.5,
+    "adBoostDurationSeconds": 14400,
+    "adBoostMaxStackSeconds": 28800,
+    "globalMilestones": [
+      25,
+      50,
+      100,
+      200,
+      300,
+      400,
+      500
+    ],
+    "globalMilestoneMultiplier": 1.25,
+    "rewardedFullValuePerDay": 8,
+    "rewardedDecayPerExtraAd": 0.5,
+    "adBoostAppliesOffline": false
+  },
+  "prestige": {
+    "k": 1,
+    "threshold": 3000000000000.0,
+    "bonusPerStar": 0.02,
+    "minStarsToPrestige": 15,
+    "softCapStars": 0,
+    "softCapExponent": 0.5,
+    "cityCarryOver": 0.1
+  },
+  "cities": [
+    {
+      "id": "dakar",
+      "displayName": "Dakar",
+      "goalLifetimeEarnings": 1.15e+17,
+      "startingMoney": 100.0,
+      "businesses": [
+        {
+          "id": "forokh_thiaya",
+          "displayName": "Forokh Thiaya",
+          "baseCost": 100.0,
+          "growth": 1.07,
+          "baseRevenue": 6.0,
+          "baseCycleSeconds": 1,
+          "managerCost": 2000.0,
+          "affinity": "none"
+        },
+        {
+          "id": "tangana",
+          "displayName": "Tangana / Ndéki",
+          "baseCost": 1500.0,
+          "growth": 1.15,
+          "baseRevenue": 315.0,
+          "baseCycleSeconds": 3,
+          "managerCost": 37500.0,
+          "affinity": "morning"
+        },
+        {
+          "id": "maiga",
+          "displayName": "Maïga",
+          "baseCost": 22500.0,
+          "growth": 1.14,
+          "baseRevenue": 4050.0,
+          "baseCycleSeconds": 6,
+          "managerCost": 338000.0,
+          "affinity": "night"
+        },
+        {
+          "id": "gargote",
+          "displayName": "Gargote",
+          "baseCost": 338000.0,
+          "growth": 1.13,
+          "baseRevenue": 48700.0,
+          "baseCycleSeconds": 12,
+          "managerCost": 3380000.0,
+          "affinity": "none"
+        },
+        {
+          "id": "dibiterie",
+          "displayName": "Dibiterie",
+          "baseCost": 5060000.0,
+          "growth": 1.12,
+          "baseRevenue": 729000.0,
+          "baseCycleSeconds": 24,
+          "managerCost": 40500000.0,
+          "affinity": "night"
+        },
+        {
+          "id": "fataya_nems",
+          "displayName": "Fataya & Nems",
+          "baseCost": 75900000.0,
+          "growth": 1.11,
+          "baseRevenue": 12000000.0,
+          "baseCycleSeconds": 48,
+          "managerCost": 455000000.0,
+          "affinity": "none"
+        },
+        {
+          "id": "restaurant_teranga",
+          "displayName": "Restaurant Teranga",
+          "baseCost": 24900000000.0,
+          "growth": 1.1,
+          "baseRevenue": 3830000000.0,
+          "baseCycleSeconds": 96,
+          "managerCost": 125000000000.0,
+          "affinity": "none"
+        },
+        {
+          "id": "traiteur_evenements",
+          "displayName": "Traiteur Événements",
+          "baseCost": 374000000000.0,
+          "growth": 1.09,
+          "baseRevenue": 64500000000.0,
+          "baseCycleSeconds": 192,
+          "managerCost": 1490000000000.0,
+          "affinity": "none"
+        }
+      ],
+      "starThreshold": 0
+    }
+  ],
+  "simulation": {
+    "days": 45,
+    "tickSeconds": 0.1,
+    "prestigeWhenGainRatio": 1,
+    "prestigeWhenStalledMinutes": 15,
+    "stalledGainRatio": 0,
+    "adBoostRewatchBelowHours": 1,
+    "maxBoostAdsPerDay": 2,
+    "offlineAdMinAwayMinutes": 60,
+    "proxyCities": 4,
+    "profiles": [
+      {
+        "name": "occasionnel_pub",
+        "sessionsPerDay": 3,
+        "sessionMinutes": 6,
+        "firstSessionMinutes": 15,
+        "watchesAds": true,
+        "isReference": false,
+        "wakeHour": 8,
+        "sleepHour": 23,
+        "tapReactionSeconds": 0.3,
+        "decisionIntervalSeconds": 1,
+        "purchases": "optimal",
+        "boostSkipChance": 0,
+        "seed": 0
+      },
+      {
+        "name": "occasionnel_sans_pub",
+        "sessionsPerDay": 3,
+        "sessionMinutes": 6,
+        "firstSessionMinutes": 15,
+        "watchesAds": false,
+        "isReference": false,
+        "wakeHour": 8,
+        "sleepHour": 23,
+        "tapReactionSeconds": 0.3,
+        "decisionIntervalSeconds": 1,
+        "purchases": "optimal",
+        "boostSkipChance": 0,
+        "seed": 0
+      },
+      {
+        "name": "regulier_pub",
+        "sessionsPerDay": 6,
+        "sessionMinutes": 7,
+        "firstSessionMinutes": 20,
+        "watchesAds": true,
+        "isReference": true,
+        "wakeHour": 8,
+        "sleepHour": 23,
+        "tapReactionSeconds": 0.3,
+        "decisionIntervalSeconds": 1,
+        "purchases": "optimal",
+        "boostSkipChance": 0,
+        "seed": 0
+      },
+      {
+        "name": "regulier_sans_pub",
+        "sessionsPerDay": 6,
+        "sessionMinutes": 7,
+        "firstSessionMinutes": 20,
+        "watchesAds": false,
+        "isReference": false,
+        "wakeHour": 8,
+        "sleepHour": 23,
+        "tapReactionSeconds": 0.3,
+        "decisionIntervalSeconds": 1,
+        "purchases": "optimal",
+        "boostSkipChance": 0,
+        "seed": 0
+      },
+      {
+        "name": "accro_pub",
+        "sessionsPerDay": 12,
+        "sessionMinutes": 8,
+        "firstSessionMinutes": 30,
+        "watchesAds": true,
+        "isReference": false,
+        "wakeHour": 8,
+        "sleepHour": 23,
+        "tapReactionSeconds": 0.3,
+        "decisionIntervalSeconds": 1,
+        "purchases": "optimal",
+        "boostSkipChance": 0,
+        "seed": 0
+      },
+      {
+        "name": "accro_sans_pub",
+        "sessionsPerDay": 12,
+        "sessionMinutes": 8,
+        "firstSessionMinutes": 30,
+        "watchesAds": false,
+        "isReference": false,
+        "wakeHour": 8,
+        "sleepHour": 23,
+        "tapReactionSeconds": 0.3,
+        "decisionIntervalSeconds": 1,
+        "purchases": "optimal",
+        "boostSkipChance": 0,
+        "seed": 0
+      },
+      {
+        "name": "sous_optimal",
+        "sessionsPerDay": 6,
+        "sessionMinutes": 7,
+        "firstSessionMinutes": 20,
+        "watchesAds": true,
+        "isReference": false,
+        "purchases": "cheapest",
+        "boostSkipChance": 0.5,
+        "seed": 7,
+        "wakeHour": 8,
+        "sleepHour": 23,
+        "tapReactionSeconds": 0.5,
+        "decisionIntervalSeconds": 2
+      }
+    ],
+    "targets": {
+      "firstManagerMaxMinutes": 3,
+      "fourthBusinessIndex": 3,
+      "fourthBusinessMaxMinutes": 15,
+      "firstPrestigeMinDay": 2,
+      "firstPrestigeMaxDay": 3,
+      "maxWallMinutes": 30,
+      "minAdsPerDay": 4,
+      "maxAdsPerDay": 8,
+      "cityMinDays": [
+        5,
+        14,
+        30
+      ],
+      "cityMaxDays": [
+        7,
+        18,
+        40
+      ],
+      "maxAdGapRatio": 1.6,
+      "maxStarMultiplier": 50,
+      "starMultiplierDay": 30,
+      "spacedUnlockIndex": 5,
+      "minUnlockSpacingMinutes": 3
+    },
+    "proxyCityScaling": {
+      "costMultiplier": 1000,
+      "revenueMultiplier": 1000,
+      "goalMultiplier": 10000,
+      "starThresholdMultiplier": 1000,
+      "goalMultipliers": [
+        10000,
+        10000,
+        10000
+      ]
+    }
+  }
+}

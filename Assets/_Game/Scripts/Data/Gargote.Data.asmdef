@@ -1,0 +1,16 @@
+{
+    "name": "Gargote.Data",
+    "rootNamespace": "Gargote.Data",
+    "references": [
+        "Gargote.Core"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
