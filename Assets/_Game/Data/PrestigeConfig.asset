@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23a807bd04ebab44ba204166775db933, type: 3}
   m_Name: PrestigeConfig
   m_EditorClassIdentifier: Gargote.Data::Gargote.Data.PrestigeConfigAsset
-  k: 1
-  threshold: 150000000000000
-  bonusPerStar: 0.02
-  minStarsToPrestige: 15
-  softCapStars: 0
-  softCapExponent: 0.5
-  cityCarryOver: 0.1
+  k: 3
+  threshold: 100000000
+  bonusPerStar: 0.03
+  minStarsToPrestige: 20
+  softCapStars: 200
+  softCapExponent: 0.2
+  cityCarryOver: 0.2
   travelMultiplierFloorRatio: 0.3
   starUpgrades:
   - id: gerants_fideles

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Gargote.Data::Gargote.Data.BusinessDefinitionAsset
   id: fataya_nems
   displayName: Fataya & Nems
-  baseCost: 3795000000
-  growth: 1.11
-  baseRevenue: 600000000
-  baseCycleSeconds: 48
-  managerCost: 22750000000
+  baseCost: 419000
+  growth: 1.2
+  baseRevenue: 25000
+  baseCycleSeconds: 37.19
+  managerCost: 3355000
   affinity: 0

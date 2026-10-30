@@ -1,148 +1,150 @@
 profile,metric,value,target,pass
-occasionnel_pub,first_manager_active_minutes,2.44 min,<= 3 min,OK
-occasionnel_pub,business4_active_minutes,6.64 min,<= 15 min,OK
-occasionnel_pub,fataya_nems_to_restaurant_teranga_minutes,6 min,>= 3 min,OK
-occasionnel_pub,first_prestige_possible_day,3.33 d,info,OK
-occasionnel_pub,city2_day,11.33 d,info,OK
-occasionnel_pub,city3_day,28.33 d,info,OK
+occasionnel_pub,first_manager_active_minutes,2.18 min,<= 3 min,OK
+occasionnel_pub,business4_active_minutes,3.83 min,<= 15 min,OK
+occasionnel_pub,fataya_nems_to_restaurant_teranga_minutes,3.08 min,>= 3 min,OK
+occasionnel_pub,first_prestige_possible_day,1.75 d,info,OK
+occasionnel_pub,city2_day,12.33 d,info,OK
+occasionnel_pub,city3_day,29.75 d,info,OK
 occasionnel_pub,city4_day,never,info,OK
-occasionnel_pub,replays_in_city1,5,info,OK
-occasionnel_pub,replays_in_city2,14,info,OK
-occasionnel_pub,star_multiplier_day30,62.65x,info,OK
+occasionnel_pub,replays_in_city1,7,info,OK
+occasionnel_pub,replays_in_city2,8,info,OK
+occasionnel_pub,star_multiplier_day30,7.85x,info,OK
 occasionnel_pub,longest_wall_active_minutes,15.01 min,<= 30 min,OK
-occasionnel_pub,travel_multiplier_ratio_min,0.3,>= 0.3,OK
+occasionnel_pub,travel_multiplier_ratio_min,0.51,>= 0.3,OK
 occasionnel_pub,welcome_bonus_on_arrival,2/2,x3 60 min each arrival,OK
 occasionnel_pub,prestige_recovery_max_minutes,0.02 min,<= 10 min,OK
 occasionnel_pub,prestige_recovery_median_minutes,0.02 min,info,OK
-occasionnel_pub,prestige_recoveries_measured,21,info,OK
-occasionnel_pub,payback_median_0_10min,1.05 min,info (p90 2.46 min, 71 achats),OK
-occasionnel_pub,payback_median_10_60min,15.97 min,info (p90 141.73 min, 391 achats),OK
-occasionnel_pub,payback_median_1_10h,147.98 min,info (p90 3132.3 min, 2031 achats),OK
+occasionnel_pub,prestige_recoveries_measured,5,info,OK
+occasionnel_pub,payback_median_0_10min,1.99 min,info (p90 6.95 min ; 89 achats),OK
+occasionnel_pub,payback_median_10_60min,38.41 min,info (p90 335.34 min ; 389 achats),OK
+occasionnel_pub,payback_median_1_10h,775.75 min,info (p90 6938.16 min ; 972 achats),OK
+occasionnel_pub,payback_median_10h_plus,12451.31 min,info (p90 15518.59 min ; 32 achats),OK
 occasionnel_pub,rewarded_per_day,4.98,>= 4 (indicatif <= 8),OK
-occasionnel_sans_pub,first_manager_active_minutes,2.44 min,<= 3 min,OK
-occasionnel_sans_pub,business4_active_minutes,6.64 min,<= 15 min,OK
-occasionnel_sans_pub,fataya_nems_to_restaurant_teranga_minutes,12 min,>= 3 min,OK
-occasionnel_sans_pub,first_prestige_possible_day,3.75 d,info,OK
-occasionnel_sans_pub,city2_day,17.33 d,info,OK
-occasionnel_sans_pub,city3_day,43.75 d,info,OK
+occasionnel_sans_pub,first_manager_active_minutes,2.18 min,<= 3 min,OK
+occasionnel_sans_pub,business4_active_minutes,3.83 min,<= 15 min,OK
+occasionnel_sans_pub,fataya_nems_to_restaurant_teranga_minutes,3.08 min,>= 3 min,OK
+occasionnel_sans_pub,first_prestige_possible_day,2.33 d,info,OK
+occasionnel_sans_pub,city2_day,18.75 d,info,OK
+occasionnel_sans_pub,city3_day,never,info,OK
 occasionnel_sans_pub,city4_day,never,info,OK
-occasionnel_sans_pub,replays_in_city1,7,info,OK
-occasionnel_sans_pub,replays_in_city2,23,info,OK
-occasionnel_sans_pub,star_multiplier_day30,57.79x,info,OK
+occasionnel_sans_pub,replays_in_city1,8,info,OK
+occasionnel_sans_pub,star_multiplier_day30,9.17x,info,OK
 occasionnel_sans_pub,longest_wall_active_minutes,15.01 min,<= 30 min,OK
-occasionnel_sans_pub,travel_multiplier_ratio_min,0.3,>= 0.3,OK
-occasionnel_sans_pub,welcome_bonus_on_arrival,2/2,x3 60 min each arrival,OK
+occasionnel_sans_pub,travel_multiplier_ratio_min,0.52,>= 0.3,OK
+occasionnel_sans_pub,welcome_bonus_on_arrival,1/1,x3 60 min each arrival,OK
 occasionnel_sans_pub,prestige_recovery_max_minutes,0.02 min,<= 10 min,OK
 occasionnel_sans_pub,prestige_recovery_median_minutes,0.02 min,info,OK
-occasionnel_sans_pub,prestige_recoveries_measured,17,info,OK
-occasionnel_sans_pub,payback_median_0_10min,1.05 min,info (p90 2.46 min, 71 achats),OK
-occasionnel_sans_pub,payback_median_10_60min,29.75 min,info (p90 155.81 min, 277 achats),OK
-occasionnel_sans_pub,payback_median_1_10h,138.8 min,info (p90 2895.25 min, 1713 achats),OK
-occasionnel_sans_pub,payback_median_10h_plus,69.56 min,info (p90 1750.91 min, 725 achats),OK
-occasionnel_sans_pub,ad_gap_city2_ratio,1.53x,<= 1.6x,OK
-occasionnel_sans_pub,ad_gap_prestiges_day30,1.28x,<= 1.6x,OK
-regulier_pub,first_manager_active_minutes,2.44 min,<= 3 min,OK
-regulier_pub,business4_active_minutes,6.64 min,<= 15 min,OK
-regulier_pub,fataya_nems_to_restaurant_teranga_minutes,7 min,>= 3 min,OK
-regulier_pub,first_prestige_possible_day,2.33 d,2-3 d,OK
-regulier_pub,city2_day,6.33 d,6-7 d,OK
-regulier_pub,city3_day,14.54 d,14-18 d,OK
-regulier_pub,city4_day,38.44 d,30-40 d,OK
-regulier_pub,replays_in_city1,5,info,OK
-regulier_pub,replays_in_city2,14,info,OK
-regulier_pub,replays_in_city3,41,info,OK
-regulier_pub,star_multiplier_day30,537.09x,<= 600x,OK
+occasionnel_sans_pub,prestige_recoveries_measured,4,info,OK
+occasionnel_sans_pub,payback_median_0_10min,1.99 min,info (p90 6.95 min ; 89 achats),OK
+occasionnel_sans_pub,payback_median_10_60min,68.46 min,info (p90 608.6 min ; 426 achats),OK
+occasionnel_sans_pub,payback_median_1_10h,1106.55 min,info (p90 5883.91 min ; 473 achats),OK
+occasionnel_sans_pub,payback_median_10h_plus,10874.56 min,info (p90 16678.39 min ; 24 achats),OK
+occasionnel_sans_pub,ad_gap_city2_ratio,1.52x,<= 1.6x,OK
+occasionnel_sans_pub,ad_gap_prestiges_day30,1.06x,<= 1.6x,OK
+regulier_pub,first_manager_active_minutes,2.18 min,<= 3 min,OK
+regulier_pub,business4_active_minutes,3.83 min,<= 15 min,OK
+regulier_pub,fataya_nems_to_restaurant_teranga_minutes,8.08 min,>= 3 min,OK
+regulier_pub,first_prestige_possible_day,1.54 d,1.5-3 d,OK
+regulier_pub,city2_day,6.44 d,6-7 d,OK
+regulier_pub,city3_day,15.33 d,14-18 d,OK
+regulier_pub,city4_day,34.75 d,30-40 d,OK
+regulier_pub,replays_in_city1,6,info,OK
+regulier_pub,replays_in_city2,9,info,OK
+regulier_pub,replays_in_city3,20,info,OK
+regulier_pub,star_multiplier_day30,11.3x,<= 100x,OK
 regulier_pub,longest_wall_active_minutes,15.01 min,<= 30 min,OK
-regulier_pub,travel_multiplier_ratio_min,0.3,>= 0.3,OK
+regulier_pub,travel_multiplier_ratio_min,0.52,>= 0.3,OK
 regulier_pub,welcome_bonus_on_arrival,3/3,x3 60 min each arrival,OK
 regulier_pub,prestige_recovery_max_minutes,0.02 min,<= 10 min,OK
 regulier_pub,prestige_recovery_median_minutes,0.02 min,info,OK
-regulier_pub,prestige_recoveries_measured,25,info,OK
-regulier_pub,payback_median_0_10min,1.05 min,info (p90 2.46 min, 71 achats),OK
-regulier_pub,payback_median_10_60min,30.74 min,info (p90 153.56 min, 329 achats),OK
-regulier_pub,payback_median_1_10h,111.17 min,info (p90 2533.95 min, 2002 achats),OK
-regulier_pub,payback_median_10h_plus,27.17 min,info (p90 9744.53 min, 1029 achats),OK
+regulier_pub,prestige_recoveries_measured,5,info,OK
+regulier_pub,payback_median_0_10min,1.99 min,info (p90 6.95 min ; 89 achats),OK
+regulier_pub,payback_median_10_60min,46.59 min,info (p90 686.35 min ; 427 achats),OK
+regulier_pub,payback_median_1_10h,1627.53 min,info (p90 10121.84 min ; 563 achats),OK
+regulier_pub,payback_median_10h_plus,1082.84 min,info (p90 9965.75 min ; 1160 achats),OK
 regulier_pub,rewarded_per_day,7.98,>= 4 (indicatif <= 8),OK
-regulier_sans_pub,first_manager_active_minutes,2.44 min,<= 3 min,OK
-regulier_sans_pub,business4_active_minutes,6.64 min,<= 15 min,OK
-regulier_sans_pub,fataya_nems_to_restaurant_teranga_minutes,7 min,>= 3 min,OK
-regulier_sans_pub,first_prestige_possible_day,2.44 d,info,OK
-regulier_sans_pub,city2_day,8.65 d,info,OK
-regulier_sans_pub,city3_day,21.75 d,info,OK
+regulier_sans_pub,first_manager_active_minutes,2.18 min,<= 3 min,OK
+regulier_sans_pub,business4_active_minutes,3.83 min,<= 15 min,OK
+regulier_sans_pub,fataya_nems_to_restaurant_teranga_minutes,8.08 min,>= 3 min,OK
+regulier_sans_pub,first_prestige_possible_day,1.65 d,info,OK
+regulier_sans_pub,city2_day,9.65 d,info,OK
+regulier_sans_pub,city3_day,24.54 d,info,OK
 regulier_sans_pub,city4_day,never,info,OK
-regulier_sans_pub,replays_in_city1,7,info,OK
-regulier_sans_pub,replays_in_city2,23,info,OK
-regulier_sans_pub,star_multiplier_day30,151.42x,info,OK
+regulier_sans_pub,replays_in_city1,8,info,OK
+regulier_sans_pub,replays_in_city2,14,info,OK
+regulier_sans_pub,star_multiplier_day30,9.97x,info,OK
 regulier_sans_pub,longest_wall_active_minutes,15.01 min,<= 30 min,OK
-regulier_sans_pub,travel_multiplier_ratio_min,0.3,>= 0.3,OK
+regulier_sans_pub,travel_multiplier_ratio_min,0.52,>= 0.3,OK
 regulier_sans_pub,welcome_bonus_on_arrival,2/2,x3 60 min each arrival,OK
 regulier_sans_pub,prestige_recovery_max_minutes,0.02 min,<= 10 min,OK
 regulier_sans_pub,prestige_recovery_median_minutes,0.02 min,info,OK
-regulier_sans_pub,prestige_recoveries_measured,20,info,OK
-regulier_sans_pub,payback_median_0_10min,1.05 min,info (p90 2.46 min, 71 achats),OK
-regulier_sans_pub,payback_median_10_60min,18.15 min,info (p90 49.67 min, 190 achats),OK
-regulier_sans_pub,payback_median_1_10h,136.01 min,info (p90 2869.79 min, 1809 achats),OK
-regulier_sans_pub,payback_median_10h_plus,121.59 min,info (p90 4028.38 min, 808 achats),OK
-regulier_sans_pub,ad_gap_city2_ratio,1.37x,<= 1.6x,OK
-regulier_sans_pub,ad_gap_prestiges_day30,0.98x,<= 1.6x,OK
-accro_pub,first_manager_active_minutes,2.44 min,<= 3 min,OK
-accro_pub,business4_active_minutes,6.64 min,<= 15 min,OK
-accro_pub,fataya_nems_to_restaurant_teranga_minutes,16.02 min,>= 3 min,OK
-accro_pub,first_prestige_possible_day,1.7 d,info,OK
-accro_pub,city2_day,4.39 d,info,OK
-accro_pub,city3_day,11.33 d,info,OK
-accro_pub,city4_day,37.44 d,info,OK
-accro_pub,replays_in_city1,9,info,OK
-accro_pub,replays_in_city2,38,info,OK
-accro_pub,replays_in_city3,142,info,OK
-accro_pub,star_multiplier_day30,614.22x,info,OK
-accro_pub,longest_wall_active_minutes,15.19 min,<= 30 min,OK
-accro_pub,travel_multiplier_ratio_min,0.3,>= 0.3,OK
+regulier_sans_pub,prestige_recoveries_measured,5,info,OK
+regulier_sans_pub,payback_median_0_10min,1.99 min,info (p90 6.95 min ; 89 achats),OK
+regulier_sans_pub,payback_median_10_60min,57.05 min,info (p90 290.48 min ; 381 achats),OK
+regulier_sans_pub,payback_median_1_10h,832.08 min,info (p90 4085.21 min ; 482 achats),OK
+regulier_sans_pub,payback_median_10h_plus,1906.68 min,info (p90 11009.12 min ; 602 achats),OK
+regulier_sans_pub,ad_gap_city2_ratio,1.5x,<= 1.6x,OK
+regulier_sans_pub,ad_gap_prestiges_day30,1.06x,<= 1.6x,OK
+accro_pub,first_manager_active_minutes,2.18 min,<= 3 min,OK
+accro_pub,business4_active_minutes,3.83 min,<= 15 min,OK
+accro_pub,fataya_nems_to_restaurant_teranga_minutes,10.3 min,>= 3 min,OK
+accro_pub,first_prestige_possible_day,1.49 d,info,OK
+accro_pub,city2_day,5.75 d,info,OK
+accro_pub,city3_day,13.75 d,info,OK
+accro_pub,city4_day,31.7 d,info,OK
+accro_pub,replays_in_city1,15,info,OK
+accro_pub,replays_in_city2,27,info,OK
+accro_pub,replays_in_city3,56,info,OK
+accro_pub,star_multiplier_day30,11.52x,info,OK
+accro_pub,longest_wall_active_minutes,23.98 min,<= 30 min,OK
+accro_pub,travel_multiplier_ratio_min,0.51,>= 0.3,OK
 accro_pub,welcome_bonus_on_arrival,3/3,x3 60 min each arrival,OK
 accro_pub,prestige_recovery_max_minutes,0.02 min,<= 10 min,OK
 accro_pub,prestige_recovery_median_minutes,0.02 min,info,OK
-accro_pub,prestige_recoveries_measured,19,info,OK
-accro_pub,payback_median_0_10min,1.05 min,info (p90 2.46 min, 71 achats),OK
-accro_pub,payback_median_10_60min,7.3 min,info (p90 13.16 min, 96 achats),OK
-accro_pub,payback_median_1_10h,120.65 min,info (p90 2403.19 min, 1565 achats),OK
-accro_pub,payback_median_10h_plus,28.91 min,info (p90 3982.15 min, 1750 achats),OK
+accro_pub,prestige_recoveries_measured,5,info,OK
+accro_pub,payback_median_0_10min,1.99 min,info (p90 6.95 min ; 89 achats),OK
+accro_pub,payback_median_10_60min,25 min,info (p90 163.51 min ; 285 achats),OK
+accro_pub,payback_median_1_10h,336.35 min,info (p90 2188.03 min ; 534 achats),OK
+accro_pub,payback_median_10h_plus,687.99 min,info (p90 4353.18 min ; 1030 achats),OK
 accro_pub,rewarded_per_day,13.96,>= 4 (indicatif <= 8),OK
-accro_sans_pub,first_manager_active_minutes,2.44 min,<= 3 min,OK
-accro_sans_pub,business4_active_minutes,6.64 min,<= 15 min,OK
-accro_sans_pub,fataya_nems_to_restaurant_teranga_minutes,16.02 min,>= 3 min,OK
-accro_sans_pub,first_prestige_possible_day,1.8 d,info,OK
-accro_sans_pub,city2_day,5.39 d,info,OK
-accro_sans_pub,city3_day,14.91 d,info,OK
-accro_sans_pub,city4_day,never,info,OK
-accro_sans_pub,replays_in_city1,11,info,OK
-accro_sans_pub,replays_in_city2,55,info,OK
-accro_sans_pub,star_multiplier_day30,286.79x,info,OK
-accro_sans_pub,longest_wall_active_minutes,22.39 min,<= 30 min,OK
-accro_sans_pub,travel_multiplier_ratio_min,0.3,>= 0.3,OK
-accro_sans_pub,welcome_bonus_on_arrival,2/2,x3 60 min each arrival,OK
+accro_sans_pub,first_manager_active_minutes,2.18 min,<= 3 min,OK
+accro_sans_pub,business4_active_minutes,3.83 min,<= 15 min,OK
+accro_sans_pub,fataya_nems_to_restaurant_teranga_minutes,10.3 min,>= 3 min,OK
+accro_sans_pub,first_prestige_possible_day,1.49 d,info,OK
+accro_sans_pub,city2_day,7.8 d,info,OK
+accro_sans_pub,city3_day,19.49 d,info,OK
+accro_sans_pub,city4_day,44.75 d,info,OK
+accro_sans_pub,replays_in_city1,20,info,OK
+accro_sans_pub,replays_in_city2,35,info,OK
+accro_sans_pub,replays_in_city3,70,info,OK
+accro_sans_pub,star_multiplier_day30,10.8x,info,OK
+accro_sans_pub,longest_wall_active_minutes,27.1 min,<= 30 min,OK
+accro_sans_pub,travel_multiplier_ratio_min,0.51,>= 0.3,OK
+accro_sans_pub,welcome_bonus_on_arrival,3/3,x3 60 min each arrival,OK
 accro_sans_pub,prestige_recovery_max_minutes,0.02 min,<= 10 min,OK
 accro_sans_pub,prestige_recovery_median_minutes,0.02 min,info,OK
-accro_sans_pub,prestige_recoveries_measured,21,info,OK
-accro_sans_pub,payback_median_0_10min,1.05 min,info (p90 2.46 min, 71 achats),OK
-accro_sans_pub,payback_median_10_60min,8.37 min,info (p90 21.13 min, 79 achats),OK
-accro_sans_pub,payback_median_1_10h,91.91 min,info (p90 1921.74 min, 1338 achats),OK
-accro_sans_pub,payback_median_10h_plus,410.49 min,info (p90 6671.64 min, 1110 achats),OK
-accro_sans_pub,ad_gap_city2_ratio,1.23x,<= 1.6x,OK
-accro_sans_pub,ad_gap_prestiges_day30,0.98x,<= 1.6x,OK
-sous_optimal,first_manager_active_minutes,4.6 min,info,OK
-sous_optimal,business4_active_minutes,14.04 min,info,OK
-sous_optimal,fataya_nems_to_restaurant_teranga_minutes,28 min,>= 3 min,OK
-sous_optimal,first_prestige_possible_day,3.33 d,info,OK
-sous_optimal,city2_day,9.65 d,info,OK
-sous_optimal,city3_day,26.85 d,info,OK
-sous_optimal,city4_day,never,info,OK
-sous_optimal,replays_in_city1,7,info,OK
-sous_optimal,replays_in_city2,20,info,OK
-sous_optimal,star_multiplier_day30,67.94x,info,OK
+accro_sans_pub,prestige_recoveries_measured,7,info,OK
+accro_sans_pub,payback_median_0_10min,1.99 min,info (p90 6.95 min ; 89 achats),OK
+accro_sans_pub,payback_median_10_60min,56.06 min,info (p90 222.57 min ; 185 achats),OK
+accro_sans_pub,payback_median_1_10h,475.28 min,info (p90 2664.99 min ; 270 achats),OK
+accro_sans_pub,payback_median_10h_plus,174.62 min,info (p90 3759.99 min ; 1018 achats),OK
+accro_sans_pub,ad_gap_city2_ratio,1.36x,<= 1.6x,OK
+accro_sans_pub,ad_gap_prestiges_day30,1.05x,<= 1.6x,OK
+sous_optimal,first_manager_active_minutes,2.3 min,info,OK
+sous_optimal,business4_active_minutes,4 min,info,OK
+sous_optimal,fataya_nems_to_restaurant_teranga_minutes,8.9 min,>= 3 min,OK
+sous_optimal,first_prestige_possible_day,1.54 d,info,OK
+sous_optimal,city2_day,7.44 d,info,OK
+sous_optimal,city3_day,16.85 d,info,OK
+sous_optimal,city4_day,38.65 d,info,OK
+sous_optimal,replays_in_city1,6,info,OK
+sous_optimal,replays_in_city2,9,info,OK
+sous_optimal,replays_in_city3,23,info,OK
+sous_optimal,star_multiplier_day30,11.08x,info,OK
 sous_optimal,longest_wall_active_minutes,15.03 min,<= 30 min,OK
-sous_optimal,travel_multiplier_ratio_min,0.3,>= 0.3,OK
-sous_optimal,welcome_bonus_on_arrival,2/2,x3 60 min each arrival,OK
+sous_optimal,travel_multiplier_ratio_min,0.52,>= 0.3,OK
+sous_optimal,welcome_bonus_on_arrival,3/3,x3 60 min each arrival,OK
 sous_optimal,prestige_recovery_max_minutes,0.03 min,info,OK
 sous_optimal,prestige_recovery_median_minutes,0.03 min,info,OK
-sous_optimal,prestige_recoveries_measured,22,info,OK
+sous_optimal,prestige_recoveries_measured,6,info,OK
 sous_optimal,rewarded_per_day,7.73,>= 4 (indicatif <= 8),OK

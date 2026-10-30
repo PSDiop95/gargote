@@ -70,6 +70,7 @@ namespace Gargote.Simulation
     {
         /// <summary>Multiplicateurs appliqués à chaque ville successive (composés).</summary>
         public double CostMultiplier = 1;
+        /// <summary>Revenu par seconde (taille du marché) : appliqué au cycle, le prix unitaire reste le prix réel.</summary>
         public double RevenueMultiplier = 1;
         public double GoalMultiplier = 1;
         /// <summary>Multiplicateur d'objectif propre à chaque nouvelle ville (remplace GoalMultiplier quand fourni).</summary>

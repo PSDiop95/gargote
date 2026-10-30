@@ -501,7 +501,7 @@ namespace Gargote.Simulation
                     if (values.Count == 0) continue;
                     values.Sort();
                     Check("payback_median_" + phaseNames[p], values[values.Count / 2] / 60d, " min", 0, 0, false,
-                        "info (p90 " + Fmt(values[(int)(values.Count * 0.9)] / 60d, " min") + ", " +
+                        "info (p90 " + Fmt(values[(int)(values.Count * 0.9)] / 60d, " min") + " ; " +
                         values.Count.ToString(CultureInfo.InvariantCulture) + " achats)");
                 }
             }
@@ -580,8 +580,9 @@ namespace Gargote.Simulation
                     var d = template.Businesses[b];
                     businesses[b] = new BusinessDefinition
                     {
-                        Id = d.Id, Growth = d.Growth, BaseCycleSeconds = d.BaseCycleSeconds, Affinity = d.Affinity,
-                        BaseCost = d.BaseCost * cost, ManagerCost = d.ManagerCost * cost, BaseRevenue = d.BaseRevenue * revenue,
+                        // Prix réel inchangé : une ville plus grande sert plus de clients (cycle plus court), pas plus cher.
+                        Id = d.Id, Growth = d.Growth, BaseCycleSeconds = d.BaseCycleSeconds / revenue, Affinity = d.Affinity,
+                        BaseCost = d.BaseCost * cost, ManagerCost = d.ManagerCost * cost, BaseRevenue = d.BaseRevenue,
                     };
                 }
                 var upgrades = new CashUpgradeDefinition[template.Upgrades.Length];

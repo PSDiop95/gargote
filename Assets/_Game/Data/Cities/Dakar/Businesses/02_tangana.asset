@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Gargote.Data::Gargote.Data.BusinessDefinitionAsset
   id: tangana
   displayName: "Tangana / Nd\xE9ki"
-  baseCost: 75000
-  growth: 1.15
-  baseRevenue: 15750
-  baseCycleSeconds: 3
-  managerCost: 1875000
+  baseCost: 4000
+  growth: 1.16
+  baseRevenue: 1000
+  baseCycleSeconds: 5.71
+  managerCost: 32000
   affinity: 1

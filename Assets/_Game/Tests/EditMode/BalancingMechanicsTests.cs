@@ -159,7 +159,8 @@ namespace Gargote.Tests
                 new ProxyCityScaling { CostMultiplier = 10, RevenueMultiplier = 10, GoalMultiplier = 100, StarThresholdMultiplier = 10 });
             Assert.That(defs.Cities.Length, Is.EqualTo(3));
             Assert.That(defs.Cities[2].Businesses[0].BaseCost, Is.EqualTo(10 * 100).Within(1e-9));
-            Assert.That(defs.Cities[2].Businesses[0].BaseRevenue, Is.EqualTo(1 * 100).Within(1e-9));
+            Assert.That(defs.Cities[2].Businesses[0].BaseRevenue, Is.EqualTo(1).Within(1e-9), "prix réel inchangé");
+            Assert.That(defs.Cities[2].Businesses[0].BaseCycleSeconds, Is.EqualTo(1d / 100).Within(1e-12), "plus de clients");
             Assert.That(defs.Cities[2].GoalLifetimeEarnings, Is.EqualTo(10000 * 1e4).Within(1e-3));
             Assert.That(defs.Cities[1].StarThreshold, Is.EqualTo(100 * 10).Within(1e-9));
         }

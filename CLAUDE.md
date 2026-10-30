@@ -46,7 +46,7 @@
 Taper sur un commerce → un client est servi → billets FCFA qui volent → acheter des niveaux → plus de revenus et de vitesse.
 
 ### 2.2 Boucle de session (minutes)
-Débloquer le commerce suivant → embaucher son gérant (automatisation) → atteindre un palier (vitesse x2) → acheter un upgrade → compléter une mission → débloquer le commerce suivant.
+Débloquer le commerce suivant → embaucher son gérant (automatisation) → atteindre un palier (service plus rapide) → acheter un upgrade → compléter une mission → débloquer le commerce suivant.
 
 ### 2.3 Boucle quotidienne (heures)
 Revenir → récupérer les gains hors ligne (x2 via rewarded) → coffre gratuit → missions du jour → roue Teranga → avancer l'événement en cours.
@@ -61,16 +61,19 @@ Atteindre l'objectif de ville → **ouvrir dans une nouvelle ville** (prestige) 
 Chaque **ville** est une carte complète avec **8 commerces**, sa cuisine, son ambiance, sa musique et ses gérants. Changer de ville = prestige. Les villes restent visitables (revenus passifs réduits).
 
 ### 3.1 Dakar (Sénégal) — ville de départ
-| # | Commerce | Ce qu'on vend | Cycle base |
+| # | Commerce | Ce qu'on vend | Prix d'une vente (réel, à valider) |
 |---|---|---|---|
-| 1 | Forokh Thiaya | Fourneau sur brouette : pain + viande grillée | 1 s |
-| 2 | Tangana / Ndéki | Petit-déj : omelette, spaghetti, niébé, pain-thon, macaroni, petits pois | 3 s |
-| 3 | Maïga (la nuit) | Brochettes, omelette, spaghetti, frites | 6 s |
-| 4 | Gargote | Thiéboudienne, yassa, mafé | 12 s |
-| 5 | Dibiterie | Dibi d'agneau, oignons, moutarde | 24 s |
-| 6 | Fataya & Nems | Fatayas, nems, pastels | 48 s |
-| 7 | Restaurant Teranga | Menus complets | 96 s |
-| 8 | Traiteur Événements | Mariages, baptêmes, Magal | 192 s |
+| 1 | Forokh Thiaya | Fourneau sur brouette : pain + viande grillée | 1 000 FCFA |
+| 2 | Tangana / Ndéki | Petit-déj : omelette, spaghetti, niébé, pain-thon, macaroni, petits pois | 1 000 FCFA |
+| 3 | Maïga (la nuit) | Brochettes, omelette, spaghetti, frites | 2 500 FCFA (plateau) |
+| 4 | Gargote | Thiéboudienne, yassa, mafé | 6 000 FCFA (bol familial) |
+| 5 | Dibiterie | Dibi d'agneau, oignons, moutarde | 12 000 FCFA (1 kg) |
+| 6 | Fataya & Nems | Fatayas, nems, pastels | 25 000 FCFA (100 pièces) |
+| 7 | Restaurant Teranga | Menus complets | 40 000 FCFA (une table) |
+| 8 | Traiteur Événements | Mariages, baptêmes, Magal | 1 500 000 FCFA (un événement) |
+
+Cycles (temps de service d'un client par point de vente), coûts et croissances : dans les ScriptableObjects, issus de
+la simulation (§4.5).
 
 ### 3.2 Villes suivantes (contenu de lancement : Dakar + Abidjan + Bamako ; puis 1 ville toutes les 6-8 semaines)
 | Ville | Commerces emblématiques (exemples, à valider culturellement) |
@@ -95,18 +98,29 @@ Chaque ville a : 8 commerces, 8 gérants de base, 1 musique, 1 palette de couleu
 
 Tout en **ScriptableObjects** dans `Assets/_Game/Data/` (`Cities/<Ville>/`, `Businesses`, `Managers`, `Upgrades`, `PrestigeConfig`, `EconomyConfig`), surchargeables par **Remote Config**. **Rien en dur.**
 
-### 4.1 Formules
-- Coût du niveau n : `cost(n) = base_cost × growth^n`, `growth` entre **1.07 et 1.15** selon le commerce (premiers commerces bon marché, derniers chers).
+### 4.1 Formules — économie réaliste
+- **Prix réels, jamais gonflés** : chaque vente = un client servi au prix de la rue (forokh 1 000 FCFA, §3.1). L'empire
+  grandit par le **volume** (points de vente, clients servis, nouvelles villes), pas par le prix. Les billets qui volent
+  montrent de vrais montants.
+- Coût du niveau n : `cost(n) = base_cost × growth^n`, `growth` d'environ **1.15 à 1.22** (premiers commerces bon marché, derniers chers).
+  Un niveau = un point de vente de plus (brouette, table, équipe).
 - Achat x1 / x10 / x100 / MAX / « prochain palier » : somme géométrique exacte, pas de boucle.
-- Revenu par cycle : `base_revenue × level × multiplicateurs`.
-- **Paliers** à 25 / 50 / 100 / 200 / 300 / 400 / 500 / 750 / 1000 : vitesse x2 (ou revenus x2 au-delà de la vitesse max). Barre « prochain palier » toujours visible.
+- Revenu par cycle : `prix × level × multiplicateurs` (= clients servis × prix réel).
+- **Paliers** (25 / 50 / 100 / 200…) : service **x1,4** plus rapide. Upgrades FCFA : x1,5 par commerce, x1,25 global. Barre « prochain palier » toujours visible.
 - **Vitesse max** : cycle minimum 0,1 s ; au-delà, les gains de vitesse deviennent des multiplicateurs de revenu (pas d'animation folle).
-- Grands nombres : struct `BigDouble` (mantisse double + exposant long, immuable, sans allocation). Affichage 1,23K · M · B · T · puis aa, ab… Jusqu'à 1e300+.
+- **Ordres de grandeur visés** : coûts de quelques milliers à quelques milliards de FCFA, chiffre d'affaires de
+  l'empire de quelques centaines de FCFA/s au départ à quelques dizaines de millions par seconde. Les villes suivantes
+  sont des marchés plus grands (plus de clients, mêmes prix réels).
+- Affichage : entier complet sous le million (« 25 000 »), puis 1,23 M · 45,6 Md · 1,2 Bn. `BigDouble` reste le type
+  des montants (mantisse double + exposant long, immuable, sans allocation), filet de sécurité au-delà.
 
 ### 4.2 Prestige : « Ouvrir une nouvelle ville »
 - Récompense : **Étoiles Teranga** = `k × sqrt(gains_totaux_de_la_ville / seuil)` (formule à racine carrée façon AdCap ; `k` et `seuil` dans `PrestigeConfig`).
-- Chaque étoile : +2 % de revenus permanents (amélioré par des upgrades d'étoiles).
-- Objectif de ville clair (« Gagner 1 T de FCFA à Dakar ») pour débloquer la ville suivante ; le prestige libre reste possible avant.
+- Chaque étoile : +3 % de revenus permanents (amélioré par des upgrades d'étoiles), avec plafond doux. Les étoiles
+  sont la **réputation** : plus de clients, jamais des prix plus chers.
+- Objectif de ville clair, en **chiffre d'affaires cumulé dans la ville** (toutes relances comprises) pour débloquer la
+  ville suivante ; le prestige libre reste possible avant. Un objectif en revenu par seconde a été testé et rejeté :
+  la courbe de revenu plafonne, l'objectif devient une falaise (quelques % d'écart = des semaines de décalage).
 - Écran de prestige : « Tu vas gagner 34 étoiles → +68 % sur tout ». Le joueur doit **vouloir** prestiger.
 
 ### 4.3 Gains hors ligne
@@ -127,7 +141,7 @@ Tout en **ScriptableObjects** dans `Assets/_Game/Data/` (`Cities/<Ville>/`, `Bus
 
 ### 4.5 Simulation obligatoire
 `EconomySimulator` (C# pur, lancé en batchmode via un test EditMode ou un menu Editor) simule des profils de joueurs (occasionnel 3 sessions/jour, régulier 6, accro 12 ; avec et sans pub) sur 30 jours et sort un CSV : temps pour chaque déblocage, chaque ville, chaque prestige, solde de cauris, pubs vues.
-**Cibles :** 1er gérant < 3 min · commerce 4 < 15 min · 1er prestige possible jour 2-3 · Abidjan jour 5-7 · aucune « muraille » > 30 min sans objectif atteignable.
+**Cibles :** 1er gérant < 3 min · commerce 4 < 15 min · 1er prestige possible jour 1,5-3 (économie réaliste : le 1er passage plafonne plus tôt, on apprend la boucle de prestige dès le jour 1) · Abidjan jour 6-7 · aucune « muraille » > 30 min sans objectif atteignable.
 
 ---
 
@@ -239,7 +253,7 @@ Max 1 toutes les **4 min**, jamais pendant les 10 premières minutes de vie ni p
 - **Monument** de la ville en arrière-plan, cycle jour/nuit, météo légère (harmattan, pluie d'hivernage).
 
 ### 9.3 Juice (non négociable)
-- Billets FCFA qui volent vers le compteur en arc, popups « +1,2K » avec rebond.
+- Billets FCFA qui volent vers le compteur en arc, popups « +12 000 » avec rebond.
 - Squash & stretch sur tout ce qui se touche, vibration légère.
 - Palier : confettis wax, « VITESSE x2 ! », zoom caméra.
 - Déblocage : rideau de fer qui s'ouvre, foule qui accourt, son de sabar.

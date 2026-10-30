@@ -79,6 +79,22 @@ Source : `Assets/_Game/Scripts/Editor/M2/LocalizationSetup.cs` (régénère la t
 | Personnages | Capsules colorées, teintes de peau variées | placeholder | Tenues (boubou, wax) et diversité à valider en M4 |
 | Confettis | Couleurs « wax » (palette accents) | placeholder | Motifs wax génériques en M4 |
 
+### Économie réaliste — prix unitaires de Dakar (FCFA)
+
+Chaque vente affichée (billets qui volent) correspond à un client servi à ce prix. Le prix ne monte jamais : l'empire
+grandit par le nombre de points de vente et de clients. À vérifier : prix crédibles dans le Dakar d'aujourd'hui.
+
+| Commerce | Ce qu'on vend (une vente) | Prix proposé | Statut | Remarque |
+|---|---|---|---|---|
+| Forokh Thiaya | Pain + viande grillée | 1 000 | à relire |  |
+| Tangana / Ndéki | Omelette-pain + café | 1 000 | à relire |  |
+| Maïga | Plateau de brochettes | 2 500 | à relire |  |
+| Gargote | Bol familial de thiéboudienne | 6 000 | à relire |  |
+| Dibiterie | 1 kg de dibi d'agneau, oignons, moutarde | 12 000 | à relire |  |
+| Fataya & Nems | Commande de 100 pièces | 25 000 | à relire |  |
+| Restaurant Teranga | Une table (menus complets) | 40 000 | à relire |  |
+| Traiteur Événements | Un mariage ou un baptême | 1 500 000 | à relire |  |
+
 ## À venir (M3/M4)
 
 Gérants (Tonton Modou, Badara le Baye Fall, Ndèye la reine de la nuit, Adja Fatou, Oustaz Grill, Aïda Pastels,

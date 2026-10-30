@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Gargote.Data::Gargote.Data.BusinessDefinitionAsset
   id: forokh_thiaya
   displayName: Forokh Thiaya
-  baseCost: 5000
-  growth: 1.07
-  baseRevenue: 300
-  baseCycleSeconds: 1
-  managerCost: 100000
+  baseCost: 1250
+  growth: 1.15
+  baseRevenue: 1000
+  baseCycleSeconds: 8
+  managerCost: 31000
   affinity: 0

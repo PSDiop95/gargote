@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Gargote.Data::Gargote.Data.BusinessDefinitionAsset
   id: dibiterie
   displayName: Dibiterie
-  baseCost: 253000000
-  growth: 1.12
-  baseRevenue: 36450000
-  baseCycleSeconds: 24
-  managerCost: 2025000000
+  baseCost: 131000
+  growth: 1.19
+  baseRevenue: 12000
+  baseCycleSeconds: 24.99
+  managerCost: 1049000
   affinity: 2

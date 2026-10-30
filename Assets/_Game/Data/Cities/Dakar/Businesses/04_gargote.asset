@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Gargote.Data::Gargote.Data.BusinessDefinitionAsset
   id: gargote
   displayName: Gargote
-  baseCost: 16900000
-  growth: 1.13
-  baseRevenue: 2435000
-  baseCycleSeconds: 12
-  managerCost: 169000000
+  baseCost: 40960
+  growth: 1.18
+  baseRevenue: 6000
+  baseCycleSeconds: 17.49
+  managerCost: 328000
   affinity: 0

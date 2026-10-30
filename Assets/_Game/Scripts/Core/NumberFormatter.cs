@@ -4,12 +4,21 @@ using System.Globalization;
 namespace Gargote.Core
 {
     /// <summary>
-    /// Affichage des grands nombres : 999 · 1,23K · 45,6M · 789B · 1,2T · puis aa, ab… az, ba…
-    /// Les valeurs sont tronquées (jamais arrondies vers le haut) pour ne pas promettre d'argent absent.
+    /// Affichage des montants en FCFA, à la française : 999 · 25 000 · 999 999 en entier, puis 1,23 M · 45,6 Md ·
+    /// et les milliers de milliards en milliards groupés (3 600 Md · 227 000 Md, plus parlant que « billion ») ;
+    /// au-delà aa, ab… az, ba… (filet de sécurité, l'économie réaliste n'y va pas).
+    /// Espaces insécables entre milliers et avant le suffixe. Valeurs tronquées (jamais arrondies vers le haut)
+    /// pour ne pas promettre d'argent absent.
     /// </summary>
     public static class NumberFormatter
     {
-        private static readonly string[] NamedSuffixes = { "", "K", "M", "B", "T" };
+        /// <summary>Palier 0 et 1 (sous le million) : nombre entier complet, sans suffixe.</summary>
+        private static readonly string[] NamedSuffixes = { "", "", "M", "Md", "Md" };
+        private const int FullDigitsTiers = 2;
+        /// <summary>Palier des milliers de milliards : écrit en milliards entiers groupés.</summary>
+        private const int GroupedBillionsTier = 4;
+        /// <summary>Espace insécable (séparateur de milliers et avant le suffixe).</summary>
+        public const char Space = ' ';
         private const int LetterSuffixCount = 26 * 26;
 
         public static string Format(BigDouble value, char decimalSeparator = ',')
@@ -17,10 +26,12 @@ namespace Gargote.Core
             if (value.IsZero) return "0";
             if (value.IsNegative) return "-" + Format(-value, decimalSeparator);
 
-            if (value.Exponent < 3)
-                return Math.Floor(value.ToDouble() + 1e-9).ToString("0", CultureInfo.InvariantCulture);
+            if (value.Exponent < 3 * FullDigitsTiers)
+                return Grouped((long)Math.Floor(value.ToDouble() + 1e-9));
 
             long tier = value.Exponent / 3;
+            if (tier == GroupedBillionsTier)
+                return Grouped((long)Math.Floor(value.ToDouble() / 1e9 + 1e-9)) + Space + NamedSuffixes[tier];
             double scaled = value.Mantissa * Math.Pow(10d, value.Exponent % 3);
 
             string suffix = Suffix(tier);
@@ -36,7 +47,14 @@ namespace Gargote.Core
             else if (scaled < 100d) text = (Math.Floor(scaled * 10d + 1e-9) / 10d).ToString("0.#", CultureInfo.InvariantCulture);
             else text = Math.Floor(scaled + 1e-9).ToString("0", CultureInfo.InvariantCulture);
 
-            return WithSeparator(text, decimalSeparator) + suffix;
+            return WithSeparator(text, decimalSeparator) + Space + suffix;
+        }
+
+        private static string Grouped(long number)
+        {
+            string digits = number.ToString(CultureInfo.InvariantCulture);
+            if (digits.Length <= 3) return digits;
+            return digits.Substring(0, digits.Length - 3) + Space + digits.Substring(digits.Length - 3);
         }
 
         /// <summary>Suffixe du palier (tier = exposant / 3) ; null au-delà des suffixes à deux lettres.</summary>
@@ -68,10 +86,18 @@ namespace Gargote.Core
                 value = -value;
             }
 
-            if (value.Exponent < 3)
-                return WriteLong(buffer, pos, (long)Math.Floor(value.ToDouble() + 1e-9));
+            if (value.Exponent < 3 * FullDigitsTiers)
+                return WriteGrouped(buffer, pos, (long)Math.Floor(value.ToDouble() + 1e-9));
 
             long tier = value.Exponent / 3;
+            if (tier == GroupedBillionsTier)
+            {
+                pos = WriteGrouped(buffer, pos, (long)Math.Floor(value.ToDouble() / 1e9 + 1e-9));
+                buffer[pos++] = Space;
+                buffer[pos++] = 'M';
+                buffer[pos++] = 'd';
+                return pos;
+            }
             long letterIndex = tier - NamedSuffixes.Length;
             if (tier >= NamedSuffixes.Length && letterIndex >= LetterSuffixCount)
             {
@@ -83,6 +109,7 @@ namespace Gargote.Core
             double scaled = value.Mantissa * Math.Pow(10d, value.Exponent % 3);
             int decimals = scaled < 10d ? 2 : scaled < 100d ? 1 : 0;
             pos = WriteDecimal(buffer, pos, scaled, decimals, decimalSeparator);
+            buffer[pos++] = Space;
             if (tier < NamedSuffixes.Length)
             {
                 string named = NamedSuffixes[tier];
@@ -111,6 +138,19 @@ namespace Gargote.Core
                 if (fraction % 10 != 0) buffer[pos++] = (char)('0' + fraction % 10);
             }
             else buffer[pos++] = (char)('0' + fraction);
+            return pos;
+        }
+
+        /// <summary>Entier inférieur au million, avec espace insécable entre milliers.</summary>
+        private static int WriteGrouped(char[] buffer, int pos, long number)
+        {
+            if (number < 1000) return WriteLong(buffer, pos, number);
+            pos = WriteLong(buffer, pos, number / 1000);
+            buffer[pos++] = Space;
+            long low = number % 1000;
+            buffer[pos++] = (char)('0' + low / 100);
+            buffer[pos++] = (char)('0' + low / 10 % 10);
+            buffer[pos++] = (char)('0' + low % 10);
             return pos;
         }
 

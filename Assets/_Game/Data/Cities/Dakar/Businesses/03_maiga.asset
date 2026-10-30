@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Gargote.Data::Gargote.Data.BusinessDefinitionAsset
   id: maiga
   displayName: "Ma\xEFga"
-  baseCost: 1125000
-  growth: 1.14
-  baseRevenue: 202500
-  baseCycleSeconds: 6
-  managerCost: 16900000
+  baseCost: 12800
+  growth: 1.17
+  baseRevenue: 2500
+  baseCycleSeconds: 10.2
+  managerCost: 102000
   affinity: 2

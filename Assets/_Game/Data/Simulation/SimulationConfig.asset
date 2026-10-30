@@ -24,15 +24,15 @@ MonoBehaviour:
     offlineAdMinAwayMinutes: 60
     proxyCities: 4
     proxyCityScaling:
-      costMultiplier: 1000
-      revenueMultiplier: 1000
-      goalMultiplier: 10000
-      starThresholdMultiplier: 1500
+      costMultiplier: 2.5
+      revenueMultiplier: 2.5
+      goalMultiplier: 5
+      starThresholdMultiplier: 1.5
       upgradeCostMultiplier: 1
       goalMultipliers:
-      - 200000
-      - 50000
-      - 100000
+      - 9
+      - 7
+      - 4
     profiles:
     - name: occasionnel_pub
       sessionsPerDay: 3
@@ -129,7 +129,7 @@ MonoBehaviour:
       firstManagerMaxMinutes: 3
       fourthBusinessIndex: 3
       fourthBusinessMaxMinutes: 15
-      firstPrestigeMinDay: 2
+      firstPrestigeMinDay: 1.5
       firstPrestigeMaxDay: 3
       cityMinDays:
       - 6
@@ -143,7 +143,7 @@ MonoBehaviour:
       minAdsPerDay: 4
       maxAdsPerDay: 8
       maxAdGapRatio: 1.6
-      maxStarMultiplier: 600
+      maxStarMultiplier: 100
       starMultiplierDay: 30
       spacedUnlockIndex: 5
       minUnlockSpacingMinutes: 3
