@@ -60,7 +60,7 @@
   },
   "prestige": {
     "k": 1,
-    "threshold": 3000000000000.0,
+    "threshold": 150000000000000.0,
     "bonusPerStar": 0.02,
     "minStarsToPrestige": 15,
     "softCapStars": 0,
@@ -93,87 +93,87 @@
     {
       "id": "dakar",
       "displayName": "Dakar",
-      "goalLifetimeEarnings": 1.5e+18,
-      "startingMoney": 100.0,
+      "goalLifetimeEarnings": 7.5e+19,
+      "startingMoney": 5000.0,
       "businesses": [
         {
           "id": "forokh_thiaya",
           "displayName": "Forokh Thiaya",
-          "baseCost": 100.0,
+          "baseCost": 5000.0,
           "growth": 1.07,
-          "baseRevenue": 6.0,
+          "baseRevenue": 300.0,
           "baseCycleSeconds": 1,
-          "managerCost": 2000.0,
+          "managerCost": 100000.0,
           "affinity": "none"
         },
         {
           "id": "tangana",
           "displayName": "Tangana / Ndéki",
-          "baseCost": 1500.0,
+          "baseCost": 75000.0,
           "growth": 1.15,
-          "baseRevenue": 315.0,
+          "baseRevenue": 15750.0,
           "baseCycleSeconds": 3,
-          "managerCost": 37500.0,
+          "managerCost": 1875000.0,
           "affinity": "morning"
         },
         {
           "id": "maiga",
           "displayName": "Maïga",
-          "baseCost": 22500.0,
+          "baseCost": 1125000.0,
           "growth": 1.14,
-          "baseRevenue": 4050.0,
+          "baseRevenue": 202500.0,
           "baseCycleSeconds": 6,
-          "managerCost": 338000.0,
+          "managerCost": 16900000.0,
           "affinity": "night"
         },
         {
           "id": "gargote",
           "displayName": "Gargote",
-          "baseCost": 338000.0,
+          "baseCost": 16900000.0,
           "growth": 1.13,
-          "baseRevenue": 48700.0,
+          "baseRevenue": 2435000.0,
           "baseCycleSeconds": 12,
-          "managerCost": 3380000.0,
+          "managerCost": 169000000.0,
           "affinity": "none"
         },
         {
           "id": "dibiterie",
           "displayName": "Dibiterie",
-          "baseCost": 5060000.0,
+          "baseCost": 253000000.0,
           "growth": 1.12,
-          "baseRevenue": 729000.0,
+          "baseRevenue": 36450000.0,
           "baseCycleSeconds": 24,
-          "managerCost": 40500000.0,
+          "managerCost": 2025000000.0,
           "affinity": "night"
         },
         {
           "id": "fataya_nems",
           "displayName": "Fataya & Nems",
-          "baseCost": 75900000.0,
+          "baseCost": 3795000000.0,
           "growth": 1.11,
-          "baseRevenue": 12000000.0,
+          "baseRevenue": 600000000.0,
           "baseCycleSeconds": 48,
-          "managerCost": 455000000.0,
+          "managerCost": 22750000000.0,
           "affinity": "none"
         },
         {
           "id": "restaurant_teranga",
           "displayName": "Restaurant Teranga",
-          "baseCost": 24900000000.0,
+          "baseCost": 1245000000000.0,
           "growth": 1.1,
-          "baseRevenue": 3830000000.0,
+          "baseRevenue": 191500000000.0,
           "baseCycleSeconds": 96,
-          "managerCost": 125000000000.0,
+          "managerCost": 6250000000000.0,
           "affinity": "none"
         },
         {
           "id": "traiteur_evenements",
           "displayName": "Traiteur Événements",
-          "baseCost": 374000000000.0,
+          "baseCost": 18700000000000.0,
           "growth": 1.09,
-          "baseRevenue": 64500000000.0,
+          "baseRevenue": 3225000000000.0,
           "baseCycleSeconds": 192,
-          "managerCost": 1490000000000.0,
+          "managerCost": 74500000000000.0,
           "affinity": "none"
         }
       ],
@@ -184,280 +184,280 @@
           "displayName": "Upgrade 01 (à nommer)",
           "business": "forokh_thiaya",
           "multiplier": 2.0,
-          "cost": 100000.0
+          "cost": 5000000.0
         },
         {
           "id": "dakar_up_02",
           "displayName": "Upgrade 02 (à nommer)",
           "business": "tangana",
           "multiplier": 2.0,
-          "cost": 3000000.0
+          "cost": 150000000.0
         },
         {
           "id": "dakar_up_03",
           "displayName": "Upgrade 03 (à nommer)",
           "business": "maiga",
           "multiplier": 2.0,
-          "cost": 90000000.0
+          "cost": 4500000000.0
         },
         {
           "id": "dakar_up_04",
           "displayName": "Upgrade 04 (à nommer)",
           "business": "gargote",
           "multiplier": 2.0,
-          "cost": 2700000000.0
+          "cost": 135000000000.0
         },
         {
           "id": "dakar_up_05",
           "displayName": "Upgrade 05 (à nommer)",
           "business": "all",
           "multiplier": 2.0,
-          "cost": 81000000000.0
+          "cost": 4050000000000.0
         },
         {
           "id": "dakar_up_06",
           "displayName": "Upgrade 06 (à nommer)",
           "business": "dibiterie",
           "multiplier": 2.0,
-          "cost": 2430000000000.0
+          "cost": 121500000000000.0
         },
         {
           "id": "dakar_up_07",
           "displayName": "Upgrade 07 (à nommer)",
           "business": "fataya_nems",
           "multiplier": 2.0,
-          "cost": 72900000000000.0
+          "cost": 3645000000000000.0
         },
         {
           "id": "dakar_up_08",
           "displayName": "Upgrade 08 (à nommer)",
           "business": "restaurant_teranga",
           "multiplier": 2.0,
-          "cost": 2190000000000000.0
+          "cost": 1.095e+17
         },
         {
           "id": "dakar_up_09",
           "displayName": "Upgrade 09 (à nommer)",
           "business": "traiteur_evenements",
           "multiplier": 2.0,
-          "cost": 6.56e+16
+          "cost": 3.28e+18
         },
         {
           "id": "dakar_up_10",
           "displayName": "Upgrade 10 (à nommer)",
           "business": "all",
           "multiplier": 2.0,
-          "cost": 1.97e+18
+          "cost": 9.85e+19
         },
         {
           "id": "dakar_up_11",
           "displayName": "Upgrade 11 (à nommer)",
           "business": "forokh_thiaya",
           "multiplier": 2.0,
-          "cost": 5.9e+19
+          "cost": 2.95e+21
         },
         {
           "id": "dakar_up_12",
           "displayName": "Upgrade 12 (à nommer)",
           "business": "tangana",
           "multiplier": 2.0,
-          "cost": 1.77e+21
+          "cost": 8.85e+22
         },
         {
           "id": "dakar_up_13",
           "displayName": "Upgrade 13 (à nommer)",
           "business": "maiga",
           "multiplier": 2.0,
-          "cost": 5.31e+22
+          "cost": 2.655e+24
         },
         {
           "id": "dakar_up_14",
           "displayName": "Upgrade 14 (à nommer)",
           "business": "gargote",
           "multiplier": 2.0,
-          "cost": 1.59e+24
+          "cost": 7.95e+25
         },
         {
           "id": "dakar_up_15",
           "displayName": "Upgrade 15 (à nommer)",
           "business": "all",
           "multiplier": 2.0,
-          "cost": 4.78e+25
+          "cost": 2.39e+27
         },
         {
           "id": "dakar_up_16",
           "displayName": "Upgrade 16 (à nommer)",
           "business": "dibiterie",
           "multiplier": 2.0,
-          "cost": 1.43e+27
+          "cost": 7.150000000000001e+28
         },
         {
           "id": "dakar_up_17",
           "displayName": "Upgrade 17 (à nommer)",
           "business": "fataya_nems",
           "multiplier": 2.0,
-          "cost": 4.3e+28
+          "cost": 2.15e+30
         },
         {
           "id": "dakar_up_18",
           "displayName": "Upgrade 18 (à nommer)",
           "business": "restaurant_teranga",
           "multiplier": 2.0,
-          "cost": 1.29e+30
+          "cost": 6.449999999999999e+31
         },
         {
           "id": "dakar_up_19",
           "displayName": "Upgrade 19 (à nommer)",
           "business": "traiteur_evenements",
           "multiplier": 2.0,
-          "cost": 3.87e+31
+          "cost": 1.9350000000000002e+33
         },
         {
           "id": "dakar_up_20",
           "displayName": "Upgrade 20 (à nommer)",
           "business": "all",
           "multiplier": 2.0,
-          "cost": 1.16e+33
+          "cost": 5.8e+34
         },
         {
           "id": "dakar_up_21",
           "displayName": "Upgrade 21 (à nommer)",
           "business": "forokh_thiaya",
           "multiplier": 2.0,
-          "cost": 3.49e+34
+          "cost": 1.745e+36
         },
         {
           "id": "dakar_up_22",
           "displayName": "Upgrade 22 (à nommer)",
           "business": "tangana",
           "multiplier": 2.0,
-          "cost": 1.05e+36
+          "cost": 5.25e+37
         },
         {
           "id": "dakar_up_23",
           "displayName": "Upgrade 23 (à nommer)",
           "business": "maiga",
           "multiplier": 2.0,
-          "cost": 3.14e+37
+          "cost": 1.57e+39
         },
         {
           "id": "dakar_up_24",
           "displayName": "Upgrade 24 (à nommer)",
           "business": "gargote",
           "multiplier": 2.0,
-          "cost": 9.41e+38
+          "cost": 4.705e+40
         },
         {
           "id": "dakar_up_25",
           "displayName": "Upgrade 25 (à nommer)",
           "business": "all",
           "multiplier": 2.0,
-          "cost": 2.82e+40
+          "cost": 1.41e+42
         },
         {
           "id": "dakar_up_26",
           "displayName": "Upgrade 26 (à nommer)",
           "business": "dibiterie",
           "multiplier": 2.0,
-          "cost": 8.47e+41
+          "cost": 4.235e+43
         },
         {
           "id": "dakar_up_27",
           "displayName": "Upgrade 27 (à nommer)",
           "business": "fataya_nems",
           "multiplier": 2.0,
-          "cost": 2.54e+43
+          "cost": 1.27e+45
         },
         {
           "id": "dakar_up_28",
           "displayName": "Upgrade 28 (à nommer)",
           "business": "restaurant_teranga",
           "multiplier": 2.0,
-          "cost": 7.63e+44
+          "cost": 3.815e+46
         },
         {
           "id": "dakar_up_29",
           "displayName": "Upgrade 29 (à nommer)",
           "business": "traiteur_evenements",
           "multiplier": 2.0,
-          "cost": 2.29e+46
+          "cost": 1.1450000000000001e+48
         },
         {
           "id": "dakar_up_30",
           "displayName": "Upgrade 30 (à nommer)",
           "business": "all",
           "multiplier": 2.0,
-          "cost": 6.86e+47
+          "cost": 3.43e+49
         },
         {
           "id": "dakar_up_31",
           "displayName": "Upgrade 31 (à nommer)",
           "business": "forokh_thiaya",
           "multiplier": 2.0,
-          "cost": 2.06e+49
+          "cost": 1.0300000000000001e+51
         },
         {
           "id": "dakar_up_32",
           "displayName": "Upgrade 32 (à nommer)",
           "business": "tangana",
           "multiplier": 2.0,
-          "cost": 6.18e+50
+          "cost": 3.09e+52
         },
         {
           "id": "dakar_up_33",
           "displayName": "Upgrade 33 (à nommer)",
           "business": "maiga",
           "multiplier": 2.0,
-          "cost": 1.85e+52
+          "cost": 9.25e+53
         },
         {
           "id": "dakar_up_34",
           "displayName": "Upgrade 34 (à nommer)",
           "business": "gargote",
           "multiplier": 2.0,
-          "cost": 5.56e+53
+          "cost": 2.7800000000000003e+55
         },
         {
           "id": "dakar_up_35",
           "displayName": "Upgrade 35 (à nommer)",
           "business": "all",
           "multiplier": 2.0,
-          "cost": 1.67e+55
+          "cost": 8.35e+56
         },
         {
           "id": "dakar_up_36",
           "displayName": "Upgrade 36 (à nommer)",
           "business": "dibiterie",
           "multiplier": 2.0,
-          "cost": 5e+56
+          "cost": 2.5000000000000002e+58
         },
         {
           "id": "dakar_up_37",
           "displayName": "Upgrade 37 (à nommer)",
           "business": "fataya_nems",
           "multiplier": 2.0,
-          "cost": 1.5e+58
+          "cost": 7.5000000000000005e+59
         },
         {
           "id": "dakar_up_38",
           "displayName": "Upgrade 38 (à nommer)",
           "business": "restaurant_teranga",
           "multiplier": 2.0,
-          "cost": 4.5e+59
+          "cost": 2.2499999999999997e+61
         },
         {
           "id": "dakar_up_39",
           "displayName": "Upgrade 39 (à nommer)",
           "business": "traiteur_evenements",
           "multiplier": 2.0,
-          "cost": 1.35e+61
+          "cost": 6.75e+62
         },
         {
           "id": "dakar_up_40",
           "displayName": "Upgrade 40 (à nommer)",
           "business": "all",
           "multiplier": 2.0,
-          "cost": 4.05e+62
+          "cost": 2.025e+64
         }
       ]
     }

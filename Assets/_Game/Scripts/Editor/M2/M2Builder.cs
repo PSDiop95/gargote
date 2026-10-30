@@ -56,12 +56,14 @@ namespace Gargote.EditorTools
             EditorApplication.Exit(0);
         }
 
-        /// <summary>Régénère les réglages de disposition (rue, caméra, jour/nuit) avec les valeurs par défaut, puis toute la rue.</summary>
+        /// <summary>Régénère les réglages de disposition (rue, caméra, jour/nuit) et les clients spéciaux avec les valeurs par défaut, puis toute la rue.</summary>
         [MenuItem("Gargote/M2/Reset layout defaults + rebuild")]
         public static void ResetLayoutAndBuild()
         {
             foreach (var name in new[] { "StreetConfig", "CameraConfig", "DayNightVisualConfig" })
                 AssetDatabase.DeleteAsset(Visual + "/" + name + ".asset");
+            // Bonus des clients spéciaux en FCFA : suivent l'échelle de prix de l'économie (seed).
+            AssetDatabase.DeleteAsset(Root + "/Data/SpecialCustomersConfig.asset");
             Build();
         }
 
@@ -190,10 +192,10 @@ namespace Gargote.EditorTools
             s.minUnlockedBusinesses = 2;
             s.customers = new[]
             {
-                new SpecialCustomersConfigAsset.Entry { id = "official", nameKey = "special.official", weight = 3, bonusIncomeSeconds = 10, minBonus = 150, crossingSeconds = 9, color = new Color(0.45f, 0.47f, 0.52f) },
-                new SpecialCustomersConfigAsset.Entry { id = "tourist", nameKey = "special.tourist", weight = 3, bonusIncomeSeconds = 15, minBonus = 200, crossingSeconds = 14, color = new Color(0.95f, 0.9f, 0.7f) },
-                new SpecialCustomersConfigAsset.Entry { id = "wrestler", nameKey = "special.wrestler", weight = 2, bonusIncomeSeconds = 20, minBonus = 300, crossingSeconds = 12, color = new Color(0.85f, 0.2f, 0.2f) },
-                new SpecialCustomersConfigAsset.Entry { id = "wedding", nameKey = "special.wedding", weight = 1, bonusIncomeSeconds = 60, minBonus = 1000, crossingSeconds = 15, color = new Color(0.95f, 0.8f, 0.3f) },
+                new SpecialCustomersConfigAsset.Entry { id = "official", nameKey = "special.official", weight = 3, bonusIncomeSeconds = 10, minBonus = 7500, crossingSeconds = 9, color = new Color(0.45f, 0.47f, 0.52f) },
+                new SpecialCustomersConfigAsset.Entry { id = "tourist", nameKey = "special.tourist", weight = 3, bonusIncomeSeconds = 15, minBonus = 10000, crossingSeconds = 14, color = new Color(0.95f, 0.9f, 0.7f) },
+                new SpecialCustomersConfigAsset.Entry { id = "wrestler", nameKey = "special.wrestler", weight = 2, bonusIncomeSeconds = 20, minBonus = 15000, crossingSeconds = 12, color = new Color(0.85f, 0.2f, 0.2f) },
+                new SpecialCustomersConfigAsset.Entry { id = "wedding", nameKey = "special.wedding", weight = 1, bonusIncomeSeconds = 60, minBonus = 50000, crossingSeconds = 15, color = new Color(0.95f, 0.8f, 0.3f) },
             };
         }
 

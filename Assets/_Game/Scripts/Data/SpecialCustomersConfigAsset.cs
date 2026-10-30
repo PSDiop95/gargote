@@ -15,7 +15,7 @@ namespace Gargote.Data
             [Tooltip("Clé de localisation du nom affiché.")] public string nameKey;
             public double weight = 1;
             [Tooltip("Bonus = revenu total/s × secondes.")] public double bonusIncomeSeconds = 60;
-            public double minBonus = 100;
+            public double minBonus = 5000;
             public double crossingSeconds = 12;
             public Color color = Color.white;
         }

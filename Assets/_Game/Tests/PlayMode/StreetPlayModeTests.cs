@@ -62,27 +62,27 @@ namespace Gargote.Tests
             AssertViewsMatchEconomy();
 
             // Achat simple.
-            Give(1e6);
+            Give(1e8);
             Assert.That(businesses.BuyLevels(0, 1), Is.True);
             yield return null;
             AssertViewsMatchEconomy();
 
             // Palier 25 : stade 1 (étal).
-            Give(1e9);
+            Give(1e11);
             Assert.That(businesses.BuyLevels(0, 25 - businesses[0].Level), Is.True);
             yield return null;
             Assert.That(_root.Presenter.Views[0].Stage, Is.GreaterThanOrEqualTo(1));
             AssertViewsMatchEconomy();
 
             // Déblocage + gérant.
-            Give(1e12);
+            Give(1e14);
             Assert.That(businesses.BuyLevels(1, 1), Is.True);
             Assert.That(businesses.HireManager(0), Is.True);
             yield return new WaitForSecondsRealtime(0.8f);
             AssertViewsMatchEconomy();
 
             // Prestige libre : la rue se resynchronise.
-            Give(1e15);
+            Give(1e22);
             Assert.That(_root.Session.PerformPrestige(false), Is.True);
             yield return null;
             AssertViewsMatchEconomy();

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Gargote.Data::Gargote.Data.BusinessDefinitionAsset
   id: traiteur_evenements
   displayName: "Traiteur \xC9v\xE9nements"
-  baseCost: 374000000000
+  baseCost: 18700000000000
   growth: 1.09
-  baseRevenue: 64500000000
+  baseRevenue: 3225000000000
   baseCycleSeconds: 192
-  managerCost: 1490000000000
+  managerCost: 74500000000000
   affinity: 0

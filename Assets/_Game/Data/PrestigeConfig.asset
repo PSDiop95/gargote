@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PrestigeConfig
   m_EditorClassIdentifier: Gargote.Data::Gargote.Data.PrestigeConfigAsset
   k: 1
-  threshold: 3000000000000
+  threshold: 150000000000000
   bonusPerStar: 0.02
   minStarsToPrestige: 15
   softCapStars: 0

@@ -70,6 +70,11 @@ namespace Gargote.Simulation
         public readonly List<double> ComfortRecoveries = new List<double>();
         /// <summary>Temps de remontée après les relances faites sans le confort complet (information).</summary>
         public readonly List<double> EarlyRecoveries = new List<double>();
+        /// <summary>
+        /// Temps de retour des achats optimaux : (minutes actives, coût ÷ gain de revenu/s mesuré, en secondes).
+        /// Hors attente pour réunir la somme ; hors boosts temporaires non retirés.
+        /// </summary>
+        public readonly List<(double ActiveMinutes, double PaybackSeconds)> Paybacks = new List<(double, double)>();
 
         public SimulationEvent FirstEvent(string kind, string detail = null)
         {

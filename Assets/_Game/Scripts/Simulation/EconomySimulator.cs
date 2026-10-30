@@ -246,7 +246,13 @@ namespace Gargote.Simulation
                     case PurchasePolicy.Random: bought = BuyRandom(businesses, economy, random); break;
                     default:
                         var best = PurchaseAdvisor.FindBestLevels(businesses, economy, _definitions.Economy);
+                        var incomeBefore = businesses.TotalIncomePerSecond();
                         bought = economy.CanAfford(best.Cost) && PurchaseAdvisor.Apply(businesses, economy, best);
+                        if (bought)
+                        {
+                            var gain = businesses.TotalIncomePerSecond() - incomeBefore;
+                            if (gain > BigDouble.Zero) result.Paybacks.Add((activeMinutes, (best.Cost / gain).ToDouble()));
+                        }
                         break;
                 }
                 if (!bought) break;
@@ -385,7 +391,7 @@ namespace Gargote.Simulation
                     Profile = name,
                     Metric = metric,
                     Value = value.HasValue ? Fmt(value.Value, unit) : "never",
-                    Target = !enforce ? "info" : target ?? (min > 0 ? Fmt(min, "") + "-" : "<= ") + Fmt(max, unit),
+                    Target = !enforce ? target ?? "info" : target ?? (min > 0 ? Fmt(min, "") + "-" : "<= ") + Fmt(max, unit),
                     Pass = !enforce || value.HasValue && value.Value >= min && value.Value <= max,
                 });
             }
@@ -477,6 +483,27 @@ namespace Gargote.Simulation
             else
             {
                 Check("prestige_recovery_max_minutes", null, " min", 0, t.MaxRecoveryMinutes, optimal && r.Profile.IsReference);
+            }
+
+            // Temps de retour (coût ÷ gain de revenu/s) par phase, informatif : cible de design 2-8 min au début, 10-30 min ensuite.
+            if (r.Paybacks.Count > 0)
+            {
+                double[] phaseEnds = { 10d, 60d, 600d, double.MaxValue };
+                string[] phaseNames = { "0_10min", "10_60min", "1_10h", "10h_plus" };
+                double phaseStart = 0d;
+                var values = new List<double>();
+                for (int p = 0; p < phaseEnds.Length; p++)
+                {
+                    values.Clear();
+                    foreach (var sample in r.Paybacks)
+                        if (sample.ActiveMinutes >= phaseStart && sample.ActiveMinutes < phaseEnds[p]) values.Add(sample.PaybackSeconds);
+                    phaseStart = phaseEnds[p];
+                    if (values.Count == 0) continue;
+                    values.Sort();
+                    Check("payback_median_" + phaseNames[p], values[values.Count / 2] / 60d, " min", 0, 0, false,
+                        "info (p90 " + Fmt(values[(int)(values.Count * 0.9)] / 60d, " min") + ", " +
+                        values.Count.ToString(CultureInfo.InvariantCulture) + " achats)");
+                }
             }
 
             if (r.Profile.WatchesAds)

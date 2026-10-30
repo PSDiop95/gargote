@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Gargote.Data::Gargote.Data.BusinessDefinitionAsset
   id: restaurant_teranga
   displayName: Restaurant Teranga
-  baseCost: 24900000000
+  baseCost: 1245000000000
   growth: 1.1
-  baseRevenue: 3830000000
+  baseRevenue: 191500000000
   baseCycleSeconds: 96
-  managerCost: 125000000000
+  managerCost: 6250000000000
   affinity: 0

@@ -8,11 +8,11 @@ namespace Gargote.Data
     {
         public string id;
         public string displayName;
-        public double baseCost = 100;
+        public double baseCost = 5000;
         [Tooltip("Entre 1.07 et 1.15 (§4.1)")] public double growth = 1.07;
         public double baseRevenue = 1;
         public double baseCycleSeconds = 1;
-        public double managerCost = 1000;
+        public double managerCost = 50000;
         public TimeAffinity affinity;
 
         public BusinessDefinition ToDefinition() => new BusinessDefinition

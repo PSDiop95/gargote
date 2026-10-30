@@ -20,27 +20,27 @@ MonoBehaviour:
     nameKey: special.official
     weight: 3
     bonusIncomeSeconds: 10
-    minBonus: 150
+    minBonus: 7500
     crossingSeconds: 9
     color: {r: 0.45, g: 0.47, b: 0.52, a: 1}
   - id: tourist
     nameKey: special.tourist
     weight: 3
     bonusIncomeSeconds: 15
-    minBonus: 200
+    minBonus: 10000
     crossingSeconds: 14
     color: {r: 0.95, g: 0.9, b: 0.7, a: 1}
   - id: wrestler
     nameKey: special.wrestler
     weight: 2
     bonusIncomeSeconds: 20
-    minBonus: 300
+    minBonus: 15000
     crossingSeconds: 12
     color: {r: 0.85, g: 0.2, b: 0.2, a: 1}
   - id: wedding
     nameKey: special.wedding
     weight: 1
     bonusIncomeSeconds: 60
-    minBonus: 1000
+    minBonus: 50000
     crossingSeconds: 15
     color: {r: 0.95, g: 0.8, b: 0.3, a: 1}

@@ -36,7 +36,7 @@ namespace Gargote.Systems.Street
         /// <summary>Bonus = revenu total par seconde × ce nombre de secondes.</summary>
         public double BonusIncomeSeconds = 60;
         /// <summary>Bonus plancher en FCFA (début de partie).</summary>
-        public double MinBonus = 100;
+        public double MinBonus = 5000;
         /// <summary>Temps de traversée de la rue (fenêtre de tap).</summary>
         public double CrossingSeconds = 12;
     }
