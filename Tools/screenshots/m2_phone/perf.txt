@@ -1,0 +1,35 @@
+Gargote Tycoon — M2 capture (2026-10-30 08:59)
+Écran 1080x2408, samsung SM-A235F, Adreno (TM) 610, RAM 3588 Mo, ARM64 FP ASIMD AES
+Qualité détectée : Medium
+
+[Low x1] 897 frames / 15 s, écran 60 Hz, nuit, 8 commerces, gérants 6/8, clients max 12, plafond qualité 12
+  FPS moyen 59,9 | frame p95 16,8 ms | pire 16,9 ms (cible 60 FPS, mini 30)
+  Batches max 65 (cible < 80) | SetPass max 24 | triangles max 10273 (cible < 100K)
+  GC : frames avec allocation 2/897, max 1496 o/frame (cible 0)
+  Mémoire système utilisée 391 Mo (cible < 400 Mo sur téléphone)
+  Répartition batches : UI 22, personnages 10 (10 variantes), monde 31
+  Sans plafond : 82 FPS (12,23 ms/frame)
+
+[Medium x1] 898 frames / 15 s, écran 60 Hz, nuit, 8 commerces, gérants 6/8, clients max 16, plafond qualité 16
+  FPS moyen 59,9 | frame p95 16,8 ms | pire 16,9 ms (cible 60 FPS, mini 30)
+  Batches max 71 (cible < 80) | SetPass max 25 | triangles max 14833 (cible < 100K)
+  GC : frames avec allocation 0/898, max 0 o/frame (cible 0)
+  Mémoire système utilisée 392 Mo (cible < 400 Mo sur téléphone)
+  Répartition batches : UI 23, personnages 10 (10 variantes), monde 36
+  Sans plafond : 60 FPS (16,71 ms/frame)
+
+[High x1] 897 frames / 15 s, écran 60 Hz, nuit, 8 commerces, gérants 6/8, clients max 20, plafond qualité 20
+  FPS moyen 59,9 | frame p95 16,8 ms | pire 16,8 ms (cible 60 FPS, mini 30)
+  Batches max 72 (cible < 80) | SetPass max 25 | triangles max 15940 (cible < 100K)
+  GC : frames avec allocation 0/897, max 0 o/frame (cible 0)
+  Mémoire système utilisée 392 Mo (cible < 400 Mo sur téléphone)
+  Répartition batches : UI 21, personnages 10 (10 variantes), monde 37
+  Sans plafond : 60 FPS (16,71 ms/frame)
+
+[High x100] 897 frames / 15 s, écran 60 Hz, nuit, 8 commerces, gérants 6/8, clients max 20, plafond qualité 20
+  FPS moyen 59,9 | frame p95 16,8 ms | pire 16,9 ms (cible 60 FPS, mini 30)
+  Batches max 80 (cible < 80) | SetPass max 32 | triangles max 16282 (cible < 100K)
+  GC : frames avec allocation 7/897, max 11568 o/frame (cible 0)
+  Mémoire système utilisée 392 Mo (cible < 400 Mo sur téléphone)
+  Répartition batches : UI 27, personnages 10 (9 variantes), monde 37
+  Sans plafond : 60 FPS (16,70 ms/frame)

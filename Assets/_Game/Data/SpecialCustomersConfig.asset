@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aed1136d320ce0478976788150598f5, type: 3}
+  m_Name: SpecialCustomersConfig
+  m_EditorClassIdentifier: Gargote.Data::Gargote.Data.SpecialCustomersConfigAsset
+  minIntervalSeconds: 120
+  maxIntervalSeconds: 240
+  minUnlockedBusinesses: 2
+  customers:
+  - id: official
+    nameKey: special.official
+    weight: 3
+    bonusIncomeSeconds: 10
+    minBonus: 150
+    crossingSeconds: 9
+    color: {r: 0.45, g: 0.47, b: 0.52, a: 1}
+  - id: tourist
+    nameKey: special.tourist
+    weight: 3
+    bonusIncomeSeconds: 15
+    minBonus: 200
+    crossingSeconds: 14
+    color: {r: 0.95, g: 0.9, b: 0.7, a: 1}
+  - id: wrestler
+    nameKey: special.wrestler
+    weight: 2
+    bonusIncomeSeconds: 20
+    minBonus: 300
+    crossingSeconds: 12
+    color: {r: 0.85, g: 0.2, b: 0.2, a: 1}
+  - id: wedding
+    nameKey: special.wedding
+    weight: 1
+    bonusIncomeSeconds: 60
+    minBonus: 1000
+    crossingSeconds: 15
+    color: {r: 0.95, g: 0.8, b: 0.3, a: 1}

@@ -1,0 +1,25 @@
+{
+    "name": "Gargote.Tests.PlayMode",
+    "rootNamespace": "Gargote.Tests",
+    "references": [
+        "UnityEngine.TestRunner",
+        "Gargote.Core",
+        "Gargote.Systems",
+        "Gargote.Services",
+        "Gargote.Data",
+        "Gargote.Presentation"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

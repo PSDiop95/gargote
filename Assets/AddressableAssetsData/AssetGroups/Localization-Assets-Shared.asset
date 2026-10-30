@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Localization-Assets-Shared
+  m_GUID: 61468c1997e31484f872ded39385ed58
+  m_SerializeEntries:
+  - m_GUID: 38a24962405c84d4fb2d778146e98bb8
+    m_Address: Assets/_Game/Localization/Tables/Gargote Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: ed5fd102b795dbc4eb07db5150a79408, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: ef5d259e5c2b8d143a8f0f0ab875f4b2, type: 2}
+    - {fileID: 11400000, guid: 27ac8c9487114764ea112309fad2f2e4, type: 2}
+    - {fileID: 11400000, guid: 765f0a5467608c84292be7d6373e99e2, type: 2}

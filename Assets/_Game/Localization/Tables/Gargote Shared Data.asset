@@ -1,0 +1,276 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Gargote Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: Gargote
+  m_TableCollectionNameGuidString: 38a24962405c84d4fb2d778146e98bb8
+  m_Entries:
+  - m_Id: 2445058048
+    m_Key: business.forokh_thiaya
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498560
+    m_Key: business.tangana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498561
+    m_Key: business.maiga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498562
+    m_Key: business.gargote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498563
+    m_Key: business.dibiterie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498564
+    m_Key: business.fataya_nems
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498565
+    m_Key: business.restaurant_teranga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498566
+    m_Key: business.traiteur_evenements
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498567
+    m_Key: manager.forokh_thiaya.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498568
+    m_Key: manager.forokh_thiaya.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498569
+    m_Key: manager.forokh_thiaya.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498570
+    m_Key: manager.tangana.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498571
+    m_Key: manager.tangana.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498572
+    m_Key: manager.tangana.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498573
+    m_Key: manager.maiga.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498574
+    m_Key: manager.maiga.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498575
+    m_Key: manager.maiga.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498576
+    m_Key: manager.gargote.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498577
+    m_Key: manager.gargote.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498578
+    m_Key: manager.gargote.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498579
+    m_Key: manager.dibiterie.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498580
+    m_Key: manager.dibiterie.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498581
+    m_Key: manager.dibiterie.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498582
+    m_Key: manager.fataya_nems.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498583
+    m_Key: manager.fataya_nems.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498584
+    m_Key: manager.fataya_nems.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498585
+    m_Key: manager.restaurant_teranga.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498586
+    m_Key: manager.restaurant_teranga.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498587
+    m_Key: manager.restaurant_teranga.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498588
+    m_Key: manager.traiteur_evenements.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498589
+    m_Key: manager.traiteur_evenements.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498590
+    m_Key: manager.traiteur_evenements.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498591
+    m_Key: special.official
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498592
+    m_Key: special.tourist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498593
+    m_Key: special.wrestler
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498594
+    m_Key: special.wedding
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498595
+    m_Key: hud.per_second
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498596
+    m_Key: hud.goal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498597
+    m_Key: hud.welcome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498598
+    m_Key: hud.ad_boost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498599
+    m_Key: sheet.level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498600
+    m_Key: sheet.open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498601
+    m_Key: sheet.manager
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498602
+    m_Key: sheet.max
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498603
+    m_Key: sheet.next_milestone
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498604
+    m_Key: sheet.buy_best
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498605
+    m_Key: badge.morning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498606
+    m_Key: badge.night
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498607
+    m_Key: tab.street
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498608
+    m_Key: tab.managers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498609
+    m_Key: tab.upgrades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498610
+    m_Key: tab.cities
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498611
+    m_Key: tab.shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498612
+    m_Key: tab.coming_soon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498613
+    m_Key: banner.unlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498614
+    m_Key: banner.speed_x2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498615
+    m_Key: banner.revenue_x2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498616
+    m_Key: banner.global
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498617
+    m_Key: offline.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498618
+    m_Key: offline.away
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498619
+    m_Key: offline.claim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498620
+    m_Key: offline.double
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7933675233306738712
+  references:
+    version: 2
+    RefIds:
+    - rid: 7933675233306738712
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1793202213072

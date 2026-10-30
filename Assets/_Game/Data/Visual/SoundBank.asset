@@ -1,0 +1,134 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6b2de3074b480489946bfd5733067d, type: 3}
+  m_Name: SoundBank
+  m_EditorClassIdentifier: Gargote.Presentation::Gargote.Presentation.SoundBank
+  entries:
+  - id: 0
+    clips:
+    - {fileID: 8300000, guid: 54d923fc94522d040ac30dc8b74992f1, type: 3}
+    volume: 0.7
+    bus: 0
+    minInterval: 0.03
+    maxVoices: 4
+  - id: 1
+    clips:
+    - {fileID: 8300000, guid: a1eb28e521827f245b6d1fa17dcf2000, type: 3}
+    volume: 0.35
+    bus: 0
+    minInterval: 0.04
+    maxVoices: 4
+  - id: 2
+    clips:
+    - {fileID: 8300000, guid: b3298bb99c05c1f418d6b126b90e17da, type: 3}
+    volume: 0.45
+    bus: 0
+    minInterval: 0.15
+    maxVoices: 2
+  - id: 3
+    clips:
+    - {fileID: 8300000, guid: 161204d99352bf648bb5be7dfb995c63, type: 3}
+    volume: 0.6
+    bus: 0
+    minInterval: 0.05
+    maxVoices: 3
+  - id: 4
+    clips:
+    - {fileID: 8300000, guid: 387075f2b3ef98e42a474903b6cb075d, type: 3}
+    volume: 0.9
+    bus: 0
+    minInterval: 0.3
+    maxVoices: 1
+  - id: 5
+    clips:
+    - {fileID: 8300000, guid: 09e0e92406c44a34ca5527ac72de0b58, type: 3}
+    volume: 0.9
+    bus: 0
+    minInterval: 0.5
+    maxVoices: 1
+  - id: 6
+    clips:
+    - {fileID: 8300000, guid: c3d81292122177e4d83417971f1cde73, type: 3}
+    volume: 0.8
+    bus: 0
+    minInterval: 0.5
+    maxVoices: 1
+  - id: 7
+    clips:
+    - {fileID: 8300000, guid: 0063b45e20e6f1c46a1d8e408cb43cc8, type: 3}
+    volume: 0.22
+    bus: 3
+    minInterval: 0.05
+    maxVoices: 2
+  - id: 8
+    clips:
+    - {fileID: 8300000, guid: 8dcb8b31c9b6f304c9d1fb2fdfc30c76, type: 3}
+    volume: 0.2
+    bus: 3
+    minInterval: 0.05
+    maxVoices: 2
+  - id: 9
+    clips:
+    - {fileID: 8300000, guid: 5bb95248f1601d043951f6abf159ec0f, type: 3}
+    volume: 0.35
+    bus: 3
+    minInterval: 0.05
+    maxVoices: 2
+  - id: 10
+    clips:
+    - {fileID: 8300000, guid: 986f3a5467abc794e86e48746ce32447, type: 3}
+    volume: 0.3
+    bus: 0
+    minInterval: 2
+    maxVoices: 1
+  - id: 11
+    clips:
+    - {fileID: 8300000, guid: 5bb43ac740caf4d488d637cf7ba7c577, type: 3}
+    volume: 0.6
+    bus: 0
+    minInterval: 0.08
+    maxVoices: 2
+  - id: 12
+    clips:
+    - {fileID: 8300000, guid: 012f42ab2bab6874dac49ccfe921f780, type: 3}
+    volume: 0.8
+    bus: 0
+    minInterval: 0.5
+    maxVoices: 1
+  - id: 13
+    clips:
+    - {fileID: 8300000, guid: db823894fb7770b489a9819c1b5191e6, type: 3}
+    volume: 0.7
+    bus: 2
+    minInterval: 0.3
+    maxVoices: 1
+  - id: 14
+    clips:
+    - {fileID: 8300000, guid: 3312ded067e248b49bfa40c1822d4888, type: 3}
+    volume: 0.45
+    bus: 1
+    minInterval: 0.05
+    maxVoices: 2
+  - id: 15
+    clips:
+    - {fileID: 8300000, guid: b6135511ec1bf7446b3c23441168535d, type: 3}
+    volume: 0.45
+    bus: 1
+    minInterval: 0.05
+    maxVoices: 2
+  - id: 16
+    clips:
+    - {fileID: 8300000, guid: bf21a35951ef19c4e9bcd6f9e34c7480, type: 3}
+    volume: 0.5
+    bus: 0
+    minInterval: 0.04
+    maxVoices: 3

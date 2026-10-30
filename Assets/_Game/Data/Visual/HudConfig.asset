@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c32a95c287bc35428690b5bda4f7db2, type: 3}
+  m_Name: HudConfig
+  m_EditorClassIdentifier: Gargote.Presentation::Gargote.Presentation.HudConfig
+  referenceResolution: {x: 1080, y: 1920}
+  minTouchSize: 132
+  topBarHeight: 230
+  sheetCollapsedHeight: 560
+  sheetExpandedHeight: 1150
+  rowHeight: 190
+  sheetAnimSeconds: 0.3
+  refreshInterval: 0.2
+  panel: {r: 0.12, g: 0.1, b: 0.14, a: 0.92}
+  panelLight: {r: 0.22, g: 0.19, b: 0.25, a: 1}
+  accent: {r: 0.98, g: 0.62, b: 0.12, a: 1}
+  money: {r: 0.55, g: 0.9, b: 0.45, a: 1}
+  cauris: {r: 0.95, g: 0.92, b: 0.85, a: 1}
+  buttonEnabled: {r: 0.22, g: 0.7, b: 0.32, a: 1}
+  buttonDisabled: {r: 0.35, g: 0.35, b: 0.38, a: 1}
+  buttonGlow: {r: 0.65, g: 1, b: 0.55, a: 1}
+  text: {r: 1, g: 1, b: 1, a: 1}
+  mutedText: {r: 0.75, g: 0.72, b: 0.78, a: 1}
+  fontSizeLarge: 64
+  fontSizeMedium: 40
+  fontSizeSmall: 30
+  font: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

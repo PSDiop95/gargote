@@ -1,5 +1,6 @@
 using Gargote.Core;
 using NUnit.Framework;
+using static UnityEngine.TestTools.Constraints.ConstraintExtensions;
 
 namespace Gargote.Tests
 {
@@ -44,6 +45,34 @@ namespace Gargote.Tests
         public void Uses_Requested_Separator()
         {
             Assert.That(NumberFormatter.Format(BigDouble.FromDouble(1234), '.'), Is.EqualTo("1.23K"));
+        }
+        [Test]
+        public void FormatTo_Matches_Format()
+        {
+            var buffer = new char[NumberFormatter.BufferSize];
+            var rng = new System.Random(3);
+            for (int i = 0; i < 5000; i++)
+            {
+                var value = BigDouble.Parse((1 + rng.NextDouble() * 9).ToString("R", System.Globalization.CultureInfo.InvariantCulture)
+                                            + "e" + rng.Next(-2, 2100));
+                if (i % 7 == 0) value = -value;
+                foreach (char sep in new[] { ',', '.' })
+                {
+                    int n = NumberFormatter.FormatTo(value, buffer, sep);
+                    Assert.AreEqual(NumberFormatter.Format(value, sep), new string(buffer, 0, n), value.ToSerializedString());
+                }
+            }
+            Assert.AreEqual("0", new string(buffer, 0, NumberFormatter.FormatTo(BigDouble.Zero, buffer)));
+        }
+
+        [Test]
+        public void FormatTo_Does_Not_Allocate()
+        {
+            var buffer = new char[NumberFormatter.BufferSize];
+            var value = BigDouble.Parse("4.567e41");
+            NumberFormatter.FormatTo(value, buffer);
+            Assert.That((TestDelegate)(() => NumberFormatter.FormatTo(value, buffer)),
+                UnityEngine.TestTools.Constraints.Is.Not.AllocatingGCMemory());
         }
     }
 }

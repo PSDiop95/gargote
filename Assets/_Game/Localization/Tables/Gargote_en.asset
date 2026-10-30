@@ -1,0 +1,271 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Gargote_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 38a24962405c84d4fb2d778146e98bb8, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 2445058048
+    m_Localized: Forokh Thiaya
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498560
+    m_Localized: Tangana / Ndeki
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498561
+    m_Localized: Maiga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498562
+    m_Localized: Gargote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498563
+    m_Localized: Dibiterie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498564
+    m_Localized: Fataya & Nems
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498565
+    m_Localized: Teranga Restaurant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498566
+    m_Localized: Event Caterer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498567
+    m_Localized: Hot bread, hot meat, happy customer!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498568
+    m_Localized: My cart is my office.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498569
+    m_Localized: "J\xEBr\xEBj\xEBf, see you tomorrow!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498570
+    m_Localized: The Touba coffee is ready!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498571
+    m_Localized: Omelette or beans? Both, of course.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498572
+    m_Localized: Mornings, this is the place to be.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498573
+    m_Localized: The night is young, so are the skewers!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498574
+    m_Localized: Under the bulb, everything tastes better.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498575
+    m_Localized: A little hungry? We've got you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498576
+    m_Localized: Today's thieb is out of the pot!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498577
+    m_Localized: Sit down, eat, you're home.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498578
+    m_Localized: "The secret? Patience\u2026 and broken rice."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498579
+    m_Localized: The dibi is grilled just right.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498580
+    m_Localized: Onions, mustard, and you're set!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498581
+    m_Localized: The charcoal is singing, good sign.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498582
+    m_Localized: Hot fatayas, mind your fingers!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498583
+    m_Localized: 'Pastels, nems, fatayas: we have it all.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498584
+    m_Localized: One for you, one for the road.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498585
+    m_Localized: Welcome, hospitality comes first!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498586
+    m_Localized: Table for how many?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498587
+    m_Localized: "Dessert is on us\u2026 for regulars."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498588
+    m_Localized: Three hundred guests? No problem.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498589
+    m_Localized: The pots are on their way!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498590
+    m_Localized: A good party is one you can eat.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498591
+    m_Localized: Hurried Official
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498592
+    m_Localized: Lost Tourist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498593
+    m_Localized: Hungry Wrestler
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498594
+    m_Localized: Wedding Delegation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498595
+    m_Localized: /s
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498596
+    m_Localized: 'Dakar goal:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498597
+    m_Localized: Welcome x3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498598
+    m_Localized: Boost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498599
+    m_Localized: Lv.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498600
+    m_Localized: Open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498601
+    m_Localized: Manager
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498602
+    m_Localized: MAX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498603
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498604
+    m_Localized: Buy the best
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498605
+    m_Localized: x2 MORNING
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498606
+    m_Localized: x2 NIGHT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498607
+    m_Localized: Street
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498608
+    m_Localized: Managers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498609
+    m_Localized: Upgrades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498610
+    m_Localized: Cities
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498611
+    m_Localized: Shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498612
+    m_Localized: Coming soon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498613
+    m_Localized: OPEN!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498614
+    m_Localized: SPEED x2!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498615
+    m_Localized: PROFIT x2!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498616
+    m_Localized: WHOLE STREET x1.25!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498617
+    m_Localized: "While you were away\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498618
+    m_Localized: Away
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498619
+    m_Localized: Collect
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498620
+    m_Localized: x2 (ad)
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

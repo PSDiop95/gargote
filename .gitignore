@@ -42,3 +42,7 @@ crashlytics-build.properties
 /Tools/sim/bin/
 /Tools/sim/obj/
 /Tools/build/results/
+
+# Builds locaux (APK de dev, build Windows de capture)
+/Builds/
+/.utmp/

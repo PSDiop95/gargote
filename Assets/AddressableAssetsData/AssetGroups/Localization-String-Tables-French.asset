@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-French
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Localization-String-Tables-French
+  m_GUID: 71b6dfea592cb0d4ca23e89c229e256d
+  m_SerializeEntries:
+  - m_GUID: 0d4a789cfe7628e46b4b63bec551f7da
+    m_Address: Gargote_fr
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: ed5fd102b795dbc4eb07db5150a79408, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a84b318675123704dbfca40f0376b84d, type: 2}
+    - {fileID: 11400000, guid: dc788255200802440afa36c78b8b5770, type: 2}
+    - {fileID: 11400000, guid: 0a37161cb78691f46b9efdab1aef08e8, type: 2}

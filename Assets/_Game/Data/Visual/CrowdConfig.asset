@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fcd738ebccabc641bbd8597bde82590, type: 3}
+  m_Name: CrowdConfig
+  m_EditorClassIdentifier: Gargote.Presentation::Gargote.Presentation.CrowdConfig
+  maxTotal: 20
+  maxPerBusiness: 6
+  minPerUnlocked: 1
+  customersPerDecade: 1.25
+  minVisualServiceSeconds: 0.6
+  spawnInterval: 0.8
+  offscreenMargin: 3
+  walkSpeed: 2.4
+  rushWalkSpeed: 3.6
+  bobHeight: 0.08
+  bobFrequency: 7
+  idleSwayDegrees: 6
+  idleSwayFrequency: 1.6
+  joyJumpHeight: 0.35
+  joyJumpDuration: 0.35
+  personScale: 0.9
+  outfits:
+  - {r: 0.95, g: 0.45, b: 0.1, a: 1}
+  - {r: 0.1, g: 0.55, b: 0.75, a: 1}
+  - {r: 0.9, g: 0.2, b: 0.35, a: 1}
+  - {r: 0.2, g: 0.65, b: 0.3, a: 1}
+  - {r: 0.95, g: 0.8, b: 0.15, a: 1}
+  - {r: 0.55, g: 0.3, b: 0.7, a: 1}
+  skinTones:
+  - {r: 0.36, g: 0.22, b: 0.14, a: 1}
+  - {r: 0.45, g: 0.29, b: 0.18, a: 1}
+  - {r: 0.28, g: 0.17, b: 0.11, a: 1}
+  employeeOutfit: {r: 0.95, g: 0.95, b: 0.92, a: 1}
+  managerOutfit: {r: 0.12, g: 0.12, b: 0.16, a: 1}
+  managerHat: {r: 0.85, g: 0.15, b: 0.15, a: 1}
+  gestureMinSeconds: 0.3
+  gestureMaxSeconds: 2.5

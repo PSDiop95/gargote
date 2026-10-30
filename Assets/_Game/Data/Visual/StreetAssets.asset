@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79ba3cf083b21ba438916fb0822bdee2, type: 3}
+  m_Name: StreetAssets
+  m_EditorClassIdentifier: Gargote.Presentation::Gargote.Presentation.StreetAssets
+  toon: {fileID: 2100000, guid: 2babde2acfe4ffd43a39c2a801f65e37, type: 2}
+  particles: {fileID: 2100000, guid: be9f27e947fd13f4a883fd323c187cad, type: 2}
+  street: {fileID: 4300000, guid: ed7918ffce450a2409a6e3c1484d4255, type: 2}
+  businessPrefab: {fileID: 466505282870184555, guid: 6d4b0f2852cffb847b3e178e507cd14e, type: 3}
+  stageMeshes:
+  - {fileID: 4300000, guid: 10e64c3029a4c2842a96cd2d4c72c0c0, type: 2}
+  - {fileID: 4300000, guid: 5338eafbbe8422e49afd6cf4ff037d22, type: 2}
+  - {fileID: 4300000, guid: 329608c3f895f124f93a8fbc07d46712, type: 2}
+  - {fileID: 4300000, guid: be2a4fbb3cd300645b2ea557f5c41175, type: 2}
+  - {fileID: 4300000, guid: 127483a26aa4eb842ad7dfe3098b5276, type: 2}
+  - {fileID: 4300000, guid: 27ac2cd7a7751f24385a7cde2f2009b2, type: 2}
+  - {fileID: 4300000, guid: c7029eb380b5e5d4d80f0a3827a80046, type: 2}
+  - {fileID: 4300000, guid: f995a60854996ae42a588d26aecc787a, type: 2}
+  - {fileID: 4300000, guid: c5c5291c8439e9a4ca695422f02782ba, type: 2}
+  - {fileID: 4300000, guid: 8effb48df70b88e40850a785f6639286, type: 2}
+  - {fileID: 4300000, guid: d03847521c8d7f140880a3dd5378a1a2, type: 2}
+  - {fileID: 4300000, guid: f0d689dbabbe07e4babc2f1c34e81888, type: 2}
+  - {fileID: 4300000, guid: aef5bc26aa1bdfc47b89c353dec5d8e1, type: 2}
+  - {fileID: 4300000, guid: 6657de585c23d8d459390e28f3d05a14, type: 2}
+  - {fileID: 4300000, guid: 0096e25ae9d6ccc4bb60c28e556c6df6, type: 2}
+  - {fileID: 4300000, guid: d85a4981e6047004fba7dc28ba6652a0, type: 2}
+  - {fileID: 4300000, guid: 7855b9513e5969e40a3b1e08e19288b9, type: 2}
+  - {fileID: 4300000, guid: aa55d8b497777004481e0496b539c4c0, type: 2}
+  - {fileID: 4300000, guid: 558a1fdab04482646bb2120d78adc220, type: 2}
+  - {fileID: 4300000, guid: 4cde631d347ed6045887bfcc1c278676, type: 2}
+  - {fileID: 4300000, guid: b9f416dfa9b0dc14ea71f6e6d9e5254b, type: 2}
+  - {fileID: 4300000, guid: 0dc20dd2507ff60409fd92a075bd318e, type: 2}
+  - {fileID: 4300000, guid: 6cf4ab393ea885e488a081f84ae4236f, type: 2}
+  - {fileID: 4300000, guid: f0bd3d9f261abe34cb46eef7bba1e9d8, type: 2}
+  - {fileID: 4300000, guid: 5a789710c35f6264892f03fd58a9621b, type: 2}
+  - {fileID: 4300000, guid: 705f2b8e11b52a14383aca80aeda028f, type: 2}
+  - {fileID: 4300000, guid: 3d1c6393207564949b548dc0f9836509, type: 2}
+  - {fileID: 4300000, guid: 5547649c538314743924d24a247229e7, type: 2}
+  - {fileID: 4300000, guid: 3db2af81d2aca25478e114f3483d9c9b, type: 2}
+  - {fileID: 4300000, guid: f7bd5ba8e9c9edf448a973799cd05a21, type: 2}
+  - {fileID: 4300000, guid: b6987dafc1300e84a9288f6e1302f003, type: 2}
+  - {fileID: 4300000, guid: ac7fae54b8696ac4dbbc3c0569e7b00a, type: 2}
+  - {fileID: 4300000, guid: 3e1ca24b86c7771449b7ec72529451ea, type: 2}
+  - {fileID: 4300000, guid: 19fe0edf1272064408fa26ada6b4fed5, type: 2}
+  - {fileID: 4300000, guid: 3649d55d5002bee4f83b7305da86ba55, type: 2}
+  - {fileID: 4300000, guid: dfc2b7c0c5b30b04f82c6a5f820ec5c8, type: 2}
+  - {fileID: 4300000, guid: 71c1cec9d310c7a4b9617a5f3345ea61, type: 2}
+  - {fileID: 4300000, guid: ec6c498407c7bc54f99dbdce5a75dc15, type: 2}
+  - {fileID: 4300000, guid: 3f7dc5a607dd36f4ebca65114975ea9a, type: 2}
+  - {fileID: 4300000, guid: d050bb9bb569b6f479d3501240ac6863, type: 2}
+  customerMeshes:
+  - {fileID: 4300000, guid: 6aa29112a26e60143ae71679cd7bb767, type: 2}
+  - {fileID: 4300000, guid: 84f80e4cce56cba4cb05a0617e42ee8f, type: 2}
+  - {fileID: 4300000, guid: a1cce025a144a8440979af8c7e05d2b0, type: 2}
+  - {fileID: 4300000, guid: 552aae100c127214aa792f09854d8f34, type: 2}
+  - {fileID: 4300000, guid: b6d1d249b48a12541a32715fcc9c46e3, type: 2}
+  - {fileID: 4300000, guid: eab4363222fa91741a52f478fb2ec724, type: 2}
+  employeeMesh: {fileID: 4300000, guid: 5fdbb77ad1efe6f438564dfd7e41f40d, type: 2}
+  managerMesh: {fileID: 4300000, guid: 02e1a47f617eea44a9235e9383d3ed85, type: 2}
+  specialMeshes:
+  - {fileID: 4300000, guid: b99288eca272a6a4993ef3d2537be2a9, type: 2}
+  - {fileID: 4300000, guid: 57cf2dff8f73d524685a4cfc9754ff4a, type: 2}
+  - {fileID: 4300000, guid: 5dfd1684669af954ca2f47346b197001, type: 2}
+  - {fileID: 4300000, guid: 4661bee53fc3329468d962ece284ab48, type: 2}
+  carryMeshes:
+  - {fileID: 4300000, guid: 82bc8bb49ccef274c8d20e49f8d0aee7, type: 2}
+  - {fileID: 4300000, guid: c26de4fd762e1ec41bd1f16bc072ddea, type: 2}
+  rounded: {fileID: 21300000, guid: dafc9de328f25ac4fb88e63b97281a0b, type: 3}
+  circle: {fileID: 21300000, guid: 0e306c8d85b1cae4d86796002699637e, type: 3}
+  bill: {fileID: 21300000, guid: 4828ce58b1144f6489749ce94c5ca3ee, type: 3}
+  hand: {fileID: 21300000, guid: 52582e0053982c64a8bd3539d3a81ad2, type: 3}
+  star: {fileID: 21300000, guid: e9566d54ea19cf8469d539443630bdd1, type: 3}

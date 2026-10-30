@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754aabfd78dfbce43ab0d81af184d10d, type: 3}
+  m_Name: JuiceConfig
+  m_EditorClassIdentifier: Gargote.Presentation::Gargote.Presentation.JuiceConfig
+  minBills: 2
+  maxBills: 5
+  minBurstIntervalSeconds: 0.35
+  minGlobalBurstIntervalSeconds: 0.08
+  billFlightDuration: 0.65
+  billArcHeight: 180
+  billStagger: 0.05
+  billSize: 46
+  billColor: {r: 0.45, g: 0.75, b: 0.45, a: 1}
+  bigBillColor: {r: 0.95, g: 0.8, b: 0.25, a: 1}
+  popupDuration: 0.9
+  popupRise: 90
+  popupFontSize: 44
+  pileMaxBills: 12
+  pileAutoCollectSeconds: 3
+  counterRollSeconds: 0.35
+  counterPulseScale: 1.12
+  tapPunch: 0.18
+  buyPunch: 0.12
+  punchDuration: 0.25
+  buttonPunch: 0.1
+  confettiCount: 60
+  dustCount: 18
+  starCount: 14
+  sparkCount: 6
+  shakeStrength: 0.15
+  shakeDuration: 0.25
+  bannerDuration: 1.2
+  shutterOpenDuration: 0.8
+  handHintDelay: 3
+  managerLineInterval: {x: 20, y: 60}
+  bubbleDuration: 3.5
+  buySoundMinInterval: 0.05
+  buyPitchStep: 0.04
+  buyPitchMax: 1.5
+  buyComboWindow: 0.6
+  reducedEffects: 0
+  reducedParticleDivider: 3
+  haptics: 1

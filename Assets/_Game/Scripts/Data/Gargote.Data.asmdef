@@ -2,7 +2,8 @@
     "name": "Gargote.Data",
     "rootNamespace": "Gargote.Data",
     "references": [
-        "Gargote.Core"
+        "Gargote.Core",
+        "Gargote.Systems"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

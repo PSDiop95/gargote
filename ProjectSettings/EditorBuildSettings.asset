@@ -6,8 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/_Game/Scenes/Street.unity
+    guid: 74e19c004c2f9674592afa74076750de
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: d5bd4c06002e9c743bbdb6ba73f0f7c3, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.localization.settings: {fileID: 11400000, guid: 4fe66b4edf15cc745a8bb2e221244878, type: 2}
   m_UseUCBPForAssetBundles: 0

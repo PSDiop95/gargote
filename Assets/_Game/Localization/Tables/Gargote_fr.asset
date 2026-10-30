@@ -1,0 +1,271 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Gargote_fr
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: 38a24962405c84d4fb2d778146e98bb8, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 2445058048
+    m_Localized: Forokh Thiaya
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498560
+    m_Localized: "Tangana / Nd\xE9ki"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498561
+    m_Localized: "Ma\xEFga"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498562
+    m_Localized: Gargote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498563
+    m_Localized: Dibiterie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498564
+    m_Localized: Fataya & Nems
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498565
+    m_Localized: Restaurant Teranga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498566
+    m_Localized: "Traiteur \xC9v\xE9nements"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498567
+    m_Localized: Pain chaud, viande chaude, client content !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498568
+    m_Localized: Ma brouette, c'est mon bureau.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498569
+    m_Localized: "J\xEBr\xEBj\xEBf, \xE0 demain !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498570
+    m_Localized: "Le caf\xE9 Touba est pr\xEAt !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498571
+    m_Localized: "Omelette ou ni\xE9b\xE9 ? Les deux, bien s\xFBr."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498572
+    m_Localized: Le matin, ici, c'est la meilleure adresse.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498573
+    m_Localized: La nuit est jeune, les brochettes aussi !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498574
+    m_Localized: Sous l'ampoule, tout est plus bon.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498575
+    m_Localized: Une petite faim ? On a ce qu'il faut.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498576
+    m_Localized: "Le thi\xE9b' du jour sort de la marmite !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498577
+    m_Localized: Assieds-toi, mange, c'est la maison.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498578
+    m_Localized: "Le secret ? La patience\u2026 et le riz cass\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498579
+    m_Localized: "Le dibi est grill\xE9 \xE0 point."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498580
+    m_Localized: "Oignons, moutarde, et le tour est jou\xE9 !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498581
+    m_Localized: Le charbon chante, c'est bon signe.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498582
+    m_Localized: Fatayas tout chauds, attention les doigts !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498583
+    m_Localized: 'Pastels, nems, fatayas : on a tout.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498584
+    m_Localized: Un pour toi, un pour la route.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498585
+    m_Localized: Bienvenue chez nous, la Teranga d'abord !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498586
+    m_Localized: Table pour combien ?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498587
+    m_Localized: "Le dessert est offert\u2026 aux habitu\xE9s."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498588
+    m_Localized: "Trois cents invit\xE9s ? Pas de souci."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498589
+    m_Localized: Les marmites sont en route !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498590
+    m_Localized: "Une f\xEAte r\xE9ussie, \xE7a se mange."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498591
+    m_Localized: "Fonctionnaire press\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498592
+    m_Localized: Touriste perdu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498593
+    m_Localized: "Lutteur affam\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498594
+    m_Localized: "D\xE9l\xE9gation de mariage"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498595
+    m_Localized: /s
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498596
+    m_Localized: 'Objectif Dakar :'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498597
+    m_Localized: Bienvenue x3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498598
+    m_Localized: Boost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498599
+    m_Localized: Niv.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498600
+    m_Localized: Ouvrir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498601
+    m_Localized: "G\xE9rant"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498602
+    m_Localized: MAX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498603
+    m_Localized: Palier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498604
+    m_Localized: Acheter le meilleur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498605
+    m_Localized: x2 MATIN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498606
+    m_Localized: x2 NUIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498607
+    m_Localized: Rue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498608
+    m_Localized: "G\xE9rants"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498609
+    m_Localized: Upgrades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498610
+    m_Localized: Villes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498611
+    m_Localized: Boutique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498612
+    m_Localized: "Bient\xF4t disponible"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498613
+    m_Localized: OUVERT !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498614
+    m_Localized: VITESSE x2 !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498615
+    m_Localized: REVENUS x2 !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498616
+    m_Localized: TOUTE LA RUE x1,25 !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498617
+    m_Localized: "Pendant ton absence\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498618
+    m_Localized: Absent
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498619
+    m_Localized: "R\xE9cup\xE9rer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2562498620
+    m_Localized: x2 (pub)
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

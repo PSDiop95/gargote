@@ -1,0 +1,27 @@
+Gargote Tycoon — M2 capture (2026-10-30 08:19)
+Écran 540x1170, 21KG (LENOVO), Intel(R) UHD Graphics, RAM 7710 Mo, 13th Gen Intel(R) Core(TM) i5-13420H
+Qualité détectée : High
+
+[Low x1] 899 frames / 15 s, nuit, 8 commerces, gérants 6/8, clients max 12, plafond qualité 12
+  FPS moyen 60,0 | frame p95 16,7 ms | pire 16,9 ms (cible 60 FPS, mini 30)
+  Batches max 64 (cible < 80) | SetPass max 24 | triangles max 10229 (cible < 100K)
+  GC : frames avec allocation 2/899, max 1496 o/frame (cible 0)
+  Mémoire système utilisée 356 Mo (cible < 400 Mo sur téléphone)
+  Répartition batches : UI 23, personnages 10 (9 variantes), monde 31
+  Sans plafond : 290 FPS (3,45 ms/frame)
+
+[High x1] 899 frames / 15 s, nuit, 8 commerces, gérants 6/8, clients max 20, plafond qualité 20
+  FPS moyen 60,0 | frame p95 16,7 ms | pire 17,3 ms (cible 60 FPS, mini 30)
+  Batches max 73 (cible < 80) | SetPass max 25 | triangles max 15819 (cible < 100K)
+  GC : frames avec allocation 0/899, max 0 o/frame (cible 0)
+  Mémoire système utilisée 372 Mo (cible < 400 Mo sur téléphone)
+  Répartition batches : UI 19, personnages 9 (9 variantes), monde 38
+  Sans plafond : 325 FPS (3,08 ms/frame)
+
+[High x100] 898 frames / 15 s, nuit, 8 commerces, gérants 6/8, clients max 20, plafond qualité 20
+  FPS moyen 59,9 | frame p95 16,8 ms | pire 31,2 ms (cible 60 FPS, mini 30)
+  Batches max 82 (cible < 80) | SetPass max 33 | triangles max 16349 (cible < 100K)
+  GC : frames avec allocation 13/898, max 9128 o/frame (cible 0)
+  Mémoire système utilisée 373 Mo (cible < 400 Mo sur téléphone)
+  Répartition batches : UI 31, personnages 9 (10 variantes), monde 40
+  Sans plafond : 309 FPS (3,24 ms/frame)

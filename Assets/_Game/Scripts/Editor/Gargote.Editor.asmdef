@@ -5,7 +5,19 @@
         "Gargote.Core",
         "Gargote.Systems",
         "Gargote.Simulation",
-        "Gargote.Data"
+        "Gargote.Data",
+        "Gargote.Services",
+        "Gargote.Presentation",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI",
+        "Unity.RenderPipelines.Core.Runtime",
+        "Unity.RenderPipelines.Universal.Runtime",
+        "Unity.Localization",
+        "Unity.Localization.Editor",
+        "Unity.Addressables",
+        "Unity.Addressables.Editor",
+        "Unity.ResourceManager",
+        "Unity.InputSystem"
     ],
     "includePlatforms": [
         "Editor"
