@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 06_fataya_nems
   m_EditorClassIdentifier: Gargote.Data::Gargote.Data.BusinessDefinitionAsset
   id: fataya_nems
-  displayName: Fataya & Nems
+  displayName: "Plateau Sal\xE9"
   baseCost: 419000
   growth: 1.2
   baseRevenue: 25000

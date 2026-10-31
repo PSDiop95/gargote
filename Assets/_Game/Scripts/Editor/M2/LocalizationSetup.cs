@@ -26,9 +26,9 @@ namespace Gargote.EditorTools
             ("business.maiga", "Maïga", "Maiga"),
             ("business.gargote", "Gargote", "Gargote"),
             ("business.dibiterie", "Dibiterie", "Dibiterie"),
-            ("business.fataya_nems", "Fataya & Nems", "Fataya & Nems"),
+            ("business.fataya_nems", "Plateau Salé", "Savoury Platter"),
             ("business.restaurant_teranga", "Restaurant Teranga", "Teranga Restaurant"),
-            ("business.traiteur_evenements", "Traiteur Événements", "Event Caterer"),
+            ("business.traiteur_evenements", "Kiki Traiteur", "Kiki Catering"),
 
             ("manager.forokh_thiaya.1", "Pain chaud, viande chaude, client content !", "Hot bread, hot meat, happy customer!"),
             ("manager.forokh_thiaya.2", "Ma brouette, c'est mon bureau.", "My cart is my office."),

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 08_traiteur_evenements
   m_EditorClassIdentifier: Gargote.Data::Gargote.Data.BusinessDefinitionAsset
   id: traiteur_evenements
-  displayName: "Traiteur \xC9v\xE9nements"
+  displayName: Kiki Traiteur
   baseCost: 4295000
   growth: 1.22
   baseRevenue: 1500000

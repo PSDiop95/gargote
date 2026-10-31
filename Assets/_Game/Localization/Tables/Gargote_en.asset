@@ -39,7 +39,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2562498564
-    m_Localized: Fataya & Nems
+    m_Localized: Savoury Platter
     m_Metadata:
       m_Items: []
   - m_Id: 2562498565
@@ -47,7 +47,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2562498566
-    m_Localized: Event Caterer
+    m_Localized: Kiki Catering
     m_Metadata:
       m_Items: []
   - m_Id: 2562498567
@@ -1067,7 +1067,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 708215796703251
-    m_Localized: Badara the Baye Fall
+    m_Localized: Badara the Early Riser
     m_Metadata:
       m_Items: []
   - m_Id: 708215796703252
@@ -1091,7 +1091,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 708215796703257
-    m_Localized: Oustaz Grill
+    m_Localized: Uncle Embers
     m_Metadata:
       m_Items: []
   - m_Id: 708215796703258
@@ -1227,11 +1227,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 708215796703291
-    m_Localized: Uncle Tchapalo
+    m_Localized: Auntie Bissap
     m_Metadata:
       m_Items: []
   - m_Id: 708215796703292
-    m_Localized: A calabash to celebrate?
+    m_Localized: Ice-cold bissap, ginger with a kick!
     m_Metadata:
       m_Items: []
   - m_Id: 708215796703293
@@ -2263,7 +2263,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 708215800897539
-    m_Localized: Tchapalo
+    m_Localized: Jus de gingembre & bissap
     m_Metadata:
       m_Items: []
   - m_Id: 708215800897540

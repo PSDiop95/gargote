@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 06_tchapalo
   m_EditorClassIdentifier: Gargote.Data::Gargote.Data.BusinessDefinitionAsset
   id: tchapalo
-  displayName: Tchapalo
+  displayName: Jus de gingembre & bissap
   baseCost: 1047500
   growth: 1.2
   baseRevenue: 25000

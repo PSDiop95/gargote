@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Gargote
   baseCost: 40960
   growth: 1.18
-  baseRevenue: 6000
-  baseCycleSeconds: 17.49
+  baseRevenue: 2000
+  baseCycleSeconds: 5.83
   managerCost: 328000
   affinity: 0

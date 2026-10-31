@@ -39,7 +39,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2562498564
-    m_Localized: Fataya & Nems
+    m_Localized: "Plateau Sal\xE9"
     m_Metadata:
       m_Items: []
   - m_Id: 2562498565
@@ -47,7 +47,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2562498566
-    m_Localized: "Traiteur \xC9v\xE9nements"
+    m_Localized: Kiki Traiteur
     m_Metadata:
       m_Items: []
   - m_Id: 2562498567
@@ -1069,7 +1069,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 708215796703251
-    m_Localized: Badara le Baye Fall
+    m_Localized: "Badara le l\xE8ve-t\xF4t"
     m_Metadata:
       m_Items: []
   - m_Id: 708215796703252
@@ -1093,7 +1093,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 708215796703257
-    m_Localized: Oustaz Grill
+    m_Localized: Tonton Braise
     m_Metadata:
       m_Items: []
   - m_Id: 708215796703258
@@ -1229,11 +1229,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 708215796703291
-    m_Localized: Tonton Tchapalo
+    m_Localized: Tata Bissap
     m_Metadata:
       m_Items: []
   - m_Id: 708215796703292
-    m_Localized: "Une calebasse pour f\xEAter \xE7a ?"
+    m_Localized: Bissap bien frais, gingembre qui pique !
     m_Metadata:
       m_Items: []
   - m_Id: 708215796703293
@@ -2268,7 +2268,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 708215800897539
-    m_Localized: Tchapalo
+    m_Localized: Jus de gingembre & bissap
     m_Metadata:
       m_Items: []
   - m_Id: 708215800897540

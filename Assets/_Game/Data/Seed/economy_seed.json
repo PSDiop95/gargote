@@ -166,8 +166,8 @@
           "displayName": "Gargote",
           "baseCost": 40960.0,
           "growth": 1.18,
-          "baseRevenue": 6000.0,
-          "baseCycleSeconds": 17.49,
+          "baseRevenue": 2000.0,
+          "baseCycleSeconds": 5.83,
           "managerCost": 328000.0,
           "affinity": "none"
         },
@@ -183,7 +183,7 @@
         },
         {
           "id": "fataya_nems",
-          "displayName": "Fataya & Nems",
+          "displayName": "Plateau Salé",
           "baseCost": 419000.0,
           "growth": 1.2,
           "baseRevenue": 25000.0,
@@ -203,7 +203,7 @@
         },
         {
           "id": "traiteur_evenements",
-          "displayName": "Traiteur Événements",
+          "displayName": "Kiki Traiteur",
           "baseCost": 4295000.0,
           "growth": 1.22,
           "baseRevenue": 1500000.0,
@@ -556,7 +556,7 @@
         },
         {
           "id": "tchapalo",
-          "displayName": "Tchapalo",
+          "displayName": "Jus de gingembre & bissap",
           "baseCost": 1047500.0,
           "growth": 1.2,
           "baseRevenue": 25000.0,

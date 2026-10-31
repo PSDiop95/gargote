@@ -8,14 +8,14 @@ Statut : `à relire` → `validé` / `à corriger` (avec commentaire du relecteu
 | Élément | Où | Valeur | Statut | Commentaire |
 |---|---|---|---|---|
 | Ville | `economy_seed.json` | Dakar | à relire | |
-| Commerce 1 | `forokh_thiaya` | Forokh Thiaya | à relire | Orthographe wolof à confirmer |
-| Commerce 2 | `tangana` | Tangana / Ndéki | à relire | Affinité « matin » (x2) |
-| Commerce 3 | `maiga` | Maïga | à relire | Affinité « nuit » (x2) |
-| Commerce 4 | `gargote` | Gargote | à relire | |
+| Commerce 1 | `forokh_thiaya` | Forokh Thiaya | à confirmer | Orthographe wolof à confirmer (producteur : « confirmer ») |
+| Commerce 2 | `tangana` | Tangana / Ndéki | à confirmer | Affinité « matin » (x2) (producteur : « confirmer ») |
+| Commerce 3 | `maiga` | Maïga | à confirmer | Affinité « nuit » (x2) (producteur : « confirmer ») |
+| Commerce 4 | `gargote` | Gargote | validé | Repas du midi et dîner ; assiette à 2 000 FCFA |
 | Commerce 5 | `dibiterie` | Dibiterie | à relire | Affinité « nuit » (x2) |
-| Commerce 6 | `fataya_nems` | Fataya & Nems | à relire | |
+| Commerce 6 | `fataya_nems` | Plateau Salé | validé | Renommé (ex-« Fataya & Nems ») ; id interne inchangé |
 | Commerce 7 | `restaurant_teranga` | Restaurant Teranga | à relire | |
-| Commerce 8 | `traiteur_evenements` | Traiteur Événements | à relire | |
+| Commerce 8 | `traiteur_evenements` | Kiki Traiteur | à confirmer | Renommé (ex-« Traiteur Événements ») ; vérifier qu'aucune entreprise réelle ne porte ce nom |
 | Monnaie | `Money` / FCFA | FCFA | à relire | Affichage « 1,23K FCFA » |
 | Prestige | `TotalStars` | Étoiles Teranga | à relire | |
 
@@ -89,11 +89,11 @@ grandit par le nombre de points de vente et de clients. À vérifier : prix cré
 | Forokh Thiaya | Pain + viande grillée | 1 000 | à relire |  |
 | Tangana / Ndéki | Omelette-pain + café | 1 000 | à relire |  |
 | Maïga | Plateau de brochettes | 2 500 | à relire |  |
-| Gargote | Bol familial de thiéboudienne | 6 000 | à relire |  |
+| Gargote | Assiette de thiéboudienne (midi et dîner) | 2 000 | validé | Ancien prix 6 000 (bol familial). Cycle 17,49 s → 5,83 s : 3 fois plus de clients, revenu/s identique |
 | Dibiterie | 1 kg de dibi d'agneau, oignons, moutarde | 12 000 | à relire |  |
-| Fataya & Nems | Commande de 100 pièces | 25 000 | à relire |  |
+| Plateau Salé | Commande de 100 pièces (fatayas, nems, pastels) | 25 000 | à relire |  |
 | Restaurant Teranga | Une table (menus complets) | 40 000 | à relire |  |
-| Traiteur Événements | Un mariage ou un baptême | 1 500 000 | à relire |  |
+| Kiki Traiteur | Un mariage ou un baptême | 1 500 000 | à relire |  |
 
 ## M3 — méta : gérants à collectionner, album de recettes, succès (à relire avant M4)
 
@@ -104,30 +104,29 @@ la griotte, le DJ, le footballeur).
 
 ### Points à trancher en priorité (sensibilité religieuse ou communautaire)
 
-- **Badara le Baye Fall** (Tangana) : référence à la communauté Baye Fall (mouridisme). Ton bienveillant voulu ; vérifier
-  que la tenue et la réplique (M4) restent respectueuses, ou choisir un autre nom.
-- **Oustaz Grill** (Dibiterie) : « oustaz » désigne un enseignant religieux. Jeu de mots possiblement mal reçu ;
-  alternative proposée : « Tonton Dibi » ou « Le Maître du charbon ».
-- **Pape du café Touba** : le café Touba est lié à la ville sainte et à la confrérie mouride ; usage courant et positif,
-  à confirmer.
-- **Le Roi des arènes / Le footballeur star / Le DJ coupé-décalé** : vérifier qu'aucun visuel (M4) ne rappelle une
-  personne réelle.
-- **Tchapalo / Tonton Tchapalo** (bière de mil) : boisson alcoolisée ; acceptable culturellement, à vérifier pour la
-  classification d'âge des stores.
+| Élément | Statut | Décision du producteur |
+|---|---|---|
+| Badara le Baye Fall (Tangana) | à modifier → fait | Garde son nom, trait non religieux : **Badara le lève-tôt** / Badara the Early Riser |
+| Oustaz Grill (Dibiterie) | à modifier → fait | Titre religieux retiré : **Tonton Braise** / Uncle Embers |
+| Pape du café Touba | validé | Conservé tel quel |
+| Tchapalo / Tonton Tchapalo (bière de mil) | rejeté → remplacé | **Pas de boisson alcoolisée dans le jeu.** Commerce `tchapalo` affiché « Jus de gingembre & bissap » ; gérant **Tata Bissap** / Auntie Bissap (« Bissap bien frais, gingembre qui pique ! »). Id interne `tchapalo` gardé (sauvegardes) |
+| Le Roi des arènes / Le footballeur star / Le DJ coupé-décalé | à valider (M4) | Aucun visuel ne doit rappeler une personne réelle |
+
+Règle ajoutée : aucun alcool, tabac ni jeu d'argent dans le jeu (noms, plats, décors, répliques).
 
 ### Gérants à collectionner (32)
 
 | Ville | Commerce | Rareté | Nom FR | Nom EN | Avis |
 |---|---|---|---|---|---|
 | dakar | forokh_thiaya | Commun | Tonton Modou | Uncle Modou | |
-| dakar | tangana | Commun | Badara le Baye Fall | Badara the Baye Fall | |
+| dakar | tangana | Commun | Badara le lève-tôt | Badara the Early Riser | renommé |
 | dakar | maiga | Commun | Ndèye la reine de la nuit | Ndeye, Queen of the Night | |
 | dakar | gargote | Commun | Adja Fatou | Adja Fatou | |
-| dakar | dibiterie | Commun | Oustaz Grill | Oustaz Grill | |
+| dakar | dibiterie | Commun | Tonton Braise | Uncle Embers | renommé |
 | dakar | fataya_nems | Commun | Aïda Pastels | Aida Pastels | |
 | dakar | restaurant_teranga | Commun | Monsieur Teranga | Mister Teranga | |
 | dakar | traiteur_evenements | Commun | Mère Coumba la traiteuse | Mother Coumba the Caterer | |
-| dakar | tangana | Rare | Pape du café Touba | Pape the Touba Coffee Man | |
+| dakar | tangana | Rare | Pape du café Touba | Pape the Touba Coffee Man | validé |
 | dakar | forokh_thiaya | Rare | Fatou Bissap | Fatou Bissap | |
 | dakar | dibiterie | Rare | Ousmane le livreur en Jakarta | Ousmane the Jakarta Rider | |
 | dakar | gargote | Épique | Yaye la Cheffe | Yaye the Chef | |
@@ -140,7 +139,7 @@ la griotte, le DJ, le footballeur).
 | abidjan | attieke_poisson | Commun | Maman Attiéké | Mama Attieke | |
 | abidjan | maquis | Commun | Maman Maquis | Mama Maquis | |
 | abidjan | choukouya | Commun | Le Roi du Choukouya | The Choukouya King | |
-| abidjan | tchapalo | Commun | Tonton Tchapalo | Uncle Tchapalo | |
+| abidjan | tchapalo | Commun | Tata Bissap | Auntie Bissap | remplacé (pas d'alcool) |
 | abidjan | kedjenou | Commun | Tantie Kédjénou | Auntie Kedjenou | |
 | abidjan | restaurant_plateau | Commun | Monsieur Plateau | Mister Plateau | |
 | abidjan | garbadrome | Rare | Le chauffeur de gbaka | The Gbaka Driver | |
@@ -228,5 +227,5 @@ Roi du Forokh, Habitués du Forokh, Paliers du Forokh, Équipe du Forokh, Roi du
 
 ## À venir (M3/M4)
 
-Gérants (Tonton Modou, Badara le Baye Fall, Ndèye la reine de la nuit, Adja Fatou, Oustaz Grill, Aïda Pastels,
+Gérants (Tonton Modou, Badara le lève-tôt, Ndèye la reine de la nuit, Adja Fatou, Tonton Braise, Aïda Pastels,
 Monsieur Teranga, Mère Coumba la traiteuse), répliques, anecdotes et recettes de l'album.

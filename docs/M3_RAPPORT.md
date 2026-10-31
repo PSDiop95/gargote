@@ -127,8 +127,10 @@ portraits remplaceront les cercles.
 ## À fournir avant M4
 
 1. **Relecture culturelle** de `docs/CULTURE_REVIEW.md`, section M3 : 32 gérants, 22 recettes (anecdotes et étapes),
-   62 succès. Points à trancher en premier : *Badara le Baye Fall*, *Oustaz Grill*, *Pape du café Touba*,
-   *Tonton Tchapalo* (boisson alcoolisée, classification d'âge des stores), noms wolof marqués « (à valider) ».
+   62 succès. Premiers points tranchés et appliqués : Badara le lève-tôt, Tonton Braise, Pape du café Touba conservé,
+   Tata Bissap et « Jus de gingembre & bissap » (aucun alcool), Plateau Salé, Kiki Traiteur, assiette de Gargote à
+   2 000 FCFA (revenu/s inchangé, simulation 199/199). Restent : noms wolof marqués « (à valider) », Forokh Thiaya /
+   Tangana / Maïga à confirmer, vérifier que « Kiki Traiteur » n'est pas une entreprise réelle.
 2. **Validation des captures** de ce rapport (ordre des onglets, lisibilité, place des rails) : elles servent de base
    à l'UI finale de M4.
 3. **Décision sur les rewarded du profil accro** (14 par jour) : garder, ou plafonner par placement.
