@@ -49,3 +49,6 @@ crashlytics-build.properties
 
 # Snapshots Memory Profiler (lourds, régénérables)
 *.snap
+# link.xml temporaire généré par le build Addressables
+/Assets/AddressableAssetsData/link.xml
+/Assets/AddressableAssetsData/link.xml.meta
