@@ -9,7 +9,8 @@ namespace Gargote.Systems
     [Serializable]
     public sealed class SaveData
     {
-        public const int CurrentVersion = 1;
+        /// <summary>v1 : M1/M2. v2 : M3 (méta, villes visitées, boosts gagnés, horloge de confiance).</summary>
+        public const int CurrentVersion = 2;
 
         public int Version = CurrentVersion;
         public long SavedUtcTicks;
@@ -41,6 +42,23 @@ namespace Gargote.Systems
         public string[] OwnedCashUpgrades = Array.Empty<string>();
 
         public BusinessSaveData[] Businesses = Array.Empty<BusinessSaveData>();
+
+        // --- v2 (M3) ---
+        public double TimedBoostRemainingSeconds;
+        public double TimedBoostMultiplier = 1d;
+        public double ExtraOfflineCapSeconds;
+        public VisitedCitySaveData[] VisitedCities = Array.Empty<VisitedCitySaveData>();
+        /// <summary>État de la méta (collection, coffres, missions, quotidien, succès, niveau…).</summary>
+        public MetaSaveData Meta;
+    }
+
+    [Serializable]
+    public sealed class VisitedCitySaveData
+    {
+        public string CityId;
+        public string ManagedIncomePerSecond = "0";
+        public string LifetimeEarnings = "0";
+        public long[] Levels;
     }
 
     [Serializable]

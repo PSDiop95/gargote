@@ -18,6 +18,10 @@ namespace Gargote.Presentation
         public Color panel = new Color(0.12f, 0.10f, 0.14f, 0.92f);
         public Color panelLight = new Color(0.22f, 0.19f, 0.25f, 1f);
         public Color accent = new Color(0.98f, 0.62f, 0.12f);
+        /// <summary>Voile derrière les fenêtres. Espace Linear : l'alpha mélange en linéaire, 0,85 ≈ −60 % perçu (0,62 ≈ −35 %).</summary>
+        public Color modalVeil = new Color(0f, 0f, 0f, 0.85f);
+        /// <summary>Résolution de l'image figée de la rue sous une fenêtre (0,5 = demi-écran, assombrie de toute façon).</summary>
+        [Range(0.25f, 1f)] public float streetFreezeScale = 0.5f;
         public Color money = new Color(0.55f, 0.90f, 0.45f);
         public Color cauris = new Color(0.95f, 0.92f, 0.85f);
         public Color buttonEnabled = new Color(0.22f, 0.70f, 0.32f);

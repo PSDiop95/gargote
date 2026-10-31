@@ -34,20 +34,20 @@ namespace Gargote.Presentation
         {
             _hud = hud;
             _assets = assets;
-            var toggleCell = UiFactory.Anchored(safeArea, "DebugToggle", new Vector2(0f, 1f), new Vector2(0f, 1f),
-                new Vector2(16f, -hud.topBarHeight - 30f), new Vector2(130f, 90f));
+            var toggleCell = UiFactory.Anchored(safeArea, "DebugToggle", new Vector2(0f, 0f), new Vector2(0f, 0f),
+                new Vector2(16f, hud.sheetCollapsedHeight + 40f), new Vector2(130f, 90f));
             var toggle = UiFactory.Button(toggleCell, "Button", hud, assets.rounded, "DBG", hud.fontSizeSmall);
             toggle.EnabledColor = new Color(0.6f, 0.15f, 0.6f, 0.85f);
             toggle.Background.color = toggle.EnabledColor;
 
-            _panel = UiFactory.Anchored(safeArea, "DebugPanel", new Vector2(0f, 1f), new Vector2(0f, 1f),
-                new Vector2(16f, -hud.topBarHeight - 130f), new Vector2(520f, 1100f));
+            _panel = UiFactory.Anchored(safeArea, "DebugPanel", new Vector2(0f, 0f), new Vector2(0f, 0f),
+                new Vector2(16f, hud.sheetCollapsedHeight + 140f), new Vector2(520f, 1100f));
             UiFactory.Image(_panel, new Color(0.05f, 0.05f, 0.08f, 0.92f), assets.rounded, true);
             _panel.gameObject.SetActive(false);
             toggle.Clicked = () => _panel.gameObject.SetActive(!_panel.gameObject.activeSelf);
 
-            var statsRt = UiFactory.Anchored(safeArea, "DebugStats", new Vector2(1f, 1f), new Vector2(1f, 1f),
-                new Vector2(-16f, -hud.topBarHeight - 30f), new Vector2(520f, 260f));
+            var statsRt = UiFactory.Anchored(safeArea, "DebugStats", new Vector2(1f, 0f), new Vector2(1f, 0f),
+                new Vector2(-180f, hud.sheetCollapsedHeight + 40f), new Vector2(520f, 260f));
             UiFactory.Image(statsRt, new Color(0f, 0f, 0f, 0.55f), assets.rounded);
             _stats = UiFactory.Text(UiFactory.Stretch(statsRt, "Text"), hud, hud.fontSizeSmall * 0.75f, Color.white, TextAlignmentOptions.TopLeft);
             _stats.margin = new Vector4(14f, 10f, 10f, 10f);

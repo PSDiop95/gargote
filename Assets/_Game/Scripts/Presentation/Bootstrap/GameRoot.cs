@@ -1,9 +1,12 @@
 using System;
 using Gargote.Core;
 using Gargote.Data;
+using System.Collections.Generic;
 using Gargote.Services.Ads;
+using Gargote.Services.Notifications;
 using Gargote.Services.Save;
 using Gargote.Systems;
+using Gargote.Systems.Meta;
 using Gargote.Systems.Street;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -43,8 +46,14 @@ namespace Gargote.Presentation
         /// <summary>Tests PlayMode : remplace la sauvegarde disque (null = fichier).</summary>
         internal static Func<ISaveService> SaveServiceOverride;
         internal static bool SkipOfflinePanel;
+        internal static Func<INotificationService> NotificationServiceOverride;
 
         public GameSession Session { get; private set; }
+        /// <summary>Méta M3 (collection, coffres, missions, quotidien, succès, niveau).</summary>
+        public MetaSession Meta { get; private set; }
+        public GameClock Clock => _gameClock;
+        public IAdsService Ads => _ads;
+        public INotificationService Notifications => _notifications;
         public SpecialCustomerSystem Specials { get; private set; }
         public GameTime GameTime { get; private set; }
         public StreetPresenter Presenter { get; private set; }
@@ -53,6 +62,8 @@ namespace Gargote.Presentation
         public EffectsFx Effects { get; private set; }
         public BusinessSheet Sheet { get; private set; }
         public HudView Hud { get; private set; }
+        public MetaUi MetaUi { get; private set; }
+        public UiLayout Layout { get; private set; }
         public OfflinePanel Offline { get; private set; }
         public PersonRenderer Persons { get; private set; }
         public AudioDirector Audio { get; private set; }
@@ -61,7 +72,14 @@ namespace Gargote.Presentation
         public bool Ready { get; private set; }
 
         private IGameClock _clock;
+        private GameClock _gameClock;
+        private TimeSpan _utcOffset;
+        private float _offsetTimer;
+        private INotificationService _notifications;
+        private readonly List<(NotificationKind, double)> _notificationCandidates = new List<(NotificationKind, double)>(8);
+        private readonly List<PlannedNotification> _plannedNotifications = new List<PlannedNotification>(8);
         private ISaveService _save;
+        private DeviceSettings _deviceSettings;
         private MockAdsService _ads;
         private JuiceConfig _juice;
         private CrowdRules _crowdRules;
@@ -78,6 +96,10 @@ namespace Gargote.Presentation
 
         private void Awake()
         {
+#if UNITY_EDITOR || DEVELOPMENT_BUILD || GARGOTE_PROBE
+            StartupProbe.Mark("awake");
+#endif
+            _deviceSettings = DeviceSettings.Load(); // PlayerPrefs : jamais dans un initialiseur de champ
             // Copies runtime : les bascules debug (effets réduits, qualité) ne modifient jamais les assets du projet.
             _juice = Instantiate(juiceConfig);
             var quality = Instantiate(qualityConfig);
@@ -87,32 +109,57 @@ namespace Gargote.Presentation
             // Pool de tweens préalloué : aucune croissance (donc aucune allocation) pendant les rafales de juice.
             PrimeTween.PrimeTweenConfig.SetTweensCapacity(_juice.tweenCapacity);
             Loc.Initialize();
+#if UNITY_EDITOR || DEVELOPMENT_BUILD || GARGOTE_PROBE
+            StartupProbe.Mark("loc");
+#endif
             _clock = new UnityGameClock();
+            // Fuseau mis en cache (relu chaque minute et au retour au premier plan) : aucune allocation par frame.
+            _utcOffset = TimeZoneInfo.Local.GetUtcOffset(DateTime.UtcNow);
+            _gameClock = new GameClock(_clock, () => _utcOffset);
             var definitions = database.ToDefinitions();
             Session = new GameSession(definitions);
             GameTime = new GameTime(_clock, definitions.Economy.DayNight);
             _ads = new MockAdsService();
+            _notifications = NotificationServiceOverride != null ? NotificationServiceOverride() : new MockNotificationService();
             _save = SaveServiceOverride != null ? SaveServiceOverride() : new FileSaveService(Application.persistentDataPath);
-            LoadGame();
+            LoadGame(database.ToMetaDefinitions(definitions));
+#if UNITY_EDITOR || DEVELOPMENT_BUILD || GARGOTE_PROBE
+            StartupProbe.Mark("data");
+#endif
 
             var specialRules = specialCustomers.ToRules();
             Specials = new SpecialCustomerSystem(specialRules, Session.Economy, () => Session.Businesses, Environment.TickCount);
+            Specials.Rewarded += (i, amount) => Meta.OnSpecialTapped();
             _crowdRules = crowdConfig.ToRules();
             _crowdRules.MaxTotal = Mathf.Min(_crowdRules.MaxTotal, crowdConfig.maxTotal);
             _moneyRules = _juice.ToMoneyRules();
 
             BuildScene(specialRules, tier);
+#if UNITY_EDITOR || DEVELOPMENT_BUILD || GARGOTE_PROBE
+            StartupProbe.Mark("scene");
+#endif
             Ready = true;
+#if UNITY_EDITOR || DEVELOPMENT_BUILD || GARGOTE_PROBE
+            StartupProbe.Attach(gameObject);
+#endif
         }
 
-        private void LoadGame()
+        private void LoadGame(MetaDefinitions metaDefinitions)
         {
             var status = _save.TryLoad(out var data);
-            if ((status != SaveLoadStatus.Loaded && status != SaveLoadStatus.LoadedFromBackup) || data == null) return;
-            Session.LoadFrom(data);
-            var savedUtc = new DateTime(data.SavedUtcTicks, DateTimeKind.Utc);
-            _pendingOfflineSeconds = OfflineCalculator.ResolveElapsedSeconds(savedUtc, _clock.UtcNow,
-                data.SavedMonotonicSeconds, _clock.MonotonicSeconds);
+            bool loaded = (status == SaveLoadStatus.Loaded || status == SaveLoadStatus.LoadedFromBackup) && data != null;
+            if (loaded)
+            {
+                Session.LoadFrom(data);
+                var savedUtc = new DateTime(data.SavedUtcTicks, DateTimeKind.Utc);
+                _pendingOfflineSeconds = OfflineCalculator.ResolveElapsedSeconds(savedUtc, _clock.UtcNow,
+                    data.SavedMonotonicSeconds, _clock.MonotonicSeconds);
+            }
+            // Méta après la session (elle se branche sur les commerces chargés). Sauvegarde M2 : Meta == null.
+            Meta = new MetaSession(Session, metaDefinitions, _gameClock, (ulong)DateTime.UtcNow.Ticks);
+            Meta.Load(loaded ? data.Meta : null);
+            // Absence validée (0 si l'heure a reculé) : fait avancer les minuteries de confiance (coffre gratuit...).
+            if (_pendingOfflineSeconds > 0d) _gameClock.AdvanceOffline(_pendingOfflineSeconds);
         }
 
         private void BuildScene(SpecialCustomerRules specialRules, QualityTierSettings tier)
@@ -176,6 +223,32 @@ namespace Gargote.Presentation
             Presenter.BusinessSelected = i => Sheet.Select(i, true);
 
             Offline = new OfflinePanel(modalSafe, hudConfig, assets);
+
+            // Méta : HUD (niveau, cauris), rails, écrans. Zones réservées : rien d'accroché au monde ne passe dessous.
+            Hud.Bind(Meta);
+            var metaContext = new MetaUiContext
+            {
+                Meta = Meta, Hud = hudConfig, Assets = assets, Ads = _ads, Audio = Audio,
+                BusinessName = id => Loc.Get("business." + id),
+            };
+            metaContext.RequestNotificationPermission = done => _notifications.RequestPermission(done);
+            MetaUi = new MetaUi(hudSafe, modalSafe, metaContext, () => Sheet.Selected, _deviceSettings);
+            Hud.SettingsClicked = MetaUi.Settings.Show;
+            Hud.LevelClicked = MetaUi.ShowLevelInfo;
+            _deviceSettings.Changed += ApplyDeviceSettings;
+            ApplyDeviceSettings();
+            MetaUi.BindSheet(Sheet);
+            Hud.CaurisPlusClicked = () => MetaUi.OpenTab(4);
+            Layout = new UiLayout(worldRoot);
+            Layout.Register(UiZone.TopHud, Hud.Root);
+            Layout.Register(UiZone.Toasts, MetaUi.Hud.Banner);
+            Layout.Register(UiZone.LeftRail, MetaUi.Hud.LeftRail);
+            Layout.Register(UiZone.RightRail, MetaUi.Hud.RightRail);
+            Layout.Register(UiZone.BottomSheet, Sheet.Root);
+            MetaUi.Layout = Layout;
+            MetaUi.Freeze = new StreetFreeze(worldRoot, mainCamera, hudConfig.streetFreezeScale);
+            _worldUi.Layout = Layout;
+            Money.Layout = Layout;
             _dayNight = new DayNightDirector(dayNightConfig, sun, mainCamera);
 
             _input = gameObject.AddComponent<InputRouter>();
@@ -214,8 +287,7 @@ namespace Gargote.Presentation
         /// <summary>Écran de retour : les gains sont calculés par la session (OfflineCalculator), jamais ici.</summary>
         public void ShowOffline(double awaySeconds)
         {
-            double cap = Session.EconomyConfig.Offline.BaseCapSeconds;
-            var result = Session.ComputeOffline(awaySeconds, cap);
+            var result = Session.ComputeOffline(awaySeconds); // plafond : base + étoiles + extension cauris
             if (result.Earnings <= BigDouble.Zero)
             {
                 Session.ClaimOffline(result, 1d);
@@ -232,6 +304,7 @@ namespace Gargote.Presentation
                 _ads.ShowRewarded("offline_x2", ad =>
                 {
                     // Récompense uniquement sur le callback de récompense.
+                    if (ad == AdResult.Rewarded) Meta.OnRewardedWatched();
                     double multiplier = ad == AdResult.Rewarded ? Session.RewardOfflineAd(DayKey()) : 1d;
                     Session.ClaimOffline(result, multiplier);
                     Money.Rain(ad == AdResult.Rewarded ? 36 : 18, 1000f, 1800f);
@@ -241,7 +314,7 @@ namespace Gargote.Presentation
             Audio.Play(SoundId.Cash);
         }
 
-        private static int DayKey() => (int)(DateTime.Now.Date - new DateTime(2024, 1, 1)).TotalDays;
+        private int DayKey() => _gameClock.LocalDayKey;
 
         private void BuildDebug(RectTransform safe)
         {
@@ -262,6 +335,13 @@ namespace Gargote.Presentation
                     Session.Businesses.BuyLevels(i, 1);
                 }
             });
+            _debug.AddButton("Méta : niveau +1", () =>
+            {
+                var level = Meta.Level;
+                if (!level.IsMax) level.AddRaw(level.XpToNext - level.XpIntoLevel);
+            });
+            _debug.AddButton("Méta : coffre Or", () => Meta.Chests.Open("gold", "debug"));
+            _debug.AddButton("Méta : +500 cauris", () => Meta.Ledger.Credit(Currency.Cauris, 500, "debug"));
             _debug.AddButton("Forcer jour / nuit", () =>
             {
                 _forcedHourIndex = (_forcedHourIndex + 1) % ForcedHours.Length;
@@ -282,6 +362,21 @@ namespace Gargote.Presentation
             _debug.AddButton("Qualité Bas / Moyen / Haut", () => ApplyQuality((QualityTier)(((int)Quality.Tier + 1) % 3)));
             _debug.AddButton("Prestige (rejouer Dakar)", () => Session.PerformPrestige(false));
             _debug.AddButton("Effacer la sauvegarde", () => _save.Delete());
+        }
+
+        /// <summary>Réglages joueur : son, effets réduits, qualité (auto = détection au démarrage).</summary>
+        private void ApplyDeviceSettings()
+        {
+            Audio.SetBusEnabled(AudioBus.Music, _deviceSettings.Music);
+            Audio.SetBusEnabled(AudioBus.Sfx, _deviceSettings.Sfx);
+            Audio.SetBusEnabled(AudioBus.Voice, _deviceSettings.Sfx);
+            if (_juice.reducedEffects != _deviceSettings.ReducedEffects)
+            {
+                _juice.reducedEffects = _deviceSettings.ReducedEffects;
+                _moneyRules.MinBurstIntervalSeconds = _juice.ToMoneyRules().MinBurstIntervalSeconds;
+            }
+            var tier = _deviceSettings.Quality < 0 ? Quality.Detect() : (QualityTier)_deviceSettings.Quality;
+            if (tier != Quality.Tier) ApplyQuality(tier);
         }
 
         public void ApplyQuality(QualityTier tier)
@@ -307,7 +402,12 @@ namespace Gargote.Presentation
                 Specials.Tick(step);
                 remaining -= step;
             }
+            _gameClock.AdvancePlayed(Time.unscaledDeltaTime);
+            Meta.Tick(gameDt);
             _lastGameDt = (float)gameDt;
+
+            _offsetTimer += Time.unscaledDeltaTime;
+            if (_offsetTimer >= 60f) RefreshUtcOffset();
 
             _autosave += Time.unscaledDeltaTime;
             if (_autosave >= autosaveSeconds)
@@ -326,11 +426,16 @@ namespace Gargote.Presentation
             float time = Time.unscaledTime;
             double hour = GameTime.HourOfDay;
             _dayNight.Apply(GameTime.DayFraction);
+            Layout.Refresh();
+            var screen = Layout.Screen;
+            if (screen.height > 0f)
+                Rig.StreetViewport = new Vector2((Layout.Street.yMin - screen.yMin) / screen.height, (Layout.Street.yMax - screen.yMin) / screen.height);
             Presenter.Tick(dt, _lastGameDt, time, hour);
             Persons.Render();
             Money.Update(dt);
             _worldUi.Tick();
             Hud.Tick(dt);
+            MetaUi.Tick(dt);
             Sheet.Tick(dt, hour, Session.EconomyConfig.DayNight);
             Offline.Tick(dt);
             Audio.Tick(dt, Presenter.Activity(), _dayNight.Night);
@@ -342,7 +447,9 @@ namespace Gargote.Presentation
             if (Session == null || _save == null) return;
             try
             {
-                _save.Save(Session.ToSaveData(_clock.UtcNow, _clock.MonotonicSeconds));
+                var data = Session.ToSaveData(_clock.UtcNow, _clock.MonotonicSeconds);
+                data.Meta = Meta?.Save();
+                _save.Save(data);
             }
             catch (Exception e)
             {
@@ -350,9 +457,45 @@ namespace Gargote.Presentation
             }
         }
 
+        private void RefreshUtcOffset()
+        {
+            _offsetTimer = 0f;
+            _utcOffset = TimeZoneInfo.Local.GetUtcOffset(DateTime.UtcNow);
+        }
+
         private void OnApplicationPause(bool paused)
         {
-            if (paused) Save();
+            if (paused)
+            {
+                Save();
+                ScheduleNotifications();
+            }
+            else
+            {
+                RefreshUtcOffset();
+                _notifications?.CancelAll();
+            }
+        }
+
+        /// <summary>Mise en arrière-plan : max 2 par jour, jamais entre 22 h et 8 h, désactivables (§7.6).</summary>
+        public void ScheduleNotifications()
+        {
+            if (Meta == null || _notifications == null) return;
+            Meta.NotificationCandidates(_notificationCandidates);
+            NotificationPlanner.Plan(Meta.Definitions.Notifications, Meta.NotificationsEnabled && _notifications.HasPermission,
+                _gameClock.LocalNow, _notificationCandidates, _plannedNotifications);
+            _notifications.Schedule(_plannedNotifications, NotificationText);
+        }
+
+        private static string NotificationText(NotificationKind kind)
+        {
+            switch (kind)
+            {
+                case NotificationKind.FreeChestReady: return Loc.Get("notif.chest_ready");
+                case NotificationKind.OfflineFull: return Loc.Get("notif.offline_full");
+                case NotificationKind.StreakInDanger: return Loc.Get("notif.streak_danger");
+                default: return Loc.Get("login.title");
+            }
         }
 
         private void OnApplicationQuit() => Save();
@@ -360,6 +503,7 @@ namespace Gargote.Presentation
         private void OnDestroy()
         {
             _debug?.Dispose();
+            MetaUi?.Freeze?.Dispose();
             Quality?.Restore();
             if (_juice != null) Destroy(_juice);
         }

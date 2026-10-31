@@ -25,6 +25,11 @@ namespace Gargote.Presentation
         /// <summary>Étendue Z du sol visible (mise à jour chaque frame).</summary>
         public float VisibleMinZ { get; private set; }
         public float VisibleMaxZ { get; private set; }
+        /// <summary>Bande verticale (viewport 0-1) laissée libre par le HUD et le panneau bas (<see cref="UiLayout"/>).</summary>
+        public Vector2 StreetViewport = new Vector2(0f, 1f);
+        /// <summary>Plage Z au sol visible dans la zone de rue (hors HUD et panneau) : apparitions des clients spéciaux.</summary>
+        public float StreetMinZ { get; private set; }
+        public float StreetMaxZ { get; private set; }
         public float VisibleMinX { get; private set; }
         public float VisibleMaxX { get; private set; }
 
@@ -178,6 +183,16 @@ namespace Gargote.Presentation
                 minX = Mathf.Min(minX, p.x); maxX = Mathf.Max(maxX, p.x);
             }
             VisibleMinZ = minZ; VisibleMaxZ = maxZ; VisibleMinX = minX; VisibleMaxX = maxX;
+            float z0 = GroundZ(new Vector3(0.5f, StreetViewport.x, 0f)), z1 = GroundZ(new Vector3(0.5f, StreetViewport.y, 0f));
+            StreetMinZ = Mathf.Min(z0, z1);
+            StreetMaxZ = Mathf.Max(z0, z1);
+        }
+
+        private float GroundZ(Vector3 viewport)
+        {
+            Ray ray = _camera.ViewportPointToRay(viewport);
+            float t = Mathf.Abs(ray.direction.y) > 1e-4f ? -ray.origin.y / ray.direction.y : 0f;
+            return (ray.origin + ray.direction * t).z;
         }
 
         /// <summary>Un point au sol (et sa hauteur) est-il dans l'écran, avec une marge en unités monde ?</summary>

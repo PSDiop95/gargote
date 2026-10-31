@@ -1,0 +1,18 @@
+Gargote Tycoon — M2 capture (2026-10-31 11:43)
+Écran 1080x2408, samsung SM-A235F, Adreno (TM) 610, RAM 3588 Mo, ARM64 FP ASIMD AES
+Qualité détectée : Medium
+Scénario M3 — écrans méta
+  m3_03_missions : ouverture 7,8 ms (cible < 150), 59,8 FPS, pire frame 17,0 ms, ouvert=True
+  m3_04_coffre_ouverture : ouverture 0,9 ms (cible < 150), 59,8 FPS, pire frame 16,8 ms, ouvert=True
+  m3_05_coffre_chances : ouverture 1,5 ms (cible < 150), 59,8 FPS, pire frame 16,9 ms, ouvert=True
+  m3_06_connexion_7j : ouverture 6,8 ms (cible < 150), 59,9 FPS, pire frame 17,0 ms, ouvert=True
+  m3_07_roue : ouverture 3,3 ms (cible < 150), 59,9 FPS, pire frame 16,9 ms, ouvert=True
+  m3_08_gerants : ouverture 25,0 ms (cible < 150), 55,5 FPS, pire frame 100,1 ms, ouvert=True
+  m3_09_gerant_detail : ouverture 2,8 ms (cible < 150), 59,9 FPS, pire frame 16,8 ms, ouvert=True
+  m3_10_album : ouverture 13,2 ms (cible < 150), 59,8 FPS, pire frame 16,8 ms, ouvert=True
+  m3_11_succes : ouverture 63,4 ms (cible < 150), 59,9 FPS, pire frame 16,9 ms, ouvert=True
+  m3_12_upgrades : ouverture 24,4 ms (cible < 150), 59,8 FPS, pire frame 16,8 ms, ouvert=True
+  m3_13_villes : ouverture 3,4 ms (cible < 150), 59,9 FPS, pire frame 16,8 ms, ouvert=True
+  m3_14_boutique : ouverture 7,7 ms (cible < 150), 59,7 FPS, pire frame 16,8 ms, ouvert=True
+  m3_15_reglages : ouverture 4,9 ms (cible < 150), 59,8 FPS, pire frame 16,8 ms, ouvert=True
+  m3_16_prestige_voyage : ouverture 2,3 ms (cible < 150), 59,9 FPS, pire frame 16,8 ms, ouvert=True

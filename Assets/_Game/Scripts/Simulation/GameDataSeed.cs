@@ -91,6 +91,8 @@ namespace Gargote.Simulation
         public double cityCarryOver = 1;
         public double travelMultiplierFloorRatio;
         public double rebuyStartingFundSeconds;
+        /// <summary>Part du revenu géré d'une ville quittée qui continue de rentrer (villes visitées).</summary>
+        public double visitedCityIncomeRatio;
         public StarUpgradeSeed[] starUpgrades;
 
         public PrestigeConfig ToConfig()
@@ -100,7 +102,7 @@ namespace Gargote.Simulation
                 K = k, Threshold = threshold, BonusPerStar = bonusPerStar, MinStarsToPrestige = minStarsToPrestige,
                 SoftCapStars = softCapStars, SoftCapExponent = softCapExponent > 0 ? softCapExponent : 0.5,
                 CityCarryOver = cityCarryOver, TravelMultiplierFloorRatio = travelMultiplierFloorRatio,
-                RebuyStartingFundSeconds = rebuyStartingFundSeconds,
+                RebuyStartingFundSeconds = rebuyStartingFundSeconds, VisitedCityIncomeRatio = visitedCityIncomeRatio,
                 StarUpgrades = new StarUpgradeDefinition[starUpgrades?.Length ?? 0],
             };
             for (int i = 0; i < cfg.StarUpgrades.Length; i++) cfg.StarUpgrades[i] = starUpgrades[i].ToDefinition();
@@ -113,13 +115,17 @@ namespace Gargote.Simulation
     {
         public string id;
         public string displayName;
-        /// <summary>"keep_managers", "auto_buy_first_milestone" ou "rebuy_previous".</summary>
+        /// <summary>
+        /// "keep_managers", "auto_buy_first_milestone", "rebuy_previous" (confort), ou "offline_earnings" (+value),
+        /// "offline_cap" (+value secondes), "global_speed" (x value), "cost_reduction" (x value).
+        /// </summary>
         public string effect;
         public long costStars;
+        public double value;
 
         public StarUpgradeDefinition ToDefinition() => new StarUpgradeDefinition
         {
-            Id = id, Effect = ParseEffect(effect), CostStars = costStars,
+            Id = id, Effect = ParseEffect(effect), CostStars = costStars, Value = value,
         };
 
         public static StarUpgradeEffect ParseEffect(string value)
@@ -129,6 +135,10 @@ namespace Gargote.Simulation
                 case "keep_managers": return StarUpgradeEffect.KeepManagers;
                 case "auto_buy_first_milestone": return StarUpgradeEffect.AutoBuyFirstMilestone;
                 case "rebuy_previous": return StarUpgradeEffect.RebuyPrevious;
+                case "offline_earnings": return StarUpgradeEffect.OfflineEarnings;
+                case "offline_cap": return StarUpgradeEffect.OfflineCap;
+                case "global_speed": return StarUpgradeEffect.GlobalSpeed;
+                case "cost_reduction": return StarUpgradeEffect.CostReduction;
                 default: throw new ArgumentException("Unknown star upgrade effect: " + value);
             }
         }
@@ -261,6 +271,13 @@ namespace Gargote.Simulation
                     MinTravelFloorRatio = targets.minTravelFloorRatio, RecoveryShare = targets.recoveryShare,
                     MaxRecoveryMinutes = targets.maxRecoveryMinutes,
                     RecoveryMinMultiplierGain = targets.recoveryMinMultiplierGain,
+                    MaxCaurisBalanceDays = targets.maxCaurisBalanceDays > 0 ? targets.maxCaurisBalanceDays : 3,
+                    FirstEpicMaxDay = targets.firstEpicMaxDay > 0 ? targets.firstEpicMaxDay : 3,
+                    FirstLegendaryMinDay = targets.firstLegendaryMinDay > 0 ? targets.firstLegendaryMinDay : 10,
+                    FirstLegendaryMaxDay = targets.firstLegendaryMaxDay > 0 ? targets.firstLegendaryMaxDay : 20,
+                    CollectionDay = targets.collectionDay > 0 ? targets.collectionDay : 30,
+                    CollectionMin = targets.collectionMin > 0 ? targets.collectionMin : 0.6,
+                    CollectionMax = targets.collectionMax > 0 ? targets.collectionMax : 0.75,
                 },
             };
             for (int i = 0; i < profiles.Length; i++)
@@ -326,5 +343,8 @@ namespace Gargote.Simulation
         public int spacedUnlockIndex;
         public double minUnlockSpacingMinutes;
         public double minTravelFloorRatio, recoveryShare, maxRecoveryMinutes, recoveryMinMultiplierGain;
+        public double maxCaurisBalanceDays, firstEpicMaxDay, firstLegendaryMinDay, firstLegendaryMaxDay;
+        public int collectionDay;
+        public double collectionMin, collectionMax;
     }
 }

@@ -266,6 +266,2359 @@ MonoBehaviour:
     m_Localized: x2 (pub)
     m_Metadata:
       m_Items: []
+  - m_Id: 708215620542464
+    m_Localized: Cauris
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314624
+    m_Localized: "\xC9toiles Teranga"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314625
+    m_Localized: Jetons
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314626
+    m_Localized: Niv. {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314627
+    m_Localized: x2 {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314628
+    m_Localized: Commun
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314629
+    m_Localized: Rare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314630
+    m_Localized: "\xC9pique"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314631
+    m_Localized: "L\xE9gendaire"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314632
+    m_Localized: Relancer {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508928
+    m_Localized: "Tu vas gagner {0} \xE9toiles"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508929
+    m_Localized: "Revenus x{0} \u2192 x{1}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508930
+    m_Localized: Tu gardes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508931
+    m_Localized: "\xC9toiles, g\xE9rants de collection, cauris, coffres, album, succ\xE8s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508932
+    m_Localized: "On repart de z\xE9ro"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508933
+    m_Localized: FCFA, niveaux des commerces, upgrades FCFA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508934
+    m_Localized: Relancer la ville
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508935
+    m_Localized: Pas encore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508936
+    m_Localized: "Ouvrir \xE0 {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508937
+    m_Localized: 'Objectif atteint ! Ton empire s''agrandit : nouvelle ville, nouvelle
+      cuisine.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508938
+    m_Localized: Partir pour {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508939
+    m_Localized: Relancer = rejouer cette ville plus fort. Voyager = ouvrir la ville
+      suivante.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508940
+    m_Localized: Passer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508941
+    m_Localized: "Bienvenue \xE0 {0} !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508942
+    m_Localized: Villes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508943
+    m_Localized: Tu es ici
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508944
+    m_Localized: Visiter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508945
+    m_Localized: 'Objectif : {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508946
+    m_Localized: Revenu passif {0}/s
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508947
+    m_Localized: Dakar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508948
+    m_Localized: Abidjan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508949
+    m_Localized: Upgrades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508950
+    m_Localized: FCFA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508951
+    m_Localized: "\xC9toiles"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508952
+    m_Localized: NOUVEAU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508953
+    m_Localized: "Achet\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508954
+    m_Localized: Toute la rue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508955
+    m_Localized: "Les g\xE9rants restent apr\xE8s une relance"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508956
+    m_Localized: Achat auto jusqu'au 1er palier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508957
+    m_Localized: Racheter comme avant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508958
+    m_Localized: Gains hors ligne +{0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508959
+    m_Localized: Plafond hors ligne +{0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508960
+    m_Localized: Service x{0} partout
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508961
+    m_Localized: Niveaux {0} moins chers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508962
+    m_Localized: "G\xE9rants"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508963
+    m_Localized: Collection {0}/{1}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508964
+    m_Localized: ???
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508965
+    m_Localized: Niveau {0}/{1}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508966
+    m_Localized: Cartes {0}/{1}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508967
+    m_Localized: Monter de niveau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508968
+    m_Localized: +{0} revenus de son commerce
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508969
+    m_Localized: +{0} revenus partout
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508970
+    m_Localized: Boost x{0} pendant {1}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508971
+    m_Localized: BOOST !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508972
+    m_Localized: "Pr\xEAt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508973
+    m_Localized: Actif {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508974
+    m_Localized: Recharge {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508975
+    m_Localized: Recharger (pub)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508976
+    m_Localized: Placer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508977
+    m_Localized: En poste
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508978
+    m_Localized: "\xC0 trouver dans les coffres"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508979
+    m_Localized: Coffre en bois
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508980
+    m_Localized: Coffre bronze
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508981
+    m_Localized: Coffre en or
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508982
+    m_Localized: Coffre Teranga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508983
+    m_Localized: Ouvrir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508984
+    m_Localized: Gratuit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508985
+    m_Localized: Gratuit dans {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508986
+    m_Localized: Coffre bonus (pub)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508987
+    m_Localized: '{0} cartes'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508988
+    m_Localized: "Probabilit\xE9s par carte"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508989
+    m_Localized: '{0} garanti dans {1} coffres'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508990
+    m_Localized: '{0} garanti au prochain !'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508991
+    m_Localized: Touche pour ouvrir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508992
+    m_Localized: "Tout r\xE9v\xE9ler"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508993
+    m_Localized: NOUVEAU !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508994
+    m_Localized: 'Doublon : +{0} cauris'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508995
+    m_Localized: Boost x{0} {1}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508996
+    m_Localized: Continuer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508997
+    m_Localized: Boutique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508998
+    m_Localized: Coffres
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508999
+    m_Localized: Offres
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509000
+    m_Localized: "Bient\xF4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509001
+    m_Localized: Plafond hors ligne +{0} pendant 24 h
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509002
+    m_Localized: '{0} cauris'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509003
+    m_Localized: "Pack de d\xE9marrage"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509004
+    m_Localized: Packs de cauris
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509005
+    m_Localized: "Sans pubs forc\xE9es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509006
+    m_Localized: Missions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509007
+    m_Localized: "R\xE9cup\xE9rer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509008
+    m_Localized: x2 (pub)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509009
+    m_Localized: Changer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509010
+    m_Localized: Changer (gratuit)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509011
+    m_Localized: Changer (pub)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509012
+    m_Localized: Nouvelle mission dans {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509013
+    m_Localized: Monte {0} au niveau {1}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509014
+    m_Localized: "Embauche le g\xE9rant de {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509015
+    m_Localized: Sers {0} clients
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509016
+    m_Localized: Atteins {0} paliers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509017
+    m_Localized: "Lance {0} boosts de g\xE9rant"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509018
+    m_Localized: "Sers {0} clients sp\xE9ciaux"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509019
+    m_Localized: "Ach\xE8te {0} upgrade(s)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509020
+    m_Localized: Ouvre {0} coffre(s)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509021
+    m_Localized: Gagne {0} FCFA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509022
+    m_Localized: Termine {0} missions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509023
+    m_Localized: Cadeaux du jour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509024
+    m_Localized: Connexion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509025
+    m_Localized: Jour {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509026
+    m_Localized: "R\xE9cup\xE9rer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509027
+    m_Localized: Reviens demain !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509028
+    m_Localized: "S\xE9rie {0} jours"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509029
+    m_Localized: "Ta s\xE9rie est en danger !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509030
+    m_Localized: "Bouclier de s\xE9rie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509031
+    m_Localized: Bouclier (pub)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509032
+    m_Localized: "Ton bouclier a sauv\xE9 ta s\xE9rie !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509033
+    m_Localized: Roue Teranga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509034
+    m_Localized: Tourner (gratuit)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509035
+    m_Localized: Tourner (pub) {0}/{1}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509036
+    m_Localized: Reviens demain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509037
+    m_Localized: "Probabilit\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509038
+    m_Localized: "D\xE9fis du jour"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509039
+    m_Localized: "Tous les d\xE9fis : coffre bonus"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509040
+    m_Localized: "Nouveaux d\xE9fis dans {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509041
+    m_Localized: +{0} cauris
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509042
+    m_Localized: +{0} jetons
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509043
+    m_Localized: +{0} cartes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509044
+    m_Localized: Boost x2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509045
+    m_Localized: +{0} XP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509046
+    m_Localized: Album de recettes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509047
+    m_Localized: '{0}/{1} recettes'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509048
+    m_Localized: 'Album complet : revenus x{0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509049
+    m_Localized: "Sers ce plat pour le d\xE9couvrir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509050
+    m_Localized: La recette
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509051
+    m_Localized: Nouvelle recette !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509052
+    m_Localized: "Succ\xE8s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509053
+    m_Localized: +{0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509054
+    m_Localized: Bronze
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509055
+    m_Localized: Argent
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509056
+    m_Localized: Or
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509057
+    m_Localized: "Succ\xE8s : {0} !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509058
+    m_Localized: Niveau {0} !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509059
+    m_Localized: "R\xE9compense de niveau"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509060
+    m_Localized: "Missions d\xE9bloqu\xE9es : 3 objectifs \xE0 la fois !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509061
+    m_Localized: "Coffres d\xE9bloqu\xE9s : trouve des g\xE9rants rares !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509062
+    m_Localized: La boutique est ouverte.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509063
+    m_Localized: Reviens chaque jour pour un cadeau.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509064
+    m_Localized: "D\xE9pense tes \xE9toiles en upgrades permanents."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509065
+    m_Localized: 'Roue Teranga : un tour gratuit par jour !'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509066
+    m_Localized: 'Album : chaque plat servi rejoint ta collection.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509067
+    m_Localized: "Succ\xE8s : des cauris pour tes exploits."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509068
+    m_Localized: "D\xE9fis du jour : nouveaux chaque minuit."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509069
+    m_Localized: "Ton coffre est pr\xEAt !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509070
+    m_Localized: Tes gains hors ligne sont pleins.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509071
+    m_Localized: "Ta s\xE9rie est en danger \U0001F525"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509072
+    m_Localized: "Veux-tu qu'on te pr\xE9vienne quand ton coffre est pr\xEAt ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509073
+    m_Localized: Oui
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509074
+    m_Localized: Non merci
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509075
+    m_Localized: Notifications
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509076
+    m_Localized: Fermer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509077
+    m_Localized: OK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509078
+    m_Localized: i
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509079
+    m_Localized: '{0} h'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509080
+    m_Localized: '{0} min'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509081
+    m_Localized: '{0} s'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509082
+    m_Localized: Gagne {0} FCFA au total
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509083
+    m_Localized: Sers {0} clients
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509084
+    m_Localized: Tape {0} fois
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509085
+    m_Localized: "Ach\xE8te {0} niveaux"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509086
+    m_Localized: Ouvre {0} commerces
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509087
+    m_Localized: "Embauche {0} g\xE9rants"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509088
+    m_Localized: Atteins {0} paliers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509089
+    m_Localized: "Ach\xE8te {0} upgrades FCFA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509090
+    m_Localized: Relance {0} fois
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509091
+    m_Localized: "Gagne {0} \xE9toiles"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509092
+    m_Localized: Visite {0} villes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509093
+    m_Localized: Ouvre {0} coffres
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509094
+    m_Localized: "Poss\xE8de {0} g\xE9rants"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509095
+    m_Localized: "Poss\xE8de {0} g\xE9rants rares"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509096
+    m_Localized: "Poss\xE8de {0} g\xE9rants \xE9piques"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509097
+    m_Localized: "Poss\xE8de {0} g\xE9rants l\xE9gendaires"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509098
+    m_Localized: "Gagne {0} niveaux de g\xE9rant"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703232
+    m_Localized: Termine {0} missions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703233
+    m_Localized: "Termine {0} d\xE9fis du jour"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703234
+    m_Localized: "S\xE9rie de {0} jours"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703235
+    m_Localized: Connecte-toi {0} jours
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703236
+    m_Localized: Tourne la roue {0} fois
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703237
+    m_Localized: "Sers {0} clients sp\xE9ciaux"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703238
+    m_Localized: Lance {0} boosts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703239
+    m_Localized: "D\xE9couvre {0} recettes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703240
+    m_Localized: Atteins le niveau {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703241
+    m_Localized: Gagne {0} cauris
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703242
+    m_Localized: Atteins {0} paliers de rue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703243
+    m_Localized: "R\xE9cup\xE8re {0} fois tes gains hors ligne"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703244
+    m_Localized: "Regarde {0} pubs r\xE9compens\xE9es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703245
+    m_Localized: '{1} au niveau {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703246
+    m_Localized: "Sers {0} clients \xE0 {1}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703247
+    m_Localized: "{0} paliers \xE0 {1}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703248
+    m_Localized: "G\xE9rant de {1} niveau {0}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703249
+    m_Localized: Tonton Modou
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703250
+    m_Localized: Pain chaud, viande chaude, client content !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703251
+    m_Localized: Badara le Baye Fall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703252
+    m_Localized: "Le caf\xE9 Touba est pr\xEAt, la journ\xE9e peut commencer."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703253
+    m_Localized: "Nd\xE8ye la reine de la nuit"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703254
+    m_Localized: La nuit est jeune, les brochettes aussi !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703255
+    m_Localized: Adja Fatou
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703256
+    m_Localized: Assieds-toi, mange, ici c'est la maison.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703257
+    m_Localized: Oustaz Grill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703258
+    m_Localized: Le charbon chante, c'est bon signe.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703259
+    m_Localized: "A\xEFda Pastels"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703260
+    m_Localized: Un pour toi, un pour la route !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703261
+    m_Localized: Monsieur Teranga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703262
+    m_Localized: Bienvenue chez nous, la Teranga d'abord.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703263
+    m_Localized: "M\xE8re Coumba la traiteuse"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703264
+    m_Localized: "Trois cents invit\xE9s ? Les marmites sont pr\xEAtes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703265
+    m_Localized: "Pape du caf\xE9 Touba"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703266
+    m_Localized: "Une tasse et tu cours jusqu'\xE0 Rufisque !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703267
+    m_Localized: Fatou Bissap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703268
+    m_Localized: Bissap bien frais pour aller avec ton sandwich !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703269
+    m_Localized: Ousmane le livreur en Jakarta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703270
+    m_Localized: "Livr\xE9 avant que \xE7a refroidisse, c'est promis."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703271
+    m_Localized: Yaye la Cheffe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703272
+    m_Localized: "Mon thi\xE9b', on en parle jusqu'\xE0 Saint-Louis."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703273
+    m_Localized: Le chauffeur de car rapide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703274
+    m_Localized: "Dernier arr\xEAt : les brochettes de Nd\xE8ye !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703275
+    m_Localized: "Mame la commer\xE7ante de Sandaga"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703276
+    m_Localized: Le meilleur prix, pour le meilleur client.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703277
+    m_Localized: "Le Roi des ar\xE8nes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703278
+    m_Localized: "Apr\xE8s le combat, tout le quartier mange chez nous !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703279
+    m_Localized: La Grande Griotte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703280
+    m_Localized: Je chante ta maison, et toute la rue accourt.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703281
+    m_Localized: Tantie Alloco
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703282
+    m_Localized: "Alloco bien dor\xE9, viens go\xFBter !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703283
+    m_Localized: Le Boss du Garba
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703284
+    m_Localized: "Garba-l\xE0, c'est le meilleur du quartier !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703285
+    m_Localized: "Maman Atti\xE9k\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703286
+    m_Localized: "Atti\xE9k\xE9 tout frais, poisson bien brais\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703287
+    m_Localized: Maman Maquis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703288
+    m_Localized: Installe-toi, le maquis est ouvert !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703289
+    m_Localized: Le Roi du Choukouya
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703290
+    m_Localized: La viande est tendre, la nuit est belle.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703291
+    m_Localized: Tonton Tchapalo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703292
+    m_Localized: "Une calebasse pour f\xEAter \xE7a ?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703293
+    m_Localized: "Tantie K\xE9dj\xE9nou"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703294
+    m_Localized: Le canari mijote depuis ce matin.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703295
+    m_Localized: Monsieur Plateau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703296
+    m_Localized: "Table r\xE9serv\xE9e pour les grands patrons !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703297
+    m_Localized: Le chauffeur de gbaka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703298
+    m_Localized: "Adjam\xE9\u2013Yopougon, garba compris !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703299
+    m_Localized: Aya la vendeuse de jus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703300
+    m_Localized: "Gnamankoudji bien frais, \xE7a r\xE9veille !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703301
+    m_Localized: Koffi le livreur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703302
+    m_Localized: Je connais toutes les rues de Cocody.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703303
+    m_Localized: La Reine du maquis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703304
+    m_Localized: Chez moi, on mange, on danse, on revient.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703305
+    m_Localized: Le chanteur de zouglou
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703306
+    m_Localized: Une chanson pour chaque client !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703307
+    m_Localized: "Mamie W\xF4r\xF4-w\xF4r\xF4"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703308
+    m_Localized: "Mon taxi s'arr\xEAte toujours devant les bonnes adresses."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703309
+    m_Localized: "Le DJ coup\xE9-d\xE9cal\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703310
+    m_Localized: "Le son est lanc\xE9, la rue est en f\xEAte !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703311
+    m_Localized: Le footballeur star
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703312
+    m_Localized: "Apr\xE8s le match, tout le monde au choukouya !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703313
+    m_Localized: "Pain-viande grill\xE9e"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703314
+    m_Localized: "Le fourneau sur brouette s'installe au coin de la rue d\xE8s la
+      tomb\xE9e du jour. On y glisse la viande grill\xE9e dans un pain encore chaud."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703315
+    m_Localized: Mariner la viande avec oignon, ail et poivre.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703316
+    m_Localized: Griller sur le charbon en retournant souvent.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703317
+    m_Localized: Ouvrir le pain et ajouter oignons et moutarde.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703318
+    m_Localized: Garnir de viande et servir chaud.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703319
+    m_Localized: Omelette du tangana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703320
+    m_Localized: "Au tangana, l'omelette se commande dans un pain pour bien commencer
+      la journ\xE9e. Chacun a son assaisonnement pr\xE9f\xE9r\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703321
+    m_Localized: "Battre les \u0153ufs avec sel et poivre."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703322
+    m_Localized: Faire revenir oignon et piment.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703323
+    m_Localized: "Cuire l'omelette \xE0 feu vif."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703324
+    m_Localized: Servir dans un pain.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703325
+    m_Localized: Spaghetti au pain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703326
+    m_Localized: "Le spaghetti en sandwich surprend les visiteurs mais r\xE9gale
+      les habitu\xE9s. C'est un classique du petit-d\xE9jeuner de rue."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703327
+    m_Localized: "Cuire les p\xE2tes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703328
+    m_Localized: "Pr\xE9parer une sauce tomate-oignon."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703329
+    m_Localized: "M\xE9langer p\xE2tes et sauce."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703330
+    m_Localized: Servir dans un pain.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703331
+    m_Localized: "Ni\xE9b\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703332
+    m_Localized: "Le ni\xE9b\xE9 mijot\xE9 nourrit longtemps et co\xFBte peu. Il
+      se mange souvent avec du pain au tangana."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703333
+    m_Localized: Faire tremper puis cuire les haricots.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703334
+    m_Localized: "Pr\xE9parer une sauce oignon-tomate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703335
+    m_Localized: Laisser mijoter ensemble.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703336
+    m_Localized: Servir avec du pain.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703337
+    m_Localized: Pain-thon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703338
+    m_Localized: "Rapide et pas cher, le pain-thon est le compagnon des matins press\xE9s.
+      On l'agr\xE9mente souvent de mayonnaise et de piment."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703339
+    m_Localized: "\xC9mietter le thon."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703340
+    m_Localized: Ajouter oignon, mayonnaise et piment.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703341
+    m_Localized: Garnir le pain.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703342
+    m_Localized: Macaroni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703343
+    m_Localized: "Les macaronis en sauce sont une autre star du tangana. On les sert
+      parfois avec un \u0153uf."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703344
+    m_Localized: Cuire les macaronis.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703345
+    m_Localized: "Pr\xE9parer la sauce oignon-tomate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703346
+    m_Localized: "M\xE9langer et servir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703347
+    m_Localized: Petits pois
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703348
+    m_Localized: "Les petits pois en sauce garnissent le pain du matin. Un plat simple
+      qui r\xE9chauffe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703349
+    m_Localized: Faire revenir oignon et tomate.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703350
+    m_Localized: Ajouter les petits pois.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703351
+    m_Localized: Laisser mijoter et servir dans un pain.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703352
+    m_Localized: Brochettes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703353
+    m_Localized: "La nuit, les brochettes grillent sous l'ampoule du ma\xEFga. L'odeur
+      attire tout le quartier."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703354
+    m_Localized: "Couper la viande en d\xE9s."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703355
+    m_Localized: "Mariner avec \xE9pices et oignon."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703356
+    m_Localized: Enfiler sur des pics.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703357
+    m_Localized: Griller sur le charbon.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703358
+    m_Localized: "Frites du ma\xEFga"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703359
+    m_Localized: Les frites accompagnent les brochettes et l'omelette du soir. Croustillantes,
+      elles partent vite.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703360
+    m_Localized: "\xC9plucher et couper les pommes de terre."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703361
+    m_Localized: "Frire une premi\xE8re fois."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703362
+    m_Localized: "Frire \xE0 nouveau plus chaud."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703363
+    m_Localized: Saler et servir.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703364
+    m_Localized: "Thi\xE9boudienne"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703365
+    m_Localized: "Riz au poisson et l\xE9gumes, le thi\xE9boudienne est souvent pr\xE9sent\xE9
+      comme le plat national du S\xE9n\xE9gal. Le riz du fond de la marmite, croustillant,
+      est tr\xE8s appr\xE9ci\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703366
+    m_Localized: "Farcir le poisson d'une p\xE2te de persil, ail et piment."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703367
+    m_Localized: "Faire revenir oignon et concentr\xE9 de tomate."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703368
+    m_Localized: "Cuire poisson et l\xE9gumes dans la sauce."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703369
+    m_Localized: Cuire le riz dans le bouillon.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703370
+    m_Localized: "Servir le riz avec poisson et l\xE9gumes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703371
+    m_Localized: Yassa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703372
+    m_Localized: "Le yassa marie le citron et les oignons confits. Il se d\xE9cline
+      au poulet ou au poisson."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703373
+    m_Localized: Mariner le poulet avec citron, oignons et moutarde.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703374
+    m_Localized: Griller le poulet.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703375
+    m_Localized: Faire fondre les oignons de la marinade.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703376
+    m_Localized: Mijoter le poulet dans les oignons et servir avec du riz.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703377
+    m_Localized: "Maf\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703378
+    m_Localized: "Le maf\xE9 est une sauce \xE0 base de p\xE2te d'arachide. Il est
+      appr\xE9ci\xE9 dans toute l'Afrique de l'Ouest."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703379
+    m_Localized: Faire revenir la viande et l'oignon.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703380
+    m_Localized: "Ajouter tomate et p\xE2te d'arachide d\xE9lay\xE9e."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703381
+    m_Localized: "Mijoter avec les l\xE9gumes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703382
+    m_Localized: Servir avec du riz.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703383
+    m_Localized: Dibi d'agneau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703384
+    m_Localized: "\xC0 la dibiterie, l'agneau grill\xE9 se commande au poids. Il
+      se partage avec oignons et moutarde."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703385
+    m_Localized: Couper l'agneau en morceaux.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703386
+    m_Localized: Griller au charbon.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703387
+    m_Localized: Assaisonner de sel et poivre.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703388
+    m_Localized: Servir avec oignons et moutarde.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703389
+    m_Localized: Fatayas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703390
+    m_Localized: "Les fatayas sont des chaussons frits farcis. Ils se mangent avec
+      une sauce tomate piment\xE9e."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703391
+    m_Localized: "Pr\xE9parer une p\xE2te souple."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703392
+    m_Localized: Garnir de viande ou de poisson.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703393
+    m_Localized: Fermer en chausson.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703394
+    m_Localized: "Frire jusqu'\xE0 dorure."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703395
+    m_Localized: Nems
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703396
+    m_Localized: "Les nems font partie des en-cas de f\xEAte au S\xE9n\xE9gal. Ils
+      rappellent une histoire de rencontres entre cuisines."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703397
+    m_Localized: "Pr\xE9parer la farce."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703398
+    m_Localized: Rouler dans les galettes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703399
+    m_Localized: Frire et servir chaud.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703400
+    m_Localized: Pastels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703401
+    m_Localized: "Les pastels sont de petits chaussons au poisson. Ils sont incontournables
+      dans les f\xEAtes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703402
+    m_Localized: "\xC9mietter le poisson avec oignon et piment."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703403
+    m_Localized: "Garnir de petits ronds de p\xE2te."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703404
+    m_Localized: Frire et servir avec sauce.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703405
+    m_Localized: Soupou kandja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703406
+    m_Localized: "Le soupou kandja est une sauce au gombo tr\xE8s appr\xE9ci\xE9e.
+      Elle se sert avec du riz blanc."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703407
+    m_Localized: Couper le gombo.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703408
+    m_Localized: Cuire viande et poisson.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703409
+    m_Localized: Ajouter gombo et huile de palme.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703410
+    m_Localized: Mijoter et servir avec du riz.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703411
+    m_Localized: Caldou
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703412
+    m_Localized: "Le caldou est un poisson cuit dans un bouillon citronn\xE9. C'est
+      un plat l\xE9ger et parfum\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703413
+    m_Localized: Faire revenir oignon et piment.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703414
+    m_Localized: Ajouter eau et citron.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703415
+    m_Localized: Pocher le poisson.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703416
+    m_Localized: Servir avec du riz.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703417
+    m_Localized: Thiakry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703418
+    m_Localized: "Le thiakry est un dessert de semoule de mil au lait caill\xE9.
+      Il se sert bien frais."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703419
+    m_Localized: "Cuire la semoule de mil \xE0 la vapeur."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703420
+    m_Localized: "M\xE9langer avec lait caill\xE9 et sucre."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703421
+    m_Localized: Parfumer et servir frais.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703422
+    m_Localized: "Thi\xE9r\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703423
+    m_Localized: "Le thi\xE9r\xE9, couscous de mil, accompagne de nombreuses f\xEAtes
+      familiales. Il se sert avec une sauce \xE0 la viande."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703424
+    m_Localized: "Cuire la semoule de mil \xE0 la vapeur."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703425
+    m_Localized: "Pr\xE9parer une sauce \xE0 la viande."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703426
+    m_Localized: Servir ensemble.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703427
+    m_Localized: Ngalakh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703428
+    m_Localized: "Le ngalakh est un dessert de mil \xE0 l'arachide et au pain de
+      singe. Il se partage entre voisins lors des f\xEAtes."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703429
+    m_Localized: Cuire la semoule de mil.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703430
+    m_Localized: "Pr\xE9parer une cr\xE8me d'arachide et de pain de singe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703431
+    m_Localized: "M\xE9langer et servir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703432
+    m_Localized: "M\xE9choui"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703433
+    m_Localized: "Le mouton r\xF4ti entier est le roi des grandes f\xEAtes. Pr\xE9parer
+      un m\xE9choui demande des heures de patience."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703434
+    m_Localized: Assaisonner le mouton.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703435
+    m_Localized: "R\xF4tir lentement sur le feu."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703436
+    m_Localized: "Arroser r\xE9guli\xE8rement."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703437
+    m_Localized: Servir avec oignons et frites.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703438
+    m_Localized: Roi du Forokh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703439
+    m_Localized: "Habitu\xE9s du Forokh"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703440
+    m_Localized: Paliers du Forokh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703441
+    m_Localized: "\xC9quipe du Forokh"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703442
+    m_Localized: Roi du Tangana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703443
+    m_Localized: "Habitu\xE9s du Tangana"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703444
+    m_Localized: Paliers du Tangana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703445
+    m_Localized: "\xC9quipe du Tangana"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703446
+    m_Localized: "Roi du Ma\xEFga"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703447
+    m_Localized: "Habitu\xE9s du Ma\xEFga"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703448
+    m_Localized: "Paliers du Ma\xEFga"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703449
+    m_Localized: "\xC9quipe du Ma\xEFga"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703450
+    m_Localized: Roi de la Gargote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703451
+    m_Localized: "Habitu\xE9s de la Gargote"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703452
+    m_Localized: Paliers de la Gargote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703453
+    m_Localized: "\xC9quipe de la Gargote"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703454
+    m_Localized: Roi du Dibi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703455
+    m_Localized: "Habitu\xE9s du Dibi"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703456
+    m_Localized: Paliers du Dibi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703457
+    m_Localized: "\xC9quipe du Dibi"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703458
+    m_Localized: Roi des Fatayas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703459
+    m_Localized: "Habitu\xE9s des Fatayas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703460
+    m_Localized: Paliers des Fatayas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703461
+    m_Localized: "\xC9quipe des Fatayas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703462
+    m_Localized: Roi de la Teranga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703463
+    m_Localized: "Habitu\xE9s de la Teranga"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703464
+    m_Localized: Paliers de la Teranga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703465
+    m_Localized: "\xC9quipe de la Teranga"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703466
+    m_Localized: "Roi des F\xEAtes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703467
+    m_Localized: "Habitu\xE9s des F\xEAtes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703468
+    m_Localized: "Paliers des F\xEAtes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703469
+    m_Localized: "\xC9quipe des F\xEAtes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703470
+    m_Localized: Le milliard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703471
+    m_Localized: "Toute la ville a mang\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703472
+    m_Localized: "Doigts de f\xE9e"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703473
+    m_Localized: "B\xE2tisseur"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703474
+    m_Localized: La rue s'anime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703475
+    m_Localized: Bon patron
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703476
+    m_Localized: Plus vite !
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703477
+    m_Localized: "Bien \xE9quip\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703478
+    m_Localized: Recommencer en mieux
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703479
+    m_Localized: Teranga absolue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703480
+    m_Localized: Tour de l'Afrique de l'Ouest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703481
+    m_Localized: Chasseur de coffres
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703482
+    m_Localized: Collectionneur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703483
+    m_Localized: Talents rares
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703484
+    m_Localized: "\xC9pique !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703485
+    m_Localized: "L\xE9gende de la rue"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703486
+    m_Localized: "\xC9cole des g\xE9rants"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703487
+    m_Localized: Mission accomplie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703488
+    m_Localized: "D\xE9fi relev\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703489
+    m_Localized: "Fid\xE8le au poste"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703490
+    m_Localized: "Habitu\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703491
+    m_Localized: La roue tourne
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703492
+    m_Localized: Bon accueil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703493
+    m_Localized: Coup de boost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703494
+    m_Localized: Album gourmand
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703495
+    m_Localized: Grand patron
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703496
+    m_Localized: Collier de cauris
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703497
+    m_Localized: Toute la rue avance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703498
+    m_Localized: "\xC7a tourne sans moi"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703499
+    m_Localized: Merci les sponsors
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703500
+    m_Localized: Pain frais de la boulangerie du quartier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703501
+    m_Localized: Brouette aux roues neuves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703502
+    m_Localized: "Thermos de caf\xE9 Touba"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703503
+    m_Localized: Banc en bois pour les clients
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703504
+    m_Localized: Ampoule de 100 watts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703505
+    m_Localized: "Glaci\xE8re pleine de bissap"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703506
+    m_Localized: Bouteille de gaz neuve
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703507
+    m_Localized: "Grille en fer forg\xE9 du forgeron"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703508
+    m_Localized: Grande marmite de Sandaga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703509
+    m_Localized: Car rapide de livraison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703510
+    m_Localized: "T\xE9l\xE9phone pour les commandes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703511
+    m_Localized: "Charbon de qualit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703512
+    m_Localized: Sauce oignon de Tonton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703513
+    m_Localized: "Pancarte peinte \xE0 la main"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703514
+    m_Localized: "Gros sac de ni\xE9b\xE9 du march\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703515
+    m_Localized: "Pagne wax pour l'\xE9quipe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703516
+    m_Localized: Agneau du foirail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703517
+    m_Localized: "Rouleau \xE0 p\xE2tisserie de Tata"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703518
+    m_Localized: "Kink\xE9liba du matin"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703519
+    m_Localized: "Brochettes marin\xE9es la veille"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703520
+    m_Localized: Huile de friture neuve
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703521
+    m_Localized: Nappes en wax
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703522
+    m_Localized: Chaises en plastique en plus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703523
+    m_Localized: "Riz parfum\xE9 de la vall\xE9e"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703524
+    m_Localized: Climatiseur qui marche
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703525
+    m_Localized: "B\xE2ches et chaises lou\xE9es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703526
+    m_Localized: "Tamarin et n\xE9t\xE9tou de Mamie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703527
+    m_Localized: "Annonce \xE0 la radio du quartier"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703528
+    m_Localized: Groupe WhatsApp des clients
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703529
+    m_Localized: "Moutarde et oignons \xE0 volont\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703530
+    m_Localized: Camion frigorifique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703531
+    m_Localized: Fourgon des grossistes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703532
+    m_Localized: "Bouche-\xE0-oreille de Dakar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703533
+    m_Localized: Papier kraft pour emporter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703534
+    m_Localized: Sauce piment maison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703535
+    m_Localized: "Commande de 1 000 pi\xE8ces"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703536
+    m_Localized: Serveur en tenue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703537
+    m_Localized: Carte des desserts thiakry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703538
+    m_Localized: "\xC9quipe de cuisini\xE8res du quartier"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703539
+    m_Localized: Tambours de sabar pour l'accueil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703540
+    m_Localized: "Vendeuse d\u2019alloco"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703541
+    m_Localized: Garbadrome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897536
+    m_Localized: "Atti\xE9k\xE9-poisson"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897537
+    m_Localized: Maquis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897538
+    m_Localized: Choukouya
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897539
+    m_Localized: Tchapalo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897540
+    m_Localized: "K\xE9dj\xE9nou"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897541
+    m_Localized: Restaurant du Plateau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897542
+    m_Localized: "Am\xE9lioration Abidjan 01 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897543
+    m_Localized: "Am\xE9lioration Abidjan 02 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897544
+    m_Localized: "Am\xE9lioration Abidjan 03 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897545
+    m_Localized: "Am\xE9lioration Abidjan 04 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897546
+    m_Localized: "Am\xE9lioration Abidjan 05 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897547
+    m_Localized: "Am\xE9lioration Abidjan 06 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897548
+    m_Localized: "Am\xE9lioration Abidjan 07 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897549
+    m_Localized: "Am\xE9lioration Abidjan 08 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897550
+    m_Localized: "Am\xE9lioration Abidjan 09 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897551
+    m_Localized: "Am\xE9lioration Abidjan 10 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897552
+    m_Localized: "Am\xE9lioration Abidjan 11 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897553
+    m_Localized: "Am\xE9lioration Abidjan 12 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897554
+    m_Localized: "Am\xE9lioration Abidjan 13 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897555
+    m_Localized: "Am\xE9lioration Abidjan 14 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897556
+    m_Localized: "Am\xE9lioration Abidjan 15 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897557
+    m_Localized: "Am\xE9lioration Abidjan 16 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897558
+    m_Localized: "Am\xE9lioration Abidjan 17 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897559
+    m_Localized: "Am\xE9lioration Abidjan 18 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897560
+    m_Localized: "Am\xE9lioration Abidjan 19 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897561
+    m_Localized: "Am\xE9lioration Abidjan 20 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897562
+    m_Localized: "Am\xE9lioration Abidjan 21 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897563
+    m_Localized: "Am\xE9lioration Abidjan 22 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897564
+    m_Localized: "Am\xE9lioration Abidjan 23 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897565
+    m_Localized: "Am\xE9lioration Abidjan 24 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897566
+    m_Localized: "Am\xE9lioration Abidjan 25 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897567
+    m_Localized: "Am\xE9lioration Abidjan 26 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897568
+    m_Localized: "Am\xE9lioration Abidjan 27 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897569
+    m_Localized: "Am\xE9lioration Abidjan 28 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897570
+    m_Localized: "Am\xE9lioration Abidjan 29 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897571
+    m_Localized: "Am\xE9lioration Abidjan 30 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897572
+    m_Localized: "Am\xE9lioration Abidjan 31 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897573
+    m_Localized: "Am\xE9lioration Abidjan 32 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897574
+    m_Localized: "Am\xE9lioration Abidjan 33 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897575
+    m_Localized: "Am\xE9lioration Abidjan 34 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897576
+    m_Localized: "Am\xE9lioration Abidjan 35 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897577
+    m_Localized: "Am\xE9lioration Abidjan 36 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897578
+    m_Localized: "Am\xE9lioration Abidjan 37 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897579
+    m_Localized: "Am\xE9lioration Abidjan 38 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897580
+    m_Localized: "Am\xE9lioration Abidjan 39 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897581
+    m_Localized: "Am\xE9lioration Abidjan 40 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897582
+    m_Localized: "G\xE9rants fid\xE8les"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897583
+    m_Localized: Commis automatique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897584
+    m_Localized: Comme avant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897585
+    m_Localized: "Le thermos du grand-p\xE8re"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897586
+    m_Localized: Veilleur de nuit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897587
+    m_Localized: Deux veilleurs de nuit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897588
+    m_Localized: "Fourneau am\xE9lior\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897589
+    m_Localized: Le grossiste ami
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922028077056
+    m_Localized: "Ville relanc\xE9e : revenus x{0} !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768832
+    m_Localized: Relancer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768833
+    m_Localized: Chiffre d'affaires {0} / {1}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768834
+    m_Localized: "{0} \xE9toiles \xE0 d\xE9penser"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768835
+    m_Localized: "{0} \xE9toiles"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768836
+    m_Localized: '{0} cauris'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768837
+    m_Localized: Coffre gratuit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768838
+    m_Localized: "En r\xE9serve : {0}/{1}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768839
+    m_Localized: Encore {0} aujourd'hui
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768840
+    m_Localized: Regarder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768841
+    m_Localized: Actif encore {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768842
+    m_Localized: 'Plafond actuel : {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000221425664
+    m_Localized: "R\xE9glages"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226304
+    m_Localized: Oui
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226305
+    m_Localized: Non
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226306
+    m_Localized: 2 par jour max, jamais la nuit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226307
+    m_Localized: Musique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226308
+    m_Localized: Sons et voix
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226309
+    m_Localized: "Effets r\xE9duits"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226310
+    m_Localized: Moins de particules et de secousses
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226311
+    m_Localized: "Qualit\xE9 graphique"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226312
+    m_Localized: Auto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226313
+    m_Localized: Basse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226314
+    m_Localized: Moyenne
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226315
+    m_Localized: Haute
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226316
+    m_Localized: "Prochaine \xE9tape : {0} au niveau {1}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226317
+    m_Localized: "Niveau {0} : tout est d\xE9bloqu\xE9 !"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226318
+    m_Localized: Missions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226319
+    m_Localized: Coffres
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226320
+    m_Localized: Boutique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226321
+    m_Localized: Cadeaux du jour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226322
+    m_Localized: "Upgrades d'\xE9toiles"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226323
+    m_Localized: Roue Teranga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226324
+    m_Localized: Album de recettes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226325
+    m_Localized: "Succ\xE8s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226326
+    m_Localized: "D\xE9fis du jour"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1024176252821504
+    m_Localized: 'Objectif {0} :'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -26,7 +26,7 @@ namespace Gargote.Presentation
         public OfflinePanel(RectTransform parent, HudConfig hud, StreetAssets assets)
         {
             _root = UiFactory.Stretch(parent, "Offline");
-            UiFactory.Image(_root, new Color(0f, 0f, 0f, 0.6f), null, true);
+            UiFactory.Image(_root, hud.modalVeil, null, true);
             _card = UiFactory.Anchored(_root, "Card", new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(900f, 760f));
             UiFactory.Image(_card, hud.panel, assets.rounded, true);
             UiFactory.Text(UiFactory.Anchored(_card, "Title", new Vector2(0.5f, 1f), new Vector2(0.5f, 1f), new Vector2(0f, -40f), new Vector2(820f, 90f)),

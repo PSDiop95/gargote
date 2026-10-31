@@ -31,11 +31,14 @@ namespace Gargote.Presentation
         }
 
         /// <summary>Le système vient de faire apparaître un client : il traverse l'écran visible de haut en bas, face caméra.</summary>
-        public void Begin(int index, float visibleMinZ, float visibleMaxZ, float x)
+        /// <summary>Traverse de <paramref name="visibleMaxZ"/> à <paramref name="visibleMinZ"/> (marge négative = reste dans la plage).</summary>
+        public void Begin(int index, float visibleMinZ, float visibleMaxZ, float x) => Begin(index, visibleMinZ, visibleMaxZ, x, _config.offscreenMargin);
+
+        public void Begin(int index, float visibleMinZ, float visibleMaxZ, float x, float margin)
         {
             _shownIndex = index;
-            _startZ = visibleMaxZ + _config.offscreenMargin;
-            _endZ = visibleMinZ - _config.offscreenMargin;
+            _startZ = visibleMaxZ + margin;
+            _endZ = visibleMinZ - margin;
             _x = x;
         }
 

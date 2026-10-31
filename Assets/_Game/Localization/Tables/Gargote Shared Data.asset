@@ -263,6 +263,2334 @@ MonoBehaviour:
     m_Key: offline.double
     m_Metadata:
       m_Items: []
+  - m_Id: 708215620542464
+    m_Key: currency.cauris
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314624
+    m_Key: currency.stars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314625
+    m_Key: currency.tokens
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314626
+    m_Key: hud.level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314627
+    m_Key: hud.boost_timer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314628
+    m_Key: rarity.common
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314629
+    m_Key: rarity.rare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314630
+    m_Key: rarity.epic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314631
+    m_Key: rarity.legendary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314632
+    m_Key: prestige.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508928
+    m_Key: prestige.gain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508929
+    m_Key: prestige.multiplier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508930
+    m_Key: prestige.keep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508931
+    m_Key: prestige.keep_list
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508932
+    m_Key: prestige.reset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508933
+    m_Key: prestige.reset_list
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508934
+    m_Key: prestige.confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508935
+    m_Key: prestige.not_yet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508936
+    m_Key: prestige.travel_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508937
+    m_Key: prestige.travel_text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508938
+    m_Key: prestige.travel_confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508939
+    m_Key: prestige.difference
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508940
+    m_Key: travel.skip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508941
+    m_Key: travel.arrival
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508942
+    m_Key: cities.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508943
+    m_Key: cities.current
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508944
+    m_Key: cities.visit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508945
+    m_Key: cities.locked
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508946
+    m_Key: cities.passive
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508947
+    m_Key: city.dakar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508948
+    m_Key: city.abidjan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508949
+    m_Key: upgrades.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508950
+    m_Key: upgrades.cash
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508951
+    m_Key: upgrades.stars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508952
+    m_Key: upgrades.new
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508953
+    m_Key: upgrades.owned
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508954
+    m_Key: upgrades.all_business
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508955
+    m_Key: star_effect.keep_managers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508956
+    m_Key: star_effect.auto_buy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508957
+    m_Key: star_effect.rebuy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508958
+    m_Key: star_effect.offline_earnings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508959
+    m_Key: star_effect.offline_cap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508960
+    m_Key: star_effect.global_speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508961
+    m_Key: star_effect.cost_reduction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508962
+    m_Key: managers.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508963
+    m_Key: managers.collection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508964
+    m_Key: managers.unknown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508965
+    m_Key: managers.level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508966
+    m_Key: managers.cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508967
+    m_Key: managers.level_up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508968
+    m_Key: managers.passive_business
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508969
+    m_Key: managers.passive_global
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508970
+    m_Key: managers.boost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508971
+    m_Key: managers.boost_go
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508972
+    m_Key: managers.boost_ready
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508973
+    m_Key: managers.boost_active
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508974
+    m_Key: managers.boost_cooldown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508975
+    m_Key: managers.accelerate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508976
+    m_Key: managers.equip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508977
+    m_Key: managers.equipped
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508978
+    m_Key: managers.not_owned
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508979
+    m_Key: chest.wood
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508980
+    m_Key: chest.bronze
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508981
+    m_Key: chest.gold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508982
+    m_Key: chest.teranga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508983
+    m_Key: chest.open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508984
+    m_Key: chest.free
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508985
+    m_Key: chest.free_in
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508986
+    m_Key: chest.rewarded
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508987
+    m_Key: chest.cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508988
+    m_Key: chest.odds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508989
+    m_Key: chest.pity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508990
+    m_Key: chest.pity_next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508991
+    m_Key: chest.tap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508992
+    m_Key: chest.reveal_all
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508993
+    m_Key: chest.new
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508994
+    m_Key: chest.duplicate_cauris
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508995
+    m_Key: chest.boost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508996
+    m_Key: chest.continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508997
+    m_Key: shop.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508998
+    m_Key: shop.chests
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508999
+    m_Key: shop.offers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509000
+    m_Key: shop.soon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509001
+    m_Key: shop.offline_extension
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509002
+    m_Key: shop.buy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509003
+    m_Key: shop.starter_pack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509004
+    m_Key: shop.cauris_pack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509005
+    m_Key: shop.no_ads
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509006
+    m_Key: missions.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509007
+    m_Key: missions.claim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509008
+    m_Key: missions.double
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509009
+    m_Key: missions.replace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509010
+    m_Key: missions.replace_free
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509011
+    m_Key: missions.replace_ad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509012
+    m_Key: missions.next_in
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509013
+    m_Key: mission.reach_level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509014
+    m_Key: mission.hire_manager
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509015
+    m_Key: mission.serve_customers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509016
+    m_Key: mission.reach_milestone
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509017
+    m_Key: mission.use_manager_boost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509018
+    m_Key: mission.tap_specials
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509019
+    m_Key: mission.buy_upgrades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509020
+    m_Key: mission.open_chests
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509021
+    m_Key: mission.earn_seconds_of_income
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509022
+    m_Key: mission.complete_missions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509023
+    m_Key: daily.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509024
+    m_Key: login.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509025
+    m_Key: login.day
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509026
+    m_Key: login.claim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509027
+    m_Key: login.tomorrow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509028
+    m_Key: login.streak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509029
+    m_Key: login.streak_danger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509030
+    m_Key: login.shield
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509031
+    m_Key: login.shield_get
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509032
+    m_Key: login.shield_used
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509033
+    m_Key: wheel.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509034
+    m_Key: wheel.spin_free
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509035
+    m_Key: wheel.spin_ad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509036
+    m_Key: wheel.done
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509037
+    m_Key: wheel.odds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509038
+    m_Key: challenges.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509039
+    m_Key: challenges.bonus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509040
+    m_Key: challenges.renew
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509041
+    m_Key: reward.cauris
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509042
+    m_Key: reward.tokens
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509043
+    m_Key: reward.cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509044
+    m_Key: reward.boost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509045
+    m_Key: reward.xp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509046
+    m_Key: album.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509047
+    m_Key: album.progress
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509048
+    m_Key: album.bonus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509049
+    m_Key: album.locked
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509050
+    m_Key: album.steps
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509051
+    m_Key: album.new_recipe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509052
+    m_Key: achievements.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509053
+    m_Key: achievements.claim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509054
+    m_Key: achievements.tier_bronze
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509055
+    m_Key: achievements.tier_silver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509056
+    m_Key: achievements.tier_gold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509057
+    m_Key: achievements.reached
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509058
+    m_Key: level.up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509059
+    m_Key: level.reward
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509060
+    m_Key: feature.missions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509061
+    m_Key: feature.chests
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509062
+    m_Key: feature.shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509063
+    m_Key: feature.login
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509064
+    m_Key: feature.star_upgrades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509065
+    m_Key: feature.wheel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509066
+    m_Key: feature.album
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509067
+    m_Key: feature.achievements
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509068
+    m_Key: feature.daily_challenges
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509069
+    m_Key: notif.chest_ready
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509070
+    m_Key: notif.offline_full
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509071
+    m_Key: notif.streak_danger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509072
+    m_Key: notif.permission
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509073
+    m_Key: notif.allow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509074
+    m_Key: notif.deny
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509075
+    m_Key: settings.notifications
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509076
+    m_Key: common.close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509077
+    m_Key: common.ok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509078
+    m_Key: common.info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509079
+    m_Key: common.hours
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509080
+    m_Key: common.minutes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509081
+    m_Key: common.seconds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509082
+    m_Key: stat.lifetime_earnings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509083
+    m_Key: stat.customers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509084
+    m_Key: stat.taps
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509085
+    m_Key: stat.levels_bought
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509086
+    m_Key: stat.businesses_unlocked
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509087
+    m_Key: stat.managers_hired
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509088
+    m_Key: stat.milestones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509089
+    m_Key: stat.cash_upgrades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509090
+    m_Key: stat.prestiges
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509091
+    m_Key: stat.stars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509092
+    m_Key: stat.cities_visited
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509093
+    m_Key: stat.chests_opened
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509094
+    m_Key: stat.managers_owned
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509095
+    m_Key: stat.rare_owned
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509096
+    m_Key: stat.epic_owned
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509097
+    m_Key: stat.legendary_owned
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509098
+    m_Key: stat.manager_levels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703232
+    m_Key: stat.missions_completed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703233
+    m_Key: stat.challenges_completed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703234
+    m_Key: stat.best_streak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703235
+    m_Key: stat.login_days
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703236
+    m_Key: stat.wheel_spins
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703237
+    m_Key: stat.specials_tapped
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703238
+    m_Key: stat.manager_boosts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703239
+    m_Key: stat.recipes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703240
+    m_Key: stat.player_level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703241
+    m_Key: stat.cauris_earned
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703242
+    m_Key: stat.global_milestones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703243
+    m_Key: stat.offline_claims
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703244
+    m_Key: stat.rewarded_watched
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703245
+    m_Key: stat.business_level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703246
+    m_Key: stat.business_customers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703247
+    m_Key: stat.business_milestones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703248
+    m_Key: stat.business_manager_level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703249
+    m_Key: manager.tonton_modou.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703250
+    m_Key: manager.tonton_modou.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703251
+    m_Key: manager.badara_baye_fall.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703252
+    m_Key: manager.badara_baye_fall.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703253
+    m_Key: manager.ndeye_reine_nuit.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703254
+    m_Key: manager.ndeye_reine_nuit.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703255
+    m_Key: manager.adja_fatou.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703256
+    m_Key: manager.adja_fatou.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703257
+    m_Key: manager.oustaz_grill.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703258
+    m_Key: manager.oustaz_grill.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703259
+    m_Key: manager.aida_pastels.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703260
+    m_Key: manager.aida_pastels.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703261
+    m_Key: manager.monsieur_teranga.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703262
+    m_Key: manager.monsieur_teranga.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703263
+    m_Key: manager.mere_coumba.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703264
+    m_Key: manager.mere_coumba.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703265
+    m_Key: manager.pape_cafe_touba.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703266
+    m_Key: manager.pape_cafe_touba.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703267
+    m_Key: manager.fatou_bissap.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703268
+    m_Key: manager.fatou_bissap.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703269
+    m_Key: manager.ousmane_jakarta.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703270
+    m_Key: manager.ousmane_jakarta.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703271
+    m_Key: manager.yaye_cheffe.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703272
+    m_Key: manager.yaye_cheffe.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703273
+    m_Key: manager.chauffeur_car_rapide.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703274
+    m_Key: manager.chauffeur_car_rapide.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703275
+    m_Key: manager.mame_sandaga.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703276
+    m_Key: manager.mame_sandaga.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703277
+    m_Key: manager.roi_des_arenes.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703278
+    m_Key: manager.roi_des_arenes.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703279
+    m_Key: manager.grande_griotte.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703280
+    m_Key: manager.grande_griotte.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703281
+    m_Key: manager.tantie_alloco.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703282
+    m_Key: manager.tantie_alloco.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703283
+    m_Key: manager.boss_du_garba.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703284
+    m_Key: manager.boss_du_garba.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703285
+    m_Key: manager.maman_attieke.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703286
+    m_Key: manager.maman_attieke.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703287
+    m_Key: manager.maman_maquis.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703288
+    m_Key: manager.maman_maquis.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703289
+    m_Key: manager.roi_choukouya.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703290
+    m_Key: manager.roi_choukouya.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703291
+    m_Key: manager.tonton_tchapalo.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703292
+    m_Key: manager.tonton_tchapalo.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703293
+    m_Key: manager.tantie_kedjenou.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703294
+    m_Key: manager.tantie_kedjenou.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703295
+    m_Key: manager.monsieur_plateau.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703296
+    m_Key: manager.monsieur_plateau.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703297
+    m_Key: manager.gbaka_driver.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703298
+    m_Key: manager.gbaka_driver.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703299
+    m_Key: manager.aya_jus.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703300
+    m_Key: manager.aya_jus.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703301
+    m_Key: manager.koffi_livreur.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703302
+    m_Key: manager.koffi_livreur.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703303
+    m_Key: manager.reine_du_maquis.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703304
+    m_Key: manager.reine_du_maquis.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703305
+    m_Key: manager.zouglou_man.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703306
+    m_Key: manager.zouglou_man.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703307
+    m_Key: manager.mamie_woro.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703308
+    m_Key: manager.mamie_woro.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703309
+    m_Key: manager.dj_coupe_decale.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703310
+    m_Key: manager.dj_coupe_decale.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703311
+    m_Key: manager.footballeur_star.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703312
+    m_Key: manager.footballeur_star.line
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703313
+    m_Key: recipe.forokh_thiaya.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703314
+    m_Key: recipe.forokh_thiaya.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703315
+    m_Key: recipe.forokh_thiaya.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703316
+    m_Key: recipe.forokh_thiaya.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703317
+    m_Key: recipe.forokh_thiaya.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703318
+    m_Key: recipe.forokh_thiaya.step.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703319
+    m_Key: recipe.omelette.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703320
+    m_Key: recipe.omelette.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703321
+    m_Key: recipe.omelette.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703322
+    m_Key: recipe.omelette.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703323
+    m_Key: recipe.omelette.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703324
+    m_Key: recipe.omelette.step.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703325
+    m_Key: recipe.spaghetti_tangana.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703326
+    m_Key: recipe.spaghetti_tangana.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703327
+    m_Key: recipe.spaghetti_tangana.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703328
+    m_Key: recipe.spaghetti_tangana.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703329
+    m_Key: recipe.spaghetti_tangana.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703330
+    m_Key: recipe.spaghetti_tangana.step.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703331
+    m_Key: recipe.niebe.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703332
+    m_Key: recipe.niebe.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703333
+    m_Key: recipe.niebe.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703334
+    m_Key: recipe.niebe.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703335
+    m_Key: recipe.niebe.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703336
+    m_Key: recipe.niebe.step.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703337
+    m_Key: recipe.pain_thon.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703338
+    m_Key: recipe.pain_thon.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703339
+    m_Key: recipe.pain_thon.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703340
+    m_Key: recipe.pain_thon.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703341
+    m_Key: recipe.pain_thon.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703342
+    m_Key: recipe.macaroni.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703343
+    m_Key: recipe.macaroni.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703344
+    m_Key: recipe.macaroni.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703345
+    m_Key: recipe.macaroni.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703346
+    m_Key: recipe.macaroni.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703347
+    m_Key: recipe.petits_pois.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703348
+    m_Key: recipe.petits_pois.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703349
+    m_Key: recipe.petits_pois.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703350
+    m_Key: recipe.petits_pois.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703351
+    m_Key: recipe.petits_pois.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703352
+    m_Key: recipe.brochettes.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703353
+    m_Key: recipe.brochettes.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703354
+    m_Key: recipe.brochettes.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703355
+    m_Key: recipe.brochettes.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703356
+    m_Key: recipe.brochettes.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703357
+    m_Key: recipe.brochettes.step.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703358
+    m_Key: recipe.frites.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703359
+    m_Key: recipe.frites.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703360
+    m_Key: recipe.frites.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703361
+    m_Key: recipe.frites.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703362
+    m_Key: recipe.frites.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703363
+    m_Key: recipe.frites.step.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703364
+    m_Key: recipe.thieboudienne.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703365
+    m_Key: recipe.thieboudienne.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703366
+    m_Key: recipe.thieboudienne.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703367
+    m_Key: recipe.thieboudienne.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703368
+    m_Key: recipe.thieboudienne.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703369
+    m_Key: recipe.thieboudienne.step.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703370
+    m_Key: recipe.thieboudienne.step.5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703371
+    m_Key: recipe.yassa.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703372
+    m_Key: recipe.yassa.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703373
+    m_Key: recipe.yassa.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703374
+    m_Key: recipe.yassa.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703375
+    m_Key: recipe.yassa.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703376
+    m_Key: recipe.yassa.step.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703377
+    m_Key: recipe.mafe.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703378
+    m_Key: recipe.mafe.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703379
+    m_Key: recipe.mafe.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703380
+    m_Key: recipe.mafe.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703381
+    m_Key: recipe.mafe.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703382
+    m_Key: recipe.mafe.step.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703383
+    m_Key: recipe.dibi.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703384
+    m_Key: recipe.dibi.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703385
+    m_Key: recipe.dibi.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703386
+    m_Key: recipe.dibi.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703387
+    m_Key: recipe.dibi.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703388
+    m_Key: recipe.dibi.step.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703389
+    m_Key: recipe.fataya.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703390
+    m_Key: recipe.fataya.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703391
+    m_Key: recipe.fataya.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703392
+    m_Key: recipe.fataya.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703393
+    m_Key: recipe.fataya.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703394
+    m_Key: recipe.fataya.step.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703395
+    m_Key: recipe.nems.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703396
+    m_Key: recipe.nems.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703397
+    m_Key: recipe.nems.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703398
+    m_Key: recipe.nems.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703399
+    m_Key: recipe.nems.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703400
+    m_Key: recipe.pastels.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703401
+    m_Key: recipe.pastels.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703402
+    m_Key: recipe.pastels.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703403
+    m_Key: recipe.pastels.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703404
+    m_Key: recipe.pastels.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703405
+    m_Key: recipe.soupou_kandja.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703406
+    m_Key: recipe.soupou_kandja.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703407
+    m_Key: recipe.soupou_kandja.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703408
+    m_Key: recipe.soupou_kandja.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703409
+    m_Key: recipe.soupou_kandja.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703410
+    m_Key: recipe.soupou_kandja.step.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703411
+    m_Key: recipe.caldou.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703412
+    m_Key: recipe.caldou.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703413
+    m_Key: recipe.caldou.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703414
+    m_Key: recipe.caldou.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703415
+    m_Key: recipe.caldou.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703416
+    m_Key: recipe.caldou.step.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703417
+    m_Key: recipe.thiakry.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703418
+    m_Key: recipe.thiakry.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703419
+    m_Key: recipe.thiakry.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703420
+    m_Key: recipe.thiakry.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703421
+    m_Key: recipe.thiakry.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703422
+    m_Key: recipe.thiere.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703423
+    m_Key: recipe.thiere.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703424
+    m_Key: recipe.thiere.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703425
+    m_Key: recipe.thiere.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703426
+    m_Key: recipe.thiere.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703427
+    m_Key: recipe.ngalakh.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703428
+    m_Key: recipe.ngalakh.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703429
+    m_Key: recipe.ngalakh.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703430
+    m_Key: recipe.ngalakh.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703431
+    m_Key: recipe.ngalakh.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703432
+    m_Key: recipe.mechoui.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703433
+    m_Key: recipe.mechoui.anecdote
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703434
+    m_Key: recipe.mechoui.step.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703435
+    m_Key: recipe.mechoui.step.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703436
+    m_Key: recipe.mechoui.step.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703437
+    m_Key: recipe.mechoui.step.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703438
+    m_Key: achievement.lvl_forokh_thiaya.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703439
+    m_Key: achievement.serve_forokh_thiaya.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703440
+    m_Key: achievement.ms_forokh_thiaya.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703441
+    m_Key: achievement.mgr_forokh_thiaya.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703442
+    m_Key: achievement.lvl_tangana.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703443
+    m_Key: achievement.serve_tangana.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703444
+    m_Key: achievement.ms_tangana.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703445
+    m_Key: achievement.mgr_tangana.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703446
+    m_Key: achievement.lvl_maiga.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703447
+    m_Key: achievement.serve_maiga.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703448
+    m_Key: achievement.ms_maiga.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703449
+    m_Key: achievement.mgr_maiga.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703450
+    m_Key: achievement.lvl_gargote.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703451
+    m_Key: achievement.serve_gargote.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703452
+    m_Key: achievement.ms_gargote.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703453
+    m_Key: achievement.mgr_gargote.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703454
+    m_Key: achievement.lvl_dibiterie.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703455
+    m_Key: achievement.serve_dibiterie.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703456
+    m_Key: achievement.ms_dibiterie.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703457
+    m_Key: achievement.mgr_dibiterie.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703458
+    m_Key: achievement.lvl_fataya_nems.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703459
+    m_Key: achievement.serve_fataya_nems.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703460
+    m_Key: achievement.ms_fataya_nems.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703461
+    m_Key: achievement.mgr_fataya_nems.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703462
+    m_Key: achievement.lvl_restaurant_teranga.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703463
+    m_Key: achievement.serve_restaurant_teranga.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703464
+    m_Key: achievement.ms_restaurant_teranga.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703465
+    m_Key: achievement.mgr_restaurant_teranga.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703466
+    m_Key: achievement.lvl_traiteur_evenements.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703467
+    m_Key: achievement.serve_traiteur_evenements.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703468
+    m_Key: achievement.ms_traiteur_evenements.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703469
+    m_Key: achievement.mgr_traiteur_evenements.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703470
+    m_Key: achievement.earn.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703471
+    m_Key: achievement.customers.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703472
+    m_Key: achievement.taps.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703473
+    m_Key: achievement.levels.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703474
+    m_Key: achievement.unlocks.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703475
+    m_Key: achievement.managers_hired.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703476
+    m_Key: achievement.milestones.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703477
+    m_Key: achievement.upgrades.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703478
+    m_Key: achievement.prestige.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703479
+    m_Key: achievement.stars.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703480
+    m_Key: achievement.cities.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703481
+    m_Key: achievement.chests.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703482
+    m_Key: achievement.collection.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703483
+    m_Key: achievement.rare.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703484
+    m_Key: achievement.epic.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703485
+    m_Key: achievement.legend.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703486
+    m_Key: achievement.mgr_levels.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703487
+    m_Key: achievement.missions.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703488
+    m_Key: achievement.challenges.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703489
+    m_Key: achievement.streak.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703490
+    m_Key: achievement.logins.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703491
+    m_Key: achievement.wheel.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703492
+    m_Key: achievement.specials.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703493
+    m_Key: achievement.boosts.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703494
+    m_Key: achievement.recipes.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703495
+    m_Key: achievement.player_level.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703496
+    m_Key: achievement.cauris.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703497
+    m_Key: achievement.global_ms.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703498
+    m_Key: achievement.offline.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703499
+    m_Key: achievement.ads.name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703500
+    m_Key: upgrade.dakar_up_01
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703501
+    m_Key: upgrade.dakar_up_02
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703502
+    m_Key: upgrade.dakar_up_03
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703503
+    m_Key: upgrade.dakar_up_04
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703504
+    m_Key: upgrade.dakar_up_05
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703505
+    m_Key: upgrade.dakar_up_06
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703506
+    m_Key: upgrade.dakar_up_07
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703507
+    m_Key: upgrade.dakar_up_08
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703508
+    m_Key: upgrade.dakar_up_09
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703509
+    m_Key: upgrade.dakar_up_10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703510
+    m_Key: upgrade.dakar_up_11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703511
+    m_Key: upgrade.dakar_up_12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703512
+    m_Key: upgrade.dakar_up_13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703513
+    m_Key: upgrade.dakar_up_14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703514
+    m_Key: upgrade.dakar_up_15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703515
+    m_Key: upgrade.dakar_up_16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703516
+    m_Key: upgrade.dakar_up_17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703517
+    m_Key: upgrade.dakar_up_18
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703518
+    m_Key: upgrade.dakar_up_19
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703519
+    m_Key: upgrade.dakar_up_20
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703520
+    m_Key: upgrade.dakar_up_21
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703521
+    m_Key: upgrade.dakar_up_22
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703522
+    m_Key: upgrade.dakar_up_23
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703523
+    m_Key: upgrade.dakar_up_24
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703524
+    m_Key: upgrade.dakar_up_25
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703525
+    m_Key: upgrade.dakar_up_26
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703526
+    m_Key: upgrade.dakar_up_27
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703527
+    m_Key: upgrade.dakar_up_28
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703528
+    m_Key: upgrade.dakar_up_29
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703529
+    m_Key: upgrade.dakar_up_30
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703530
+    m_Key: upgrade.dakar_up_31
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703531
+    m_Key: upgrade.dakar_up_32
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703532
+    m_Key: upgrade.dakar_up_33
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703533
+    m_Key: upgrade.dakar_up_34
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703534
+    m_Key: upgrade.dakar_up_35
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703535
+    m_Key: upgrade.dakar_up_36
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703536
+    m_Key: upgrade.dakar_up_37
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703537
+    m_Key: upgrade.dakar_up_38
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703538
+    m_Key: upgrade.dakar_up_39
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703539
+    m_Key: upgrade.dakar_up_40
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703540
+    m_Key: business.alloco
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703541
+    m_Key: business.garbadrome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897536
+    m_Key: business.attieke_poisson
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897537
+    m_Key: business.maquis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897538
+    m_Key: business.choukouya
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897539
+    m_Key: business.tchapalo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897540
+    m_Key: business.kedjenou
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897541
+    m_Key: business.restaurant_plateau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897542
+    m_Key: upgrade.abidjan_up_01
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897543
+    m_Key: upgrade.abidjan_up_02
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897544
+    m_Key: upgrade.abidjan_up_03
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897545
+    m_Key: upgrade.abidjan_up_04
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897546
+    m_Key: upgrade.abidjan_up_05
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897547
+    m_Key: upgrade.abidjan_up_06
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897548
+    m_Key: upgrade.abidjan_up_07
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897549
+    m_Key: upgrade.abidjan_up_08
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897550
+    m_Key: upgrade.abidjan_up_09
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897551
+    m_Key: upgrade.abidjan_up_10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897552
+    m_Key: upgrade.abidjan_up_11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897553
+    m_Key: upgrade.abidjan_up_12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897554
+    m_Key: upgrade.abidjan_up_13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897555
+    m_Key: upgrade.abidjan_up_14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897556
+    m_Key: upgrade.abidjan_up_15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897557
+    m_Key: upgrade.abidjan_up_16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897558
+    m_Key: upgrade.abidjan_up_17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897559
+    m_Key: upgrade.abidjan_up_18
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897560
+    m_Key: upgrade.abidjan_up_19
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897561
+    m_Key: upgrade.abidjan_up_20
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897562
+    m_Key: upgrade.abidjan_up_21
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897563
+    m_Key: upgrade.abidjan_up_22
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897564
+    m_Key: upgrade.abidjan_up_23
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897565
+    m_Key: upgrade.abidjan_up_24
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897566
+    m_Key: upgrade.abidjan_up_25
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897567
+    m_Key: upgrade.abidjan_up_26
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897568
+    m_Key: upgrade.abidjan_up_27
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897569
+    m_Key: upgrade.abidjan_up_28
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897570
+    m_Key: upgrade.abidjan_up_29
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897571
+    m_Key: upgrade.abidjan_up_30
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897572
+    m_Key: upgrade.abidjan_up_31
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897573
+    m_Key: upgrade.abidjan_up_32
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897574
+    m_Key: upgrade.abidjan_up_33
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897575
+    m_Key: upgrade.abidjan_up_34
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897576
+    m_Key: upgrade.abidjan_up_35
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897577
+    m_Key: upgrade.abidjan_up_36
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897578
+    m_Key: upgrade.abidjan_up_37
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897579
+    m_Key: upgrade.abidjan_up_38
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897580
+    m_Key: upgrade.abidjan_up_39
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897581
+    m_Key: upgrade.abidjan_up_40
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897582
+    m_Key: star_upgrade.gerants_fideles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897583
+    m_Key: star_upgrade.commis_automatique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897584
+    m_Key: star_upgrade.comme_avant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897585
+    m_Key: star_upgrade.thermos_grand_pere
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897586
+    m_Key: star_upgrade.veilleur_de_nuit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897587
+    m_Key: star_upgrade.veilleur_de_nuit_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897588
+    m_Key: star_upgrade.fourneau_ameliore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897589
+    m_Key: star_upgrade.grossiste_ami
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922028077056
+    m_Key: prestige.done
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768832
+    m_Key: cities.restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768833
+    m_Key: cities.goal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768834
+    m_Key: upgrades.stars_balance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768835
+    m_Key: upgrades.star_cost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768836
+    m_Key: shop.balance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768837
+    m_Key: shop.free_chest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768838
+    m_Key: shop.free_stored
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768839
+    m_Key: shop.rewarded_left
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768840
+    m_Key: shop.watch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768841
+    m_Key: shop.active
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768842
+    m_Key: shop.offline_cap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000221425664
+    m_Key: settings.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226304
+    m_Key: settings.on
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226305
+    m_Key: settings.off
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226306
+    m_Key: settings.notifications_hint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226307
+    m_Key: settings.music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226308
+    m_Key: settings.sfx
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226309
+    m_Key: settings.reduced_effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226310
+    m_Key: settings.reduced_hint
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226311
+    m_Key: settings.quality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226312
+    m_Key: settings.quality_auto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226313
+    m_Key: settings.quality_low
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226314
+    m_Key: settings.quality_medium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226315
+    m_Key: settings.quality_high
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226316
+    m_Key: level.next_feature
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226317
+    m_Key: level.all_unlocked
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226318
+    m_Key: feature_name.missions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226319
+    m_Key: feature_name.chests
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226320
+    m_Key: feature_name.shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226321
+    m_Key: feature_name.login
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226322
+    m_Key: feature_name.star_upgrades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226323
+    m_Key: feature_name.wheel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226324
+    m_Key: feature_name.album
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226325
+    m_Key: feature_name.achievements
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226326
+    m_Key: feature_name.daily_challenges
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1024176252821504
+    m_Key: hud.goal_city
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

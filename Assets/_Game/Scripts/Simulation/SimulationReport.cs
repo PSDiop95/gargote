@@ -41,6 +41,7 @@ namespace Gargote.Simulation
         public int AdsWatched;
         public int ManagersHired;
         public long TotalLevels;
+        public long Cauris;
     }
 
     public sealed class TargetCheck
@@ -75,6 +76,13 @@ namespace Gargote.Simulation
         /// Hors attente pour réunir la somme ; hors boosts temporaires non retirés.
         /// </summary>
         public readonly List<(double ActiveMinutes, double PaybackSeconds)> Paybacks = new List<(double, double)>();
+
+        /// <summary>Relevés quotidiens de la méta (vide si la simulation tourne sans méta).</summary>
+        public readonly List<MetaDaySample> MetaDays = new List<MetaDaySample>();
+        public double? FirstEpicDay;
+        public double? FirstLegendaryDay;
+        /// <summary>Registre final : (monnaie, raison, gagné, dépensé) — toutes les sources et tous les puits.</summary>
+        public readonly List<(string Currency, string Reason, long Earned, long Spent)> MetaLedger = new List<(string, string, long, long)>();
 
         public SimulationEvent FirstEvent(string kind, string detail = null)
         {
@@ -150,7 +158,7 @@ namespace Gargote.Simulation
                         s.Prestiges.ToString(CultureInfo.InvariantCulture), s.AdsWatched.ToString(CultureInfo.InvariantCulture),
                         s.ManagersHired.ToString(CultureInfo.InvariantCulture), s.TotalLevels.ToString(CultureInfo.InvariantCulture),
                         s.CashUpgrades.ToString(CultureInfo.InvariantCulture),
-                        "0")); // cauris : sources (missions, succès, coffres) arrivent en M3
+                        s.Cauris.ToString(CultureInfo.InvariantCulture)));
         }
 
         public void WriteSummaryCsv(TextWriter w)
@@ -177,6 +185,34 @@ namespace Gargote.Simulation
             using (var w = new StreamWriter(Path.Combine(directory, "simulation_events.csv"))) WriteEventsCsv(w);
             using (var w = new StreamWriter(Path.Combine(directory, "simulation_timeline.csv"))) WriteTimelineCsv(w);
             using (var w = new StreamWriter(Path.Combine(directory, "simulation_summary.csv"))) WriteSummaryCsv(w);
+            using (var w = new StreamWriter(Path.Combine(directory, "simulation_meta_daily.csv"))) WriteMetaDailyCsv(w);
+            using (var w = new StreamWriter(Path.Combine(directory, "simulation_meta_ledger.csv"))) WriteMetaLedgerCsv(w);
+        }
+
+        public void WriteMetaDailyCsv(TextWriter w)
+        {
+            w.WriteLine("profile,day,cauris,cauris_earned,cauris_spent,managers_owned,managers_available,collection_pct,epic,legendary," +
+                        "player_level,chests_opened,recipes,achievement_tiers,meta_ads");
+            foreach (var p in Profiles)
+                foreach (var d in p.MetaDays)
+                    w.WriteLine(string.Join(",", p.Profile.Name, d.Day.ToString(CultureInfo.InvariantCulture),
+                        d.Cauris.ToString(CultureInfo.InvariantCulture), d.CaurisEarnedToday.ToString(CultureInfo.InvariantCulture),
+                        d.CaurisSpentToday.ToString(CultureInfo.InvariantCulture), d.ManagersOwned.ToString(CultureInfo.InvariantCulture),
+                        d.ManagersAvailable.ToString(CultureInfo.InvariantCulture),
+                        F(d.CollectibleAvailable > 0 ? 100d * d.CollectibleOwned / d.CollectibleAvailable : 0d),
+                        d.Epic.ToString(CultureInfo.InvariantCulture), d.Legendary.ToString(CultureInfo.InvariantCulture),
+                        d.PlayerLevel.ToString(CultureInfo.InvariantCulture), d.ChestsOpened.ToString(CultureInfo.InvariantCulture),
+                        d.Recipes.ToString(CultureInfo.InvariantCulture), d.AchievementTiers.ToString(CultureInfo.InvariantCulture),
+                        d.MetaAds.ToString(CultureInfo.InvariantCulture)));
+        }
+
+        public void WriteMetaLedgerCsv(TextWriter w)
+        {
+            w.WriteLine("profile,currency,reason,earned,spent");
+            foreach (var p in Profiles)
+                foreach (var e in p.MetaLedger)
+                    w.WriteLine(string.Join(",", p.Profile.Name, e.Currency, e.Reason,
+                        e.Earned.ToString(CultureInfo.InvariantCulture), e.Spent.ToString(CultureInfo.InvariantCulture)));
         }
     }
 }

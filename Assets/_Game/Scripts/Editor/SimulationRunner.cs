@@ -46,9 +46,10 @@ namespace Gargote.EditorTools
             if (database == null || config == null)
                 throw new InvalidOperationException("Missing GameDatabase or SimulationConfig — run Gargote > Data > Import first.");
 
-            var definitions = EconomySimulator.WithProxyCities(database.ToDefinitions(), 1 + config.settings.proxyCities,
-                config.settings.ToScaling());
-            var report = new EconomySimulator(definitions, config.settings.ToSettings()).Run();
+            var game = database.ToDefinitions();
+            var definitions = EconomySimulator.WithProxyCities(game, 1 + config.settings.proxyCities, config.settings.ToScaling());
+            // Méta M3 incluse : la référence d'équilibrage est le jeu complet (passifs, album, boosts de coffres).
+            var report = new EconomySimulator(definitions, config.settings.ToSettings(), database.ToMetaDefinitions(game)).Run();
             report.WriteAll(GargotePaths.SimulationOutput);
 
             var sb = new StringBuilder("[Gargote] Simulation written to " + GargotePaths.SimulationOutput + "\n");

@@ -31,13 +31,14 @@ namespace Gargote.Presentation
         }
 
         private readonly GameSession _session;
+        private readonly Func<int, string> _businessName;
         private readonly HudConfig _hud;
         private readonly Row[] _rows;
         private readonly RectTransform _root, _content;
         private readonly ScrollRect _scroll;
         private readonly UiButton[] _modeButtons;
         private readonly UiButton _best;
-        private readonly GameObject _comingSoon;
+        private readonly Image[] _tabDots = new Image[5];
         private readonly string _levelPrefix, _open, _manager, _perSecond, _morning, _night;
         private float _refresh;
         private Tween _heightTween;
@@ -53,11 +54,14 @@ namespace Gargote.Presentation
         public Action<int> ManagerClicked;
         public Action<int> RowSelected;
         public Action BestClicked;
+        /// <summary>Onglet 1 à 4 (Gérants, Upgrades, Villes, Boutique) : ouvre l'écran méta correspondant ; 0 = Rue.</summary>
+        public Action<int> TabClicked;
 
         public BusinessSheet(GameSession session, HudConfig hud, RectTransform safeArea, StreetAssets assets, Func<int, string> businessName)
         {
             _session = session;
             _hud = hud;
+            _businessName = businessName;
             _levelPrefix = Loc.Get("sheet.level");
             _open = Loc.Get("sheet.open");
             _manager = Loc.Get("sheet.manager");
@@ -101,6 +105,8 @@ namespace Gargote.Presentation
 
             _rows = new Row[count];
             for (int i = 0; i < count; i++) _rows[i] = BuildRow(i, assets, businessName(i));
+            // Nouvelle ville : mêmes rangées, nouveaux commerces (Forokh Thiaya → Alloco…).
+            session.CityChanged += _ => { for (int i = 0; i < _rows.Length; i++) _rows[i].Name.text = _businessName(i); };
 
             // Barre d'outils : quantité + acheter le meilleur.
             var tool = UiFactory.Rect(_root, "Toolbar", new Vector2(0f, 0f), new Vector2(1f, 0f), new Vector2(16f, tabs), new Vector2(-16f, tabs + toolbar));
@@ -121,16 +127,10 @@ namespace Gargote.Presentation
             _best.Background.color = hud.accent;
             _best.Clicked = () => BestClicked?.Invoke();
 
-            // Onglets : Rue active, les autres annoncent M3.
+            // Onglets : Rue (cette liste) puis écrans méta. Point rouge par onglet (règle unique AttentionRules).
             var tabBar = UiFactory.Rect(_root, "Tabs", Vector2.zero, new Vector2(1f, 0f), new Vector2(0f, 0f), new Vector2(0f, tabs));
             UiFactory.Image(tabBar, hud.panelLight, null);
             string[] tabKeys = { "tab.street", "tab.managers", "tab.upgrades", "tab.cities", "tab.shop" };
-            var soonRt = UiFactory.Rect(_root, "ComingSoon", Vector2.zero, Vector2.one, new Vector2(16f, toolbar + tabs), new Vector2(-16f, -handle));
-            UiFactory.Image(soonRt, hud.panel, assets.rounded, true);
-            UiFactory.Text(UiFactory.Stretch(soonRt, "Label"), hud, hud.fontSizeMedium, hud.mutedText, TextAlignmentOptions.Center,
-                Loc.Get("tab.coming_soon"));
-            _comingSoon = soonRt.gameObject;
-            _comingSoon.SetActive(false);
             for (int t = 0; t < tabKeys.Length; t++)
             {
                 int tab = t;
@@ -138,12 +138,15 @@ namespace Gargote.Presentation
                 var b = UiFactory.Button(cell, "Button", hud, assets.rounded, Loc.Get(tabKeys[t]), hud.fontSizeSmall * 0.9f);
                 b.EnabledColor = t == 0 ? hud.accent : hud.panelLight;
                 b.Background.color = b.EnabledColor;
-                b.Clicked = () => _comingSoon.SetActive(tab != 0);
+                b.Clicked = () => { if (tab == 0) SetExpanded(true); else TabClicked?.Invoke(tab); };
+                _tabDots[t] = MetaUiKit.RedDot(cell, assets, 30f);
             }
 
             SetMode(BuyMode.One);
             Select(0, false);
         }
+
+        public void SetTabDot(int tab, bool on) => MetaUiKit.SetDot(_tabDots[tab], on);
 
         private Row BuildRow(int index, StreetAssets assets, string name)
         {
@@ -206,8 +209,9 @@ namespace Gargote.Presentation
             _expanded = expanded;
             if (_heightTween.isAlive) _heightTween.Stop();
             float target = expanded ? _hud.sheetExpandedHeight : _hud.sheetCollapsedHeight;
-            _heightTween = Tween.Custom(this, _root.sizeDelta.y, target, _hud.sheetAnimSeconds,
-                (sheet, h) => sheet._root.sizeDelta = new Vector2(0f, h), Ease.OutCubic);
+            // Cible = le RectTransform : PrimeTween arrête le tween si la scène est déchargée en cours d'animation.
+            _heightTween = Tween.Custom(_root, _root.sizeDelta.y, target, _hud.sheetAnimSeconds,
+                (rt, h) => rt.sizeDelta = new Vector2(0f, h), Ease.OutCubic);
             if (!expanded) ScrollTo(_selected);
         }
 

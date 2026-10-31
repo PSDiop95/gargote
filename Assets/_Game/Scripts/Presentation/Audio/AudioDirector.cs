@@ -157,6 +157,18 @@ namespace Gargote.Presentation
 
         public void SetMuted(bool muted) => AudioListener.pause = muted;
 
+        /// <summary>Coupe ou rétablit la musique / les sons (réglages joueur) via le mixer, au niveau par défaut du bus.</summary>
+        public void SetBusEnabled(AudioBus bus, bool enabled)
+        {
+            if (_config == null || _config.mixer == null) return;
+            switch (bus)
+            {
+                case AudioBus.Music: _config.mixer.SetFloat(MusicParam, enabled ? _config.defaultMusicDb : -80f); break;
+                case AudioBus.Sfx: _config.mixer.SetFloat(SfxParam, enabled ? _config.defaultSfxDb : -80f); break;
+                case AudioBus.Voice: _config.mixer.SetFloat(VoiceParam, enabled ? _config.defaultVoiceDb : -80f); break;
+            }
+        }
+
         private uint Next()
         {
             _random ^= _random << 13;

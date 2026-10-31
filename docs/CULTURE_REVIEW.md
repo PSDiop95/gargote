@@ -95,6 +95,137 @@ grandit par le nombre de points de vente et de clients. À vérifier : prix cré
 | Restaurant Teranga | Une table (menus complets) | 40 000 | à relire |  |
 | Traiteur Événements | Un mariage ou un baptême | 1 500 000 | à relire |  |
 
+## M3 — méta : gérants à collectionner, album de recettes, succès (à relire avant M4)
+
+Source : `Assets/_Game/Data/Seed/meta_seed.json` (noms, anecdotes, recettes) et `Assets/_Game/Scripts/Editor/M3/MetaStrings.cs`
+(textes d'interface FR/EN). Les noms en wolof portent « (à valider) » : **relecture par un locuteur natif obligatoire**.
+Aucun gérant ne représente une personne réelle identifiable : les légendaires sont des figures-types (le lutteur star,
+la griotte, le DJ, le footballeur).
+
+### Points à trancher en priorité (sensibilité religieuse ou communautaire)
+
+- **Badara le Baye Fall** (Tangana) : référence à la communauté Baye Fall (mouridisme). Ton bienveillant voulu ; vérifier
+  que la tenue et la réplique (M4) restent respectueuses, ou choisir un autre nom.
+- **Oustaz Grill** (Dibiterie) : « oustaz » désigne un enseignant religieux. Jeu de mots possiblement mal reçu ;
+  alternative proposée : « Tonton Dibi » ou « Le Maître du charbon ».
+- **Pape du café Touba** : le café Touba est lié à la ville sainte et à la confrérie mouride ; usage courant et positif,
+  à confirmer.
+- **Le Roi des arènes / Le footballeur star / Le DJ coupé-décalé** : vérifier qu'aucun visuel (M4) ne rappelle une
+  personne réelle.
+- **Tchapalo / Tonton Tchapalo** (bière de mil) : boisson alcoolisée ; acceptable culturellement, à vérifier pour la
+  classification d'âge des stores.
+
+### Gérants à collectionner (32)
+
+| Ville | Commerce | Rareté | Nom FR | Nom EN | Avis |
+|---|---|---|---|---|---|
+| dakar | forokh_thiaya | Commun | Tonton Modou | Uncle Modou | |
+| dakar | tangana | Commun | Badara le Baye Fall | Badara the Baye Fall | |
+| dakar | maiga | Commun | Ndèye la reine de la nuit | Ndeye, Queen of the Night | |
+| dakar | gargote | Commun | Adja Fatou | Adja Fatou | |
+| dakar | dibiterie | Commun | Oustaz Grill | Oustaz Grill | |
+| dakar | fataya_nems | Commun | Aïda Pastels | Aida Pastels | |
+| dakar | restaurant_teranga | Commun | Monsieur Teranga | Mister Teranga | |
+| dakar | traiteur_evenements | Commun | Mère Coumba la traiteuse | Mother Coumba the Caterer | |
+| dakar | tangana | Rare | Pape du café Touba | Pape the Touba Coffee Man | |
+| dakar | forokh_thiaya | Rare | Fatou Bissap | Fatou Bissap | |
+| dakar | dibiterie | Rare | Ousmane le livreur en Jakarta | Ousmane the Jakarta Rider | |
+| dakar | gargote | Épique | Yaye la Cheffe | Yaye the Chef | |
+| dakar | maiga | Épique | Le chauffeur de car rapide | The Car Rapide Driver | |
+| dakar | restaurant_teranga | Épique | Mame la commerçante de Sandaga | Mame the Sandaga Trader | |
+| dakar | traiteur_evenements | Légendaire | Le Roi des arènes | King of the Arena | |
+| dakar | fataya_nems | Légendaire | La Grande Griotte | The Great Griotte | |
+| abidjan | alloco | Commun | Tantie Alloco | Auntie Alloco | |
+| abidjan | garbadrome | Commun | Le Boss du Garba | The Garba Boss | |
+| abidjan | attieke_poisson | Commun | Maman Attiéké | Mama Attieke | |
+| abidjan | maquis | Commun | Maman Maquis | Mama Maquis | |
+| abidjan | choukouya | Commun | Le Roi du Choukouya | The Choukouya King | |
+| abidjan | tchapalo | Commun | Tonton Tchapalo | Uncle Tchapalo | |
+| abidjan | kedjenou | Commun | Tantie Kédjénou | Auntie Kedjenou | |
+| abidjan | restaurant_plateau | Commun | Monsieur Plateau | Mister Plateau | |
+| abidjan | garbadrome | Rare | Le chauffeur de gbaka | The Gbaka Driver | |
+| abidjan | alloco | Rare | Aya la vendeuse de jus | Aya the Juice Seller | |
+| abidjan | maquis | Rare | Koffi le livreur | Koffi the Delivery Man | |
+| abidjan | kedjenou | Épique | La Reine du maquis | Queen of the Maquis | |
+| abidjan | tchapalo | Épique | Le chanteur de zouglou | The Zouglou Singer | |
+| abidjan | attieke_poisson | Épique | Mamie Wôrô-wôrô | Granny Woro-woro | |
+| abidjan | restaurant_plateau | Légendaire | Le DJ coupé-décalé | The Coupe-Decale DJ | |
+| abidjan | choukouya | Légendaire | Le footballeur star | The Star Footballer | |
+
+### Recettes de l'album (22) — nom, anecdote, étapes
+
+- **Pain-viande grillée** (Mburu ak yàpp (à valider) / Grilled meat sandwich), commerce `forokh_thiaya`, niveau 1
+  - Anecdote : Le fourneau sur brouette s'installe au coin de la rue dès la tombée du jour. On y glisse la viande grillée dans un pain encore chaud.
+  - Recette : Mariner la viande avec oignon, ail et poivre. / Griller sur le charbon en retournant souvent. / Ouvrir le pain et ajouter oignons et moutarde. / Garnir de viande et servir chaud.
+- **Omelette du tangana** (Omlet (à valider) / Tangana omelette), commerce `tangana`, niveau 1
+  - Anecdote : Au tangana, l'omelette se commande dans un pain pour bien commencer la journée. Chacun a son assaisonnement préféré.
+  - Recette : Battre les œufs avec sel et poivre. / Faire revenir oignon et piment. / Cuire l'omelette à feu vif. / Servir dans un pain.
+- **Spaghetti au pain** (Espageti (à valider) / Spaghetti in bread), commerce `tangana`, niveau 25
+  - Anecdote : Le spaghetti en sandwich surprend les visiteurs mais régale les habitués. C'est un classique du petit-déjeuner de rue.
+  - Recette : Cuire les pâtes. / Préparer une sauce tomate-oignon. / Mélanger pâtes et sauce. / Servir dans un pain.
+- **Niébé** (Ñebbe (à valider) / Black-eyed peas), commerce `tangana`, niveau 50
+  - Anecdote : Le niébé mijoté nourrit longtemps et coûte peu. Il se mange souvent avec du pain au tangana.
+  - Recette : Faire tremper puis cuire les haricots. / Préparer une sauce oignon-tomate. / Laisser mijoter ensemble. / Servir avec du pain.
+- **Pain-thon** (Mburu ak toon (à valider) / Tuna sandwich), commerce `tangana`, niveau 100
+  - Anecdote : Rapide et pas cher, le pain-thon est le compagnon des matins pressés. On l'agrémente souvent de mayonnaise et de piment.
+  - Recette : Émietter le thon. / Ajouter oignon, mayonnaise et piment. / Garnir le pain.
+- **Macaroni** (Makaroni (à valider) / Macaroni), commerce `tangana`, niveau 200
+  - Anecdote : Les macaronis en sauce sont une autre star du tangana. On les sert parfois avec un œuf.
+  - Recette : Cuire les macaronis. / Préparer la sauce oignon-tomate. / Mélanger et servir.
+- **Petits pois** (Petipwa (à valider) / Green peas), commerce `tangana`, niveau 300
+  - Anecdote : Les petits pois en sauce garnissent le pain du matin. Un plat simple qui réchauffe.
+  - Recette : Faire revenir oignon et tomate. / Ajouter les petits pois. / Laisser mijoter et servir dans un pain.
+- **Brochettes** (Brosett (à valider) / Skewers), commerce `maiga`, niveau 1
+  - Anecdote : La nuit, les brochettes grillent sous l'ampoule du maïga. L'odeur attire tout le quartier.
+  - Recette : Couper la viande en dés. / Mariner avec épices et oignon. / Enfiler sur des pics. / Griller sur le charbon.
+- **Frites du maïga** (Frit (à valider) / Maiga fries), commerce `maiga`, niveau 25
+  - Anecdote : Les frites accompagnent les brochettes et l'omelette du soir. Croustillantes, elles partent vite.
+  - Recette : Éplucher et couper les pommes de terre. / Frire une première fois. / Frire à nouveau plus chaud. / Saler et servir.
+- **Thiéboudienne** (Ceebu jën / Thieboudienne), commerce `gargote`, niveau 1
+  - Anecdote : Riz au poisson et légumes, le thiéboudienne est souvent présenté comme le plat national du Sénégal. Le riz du fond de la marmite, croustillant, est très apprécié.
+  - Recette : Farcir le poisson d'une pâte de persil, ail et piment. / Faire revenir oignon et concentré de tomate. / Cuire poisson et légumes dans la sauce. / Cuire le riz dans le bouillon. / Servir le riz avec poisson et légumes.
+- **Yassa** (Yaasa / Yassa), commerce `gargote`, niveau 25
+  - Anecdote : Le yassa marie le citron et les oignons confits. Il se décline au poulet ou au poisson.
+  - Recette : Mariner le poulet avec citron, oignons et moutarde. / Griller le poulet. / Faire fondre les oignons de la marinade. / Mijoter le poulet dans les oignons et servir avec du riz.
+- **Mafé** (Maafe / Mafe), commerce `gargote`, niveau 50
+  - Anecdote : Le mafé est une sauce à base de pâte d'arachide. Il est apprécié dans toute l'Afrique de l'Ouest.
+  - Recette : Faire revenir la viande et l'oignon. / Ajouter tomate et pâte d'arachide délayée. / Mijoter avec les légumes. / Servir avec du riz.
+- **Dibi d'agneau** (Dibi / Lamb dibi), commerce `dibiterie`, niveau 1
+  - Anecdote : À la dibiterie, l'agneau grillé se commande au poids. Il se partage avec oignons et moutarde.
+  - Recette : Couper l'agneau en morceaux. / Griller au charbon. / Assaisonner de sel et poivre. / Servir avec oignons et moutarde.
+- **Fatayas** (Fataya / Fatayas), commerce `fataya_nems`, niveau 1
+  - Anecdote : Les fatayas sont des chaussons frits farcis. Ils se mangent avec une sauce tomate pimentée.
+  - Recette : Préparer une pâte souple. / Garnir de viande ou de poisson. / Fermer en chausson. / Frire jusqu'à dorure.
+- **Nems** (Nem (à valider) / Spring rolls), commerce `fataya_nems`, niveau 25
+  - Anecdote : Les nems font partie des en-cas de fête au Sénégal. Ils rappellent une histoire de rencontres entre cuisines.
+  - Recette : Préparer la farce. / Rouler dans les galettes. / Frire et servir chaud.
+- **Pastels** (Pastel / Pastels), commerce `fataya_nems`, niveau 50
+  - Anecdote : Les pastels sont de petits chaussons au poisson. Ils sont incontournables dans les fêtes.
+  - Recette : Émietter le poisson avec oignon et piment. / Garnir de petits ronds de pâte. / Frire et servir avec sauce.
+- **Soupou kandja** (Supu kànja / Soupou kandja), commerce `restaurant_teranga`, niveau 1
+  - Anecdote : Le soupou kandja est une sauce au gombo très appréciée. Elle se sert avec du riz blanc.
+  - Recette : Couper le gombo. / Cuire viande et poisson. / Ajouter gombo et huile de palme. / Mijoter et servir avec du riz.
+- **Caldou** (Kaldu (à valider) / Caldou), commerce `restaurant_teranga`, niveau 25
+  - Anecdote : Le caldou est un poisson cuit dans un bouillon citronné. C'est un plat léger et parfumé.
+  - Recette : Faire revenir oignon et piment. / Ajouter eau et citron. / Pocher le poisson. / Servir avec du riz.
+- **Thiakry** (Caakiri / Thiakry), commerce `restaurant_teranga`, niveau 50
+  - Anecdote : Le thiakry est un dessert de semoule de mil au lait caillé. Il se sert bien frais.
+  - Recette : Cuire la semoule de mil à la vapeur. / Mélanger avec lait caillé et sucre. / Parfumer et servir frais.
+- **Thiéré** (Cere / Millet couscous), commerce `traiteur_evenements`, niveau 1
+  - Anecdote : Le thiéré, couscous de mil, accompagne de nombreuses fêtes familiales. Il se sert avec une sauce à la viande.
+  - Recette : Cuire la semoule de mil à la vapeur. / Préparer une sauce à la viande. / Servir ensemble.
+- **Ngalakh** (Ngalax / Ngalakh), commerce `traiteur_evenements`, niveau 25
+  - Anecdote : Le ngalakh est un dessert de mil à l'arachide et au pain de singe. Il se partage entre voisins lors des fêtes.
+  - Recette : Cuire la semoule de mil. / Préparer une crème d'arachide et de pain de singe. / Mélanger et servir.
+- **Méchoui** (Mesuwi (à valider) / Roast lamb), commerce `traiteur_evenements`, niveau 50
+  - Anecdote : Le mouton rôti entier est le roi des grandes fêtes. Préparer un méchoui demande des heures de patience.
+  - Recette : Assaisonner le mouton. / Rôtir lentement sur le feu. / Arroser régulièrement. / Servir avec oignons et frites.
+
+### Succès (62)
+
+Roi du Forokh, Habitués du Forokh, Paliers du Forokh, Équipe du Forokh, Roi du Tangana, Habitués du Tangana, Paliers du Tangana, Équipe du Tangana, Roi du Maïga, Habitués du Maïga, Paliers du Maïga, Équipe du Maïga, Roi de la Gargote, Habitués de la Gargote, Paliers de la Gargote, Équipe de la Gargote, Roi du Dibi, Habitués du Dibi, Paliers du Dibi, Équipe du Dibi, Roi des Fatayas, Habitués des Fatayas, Paliers des Fatayas, Équipe des Fatayas, Roi de la Teranga, Habitués de la Teranga, Paliers de la Teranga, Équipe de la Teranga, Roi des Fêtes, Habitués des Fêtes, Paliers des Fêtes, Équipe des Fêtes, Le milliard, Toute la ville a mangé, Doigts de fée, Bâtisseur, La rue s'anime, Bon patron, Plus vite !, Bien équipé, Recommencer en mieux, Teranga absolue, Tour de l'Afrique de l'Ouest, Chasseur de coffres, Collectionneur, Talents rares, Épique !, Légende de la rue, École des gérants, Mission accomplie, Défi relevé, Fidèle au poste, Habitué, La roue tourne, Bon accueil, Coup de boost, Album gourmand, Grand patron, Collier de cauris, Toute la rue avance, Ça tourne sans moi, Merci les sponsors
+
+
 ## À venir (M3/M4)
 
 Gérants (Tonton Modou, Badara le Baye Fall, Ndèye la reine de la nuit, Adja Fatou, Oustaz Grill, Aïda Pastels,

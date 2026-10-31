@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Gargote.Data::Gargote.Data.GameDatabase
   cities:
   - {fileID: 11400000, guid: 56586d930355adc4983a6cd282eea476, type: 2}
+  - {fileID: 11400000, guid: 2af1815e7f8b39d43884dfe3e3308a42, type: 2}
   economy: {fileID: 11400000, guid: d7209a4862b70e441831de289e7e825e, type: 2}
   prestige: {fileID: 11400000, guid: 92e59e0754dcc964583d716828f1a4dc, type: 2}
+  meta: {fileID: 11400000, guid: dc4576bf9b5ed48449c57fc9018d31db, type: 2}

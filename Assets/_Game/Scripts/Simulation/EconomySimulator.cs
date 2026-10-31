@@ -20,11 +20,14 @@ namespace Gargote.Simulation
 
         private readonly GameDefinitions _definitions;
         private readonly SimulationSettings _settings;
+        private readonly MetaDefinitions _meta;
 
-        public EconomySimulator(GameDefinitions definitions, SimulationSettings settings)
+        /// <param name="meta">Contenu méta (M3) ; null = économie M1 seule.</param>
+        public EconomySimulator(GameDefinitions definitions, SimulationSettings settings, MetaDefinitions meta = null)
         {
             _definitions = definitions;
             _settings = settings;
+            _meta = meta;
         }
 
         public SimulationReport Run()
@@ -51,6 +54,18 @@ namespace Gargote.Simulation
             int adsTotal = 0;
             int managers = 0;
             var state = new DecisionState();
+            var metaPlayer = _meta != null ? new MetaPlayer(session, _meta, profile.Seed) : null;
+            int adsToday = 0, currentDay = 0, sessionIndex = 0, boostAdsReserved = 0;
+            // Rewarded méta : après celles du cœur (x2 hors ligne des sessions restantes, boosts), dans la limite indicative.
+            bool TryMetaAd()
+            {
+                int reserve = Math.Max(0, profile.SessionsPerDay - sessionIndex - 1) + Math.Max(0, _settings.MaxBoostAdsPerDay - boostAdsReserved);
+                if (adsToday + reserve >= _settings.Targets.MaxAdsPerDay) return false;
+                adsToday++;
+                adsTotal++;
+                result.AdsPerDay[currentDay]++;
+                return true;
+            }
 
             void Record(string kind, string detail, bool isObjective)
             {
@@ -109,14 +124,20 @@ namespace Gargote.Simulation
                     CityIndex = session.CityIndex,
                     Prestiges = session.Prestige.PrestigeCount, AdsWatched = adsTotal,
                     ManagersHired = managers, TotalLevels = levels,
+                    Cauris = metaPlayer?.Meta.Cauris ?? 0,
                 });
             }
 
             for (int day = 0; day < _settings.Days; day++)
             {
                 int boostAdsToday = 0;
+                currentDay = day;
+                adsToday = 0;
+                metaPlayer?.StartDay(day);
                 for (int s = 0; s < profile.SessionsPerDay; s++)
                 {
+                    sessionIndex = s;
+                    boostAdsReserved = boostAdsToday;
                     double start = day * 86400d + (profile.WakeHour + s * sessionGapHours) * 3600d;
                     elapsed = start;
 
@@ -124,12 +145,14 @@ namespace Gargote.Simulation
                     if (lastSessionEnd >= 0d)
                     {
                         double away = start - lastSessionEnd;
-                        var offline = session.ComputeOffline(away, config.Offline.BaseCapSeconds);
+                        metaPlayer?.Away(away, start);
+                        var offline = session.ComputeOffline(away, session.OfflineCapSeconds);
                         double multiplier = 1d;
                         if (offline.HasEarnings && profile.WatchesAds && away >= _settings.OfflineAdMinAwayMinutes * 60d)
                         {
                             multiplier = session.RewardOfflineAd(day);
                             adsTotal++;
+                            adsToday++;
                             result.AdsPerDay[day]++;
                         }
                         session.ClaimOffline(offline, multiplier);
@@ -143,9 +166,11 @@ namespace Gargote.Simulation
                         {
                             boostAdsToday++;
                             adsTotal++;
+                            adsToday++;
                             result.AdsPerDay[day]++;
                         }
                     }
+                    metaPlayer?.OnSessionStart(profile, TryMetaAd, elapsed);
 
                     double minutes = day == 0 && s == 0 && profile.FirstSessionMinutes > 0
                         ? profile.FirstSessionMinutes
@@ -162,6 +187,7 @@ namespace Gargote.Simulation
                         elapsed += dt;
                         active += dt;
                         sinceDecision += dt;
+                        metaPlayer?.Played(dt, elapsed, profile, TryMetaAd);
 
                         var businesses = session.Businesses;
                         for (int i = 0; i < businesses.Count; i++)
@@ -186,6 +212,14 @@ namespace Gargote.Simulation
                     lastSessionEnd = elapsed;
                     Snapshot(day, s);
                 }
+                metaPlayer?.EndDay(day);
+            }
+            if (metaPlayer != null)
+            {
+                result.MetaDays.AddRange(metaPlayer.Days);
+                result.FirstEpicDay = metaPlayer.FirstEpicDay;
+                result.FirstLegendaryDay = metaPlayer.FirstLegendaryDay;
+                metaPlayer.CopyLedger(result.MetaLedger);
             }
 
             // Mur final : temps actif depuis le dernier objectif.
@@ -211,11 +245,40 @@ namespace Gargote.Simulation
             public BigDouble RecoveryTarget;
         }
 
+        /// <summary>Tous les upgrades de confort de relance (garder les gérants, auto-achat, racheter) sont possédés.</summary>
         private static bool OwnsAllUpgrades(PrestigeSystem prestige)
         {
+            int comfort = 0;
             for (int i = 0; i < prestige.UpgradeCount; i++)
+            {
+                var effect = prestige.Upgrade(i).Effect;
+                if (effect != StarUpgradeEffect.KeepManagers && effect != StarUpgradeEffect.AutoBuyFirstMilestone &&
+                    effect != StarUpgradeEffect.RebuyPrevious) continue;
+                comfort++;
                 if (!prestige.Owns(i)) return false;
-            return prestige.UpgradeCount > 0;
+            }
+            return comfort > 0;
+        }
+
+        /// <summary>
+        /// Joueur rationnel : un upgrade d'étoiles de puissance n'est acheté que s'il rapporte plus que les étoiles qu'il
+        /// retire du multiplicateur (vitesse, coût) ou s'il coûte moins de 2 % de revenus (hors ligne). Confort : toujours.
+        /// </summary>
+        private static bool IsWorthBuying(GameSession session, StarUpgradeDefinition upgrade)
+        {
+            var p = session.Prestige;
+            var cfg = session.Definitions.Prestige;
+            double before = p.RevenueMultiplier;
+            double afterStars = 1d + PrestigeCalculator.EffectiveStars(p.CurrentCityStars, p.PreviousCitiesStars, p.StarsSpent + upgrade.CostStars, cfg) * cfg.BonusPerStar;
+            double after = Math.Max(afterStars, p.MultiplierFloor);
+            switch (upgrade.Effect)
+            {
+                case StarUpgradeEffect.GlobalSpeed: return after * upgrade.Value > before * 1.02d;
+                case StarUpgradeEffect.CostReduction: return after / Math.Max(0.01d, upgrade.Value) > before * 1.02d;
+                case StarUpgradeEffect.OfflineEarnings:
+                case StarUpgradeEffect.OfflineCap: return after >= before * 0.98d;
+                default: return true;
+            }
         }
 
         private void Decide(GameSession session, PlayerProfile profile, Random random,
@@ -228,9 +291,10 @@ namespace Gargote.Simulation
 
             // 0. Upgrades d'étoiles de confort, dans l'ordre, dès qu'ils sont abordables.
             // Le joueur n'en achète un que s'il coûte au plus UpgradeMaxShareOfStars de ses étoiles disponibles.
+            // Upgrades de puissance (M3) : seulement si l'échange est gagnant (les étoiles dépensées ne comptent plus).
             for (int i = 0; i < prestige.UpgradeCount; i++)
                 if (!prestige.Owns(i) && prestige.Upgrade(i).CostStars <= prestige.AvailableStars * _settings.UpgradeMaxShareOfStars &&
-                    session.BuyStarUpgrade(i)) record("star_upgrade", prestige.Upgrade(i).Id, true);
+                    IsWorthBuying(session, prestige.Upgrade(i)) && session.BuyStarUpgrade(i)) record("star_upgrade", prestige.Upgrade(i).Id, true);
 
             // 1. Gérants en priorité (automatisation = moins de taps, gains hors ligne), puis « racheter comme avant ».
             HireManagers(businesses, economy);
@@ -506,6 +570,8 @@ namespace Gargote.Simulation
                 }
             }
 
+            if (r.MetaDays.Count > 0) EvaluateMeta(r, Check, reference);
+
             if (r.Profile.WatchesAds)
             {
                 double sum = 0;
@@ -515,6 +581,35 @@ namespace Gargote.Simulation
                 Check("rewarded_per_day", sum / Math.Max(1, r.AdsPerDay.Length), "", t.MinAdsPerDay, double.MaxValue, true,
                     ">= " + Fmt(t.MinAdsPerDay, "") + " (indicatif <= " + Fmt(t.MaxAdsPerDay, "") + ")");
             }
+        }
+
+        /// <summary>Cibles méta (M3) : économie de cauris, rythme des raretés, collection.</summary>
+        private void EvaluateMeta(ProfileResult r, Action<string, double?, string, double, double, bool, string> check, bool reference)
+        {
+            var t = _settings.Targets;
+            // Jours de dépenses : solde moyen ÷ dépense quotidienne moyenne (jours où des cauris circulent).
+            double balance = 0, spent = 0;
+            int n = 0;
+            foreach (var d in r.MetaDays)
+            {
+                if (d.CaurisEarnedToday <= 0 && d.CaurisSpentToday <= 0) continue;
+                balance += d.Cauris;
+                spent += d.CaurisSpentToday;
+                n++;
+            }
+            double? days = n > 0 && spent > 0 ? balance / spent : (double?)null;
+            check("cauris_balance_days", days, " d", 0, t.MaxCaurisBalanceDays, reference, null);
+            check("cauris_spent_per_day", n > 0 ? spent / n : 0, "", 0, 0, false, null);
+            check("first_epic_day", r.FirstEpicDay, " d", 0, t.FirstEpicMaxDay, reference, null);
+            check("first_legendary_day", r.FirstLegendaryDay, " d", t.FirstLegendaryMinDay, t.FirstLegendaryMaxDay, reference, null);
+            var at = r.MetaDays.Find(d => d.Day == t.CollectionDay);
+            // Collection = gérants à collectionner (les gérants de base s'embauchent en FCFA et ne comptent pas).
+            double? share = at != null && at.CollectibleAvailable > 0 ? 100d * at.CollectibleOwned / at.CollectibleAvailable : (double?)null;
+            check("collection_day" + t.CollectionDay.ToString(CultureInfo.InvariantCulture), share, "%",
+                t.CollectionMin * 100d, t.CollectionMax * 100d, reference, null);
+            var last = r.MetaDays[r.MetaDays.Count - 1];
+            check("player_level_end", last.PlayerLevel, "", 0, 0, false, null);
+            check("chests_opened_end", last.ChestsOpened, "", 0, 0, false, null);
         }
 
         /// <summary>
@@ -569,9 +664,13 @@ namespace Gargote.Simulation
             scaling = scaling ?? new ProxyCityScaling();
             var cities = new List<CityDefinition>(source.Cities);
             var template = source.Cities[source.Cities.Length - 1];
+            // Les villes réelles occupent les premiers pas de l'échelle : la proxy suivante continue la chaîne
+            // (objectif x9 → x7 → x4 compté depuis Dakar, quel que soit le nombre de villes réelles).
+            int offset = source.Cities.Length - 1;
             for (int i = cities.Count; i < totalCities; i++)
             {
                 int step = i - source.Cities.Length + 1;
+                string suffix = "_c" + (i + 1).ToString(CultureInfo.InvariantCulture);
                 double cost = Math.Pow(scaling.CostMultiplier, step);
                 double revenue = Math.Pow(scaling.RevenueMultiplier, step);
                 var businesses = new BusinessDefinition[template.Businesses.Length];
@@ -581,7 +680,7 @@ namespace Gargote.Simulation
                     businesses[b] = new BusinessDefinition
                     {
                         // Prix réel inchangé : une ville plus grande sert plus de clients (cycle plus court), pas plus cher.
-                        Id = d.Id, Growth = d.Growth, BaseCycleSeconds = d.BaseCycleSeconds / revenue, Affinity = d.Affinity,
+                        Id = d.Id + suffix, Growth = d.Growth, BaseCycleSeconds = d.BaseCycleSeconds / revenue, Affinity = d.Affinity,
                         BaseCost = d.BaseCost * cost, ManagerCost = d.ManagerCost * cost, BaseRevenue = d.BaseRevenue,
                     };
                 }
@@ -591,7 +690,7 @@ namespace Gargote.Simulation
                     var d = template.Upgrades[u];
                     upgrades[u] = new CashUpgradeDefinition
                     {
-                        Id = d.Id, BusinessIndex = d.BusinessIndex, RevenueMultiplier = d.RevenueMultiplier,
+                        Id = d.Id + suffix, BusinessIndex = d.BusinessIndex, RevenueMultiplier = d.RevenueMultiplier,
                         Cost = d.Cost * cost * Math.Pow(scaling.UpgradeCostMultiplier, step),
                     };
                 }
@@ -601,7 +700,7 @@ namespace Gargote.Simulation
                     Id = "city" + (i + 1).ToString(CultureInfo.InvariantCulture) + "_proxy",
                     Businesses = businesses,
                     Upgrades = upgrades,
-                    GoalLifetimeEarnings = template.GoalLifetimeEarnings * scaling.GoalFactor(step),
+                    GoalLifetimeEarnings = template.GoalLifetimeEarnings * scaling.GoalFactor(offset + step) / scaling.GoalFactor(offset),
                     StartingMoney = template.StartingMoney * cost,
                     StarThreshold = baseThreshold * Math.Pow(scaling.StarThresholdMultiplier, step),
                 });

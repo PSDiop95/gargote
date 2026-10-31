@@ -58,6 +58,7 @@ namespace Gargote.EditorTools
             prestige.cityCarryOver = seed.prestige.cityCarryOver;
             prestige.travelMultiplierFloorRatio = seed.prestige.travelMultiplierFloorRatio;
             prestige.rebuyStartingFundSeconds = seed.prestige.rebuyStartingFundSeconds;
+            prestige.visitedCityIncomeRatio = seed.prestige.visitedCityIncomeRatio;
             var upgrades = seed.prestige.starUpgrades ?? new StarUpgradeSeed[0];
             prestige.starUpgrades = new PrestigeConfigAsset.StarUpgradeEntry[upgrades.Length];
             for (int u = 0; u < upgrades.Length; u++)
@@ -67,6 +68,7 @@ namespace Gargote.EditorTools
                     displayName = upgrades[u].displayName,
                     effect = StarUpgradeSeed.ParseEffect(upgrades[u].effect),
                     costStars = upgrades[u].costStars,
+                    value = upgrades[u].value,
                 };
             EditorUtility.SetDirty(prestige);
 
@@ -135,7 +137,7 @@ namespace Gargote.EditorTools
             Debug.Log("[Gargote] Seed imported: " + cities.Length + " city(ies).");
         }
 
-        private static T LoadOrCreate<T>(string path) where T : ScriptableObject
+        internal static T LoadOrCreate<T>(string path) where T : ScriptableObject
         {
             var asset = AssetDatabase.LoadAssetAtPath<T>(path);
             if (asset != null) return asset;

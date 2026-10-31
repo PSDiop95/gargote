@@ -16,7 +16,7 @@ namespace Gargote.Presentation
     /// (tap, billets, gérant, palier, déblocage, foule, client spécial, nuit, panneau, retour hors ligne), prend des captures
     /// et mesure les performances en qualité Bas et Haut. Activé seulement par l'argument « -gargoteCapture &lt;dossier&gt; ».
     /// </summary>
-    public sealed class CaptureDirector : MonoBehaviour
+    public sealed partial class CaptureDirector : MonoBehaviour
     {
         private const string Arg = "-gargoteCapture";
         private string _folder;
@@ -28,6 +28,7 @@ namespace Gargote.Presentation
         {
             string folder = null;
             string[] args = Environment.GetCommandLineArgs();
+            bool meta = Array.IndexOf(args, "-gargoteCaptureMeta") >= 0;
             for (int i = 0; i < args.Length - 1; i++)
                 if (args[i] == Arg) folder = args[i + 1];
 #if UNITY_ANDROID && !UNITY_EDITOR
@@ -35,8 +36,11 @@ namespace Gargote.Presentation
             using (var player = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
             using (var activity = player.GetStatic<AndroidJavaObject>("currentActivity"))
             using (var intent = activity.Call<AndroidJavaObject>("getIntent"))
-                if (intent.Call<bool>("getBooleanExtra", "gargoteCapture", false))
+            {
+                meta |= intent.Call<bool>("getBooleanExtra", "gargoteCaptureMeta", false);
+                if (meta || intent.Call<bool>("getBooleanExtra", "gargoteCapture", false))
                     folder = Path.Combine(Application.persistentDataPath, "capture");
+            }
 #endif
             if (folder == null) return;
             GameRoot.SaveServiceOverride = () => new InMemorySaveService();
@@ -44,7 +48,9 @@ namespace Gargote.Presentation
             Application.runInBackground = true; // la capture continue si la fenêtre perd le focus
             var go = new GameObject("CaptureDirector");
             DontDestroyOnLoad(go);
-            go.AddComponent<CaptureDirector>()._folder = folder;
+            var director = go.AddComponent<CaptureDirector>();
+            director._folder = folder;
+            director._meta = meta;
         }
 
         private IEnumerator Start()
@@ -56,6 +62,11 @@ namespace Gargote.Presentation
             _report.AppendLine("Écran " + Screen.width + "x" + Screen.height + ", " + SystemInfo.deviceModel + ", " +
                                SystemInfo.graphicsDeviceName + ", RAM " + SystemInfo.systemMemorySize + " Mo, " + SystemInfo.processorType);
             _report.AppendLine("Qualité détectée : " + _root.Quality.Tier);
+            if (_meta)
+            {
+                yield return MetaScenario();
+                yield break;
+            }
 
             _root.GameTime.ForcedHour = 9.5d;
             yield return Wait(2.5f);

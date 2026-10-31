@@ -18,6 +18,10 @@ namespace Gargote.Systems
         /// <summary>Multiplicateurs locaux (upgrades, gérants à rareté — M3). 1 par défaut.</summary>
         public double LocalRevenueMultiplier { get; internal set; } = 1d;
         public double LocalSpeedMultiplier { get; internal set; } = 1d;
+        /// <summary>Multiplicateur permanent de la méta (gérants de collection) : conservé aux relances.</summary>
+        public double MetaRevenueMultiplier { get; internal set; } = 1d;
+        /// <summary>Boost actif temporaire (gérant) : s'applique aux cycles en jeu actif, jamais hors ligne.</summary>
+        public double BoostMultiplier { get; internal set; } = 1d;
 
         public double CycleSeconds { get; private set; }
         /// <summary>Revenu par cycle hors multiplicateurs globaux (étoiles, boosts, jour/nuit).</summary>
@@ -36,7 +40,7 @@ namespace Gargote.Systems
 
         internal void Recompute(EconomyConfig config)
         {
-            RevenuePerCycle = EconomyMath.RevenuePerCycle(Definition, Level, config, LocalRevenueMultiplier,
+            RevenuePerCycle = EconomyMath.RevenuePerCycle(Definition, Level, config, LocalRevenueMultiplier * MetaRevenueMultiplier,
                 LocalSpeedMultiplier, out double cycle);
             CycleSeconds = cycle;
             MilestonesReached = EconomyMath.MilestonesReached(Level, config.Milestones);

@@ -70,6 +70,24 @@ namespace Gargote.Systems
             return false;
         }
 
+        /// <summary>Produit des valeurs des upgrades possédés pour un effet multiplicatif (1 si aucun).</summary>
+        public double Product(StarUpgradeEffect effect)
+        {
+            double p = 1d;
+            for (int i = 0; i < _owned.Length; i++)
+                if (_owned[i] && _config.StarUpgrades[i].Effect == effect) p *= _config.StarUpgrades[i].Value;
+            return p;
+        }
+
+        /// <summary>Somme des valeurs des upgrades possédés pour un effet additif (0 si aucun).</summary>
+        public double Sum(StarUpgradeEffect effect)
+        {
+            double s = 0d;
+            for (int i = 0; i < _owned.Length; i++)
+                if (_owned[i] && _config.StarUpgrades[i].Effect == effect) s += _config.StarUpgrades[i].Value;
+            return s;
+        }
+
         public bool CanBuyUpgrade(int index) => !_owned[index] && AvailableStars >= _config.StarUpgrades[index].CostStars;
 
         public bool TryBuyUpgrade(int index)

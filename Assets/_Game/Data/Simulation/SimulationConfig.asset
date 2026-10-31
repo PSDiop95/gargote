@@ -22,7 +22,7 @@ MonoBehaviour:
     adBoostRewatchBelowHours: 1
     maxBoostAdsPerDay: 2
     offlineAdMinAwayMinutes: 60
-    proxyCities: 4
+    proxyCities: 3
     proxyCityScaling:
       costMultiplier: 2.5
       revenueMultiplier: 2.5
@@ -31,7 +31,7 @@ MonoBehaviour:
       upgradeCostMultiplier: 1
       goalMultipliers:
       - 9
-      - 7
+      - 7.5
       - 4
     profiles:
     - name: occasionnel_pub
@@ -151,3 +151,10 @@ MonoBehaviour:
       recoveryShare: 0.5
       maxRecoveryMinutes: 10
       recoveryMinMultiplierGain: 0.1
+      maxCaurisBalanceDays: 0
+      firstEpicMaxDay: 0
+      firstLegendaryMinDay: 0
+      firstLegendaryMaxDay: 0
+      collectionDay: 0
+      collectionMin: 0
+      collectionMax: 0

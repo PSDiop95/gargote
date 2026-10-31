@@ -28,92 +28,202 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c209e7d6c8252444a869f421ff6533eb, type: 2}
   upgrades:
   - id: dakar_up_01
-    displayName: "Upgrade 01 (\xE0 nommer)"
+    displayName: Pain frais de la boulangerie du quartier
     business: {fileID: 11400000, guid: e1e073aa18a567e40995e4fa5d9615d1, type: 2}
-    multiplier: 1.5
+    multiplier: 1.25
     cost: 50000
   - id: dakar_up_02
-    displayName: "Upgrade 02 (\xE0 nommer)"
-    business: {fileID: 11400000, guid: 0f5e8dbedaa515244ae6b35e47734fe5, type: 2}
-    multiplier: 1.5
-    cost: 160000
-  - id: dakar_up_03
-    displayName: "Upgrade 03 (\xE0 nommer)"
-    business: {fileID: 11400000, guid: fcd5f20f995f0ae478c34256b641ab0b, type: 2}
-    multiplier: 1.5
-    cost: 512000
-  - id: dakar_up_04
-    displayName: "Upgrade 04 (\xE0 nommer)"
-    business: {fileID: 11400000, guid: 45e400568d7ccb045ac1e848e5814107, type: 2}
-    multiplier: 1.5
-    cost: 1638000
-  - id: dakar_up_05
-    displayName: "Upgrade 05 (\xE0 nommer)"
+    displayName: Brouette aux roues neuves
     business: {fileID: 11400000, guid: e1e073aa18a567e40995e4fa5d9615d1, type: 2}
-    multiplier: 1.5
-    cost: 3125000
-  - id: dakar_up_06
-    displayName: "Upgrade 06 (\xE0 nommer)"
-    business: {fileID: 0}
-    multiplier: 1.25
-    cost: 5243000
-  - id: dakar_up_07
-    displayName: "Upgrade 07 (\xE0 nommer)"
-    business: {fileID: 11400000, guid: c15ed926776e6544dab7c3556743cbea, type: 2}
-    multiplier: 1.5
-    cost: 5243000
-  - id: dakar_up_08
-    displayName: "Upgrade 08 (\xE0 nommer)"
+    multiplier: 1.2
+    cost: 100000
+  - id: dakar_up_03
+    displayName: "Thermos de caf\xE9 Touba"
     business: {fileID: 11400000, guid: 0f5e8dbedaa515244ae6b35e47734fe5, type: 2}
-    multiplier: 1.5
-    cost: 10000000
-  - id: dakar_up_09
-    displayName: "Upgrade 09 (\xE0 nommer)"
-    business: {fileID: 11400000, guid: 52f51c8e22b4959449ff14db3bdbb5ca, type: 2}
-    multiplier: 1.5
-    cost: 16777000
-  - id: dakar_up_10
-    displayName: "Upgrade 10 (\xE0 nommer)"
-    business: {fileID: 11400000, guid: fcd5f20f995f0ae478c34256b641ab0b, type: 2}
-    multiplier: 1.5
-    cost: 32000000
-  - id: dakar_up_11
-    displayName: "Upgrade 11 (\xE0 nommer)"
-    business: {fileID: 11400000, guid: 1ef1c2444c395fb4c802965fb1b588fc, type: 2}
-    multiplier: 1.5
-    cost: 53687000
-  - id: dakar_up_12
-    displayName: "Upgrade 12 (\xE0 nommer)"
-    business: {fileID: 11400000, guid: 45e400568d7ccb045ac1e848e5814107, type: 2}
-    multiplier: 1.5
-    cost: 102400000
-  - id: dakar_up_13
-    displayName: "Upgrade 13 (\xE0 nommer)"
-    business: {fileID: 11400000, guid: c209e7d6c8252444a869f421ff6533eb, type: 2}
-    multiplier: 1.5
-    cost: 171799000
-  - id: dakar_up_14
-    displayName: "Upgrade 14 (\xE0 nommer)"
-    business: {fileID: 0}
     multiplier: 1.25
-    cost: 327680000
-  - id: dakar_up_15
-    displayName: "Upgrade 15 (\xE0 nommer)"
+    cost: 160000
+  - id: dakar_up_04
+    displayName: Banc en bois pour les clients
+    business: {fileID: 11400000, guid: 0f5e8dbedaa515244ae6b35e47734fe5, type: 2}
+    multiplier: 1.2
+    cost: 320000
+  - id: dakar_up_05
+    displayName: Ampoule de 100 watts
+    business: {fileID: 11400000, guid: fcd5f20f995f0ae478c34256b641ab0b, type: 2}
+    multiplier: 1.25
+    cost: 512000
+  - id: dakar_up_06
+    displayName: "Glaci\xE8re pleine de bissap"
+    business: {fileID: 11400000, guid: fcd5f20f995f0ae478c34256b641ab0b, type: 2}
+    multiplier: 1.2
+    cost: 1020000
+  - id: dakar_up_07
+    displayName: Bouteille de gaz neuve
+    business: {fileID: 11400000, guid: 45e400568d7ccb045ac1e848e5814107, type: 2}
+    multiplier: 1.25
+    cost: 1640000
+  - id: dakar_up_08
+    displayName: "Grille en fer forg\xE9 du forgeron"
+    business: {fileID: 11400000, guid: e1e073aa18a567e40995e4fa5d9615d1, type: 2}
+    multiplier: 1.25
+    cost: 3120000
+  - id: dakar_up_09
+    displayName: Grande marmite de Sandaga
+    business: {fileID: 11400000, guid: 45e400568d7ccb045ac1e848e5814107, type: 2}
+    multiplier: 1.2
+    cost: 3280000
+  - id: dakar_up_10
+    displayName: Car rapide de livraison
+    business: {fileID: 0}
+    multiplier: 1.06
+    cost: 3930000
+  - id: dakar_up_11
+    displayName: "T\xE9l\xE9phone pour les commandes"
+    business: {fileID: 0}
+    multiplier: 1.06
+    cost: 5240000
+  - id: dakar_up_12
+    displayName: "Charbon de qualit\xE9"
     business: {fileID: 11400000, guid: c15ed926776e6544dab7c3556743cbea, type: 2}
-    multiplier: 1.5
-    cost: 327680000
+    multiplier: 1.25
+    cost: 5240000
+  - id: dakar_up_13
+    displayName: Sauce oignon de Tonton
+    business: {fileID: 11400000, guid: e1e073aa18a567e40995e4fa5d9615d1, type: 2}
+    multiplier: 1.2
+    cost: 6250000
+  - id: dakar_up_14
+    displayName: "Pancarte peinte \xE0 la main"
+    business: {fileID: 0}
+    multiplier: 1.06
+    cost: 7860000
+  - id: dakar_up_15
+    displayName: "Gros sac de ni\xE9b\xE9 du march\xE9"
+    business: {fileID: 11400000, guid: 0f5e8dbedaa515244ae6b35e47734fe5, type: 2}
+    multiplier: 1.25
+    cost: 10000000
   - id: dakar_up_16
-    displayName: "Upgrade 16 (\xE0 nommer)"
-    business: {fileID: 11400000, guid: 52f51c8e22b4959449ff14db3bdbb5ca, type: 2}
-    multiplier: 1.5
-    cost: 1048576000
+    displayName: "Pagne wax pour l'\xE9quipe"
+    business: {fileID: 0}
+    multiplier: 1.05
+    cost: 10500000
   - id: dakar_up_17
-    displayName: "Upgrade 17 (\xE0 nommer)"
-    business: {fileID: 11400000, guid: 1ef1c2444c395fb4c802965fb1b588fc, type: 2}
-    multiplier: 1.5
-    cost: 3355443000
+    displayName: Agneau du foirail
+    business: {fileID: 11400000, guid: c15ed926776e6544dab7c3556743cbea, type: 2}
+    multiplier: 1.2
+    cost: 10500000
   - id: dakar_up_18
-    displayName: "Upgrade 18 (\xE0 nommer)"
+    displayName: "Rouleau \xE0 p\xE2tisserie de Tata"
+    business: {fileID: 11400000, guid: 52f51c8e22b4959449ff14db3bdbb5ca, type: 2}
+    multiplier: 1.25
+    cost: 16800000
+  - id: dakar_up_19
+    displayName: "Kink\xE9liba du matin"
+    business: {fileID: 11400000, guid: 0f5e8dbedaa515244ae6b35e47734fe5, type: 2}
+    multiplier: 1.2
+    cost: 20000000
+  - id: dakar_up_20
+    displayName: "Brochettes marin\xE9es la veille"
+    business: {fileID: 11400000, guid: fcd5f20f995f0ae478c34256b641ab0b, type: 2}
+    multiplier: 1.25
+    cost: 32000000
+  - id: dakar_up_21
+    displayName: Huile de friture neuve
+    business: {fileID: 11400000, guid: 52f51c8e22b4959449ff14db3bdbb5ca, type: 2}
+    multiplier: 1.2
+    cost: 33600000
+  - id: dakar_up_22
+    displayName: Nappes en wax
+    business: {fileID: 11400000, guid: 1ef1c2444c395fb4c802965fb1b588fc, type: 2}
+    multiplier: 1.25
+    cost: 53700000
+  - id: dakar_up_23
+    displayName: Chaises en plastique en plus
+    business: {fileID: 11400000, guid: fcd5f20f995f0ae478c34256b641ab0b, type: 2}
+    multiplier: 1.2
+    cost: 64000000
+  - id: dakar_up_24
+    displayName: "Riz parfum\xE9 de la vall\xE9e"
+    business: {fileID: 11400000, guid: 45e400568d7ccb045ac1e848e5814107, type: 2}
+    multiplier: 1.25
+    cost: 102000000
+  - id: dakar_up_25
+    displayName: Climatiseur qui marche
+    business: {fileID: 11400000, guid: 1ef1c2444c395fb4c802965fb1b588fc, type: 2}
+    multiplier: 1.2
+    cost: 107000000
+  - id: dakar_up_26
+    displayName: "B\xE2ches et chaises lou\xE9es"
     business: {fileID: 11400000, guid: c209e7d6c8252444a869f421ff6533eb, type: 2}
-    multiplier: 1.5
-    cost: 10737418000
+    multiplier: 1.25
+    cost: 172000000
+  - id: dakar_up_27
+    displayName: "Tamarin et n\xE9t\xE9tou de Mamie"
+    business: {fileID: 11400000, guid: 45e400568d7ccb045ac1e848e5814107, type: 2}
+    multiplier: 1.2
+    cost: 205000000
+  - id: dakar_up_28
+    displayName: "Annonce \xE0 la radio du quartier"
+    business: {fileID: 0}
+    multiplier: 1.06
+    cost: 246000000
+  - id: dakar_up_29
+    displayName: Groupe WhatsApp des clients
+    business: {fileID: 0}
+    multiplier: 1.06
+    cost: 328000000
+  - id: dakar_up_30
+    displayName: "Moutarde et oignons \xE0 volont\xE9"
+    business: {fileID: 11400000, guid: c15ed926776e6544dab7c3556743cbea, type: 2}
+    multiplier: 1.25
+    cost: 328000000
+  - id: dakar_up_31
+    displayName: Camion frigorifique
+    business: {fileID: 11400000, guid: c209e7d6c8252444a869f421ff6533eb, type: 2}
+    multiplier: 1.2
+    cost: 344000000
+  - id: dakar_up_32
+    displayName: Fourgon des grossistes
+    business: {fileID: 0}
+    multiplier: 1.06
+    cost: 492000000
+  - id: dakar_up_33
+    displayName: "Bouche-\xE0-oreille de Dakar"
+    business: {fileID: 0}
+    multiplier: 1.05
+    cost: 655000000
+  - id: dakar_up_34
+    displayName: Papier kraft pour emporter
+    business: {fileID: 11400000, guid: c15ed926776e6544dab7c3556743cbea, type: 2}
+    multiplier: 1.2
+    cost: 655000000
+  - id: dakar_up_35
+    displayName: Sauce piment maison
+    business: {fileID: 11400000, guid: 52f51c8e22b4959449ff14db3bdbb5ca, type: 2}
+    multiplier: 1.25
+    cost: 1050000000
+  - id: dakar_up_36
+    displayName: "Commande de 1 000 pi\xE8ces"
+    business: {fileID: 11400000, guid: 52f51c8e22b4959449ff14db3bdbb5ca, type: 2}
+    multiplier: 1.2
+    cost: 2100000000
+  - id: dakar_up_37
+    displayName: Serveur en tenue
+    business: {fileID: 11400000, guid: 1ef1c2444c395fb4c802965fb1b588fc, type: 2}
+    multiplier: 1.25
+    cost: 3360000000
+  - id: dakar_up_38
+    displayName: Carte des desserts thiakry
+    business: {fileID: 11400000, guid: 1ef1c2444c395fb4c802965fb1b588fc, type: 2}
+    multiplier: 1.2
+    cost: 6710000000
+  - id: dakar_up_39
+    displayName: "\xC9quipe de cuisini\xE8res du quartier"
+    business: {fileID: 11400000, guid: c209e7d6c8252444a869f421ff6533eb, type: 2}
+    multiplier: 1.25
+    cost: 10700000000
+  - id: dakar_up_40
+    displayName: Tambours de sabar pour l'accueil
+    business: {fileID: 11400000, guid: c209e7d6c8252444a869f421ff6533eb, type: 2}
+    multiplier: 1.2
+    cost: 21500000000

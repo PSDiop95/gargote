@@ -29,8 +29,22 @@ namespace Gargote.Services.Save
         /// <summary>Migrations de la version n vers n+1, appliquées dans l'ordre sur le JSON brut.</summary>
         private static readonly Dictionary<int, Func<JObject, JObject>> Migrations = new Dictionary<int, Func<JObject, JObject>>
         {
-            // Exemple pour la V2 : { 1, o => { o["NewField"] = 0; return o; } },
+            { 1, MigrateV1ToV2 },
         };
+
+        /// <summary>
+        /// v1 (M1/M2) → v2 (M3) : champs neutres pour les boosts gagnés, l'extension hors ligne et les villes visitées ;
+        /// pas de bloc méta (la méta le reconstruit depuis l'état de la session, sans crédit rétroactif).
+        /// </summary>
+        private static JObject MigrateV1ToV2(JObject o)
+        {
+            if (o[nameof(SaveData.TimedBoostRemainingSeconds)] == null) o[nameof(SaveData.TimedBoostRemainingSeconds)] = 0d;
+            if (o[nameof(SaveData.TimedBoostMultiplier)] == null) o[nameof(SaveData.TimedBoostMultiplier)] = 1d;
+            if (o[nameof(SaveData.ExtraOfflineCapSeconds)] == null) o[nameof(SaveData.ExtraOfflineCapSeconds)] = 0d;
+            if (o[nameof(SaveData.VisitedCities)] == null) o[nameof(SaveData.VisitedCities)] = new JArray();
+            o.Remove(nameof(SaveData.Meta));
+            return o;
+        }
 
         public static string Serialize(SaveData data)
         {

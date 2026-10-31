@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Gargote.Core;
 
 namespace Gargote.Systems
@@ -7,6 +8,15 @@ namespace Gargote.Systems
     /// Façade d'une partie : regroupe économie, commerces et prestige de la ville en cours.
     /// Logique pure : aucune dépendance à UnityEngine ; la présentation écoute les événements.
     /// </summary>
+    /// <summary>Ville quittée : revenu géré figé au départ, versé en partie à la ville en cours (§3).</summary>
+    public sealed class VisitedCity
+    {
+        public string CityId;
+        public BigDouble ManagedIncomePerSecond;
+        public BigDouble LifetimeEarnings;
+        public long[] Levels = Array.Empty<long>();
+    }
+
     public sealed class GameSession
     {
         private readonly GameDefinitions _definitions;
@@ -26,6 +36,19 @@ namespace Gargote.Systems
         public event Action<long, bool> Prestiged;
         /// <summary>Levé quand <see cref="Businesses"/> est remplacé (nouvelle ville).</summary>
         public event Action<BusinessSystem> CityChanged;
+        /// <summary>Gains hors ligne crédités (multiplicateur appliqué).</summary>
+        public event Action<BigDouble, double> OfflineClaimed;
+
+        private readonly List<VisitedCity> _visited = new List<VisitedCity>();
+        private BigDouble _visitedPassivePerSecond = BigDouble.Zero;
+
+        /// <summary>Villes quittées, dans l'ordre de visite.</summary>
+        public IReadOnlyList<VisitedCity> VisitedCities => _visited;
+        /// <summary>Revenu passif des villes quittées (déjà réduit par <see cref="PrestigeConfig.VisitedCityIncomeRatio"/>).</summary>
+        public BigDouble VisitedPassivePerSecond => _visitedPassivePerSecond;
+        /// <summary>Plafond hors ligne temporaire acheté en cauris (secondes ajoutées), fixé par la méta.</summary>
+        public double ExtraOfflineCapSeconds { get; internal set; }
+        public GameDefinitions Definitions => _definitions;
 
         public GameSession(GameDefinitions definitions)
         {
@@ -54,6 +77,7 @@ namespace Gargote.Systems
         public void Tick(double deltaSeconds, double hourOfDay)
         {
             Businesses.Tick(deltaSeconds, hourOfDay);
+            if (!_visitedPassivePerSecond.IsZero && deltaSeconds > 0d) Economy.Earn(_visitedPassivePerSecond * deltaSeconds);
             Economy.ConsumeBoostTime(deltaSeconds);
 
             if (!Prestige.Has(StarUpgradeEffect.AutoBuyFirstMilestone)) return;
@@ -69,6 +93,7 @@ namespace Gargote.Systems
         {
             if (!Prestige.TryBuyUpgrade(index)) return false;
             Economy.PermanentMultiplier = Prestige.RevenueMultiplier;
+            ApplyStarEffects();
             return true;
         }
 
@@ -101,12 +126,13 @@ namespace Gargote.Systems
             if (!moveToNextCity && !CanPrestige) return false;
 
             // Revenu d'avant la relance, hors boosts temporaires (pub, bienvenue).
-            BigDouble incomeBefore = Businesses.TotalIncomePerSecond() / (Economy.AdBoostMultiplier * Economy.WelcomeMultiplier);
+            BigDouble incomeBefore = Businesses.TotalIncomePerSecond() / Economy.TemporaryMultiplier;
             long gained = Prestige.Claim(Economy.CityLifetimeEarnings, moveToNextCity);
             Economy.PermanentMultiplier = Prestige.RevenueMultiplier;
 
             if (moveToNextCity)
             {
+                RecordVisit();
                 _previousLevels = null;
                 _previousUpgrades = null;
                 EnterCity(CityIndex + 1);
@@ -124,21 +150,65 @@ namespace Gargote.Systems
             return true;
         }
 
+        /// <summary>Plafond hors ligne effectif : base + upgrades d'étoiles + extension temporaire, borné au maximum.</summary>
+        public double OfflineCapSeconds
+        {
+            get
+            {
+                var offline = _definitions.Economy.Offline;
+                double cap = offline.BaseCapSeconds + Prestige.Sum(StarUpgradeEffect.OfflineCap) + Math.Max(0d, ExtraOfflineCapSeconds);
+                return Math.Min(offline.MaxCapSeconds, cap);
+            }
+        }
+
+        /// <summary>Efficacité hors ligne effective (config × upgrades d'étoiles « gains hors ligne »).</summary>
+        public double OfflineEfficiency => _definitions.Economy.Offline.Efficiency * (1d + Prestige.Sum(StarUpgradeEffect.OfflineEarnings));
+
+        public OfflineResult ComputeOffline(double elapsedSeconds) => ComputeOffline(elapsedSeconds, OfflineCapSeconds);
+
         public OfflineResult ComputeOffline(double elapsedSeconds, double capSeconds)
         {
-            var offline = _definitions.Economy.Offline;
             var boost = _definitions.Economy.AdBoost;
             // ManagedIncomePerSecond inclut le multiplicateur permanent ; boost et bienvenue s'appliquent à la part couverte.
-            return OfflineCalculator.Compute(Businesses.ManagedIncomePerSecond(), elapsedSeconds, capSeconds,
-                offline.Efficiency, boost.AppliesOffline ? Economy.AdBoostRemainingSeconds : 0d, boost.Multiplier,
+            // Le revenu passif des villes quittées s'ajoute (sans boost, il est déjà réduit).
+            return OfflineCalculator.Compute(Businesses.ManagedIncomePerSecond() + _visitedPassivePerSecond, elapsedSeconds, capSeconds,
+                OfflineEfficiency, boost.AppliesOffline ? Economy.AdBoostRemainingSeconds : 0d, boost.Multiplier,
                 Economy.WelcomeRemainingSeconds, _definitions.Economy.Welcome.Multiplier);
         }
 
         /// <summary>Crédite les gains hors ligne (multiplicateur x2 rewarded, x3 pass…) et consomme le boost écoulé.</summary>
         public void ClaimOffline(OfflineResult result, double multiplier)
         {
-            Economy.Earn(result.Earnings * Math.Max(1d, multiplier));
+            var earned = result.Earnings * Math.Max(1d, multiplier);
+            Economy.Earn(earned);
             Economy.ConsumeBoostTime(result.ElapsedSeconds);
+            OfflineClaimed?.Invoke(earned, multiplier);
+        }
+
+        private void RecordVisit()
+        {
+            _visited.Add(new VisitedCity
+            {
+                CityId = City.Id,
+                ManagedIncomePerSecond = Businesses.ManagedIncomePerSecond(),
+                LifetimeEarnings = Economy.CityLifetimeEarnings,
+                Levels = Businesses.LevelsSnapshot(),
+            });
+            RecomputeVisitedPassive();
+        }
+
+        private void RecomputeVisitedPassive()
+        {
+            BigDouble total = BigDouble.Zero;
+            foreach (var v in _visited) total += v.ManagedIncomePerSecond;
+            _visitedPassivePerSecond = total * _definitions.Prestige.VisitedCityIncomeRatio;
+        }
+
+        /// <summary>Effets des upgrades d'étoiles sur les commerces de la ville en cours (vitesse, coût).</summary>
+        private void ApplyStarEffects()
+        {
+            Businesses.CostMultiplier = Prestige.Product(StarUpgradeEffect.CostReduction);
+            Businesses.SetSpeedMultiplier(Prestige.Product(StarUpgradeEffect.GlobalSpeed));
         }
 
         /// <summary>Rewarded « x2 gains hors ligne » regardée (callback de récompense) : renvoie le multiplicateur accordé.</summary>
@@ -165,6 +235,10 @@ namespace Gargote.Systems
                 CityLifetimeEarnings = Economy.CityLifetimeEarnings.ToSerializedString(),
                 TotalLifetimeEarnings = Economy.TotalLifetimeEarnings.ToSerializedString(),
                 AdBoostRemainingSeconds = Economy.AdBoostRemainingSeconds,
+                TimedBoostRemainingSeconds = Economy.TimedBoostRemainingSeconds,
+                TimedBoostMultiplier = Economy.TimedBoostMultiplier,
+                ExtraOfflineCapSeconds = ExtraOfflineCapSeconds,
+                VisitedCities = SaveVisited(),
                 TotalStars = Prestige.TotalStars,
                 CurrentCityStars = Prestige.CurrentCityStars,
                 ClaimedStarsForCity = Prestige.ClaimedForCurrentCity,
@@ -211,6 +285,23 @@ namespace Gargote.Systems
             Economy.Restore(ParseOrZero(data.Money), ParseOrZero(data.RunEarnings),
                 ParseOrZero(data.CityLifetimeEarnings), ParseOrZero(data.TotalLifetimeEarnings),
                 data.AdBoostRemainingSeconds, data.WelcomeRemainingSeconds);
+            Economy.RestoreTimedBoost(data.TimedBoostMultiplier, data.TimedBoostRemainingSeconds);
+            ExtraOfflineCapSeconds = Math.Max(0d, data.ExtraOfflineCapSeconds);
+            _visited.Clear();
+            if (data.VisitedCities != null)
+                foreach (var v in data.VisitedCities)
+                {
+                    if (v == null || string.IsNullOrEmpty(v.CityId)) continue;
+                    _visited.Add(new VisitedCity
+                    {
+                        CityId = v.CityId,
+                        ManagedIncomePerSecond = ParseOrZero(v.ManagedIncomePerSecond),
+                        LifetimeEarnings = ParseOrZero(v.LifetimeEarnings),
+                        Levels = v.Levels ?? Array.Empty<long>(),
+                    });
+                }
+            RecomputeVisitedPassive();
+            ApplyStarEffects();
 
             if (data.Businesses == null) return;
             foreach (var b in data.Businesses)
@@ -222,11 +313,26 @@ namespace Gargote.Systems
             Businesses.RestoreUpgrades(data.OwnedCashUpgrades);
         }
 
+        private VisitedCitySaveData[] SaveVisited()
+        {
+            var list = new VisitedCitySaveData[_visited.Count];
+            for (int i = 0; i < list.Length; i++)
+                list[i] = new VisitedCitySaveData
+                {
+                    CityId = _visited[i].CityId,
+                    ManagedIncomePerSecond = _visited[i].ManagedIncomePerSecond.ToSerializedString(),
+                    LifetimeEarnings = _visited[i].LifetimeEarnings.ToSerializedString(),
+                    Levels = _visited[i].Levels,
+                };
+            return list;
+        }
+
         private void EnterCity(int index)
         {
             CityIndex = index;
             Prestige.CityThreshold = City.StarThreshold > 0 ? City.StarThreshold : _definitions.Prestige.Threshold;
             Businesses = new BusinessSystem(City, _definitions.Economy, Economy);
+            ApplyStarEffects();
             CityChanged?.Invoke(Businesses);
         }
 

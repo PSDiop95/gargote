@@ -19,9 +19,15 @@ namespace Gargote.Tools.Sim
             var definitions = EconomySimulator.WithProxyCities(seed.ToDefinitions(), 1 + seed.simulation.proxyCities,
                 seed.simulation.ToScaling());
             var settings = seed.simulation.ToSettings();
+            // Méta M3 : lue à côté du seed économique (absente = économie M1 seule, ou « --no-meta »).
+            string metaPath = Path.Combine(Path.GetDirectoryName(seedPath), "meta_seed.json");
+            Gargote.Core.MetaDefinitions meta = null;
+            if (File.Exists(metaPath) && Array.IndexOf(args, "--no-meta") < 0)
+                meta = JsonSerializer.Deserialize<MetaSeed>(File.ReadAllText(metaPath), new JsonSerializerOptions { IncludeFields = true })
+                    .ToDefinitions(definitions);
 
             var watch = Stopwatch.StartNew();
-            var report = new EconomySimulator(definitions, settings).Run();
+            var report = new EconomySimulator(definitions, settings, meta).Run();
             report.WriteAll(outDir);
 
             foreach (var p in report.Profiles)

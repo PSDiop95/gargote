@@ -46,3 +46,6 @@ crashlytics-build.properties
 # Builds locaux (APK de dev, build Windows de capture)
 /Builds/
 /.utmp/
+
+# Snapshots Memory Profiler (lourds, régénérables)
+*.snap

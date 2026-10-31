@@ -126,6 +126,14 @@ namespace Gargote.Core
         AutoBuyFirstMilestone = 2,
         /// <summary>Bouton « racheter comme avant » : remonte vers les niveaux d'avant la relance.</summary>
         RebuyPrevious = 3,
+        /// <summary>Gains hors ligne : +Value (0,25 = +25 %).</summary>
+        OfflineEarnings = 4,
+        /// <summary>Plafond hors ligne : +Value secondes (jusqu'au plafond maximal de la config).</summary>
+        OfflineCap = 5,
+        /// <summary>Vitesse de service de tous les commerces : ×Value.</summary>
+        GlobalSpeed = 6,
+        /// <summary>Coût des niveaux : ×Value (0,9 = −10 %).</summary>
+        CostReduction = 7,
     }
 
     public sealed class StarUpgradeDefinition
@@ -134,6 +142,8 @@ namespace Gargote.Core
         public StarUpgradeEffect Effect;
         /// <summary>Étoiles dépensées pour l'acheter (elles cessent de compter dans le multiplicateur).</summary>
         public long CostStars;
+        /// <summary>Valeur de l'effet (ignorée pour les effets de confort).</summary>
+        public double Value;
     }
 
     /// <summary>Valeur des rewarded : pleine jusqu'à N par jour, puis décroissante (§8.1, « sans forcer »).</summary>
@@ -207,6 +217,8 @@ namespace Gargote.Core
         /// d'avant la relance (hors boosts temporaires, au moins l'argent de départ de la ville), pour racheter tout de suite.
         /// </summary>
         public double RebuyStartingFundSeconds;
+        /// <summary>Villes quittées : part de leur revenu géré (figé au départ) versée en continu à la ville en cours.</summary>
+        public double VisitedCityIncomeRatio;
 
         public void Validate()
         {
@@ -220,6 +232,12 @@ namespace Gargote.Core
             if (SoftCapStars < 0 || SoftCapExponent <= 0 || SoftCapExponent > 1)
                 throw new ArgumentException("Star soft cap is inconsistent.");
             if (CityCarryOver < 0 || CityCarryOver > 1) throw new ArgumentException("CityCarryOver must be in [0, 1].");
+            if (VisitedCityIncomeRatio < 0 || VisitedCityIncomeRatio > 1) throw new ArgumentException("VisitedCityIncomeRatio must be in [0, 1].");
+            foreach (var u in StarUpgrades)
+                if ((u.Effect == StarUpgradeEffect.GlobalSpeed && u.Value < 1) ||
+                    (u.Effect == StarUpgradeEffect.CostReduction && (u.Value <= 0 || u.Value > 1)) ||
+                    ((u.Effect == StarUpgradeEffect.OfflineEarnings || u.Effect == StarUpgradeEffect.OfflineCap) && u.Value < 0))
+                    throw new ArgumentException("Star upgrade " + u.Id + " has an invalid value.");
         }
     }
 

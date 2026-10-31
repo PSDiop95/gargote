@@ -127,6 +127,7 @@ namespace Gargote.Tests
             var migrations = new Dictionary<int, Func<JObject, JObject>>
             {
                 { 0, o => { o["Money"] = o["LegacyCash"]; o.Remove("LegacyCash"); return o; } },
+                { 1, o => o },
             };
             string v0 = "{\"Version\":0,\"LegacyCash\":\"1.5e12\",\"CityId\":\"city0\"}";
             var data = SaveSerializer.Deserialize(v0, migrations);

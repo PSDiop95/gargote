@@ -1,0 +1,11 @@
+activity=com.smartiaservices.gargotetycoon/com.unity3d.player.UnityPlayerGameActivity
+run 1 | TotalTime: 402
+WaitTime: 419 | cold_start_ms=2685 since_unity_ms=1458 awake_ms=175 loc_ms=333 data_ms=652 scene_ms=1100 boot_allocated_mb=82.1 boot_reserved_mb=157.4 boot_mono_mb=12.7 boot_gfx_mb=0.0
+run 2 | TotalTime: 360
+WaitTime: 366 | cold_start_ms=2340 since_unity_ms=1261 awake_ms=148 loc_ms=289 data_ms=590 scene_ms=994 boot_allocated_mb=82.4 boot_reserved_mb=157.4 boot_mono_mb=12.6 boot_gfx_mb=0.0
+run 3 | TotalTime: 284
+WaitTime: 298 | cold_start_ms=2143 since_unity_ms=1212 awake_ms=124 loc_ms=249 data_ms=547 scene_ms=952 boot_allocated_mb=82.1 boot_reserved_mb=157.4 boot_mono_mb=12.7 boot_gfx_mb=0.0
+run 4 | TotalTime: 301
+WaitTime: 315 | cold_start_ms=2143 since_unity_ms=1199 awake_ms=123 loc_ms=250 data_ms=549 scene_ms=953 boot_allocated_mb=82.4 boot_reserved_mb=157.4 boot_mono_mb=12.7 boot_gfx_mb=0.0
+run 5 | TotalTime: 291
+WaitTime: 304 | cold_start_ms=2220 since_unity_ms=1235 awake_ms=130 loc_ms=255 data_ms=557 scene_ms=968 boot_allocated_mb=82.1 boot_reserved_mb=157.4 boot_mono_mb=12.7 boot_gfx_mb=0.0

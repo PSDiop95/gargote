@@ -151,6 +151,9 @@ namespace Gargote.Presentation
 
         public void ApplyTo(TMP_Text text) => text.SetCharArray(_chars, 0, _length);
 
+        /// <summary>Copie en chaîne (alloue : écrans ponctuels uniquement).</summary>
+        public override string ToString() => new string(_chars, 0, _length);
+
         private int _appliedHash = int.MinValue;
 
         /// <summary>N'envoie le texte à TMP que s'il a changé (évite les reconstructions de mesh inutiles).</summary>

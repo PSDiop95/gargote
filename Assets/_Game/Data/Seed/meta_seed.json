@@ -1,0 +1,2591 @@
+{
+  "managers": [
+    {
+      "id": "tonton_modou",
+      "city": "dakar",
+      "business": "forokh_thiaya",
+      "rarity": "common",
+      "nameFr": "Tonton Modou",
+      "nameEn": "Uncle Modou",
+      "passive": "business",
+      "passivePerLevel": 0.01,
+      "boostMultiplier": 2,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Pain chaud, viande chaude, client content !",
+      "lineEn": "Hot bread, hot meat, happy customer!",
+      "lineWo": "Mburu bu tàng, yàpp wu tàng !"
+    },
+    {
+      "id": "badara_baye_fall",
+      "city": "dakar",
+      "business": "tangana",
+      "rarity": "common",
+      "nameFr": "Badara le Baye Fall",
+      "nameEn": "Badara the Baye Fall",
+      "passive": "business",
+      "passivePerLevel": 0.01,
+      "boostMultiplier": 2,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Le café Touba est prêt, la journée peut commencer.",
+      "lineEn": "The Touba coffee is ready, the day can begin.",
+      "lineWo": "Kafe Tuubaa bi pare na."
+    },
+    {
+      "id": "ndeye_reine_nuit",
+      "city": "dakar",
+      "business": "maiga",
+      "rarity": "common",
+      "nameFr": "Ndèye la reine de la nuit",
+      "nameEn": "Ndeye, Queen of the Night",
+      "passive": "business",
+      "passivePerLevel": 0.01,
+      "boostMultiplier": 2,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "La nuit est jeune, les brochettes aussi !",
+      "lineEn": "The night is young, so are the skewers!",
+      "lineWo": "Guddi gi ndaw la !"
+    },
+    {
+      "id": "adja_fatou",
+      "city": "dakar",
+      "business": "gargote",
+      "rarity": "common",
+      "nameFr": "Adja Fatou",
+      "nameEn": "Adja Fatou",
+      "passive": "business",
+      "passivePerLevel": 0.01,
+      "boostMultiplier": 2,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Assieds-toi, mange, ici c'est la maison.",
+      "lineEn": "Sit down, eat, you're home here.",
+      "lineWo": "Toogal, lekk, fii sa kër la."
+    },
+    {
+      "id": "oustaz_grill",
+      "city": "dakar",
+      "business": "dibiterie",
+      "rarity": "common",
+      "nameFr": "Oustaz Grill",
+      "nameEn": "Oustaz Grill",
+      "passive": "business",
+      "passivePerLevel": 0.01,
+      "boostMultiplier": 2,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Le charbon chante, c'est bon signe.",
+      "lineEn": "The charcoal is singing, good sign.",
+      "lineWo": ""
+    },
+    {
+      "id": "aida_pastels",
+      "city": "dakar",
+      "business": "fataya_nems",
+      "rarity": "common",
+      "nameFr": "Aïda Pastels",
+      "nameEn": "Aida Pastels",
+      "passive": "business",
+      "passivePerLevel": 0.01,
+      "boostMultiplier": 2,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Un pour toi, un pour la route !",
+      "lineEn": "One for you, one for the road!",
+      "lineWo": ""
+    },
+    {
+      "id": "monsieur_teranga",
+      "city": "dakar",
+      "business": "restaurant_teranga",
+      "rarity": "common",
+      "nameFr": "Monsieur Teranga",
+      "nameEn": "Mister Teranga",
+      "passive": "business",
+      "passivePerLevel": 0.01,
+      "boostMultiplier": 2,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Bienvenue chez nous, la Teranga d'abord.",
+      "lineEn": "Welcome, hospitality comes first.",
+      "lineWo": "Dalal ak jàmm !"
+    },
+    {
+      "id": "mere_coumba",
+      "city": "dakar",
+      "business": "traiteur_evenements",
+      "rarity": "common",
+      "nameFr": "Mère Coumba la traiteuse",
+      "nameEn": "Mother Coumba the Caterer",
+      "passive": "business",
+      "passivePerLevel": 0.01,
+      "boostMultiplier": 2,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Trois cents invités ? Les marmites sont prêtes.",
+      "lineEn": "Three hundred guests? The pots are ready.",
+      "lineWo": ""
+    },
+    {
+      "id": "pape_cafe_touba",
+      "city": "dakar",
+      "business": "tangana",
+      "rarity": "rare",
+      "nameFr": "Pape du café Touba",
+      "nameEn": "Pape the Touba Coffee Man",
+      "passive": "business",
+      "passivePerLevel": 0.02,
+      "boostMultiplier": 3,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Une tasse et tu cours jusqu'à Rufisque !",
+      "lineEn": "One cup and you'll run all the way to Rufisque!",
+      "lineWo": ""
+    },
+    {
+      "id": "fatou_bissap",
+      "city": "dakar",
+      "business": "forokh_thiaya",
+      "rarity": "rare",
+      "nameFr": "Fatou Bissap",
+      "nameEn": "Fatou Bissap",
+      "passive": "business",
+      "passivePerLevel": 0.02,
+      "boostMultiplier": 3,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Bissap bien frais pour aller avec ton sandwich !",
+      "lineEn": "Ice-cold bissap to go with your sandwich!",
+      "lineWo": ""
+    },
+    {
+      "id": "ousmane_jakarta",
+      "city": "dakar",
+      "business": "dibiterie",
+      "rarity": "rare",
+      "nameFr": "Ousmane le livreur en Jakarta",
+      "nameEn": "Ousmane the Jakarta Rider",
+      "passive": "business",
+      "passivePerLevel": 0.02,
+      "boostMultiplier": 3,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Livré avant que ça refroidisse, c'est promis.",
+      "lineEn": "Delivered before it cools down, promise.",
+      "lineWo": ""
+    },
+    {
+      "id": "yaye_cheffe",
+      "city": "dakar",
+      "business": "gargote",
+      "rarity": "epic",
+      "nameFr": "Yaye la Cheffe",
+      "nameEn": "Yaye the Chef",
+      "passive": "business",
+      "passivePerLevel": 0.03,
+      "boostMultiplier": 3,
+      "boostSeconds": 60,
+      "boostCooldownSeconds": 900,
+      "boostGlobal": false,
+      "lineFr": "Mon thiéb', on en parle jusqu'à Saint-Louis.",
+      "lineEn": "People talk about my thieb all the way to Saint-Louis.",
+      "lineWo": ""
+    },
+    {
+      "id": "chauffeur_car_rapide",
+      "city": "dakar",
+      "business": "maiga",
+      "rarity": "epic",
+      "nameFr": "Le chauffeur de car rapide",
+      "nameEn": "The Car Rapide Driver",
+      "passive": "business",
+      "passivePerLevel": 0.03,
+      "boostMultiplier": 3,
+      "boostSeconds": 60,
+      "boostCooldownSeconds": 900,
+      "boostGlobal": false,
+      "lineFr": "Dernier arrêt : les brochettes de Ndèye !",
+      "lineEn": "Last stop: Ndeye's skewers!",
+      "lineWo": ""
+    },
+    {
+      "id": "mame_sandaga",
+      "city": "dakar",
+      "business": "restaurant_teranga",
+      "rarity": "epic",
+      "nameFr": "Mame la commerçante de Sandaga",
+      "nameEn": "Mame the Sandaga Trader",
+      "passive": "business",
+      "passivePerLevel": 0.03,
+      "boostMultiplier": 3,
+      "boostSeconds": 60,
+      "boostCooldownSeconds": 900,
+      "boostGlobal": false,
+      "lineFr": "Le meilleur prix, pour le meilleur client.",
+      "lineEn": "The best price, for the best customer.",
+      "lineWo": ""
+    },
+    {
+      "id": "roi_des_arenes",
+      "city": "dakar",
+      "business": "traiteur_evenements",
+      "rarity": "legendary",
+      "nameFr": "Le Roi des arènes",
+      "nameEn": "King of the Arena",
+      "passive": "global",
+      "passivePerLevel": 0.005,
+      "boostMultiplier": 2,
+      "boostSeconds": 60,
+      "boostCooldownSeconds": 1200,
+      "boostGlobal": true,
+      "lineFr": "Après le combat, tout le quartier mange chez nous !",
+      "lineEn": "After the fight, the whole neighbourhood eats here!",
+      "lineWo": ""
+    },
+    {
+      "id": "grande_griotte",
+      "city": "dakar",
+      "business": "fataya_nems",
+      "rarity": "legendary",
+      "nameFr": "La Grande Griotte",
+      "nameEn": "The Great Griotte",
+      "passive": "global",
+      "passivePerLevel": 0.005,
+      "boostMultiplier": 2,
+      "boostSeconds": 60,
+      "boostCooldownSeconds": 1200,
+      "boostGlobal": true,
+      "lineFr": "Je chante ta maison, et toute la rue accourt.",
+      "lineEn": "I sing your praises, and the whole street comes running.",
+      "lineWo": ""
+    },
+    {
+      "id": "tantie_alloco",
+      "city": "abidjan",
+      "business": "alloco",
+      "rarity": "common",
+      "nameFr": "Tantie Alloco",
+      "nameEn": "Auntie Alloco",
+      "passive": "business",
+      "passivePerLevel": 0.01,
+      "boostMultiplier": 2,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Alloco bien doré, viens goûter !",
+      "lineEn": "Golden alloco, come and taste!",
+      "lineWo": ""
+    },
+    {
+      "id": "boss_du_garba",
+      "city": "abidjan",
+      "business": "garbadrome",
+      "rarity": "common",
+      "nameFr": "Le Boss du Garba",
+      "nameEn": "The Garba Boss",
+      "passive": "business",
+      "passivePerLevel": 0.01,
+      "boostMultiplier": 2,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Garba-là, c'est le meilleur du quartier !",
+      "lineEn": "This garba is the best in the area!",
+      "lineWo": ""
+    },
+    {
+      "id": "maman_attieke",
+      "city": "abidjan",
+      "business": "attieke_poisson",
+      "rarity": "common",
+      "nameFr": "Maman Attiéké",
+      "nameEn": "Mama Attieke",
+      "passive": "business",
+      "passivePerLevel": 0.01,
+      "boostMultiplier": 2,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Attiéké tout frais, poisson bien braisé.",
+      "lineEn": "Fresh attieke, nicely grilled fish.",
+      "lineWo": ""
+    },
+    {
+      "id": "maman_maquis",
+      "city": "abidjan",
+      "business": "maquis",
+      "rarity": "common",
+      "nameFr": "Maman Maquis",
+      "nameEn": "Mama Maquis",
+      "passive": "business",
+      "passivePerLevel": 0.01,
+      "boostMultiplier": 2,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Installe-toi, le maquis est ouvert !",
+      "lineEn": "Take a seat, the maquis is open!",
+      "lineWo": ""
+    },
+    {
+      "id": "roi_choukouya",
+      "city": "abidjan",
+      "business": "choukouya",
+      "rarity": "common",
+      "nameFr": "Le Roi du Choukouya",
+      "nameEn": "The Choukouya King",
+      "passive": "business",
+      "passivePerLevel": 0.01,
+      "boostMultiplier": 2,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "La viande est tendre, la nuit est belle.",
+      "lineEn": "The meat is tender, the night is lovely.",
+      "lineWo": ""
+    },
+    {
+      "id": "tonton_tchapalo",
+      "city": "abidjan",
+      "business": "tchapalo",
+      "rarity": "common",
+      "nameFr": "Tonton Tchapalo",
+      "nameEn": "Uncle Tchapalo",
+      "passive": "business",
+      "passivePerLevel": 0.01,
+      "boostMultiplier": 2,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Une calebasse pour fêter ça ?",
+      "lineEn": "A calabash to celebrate?",
+      "lineWo": ""
+    },
+    {
+      "id": "tantie_kedjenou",
+      "city": "abidjan",
+      "business": "kedjenou",
+      "rarity": "common",
+      "nameFr": "Tantie Kédjénou",
+      "nameEn": "Auntie Kedjenou",
+      "passive": "business",
+      "passivePerLevel": 0.01,
+      "boostMultiplier": 2,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Le canari mijote depuis ce matin.",
+      "lineEn": "The clay pot has been simmering since morning.",
+      "lineWo": ""
+    },
+    {
+      "id": "monsieur_plateau",
+      "city": "abidjan",
+      "business": "restaurant_plateau",
+      "rarity": "common",
+      "nameFr": "Monsieur Plateau",
+      "nameEn": "Mister Plateau",
+      "passive": "business",
+      "passivePerLevel": 0.01,
+      "boostMultiplier": 2,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Table réservée pour les grands patrons !",
+      "lineEn": "Table reserved for the big bosses!",
+      "lineWo": ""
+    },
+    {
+      "id": "gbaka_driver",
+      "city": "abidjan",
+      "business": "garbadrome",
+      "rarity": "rare",
+      "nameFr": "Le chauffeur de gbaka",
+      "nameEn": "The Gbaka Driver",
+      "passive": "business",
+      "passivePerLevel": 0.02,
+      "boostMultiplier": 3,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Adjamé–Yopougon, garba compris !",
+      "lineEn": "Adjame to Yopougon, garba included!",
+      "lineWo": ""
+    },
+    {
+      "id": "aya_jus",
+      "city": "abidjan",
+      "business": "alloco",
+      "rarity": "rare",
+      "nameFr": "Aya la vendeuse de jus",
+      "nameEn": "Aya the Juice Seller",
+      "passive": "business",
+      "passivePerLevel": 0.02,
+      "boostMultiplier": 3,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Gnamankoudji bien frais, ça réveille !",
+      "lineEn": "Ice-cold ginger juice, that wakes you up!",
+      "lineWo": ""
+    },
+    {
+      "id": "koffi_livreur",
+      "city": "abidjan",
+      "business": "maquis",
+      "rarity": "rare",
+      "nameFr": "Koffi le livreur",
+      "nameEn": "Koffi the Delivery Man",
+      "passive": "business",
+      "passivePerLevel": 0.02,
+      "boostMultiplier": 3,
+      "boostSeconds": 30,
+      "boostCooldownSeconds": 600,
+      "boostGlobal": false,
+      "lineFr": "Je connais toutes les rues de Cocody.",
+      "lineEn": "I know every street in Cocody.",
+      "lineWo": ""
+    },
+    {
+      "id": "reine_du_maquis",
+      "city": "abidjan",
+      "business": "kedjenou",
+      "rarity": "epic",
+      "nameFr": "La Reine du maquis",
+      "nameEn": "Queen of the Maquis",
+      "passive": "business",
+      "passivePerLevel": 0.03,
+      "boostMultiplier": 3,
+      "boostSeconds": 60,
+      "boostCooldownSeconds": 900,
+      "boostGlobal": false,
+      "lineFr": "Chez moi, on mange, on danse, on revient.",
+      "lineEn": "At my place you eat, you dance, you come back.",
+      "lineWo": ""
+    },
+    {
+      "id": "zouglou_man",
+      "city": "abidjan",
+      "business": "tchapalo",
+      "rarity": "epic",
+      "nameFr": "Le chanteur de zouglou",
+      "nameEn": "The Zouglou Singer",
+      "passive": "business",
+      "passivePerLevel": 0.03,
+      "boostMultiplier": 3,
+      "boostSeconds": 60,
+      "boostCooldownSeconds": 900,
+      "boostGlobal": false,
+      "lineFr": "Une chanson pour chaque client !",
+      "lineEn": "A song for every customer!",
+      "lineWo": ""
+    },
+    {
+      "id": "mamie_woro",
+      "city": "abidjan",
+      "business": "attieke_poisson",
+      "rarity": "epic",
+      "nameFr": "Mamie Wôrô-wôrô",
+      "nameEn": "Granny Woro-woro",
+      "passive": "business",
+      "passivePerLevel": 0.03,
+      "boostMultiplier": 3,
+      "boostSeconds": 60,
+      "boostCooldownSeconds": 900,
+      "boostGlobal": false,
+      "lineFr": "Mon taxi s'arrête toujours devant les bonnes adresses.",
+      "lineEn": "My taxi always stops at the best spots.",
+      "lineWo": ""
+    },
+    {
+      "id": "dj_coupe_decale",
+      "city": "abidjan",
+      "business": "restaurant_plateau",
+      "rarity": "legendary",
+      "nameFr": "Le DJ coupé-décalé",
+      "nameEn": "The Coupe-Decale DJ",
+      "passive": "global",
+      "passivePerLevel": 0.005,
+      "boostMultiplier": 2,
+      "boostSeconds": 60,
+      "boostCooldownSeconds": 1200,
+      "boostGlobal": true,
+      "lineFr": "Le son est lancé, la rue est en fête !",
+      "lineEn": "The music is on, the street is partying!",
+      "lineWo": ""
+    },
+    {
+      "id": "footballeur_star",
+      "city": "abidjan",
+      "business": "choukouya",
+      "rarity": "legendary",
+      "nameFr": "Le footballeur star",
+      "nameEn": "The Star Footballer",
+      "passive": "global",
+      "passivePerLevel": 0.005,
+      "boostMultiplier": 2,
+      "boostSeconds": 60,
+      "boostCooldownSeconds": 1200,
+      "boostGlobal": true,
+      "lineFr": "Après le match, tout le monde au choukouya !",
+      "lineEn": "After the match, everyone to the choukouya!",
+      "lineWo": ""
+    }
+  ],
+  "managerLevels": {
+    "maxLevel": 10,
+    "cardsToNext": [
+      2,
+      4,
+      6,
+      10,
+      15,
+      20,
+      30,
+      40,
+      50
+    ],
+    "fcfaSecondsToNext": [
+      30,
+      60,
+      120,
+      240,
+      420,
+      600,
+      900,
+      1200,
+      1800
+    ],
+    "duplicateCaurisAtMax": {
+      "common": 1,
+      "rare": 3,
+      "epic": 8,
+      "legendary": 20
+    },
+    "accelerateBoostCauris": 20
+  },
+  "chests": [
+    {
+      "id": "wood",
+      "cards": 2,
+      "weights": {
+        "common": 95,
+        "rare": 5,
+        "epic": 0,
+        "legendary": 0
+      },
+      "caurisMin": 2,
+      "caurisMax": 5,
+      "boostChance": 0.0,
+      "costCauris": 0,
+      "pityRarity": "",
+      "pityEvery": 0,
+      "firstGuaranteed": false
+    },
+    {
+      "id": "bronze",
+      "cards": 4,
+      "weights": {
+        "common": 89.6,
+        "rare": 10,
+        "epic": 0.3,
+        "legendary": 0.1
+      },
+      "caurisMin": 5,
+      "caurisMax": 12,
+      "boostChance": 0.1,
+      "costCauris": 0,
+      "pityRarity": "",
+      "pityEvery": 0,
+      "firstGuaranteed": false
+    },
+    {
+      "id": "gold",
+      "cards": 8,
+      "weights": {
+        "common": 83.1,
+        "rare": 15,
+        "epic": 1.5,
+        "legendary": 0.4
+      },
+      "caurisMin": 15,
+      "caurisMax": 30,
+      "boostChance": 0.2,
+      "costCauris": 300,
+      "pityRarity": "epic",
+      "pityEvery": 14,
+      "firstGuaranteed": true
+    },
+    {
+      "id": "teranga",
+      "cards": 15,
+      "weights": {
+        "common": 59,
+        "rare": 35,
+        "epic": 3,
+        "legendary": 3
+      },
+      "caurisMin": 40,
+      "caurisMax": 80,
+      "boostChance": 0.5,
+      "costCauris": 900,
+      "pityRarity": "legendary",
+      "pityEvery": 8,
+      "firstGuaranteed": true
+    }
+  ],
+  "chestRules": {
+    "freeChest": "wood",
+    "freeEverySeconds": 14400,
+    "freeMaxStored": 2,
+    "rewardedChest": "bronze",
+    "rewardedPerDay": 1,
+    "boostMultiplier": 1.5,
+    "boostSeconds": 300,
+    "boostMaxStackSeconds": 3600
+  },
+  "missions": [
+    {
+      "id": "m_level",
+      "kind": "reach_level",
+      "weight": 30,
+      "amount": 1,
+      "xp": 30,
+      "cauris": 4,
+      "chest": ""
+    },
+    {
+      "id": "m_manager",
+      "kind": "hire_manager",
+      "weight": 20,
+      "amount": 1,
+      "xp": 30,
+      "cauris": 4,
+      "chest": ""
+    },
+    {
+      "id": "m_serve",
+      "kind": "serve_customers",
+      "weight": 25,
+      "amount": 300,
+      "xp": 25,
+      "cauris": 3,
+      "chest": ""
+    },
+    {
+      "id": "m_milestone",
+      "kind": "reach_milestone",
+      "weight": 15,
+      "amount": 1,
+      "xp": 30,
+      "cauris": 5,
+      "chest": ""
+    },
+    {
+      "id": "m_boost",
+      "kind": "use_manager_boost",
+      "weight": 10,
+      "amount": 2,
+      "xp": 20,
+      "cauris": 3,
+      "chest": ""
+    },
+    {
+      "id": "m_specials",
+      "kind": "tap_specials",
+      "weight": 10,
+      "amount": 3,
+      "xp": 25,
+      "cauris": 4,
+      "chest": ""
+    },
+    {
+      "id": "m_upgrade",
+      "kind": "buy_upgrades",
+      "weight": 12,
+      "amount": 1,
+      "xp": 25,
+      "cauris": 4,
+      "chest": ""
+    },
+    {
+      "id": "m_chest",
+      "kind": "open_chests",
+      "weight": 8,
+      "amount": 1,
+      "xp": 20,
+      "cauris": 3,
+      "chest": ""
+    },
+    {
+      "id": "m_earn",
+      "kind": "earn_seconds_of_income",
+      "weight": 15,
+      "amount": 600,
+      "xp": 30,
+      "cauris": 0,
+      "chest": "wood"
+    }
+  ],
+  "challenges": [
+    {
+      "id": "c_serve",
+      "kind": "serve_customers",
+      "weight": 25,
+      "amount": 1800,
+      "xp": 80,
+      "tokens": 30,
+      "chest": ""
+    },
+    {
+      "id": "c_level",
+      "kind": "reach_level",
+      "weight": 20,
+      "amount": 2,
+      "xp": 80,
+      "tokens": 25,
+      "chest": ""
+    },
+    {
+      "id": "c_earn",
+      "kind": "earn_seconds_of_income",
+      "weight": 20,
+      "amount": 3600,
+      "xp": 80,
+      "tokens": 30,
+      "chest": ""
+    },
+    {
+      "id": "c_specials",
+      "kind": "tap_specials",
+      "weight": 12,
+      "amount": 8,
+      "xp": 80,
+      "tokens": 25,
+      "chest": ""
+    },
+    {
+      "id": "c_boost",
+      "kind": "use_manager_boost",
+      "weight": 12,
+      "amount": 4,
+      "xp": 80,
+      "tokens": 25,
+      "chest": ""
+    },
+    {
+      "id": "c_missions",
+      "kind": "complete_missions",
+      "weight": 15,
+      "amount": 4,
+      "xp": 100,
+      "tokens": 40,
+      "chest": ""
+    },
+    {
+      "id": "c_chests",
+      "kind": "open_chests",
+      "weight": 10,
+      "amount": 3,
+      "xp": 80,
+      "tokens": 25,
+      "chest": ""
+    }
+  ],
+  "missionRules": {
+    "activeSlots": 3,
+    "freeReplacesPerDay": 1,
+    "replaceCauris": 10,
+    "challengeSlots": 3,
+    "refillDelaySeconds": 1800,
+    "challengeBonusChest": "bronze"
+  },
+  "login": {
+    "days": [
+      {
+        "cauris": 20,
+        "chest": ""
+      },
+      {
+        "cauris": 0,
+        "chest": "wood"
+      },
+      {
+        "cauris": 30,
+        "chest": ""
+      },
+      {
+        "cauris": 0,
+        "chest": "bronze"
+      },
+      {
+        "cauris": 40,
+        "chest": ""
+      },
+      {
+        "cauris": 20,
+        "chest": "bronze"
+      },
+      {
+        "cauris": 0,
+        "chest": "gold"
+      },
+      {
+        "cauris": 25,
+        "chest": ""
+      },
+      {
+        "cauris": 0,
+        "chest": "wood"
+      },
+      {
+        "cauris": 35,
+        "chest": ""
+      },
+      {
+        "cauris": 0,
+        "chest": "bronze"
+      },
+      {
+        "cauris": 45,
+        "chest": ""
+      },
+      {
+        "cauris": 25,
+        "chest": "bronze"
+      },
+      {
+        "cauris": 0,
+        "chest": "teranga"
+      }
+    ],
+    "shieldsPerWeek": 1,
+    "maxShields": 1,
+    "resetToleranceHours": 3
+  },
+  "wheel": {
+    "freePerDay": 1,
+    "rewardedPerDay": 3,
+    "segments": [
+      {
+        "id": "w_cauris_s",
+        "weight": 26,
+        "cauris": 10,
+        "chest": "",
+        "boost": false,
+        "cards": 0
+      },
+      {
+        "id": "w_cauris_m",
+        "weight": 14,
+        "cauris": 25,
+        "chest": "",
+        "boost": false,
+        "cards": 0
+      },
+      {
+        "id": "w_cauris_l",
+        "weight": 3,
+        "cauris": 80,
+        "chest": "",
+        "boost": false,
+        "cards": 0
+      },
+      {
+        "id": "w_wood",
+        "weight": 20,
+        "cauris": 0,
+        "chest": "wood",
+        "boost": false,
+        "cards": 0
+      },
+      {
+        "id": "w_bronze",
+        "weight": 8,
+        "cauris": 0,
+        "chest": "bronze",
+        "boost": false,
+        "cards": 0
+      },
+      {
+        "id": "w_gold",
+        "weight": 1,
+        "cauris": 0,
+        "chest": "gold",
+        "boost": false,
+        "cards": 0
+      },
+      {
+        "id": "w_boost",
+        "weight": 10,
+        "cauris": 0,
+        "chest": "",
+        "boost": true,
+        "cards": 0
+      },
+      {
+        "id": "w_cards",
+        "weight": 10,
+        "cauris": 0,
+        "chest": "",
+        "boost": false,
+        "cards": 5
+      }
+    ]
+  },
+  "playerLevels": {
+    "xpToReach": [
+      0,
+      100,
+      300,
+      650,
+      1200,
+      2000,
+      3200,
+      5000,
+      7500,
+      10500,
+      13900,
+      17700,
+      21900,
+      26500,
+      31500,
+      36900,
+      42700,
+      48900,
+      55500,
+      62500,
+      69900,
+      77700,
+      85900,
+      94500,
+      103500,
+      112900,
+      122700,
+      132900,
+      143500,
+      154500,
+      165900,
+      177700,
+      189900,
+      202500,
+      215500,
+      228900,
+      242700,
+      256900,
+      271500,
+      286500,
+      301900,
+      317700,
+      333900,
+      350500,
+      367500,
+      384900,
+      402700,
+      420900,
+      439500,
+      458500,
+      477900,
+      497700,
+      517900,
+      538500,
+      559500,
+      580900,
+      602700,
+      624900,
+      647500,
+      670500
+    ],
+    "caurisPerLevel": 10,
+    "chestEvery": 5,
+    "chestOnLevel": "bronze",
+    "unlocks": {
+      "missions": 2,
+      "chests": 3,
+      "shop": 3,
+      "login": 4,
+      "star_upgrades": 4,
+      "wheel": 5,
+      "album": 6,
+      "achievements": 6,
+      "daily_challenges": 7
+    },
+    "xp": {
+      "buy_levels": 1,
+      "unlock_business": 25,
+      "hire_manager": 30,
+      "milestone": 15,
+      "cash_upgrade": 10,
+      "chest": 10,
+      "prestige": 100,
+      "new_city": 300,
+      "special": 5,
+      "manager_boost": 5,
+      "login": 20,
+      "wheel": 5,
+      "recipe": 15,
+      "achievement": 25,
+      "manager_level": 20
+    }
+  },
+  "recipes": [
+    {
+      "id": "forokh_thiaya",
+      "business": "forokh_thiaya",
+      "unlockLevel": 1,
+      "nameFr": "Pain-viande grillée",
+      "nameEn": "Grilled meat sandwich",
+      "nameWo": "Mburu ak yàpp (à valider)",
+      "anecdoteFr": "Le fourneau sur brouette s'installe au coin de la rue dès la tombée du jour. On y glisse la viande grillée dans un pain encore chaud.",
+      "anecdoteEn": "The cart grill sets up on the corner at dusk. Grilled meat is tucked into still-warm bread.",
+      "stepsFr": [
+        "Mariner la viande avec oignon, ail et poivre.",
+        "Griller sur le charbon en retournant souvent.",
+        "Ouvrir le pain et ajouter oignons et moutarde.",
+        "Garnir de viande et servir chaud."
+      ],
+      "stepsEn": [
+        "Marinate the meat with onion, garlic and pepper.",
+        "Grill over charcoal, turning often.",
+        "Open the bread, add onions and mustard.",
+        "Fill with meat and serve hot."
+      ]
+    },
+    {
+      "id": "omelette",
+      "business": "tangana",
+      "unlockLevel": 1,
+      "nameFr": "Omelette du tangana",
+      "nameEn": "Tangana omelette",
+      "nameWo": "Omlet (à valider)",
+      "anecdoteFr": "Au tangana, l'omelette se commande dans un pain pour bien commencer la journée. Chacun a son assaisonnement préféré.",
+      "anecdoteEn": "At the tangana, the omelette comes in bread to start the day right. Everyone has a favourite seasoning.",
+      "stepsFr": [
+        "Battre les œufs avec sel et poivre.",
+        "Faire revenir oignon et piment.",
+        "Cuire l'omelette à feu vif.",
+        "Servir dans un pain."
+      ],
+      "stepsEn": [
+        "Beat the eggs with salt and pepper.",
+        "Fry onion and chili.",
+        "Cook the omelette on high heat.",
+        "Serve in bread."
+      ]
+    },
+    {
+      "id": "spaghetti_tangana",
+      "business": "tangana",
+      "unlockLevel": 25,
+      "nameFr": "Spaghetti au pain",
+      "nameEn": "Spaghetti in bread",
+      "nameWo": "Espageti (à valider)",
+      "anecdoteFr": "Le spaghetti en sandwich surprend les visiteurs mais régale les habitués. C'est un classique du petit-déjeuner de rue.",
+      "anecdoteEn": "Spaghetti in a sandwich surprises visitors and delights regulars. It is a street-breakfast classic.",
+      "stepsFr": [
+        "Cuire les pâtes.",
+        "Préparer une sauce tomate-oignon.",
+        "Mélanger pâtes et sauce.",
+        "Servir dans un pain."
+      ],
+      "stepsEn": [
+        "Cook the pasta.",
+        "Make a tomato-onion sauce.",
+        "Mix pasta and sauce.",
+        "Serve in bread."
+      ]
+    },
+    {
+      "id": "niebe",
+      "business": "tangana",
+      "unlockLevel": 50,
+      "nameFr": "Niébé",
+      "nameEn": "Black-eyed peas",
+      "nameWo": "Ñebbe (à valider)",
+      "anecdoteFr": "Le niébé mijoté nourrit longtemps et coûte peu. Il se mange souvent avec du pain au tangana.",
+      "anecdoteEn": "Slow-cooked black-eyed peas are filling and cheap. They are often eaten with bread at the tangana.",
+      "stepsFr": [
+        "Faire tremper puis cuire les haricots.",
+        "Préparer une sauce oignon-tomate.",
+        "Laisser mijoter ensemble.",
+        "Servir avec du pain."
+      ],
+      "stepsEn": [
+        "Soak then cook the beans.",
+        "Make an onion-tomato sauce.",
+        "Simmer together.",
+        "Serve with bread."
+      ]
+    },
+    {
+      "id": "pain_thon",
+      "business": "tangana",
+      "unlockLevel": 100,
+      "nameFr": "Pain-thon",
+      "nameEn": "Tuna sandwich",
+      "nameWo": "Mburu ak toon (à valider)",
+      "anecdoteFr": "Rapide et pas cher, le pain-thon est le compagnon des matins pressés. On l'agrémente souvent de mayonnaise et de piment.",
+      "anecdoteEn": "Quick and cheap, the tuna sandwich is the friend of rushed mornings. It often gets mayonnaise and chili.",
+      "stepsFr": [
+        "Émietter le thon.",
+        "Ajouter oignon, mayonnaise et piment.",
+        "Garnir le pain."
+      ],
+      "stepsEn": [
+        "Flake the tuna.",
+        "Add onion, mayonnaise and chili.",
+        "Fill the bread."
+      ]
+    },
+    {
+      "id": "macaroni",
+      "business": "tangana",
+      "unlockLevel": 200,
+      "nameFr": "Macaroni",
+      "nameEn": "Macaroni",
+      "nameWo": "Makaroni (à valider)",
+      "anecdoteFr": "Les macaronis en sauce sont une autre star du tangana. On les sert parfois avec un œuf.",
+      "anecdoteEn": "Macaroni in sauce is another tangana star. It is sometimes served with an egg.",
+      "stepsFr": [
+        "Cuire les macaronis.",
+        "Préparer la sauce oignon-tomate.",
+        "Mélanger et servir."
+      ],
+      "stepsEn": [
+        "Cook the macaroni.",
+        "Make the onion-tomato sauce.",
+        "Mix and serve."
+      ]
+    },
+    {
+      "id": "petits_pois",
+      "business": "tangana",
+      "unlockLevel": 300,
+      "nameFr": "Petits pois",
+      "nameEn": "Green peas",
+      "nameWo": "Petipwa (à valider)",
+      "anecdoteFr": "Les petits pois en sauce garnissent le pain du matin. Un plat simple qui réchauffe.",
+      "anecdoteEn": "Peas in sauce fill the morning bread. A simple, warming dish.",
+      "stepsFr": [
+        "Faire revenir oignon et tomate.",
+        "Ajouter les petits pois.",
+        "Laisser mijoter et servir dans un pain."
+      ],
+      "stepsEn": [
+        "Fry onion and tomato.",
+        "Add the peas.",
+        "Simmer and serve in bread."
+      ]
+    },
+    {
+      "id": "brochettes",
+      "business": "maiga",
+      "unlockLevel": 1,
+      "nameFr": "Brochettes",
+      "nameEn": "Skewers",
+      "nameWo": "Brosett (à valider)",
+      "anecdoteFr": "La nuit, les brochettes grillent sous l'ampoule du maïga. L'odeur attire tout le quartier.",
+      "anecdoteEn": "At night, skewers grill under the maiga's light bulb. The smell draws the whole neighbourhood.",
+      "stepsFr": [
+        "Couper la viande en dés.",
+        "Mariner avec épices et oignon.",
+        "Enfiler sur des pics.",
+        "Griller sur le charbon."
+      ],
+      "stepsEn": [
+        "Dice the meat.",
+        "Marinate with spices and onion.",
+        "Thread onto skewers.",
+        "Grill over charcoal."
+      ]
+    },
+    {
+      "id": "frites",
+      "business": "maiga",
+      "unlockLevel": 25,
+      "nameFr": "Frites du maïga",
+      "nameEn": "Maiga fries",
+      "nameWo": "Frit (à valider)",
+      "anecdoteFr": "Les frites accompagnent les brochettes et l'omelette du soir. Croustillantes, elles partent vite.",
+      "anecdoteEn": "Fries come with the evening skewers and omelette. Crispy, they go fast.",
+      "stepsFr": [
+        "Éplucher et couper les pommes de terre.",
+        "Frire une première fois.",
+        "Frire à nouveau plus chaud.",
+        "Saler et servir."
+      ],
+      "stepsEn": [
+        "Peel and cut the potatoes.",
+        "Fry once.",
+        "Fry again hotter.",
+        "Salt and serve."
+      ]
+    },
+    {
+      "id": "thieboudienne",
+      "business": "gargote",
+      "unlockLevel": 1,
+      "nameFr": "Thiéboudienne",
+      "nameEn": "Thieboudienne",
+      "nameWo": "Ceebu jën",
+      "anecdoteFr": "Riz au poisson et légumes, le thiéboudienne est souvent présenté comme le plat national du Sénégal. Le riz du fond de la marmite, croustillant, est très apprécié.",
+      "anecdoteEn": "Rice with fish and vegetables, thieboudienne is often called Senegal's national dish. The crispy rice from the bottom of the pot is a treat.",
+      "stepsFr": [
+        "Farcir le poisson d'une pâte de persil, ail et piment.",
+        "Faire revenir oignon et concentré de tomate.",
+        "Cuire poisson et légumes dans la sauce.",
+        "Cuire le riz dans le bouillon.",
+        "Servir le riz avec poisson et légumes."
+      ],
+      "stepsEn": [
+        "Stuff the fish with parsley, garlic and chili paste.",
+        "Fry onion and tomato paste.",
+        "Cook fish and vegetables in the sauce.",
+        "Cook the rice in the broth.",
+        "Serve the rice with fish and vegetables."
+      ]
+    },
+    {
+      "id": "yassa",
+      "business": "gargote",
+      "unlockLevel": 25,
+      "nameFr": "Yassa",
+      "nameEn": "Yassa",
+      "nameWo": "Yaasa",
+      "anecdoteFr": "Le yassa marie le citron et les oignons confits. Il se décline au poulet ou au poisson.",
+      "anecdoteEn": "Yassa combines lemon and slow-cooked onions. It comes with chicken or fish.",
+      "stepsFr": [
+        "Mariner le poulet avec citron, oignons et moutarde.",
+        "Griller le poulet.",
+        "Faire fondre les oignons de la marinade.",
+        "Mijoter le poulet dans les oignons et servir avec du riz."
+      ],
+      "stepsEn": [
+        "Marinate the chicken with lemon, onions and mustard.",
+        "Grill the chicken.",
+        "Slow-cook the marinade onions.",
+        "Simmer the chicken in the onions and serve with rice."
+      ]
+    },
+    {
+      "id": "mafe",
+      "business": "gargote",
+      "unlockLevel": 50,
+      "nameFr": "Mafé",
+      "nameEn": "Mafe",
+      "nameWo": "Maafe",
+      "anecdoteFr": "Le mafé est une sauce à base de pâte d'arachide. Il est apprécié dans toute l'Afrique de l'Ouest.",
+      "anecdoteEn": "Mafe is a peanut-butter based sauce. It is loved across West Africa.",
+      "stepsFr": [
+        "Faire revenir la viande et l'oignon.",
+        "Ajouter tomate et pâte d'arachide délayée.",
+        "Mijoter avec les légumes.",
+        "Servir avec du riz."
+      ],
+      "stepsEn": [
+        "Brown the meat and onion.",
+        "Add tomato and thinned peanut butter.",
+        "Simmer with vegetables.",
+        "Serve with rice."
+      ]
+    },
+    {
+      "id": "dibi",
+      "business": "dibiterie",
+      "unlockLevel": 1,
+      "nameFr": "Dibi d'agneau",
+      "nameEn": "Lamb dibi",
+      "nameWo": "Dibi",
+      "anecdoteFr": "À la dibiterie, l'agneau grillé se commande au poids. Il se partage avec oignons et moutarde.",
+      "anecdoteEn": "At the dibiterie, grilled lamb is ordered by weight. It is shared with onions and mustard.",
+      "stepsFr": [
+        "Couper l'agneau en morceaux.",
+        "Griller au charbon.",
+        "Assaisonner de sel et poivre.",
+        "Servir avec oignons et moutarde."
+      ],
+      "stepsEn": [
+        "Cut the lamb into pieces.",
+        "Grill over charcoal.",
+        "Season with salt and pepper.",
+        "Serve with onions and mustard."
+      ]
+    },
+    {
+      "id": "fataya",
+      "business": "fataya_nems",
+      "unlockLevel": 1,
+      "nameFr": "Fatayas",
+      "nameEn": "Fatayas",
+      "nameWo": "Fataya",
+      "anecdoteFr": "Les fatayas sont des chaussons frits farcis. Ils se mangent avec une sauce tomate pimentée.",
+      "anecdoteEn": "Fatayas are fried stuffed turnovers. They are eaten with a spicy tomato sauce.",
+      "stepsFr": [
+        "Préparer une pâte souple.",
+        "Garnir de viande ou de poisson.",
+        "Fermer en chausson.",
+        "Frire jusqu'à dorure."
+      ],
+      "stepsEn": [
+        "Make a soft dough.",
+        "Fill with meat or fish.",
+        "Fold into a turnover.",
+        "Fry until golden."
+      ]
+    },
+    {
+      "id": "nems",
+      "business": "fataya_nems",
+      "unlockLevel": 25,
+      "nameFr": "Nems",
+      "nameEn": "Spring rolls",
+      "nameWo": "Nem (à valider)",
+      "anecdoteFr": "Les nems font partie des en-cas de fête au Sénégal. Ils rappellent une histoire de rencontres entre cuisines.",
+      "anecdoteEn": "Spring rolls are part of party snacks in Senegal. They recall a history of cuisines meeting.",
+      "stepsFr": [
+        "Préparer la farce.",
+        "Rouler dans les galettes.",
+        "Frire et servir chaud."
+      ],
+      "stepsEn": [
+        "Make the filling.",
+        "Roll in the wrappers.",
+        "Fry and serve hot."
+      ]
+    },
+    {
+      "id": "pastels",
+      "business": "fataya_nems",
+      "unlockLevel": 50,
+      "nameFr": "Pastels",
+      "nameEn": "Pastels",
+      "nameWo": "Pastel",
+      "anecdoteFr": "Les pastels sont de petits chaussons au poisson. Ils sont incontournables dans les fêtes.",
+      "anecdoteEn": "Pastels are small fish turnovers. Parties are not complete without them.",
+      "stepsFr": [
+        "Émietter le poisson avec oignon et piment.",
+        "Garnir de petits ronds de pâte.",
+        "Frire et servir avec sauce."
+      ],
+      "stepsEn": [
+        "Flake the fish with onion and chili.",
+        "Fill small rounds of dough.",
+        "Fry and serve with sauce."
+      ]
+    },
+    {
+      "id": "soupou_kandja",
+      "business": "restaurant_teranga",
+      "unlockLevel": 1,
+      "nameFr": "Soupou kandja",
+      "nameEn": "Soupou kandja",
+      "nameWo": "Supu kànja",
+      "anecdoteFr": "Le soupou kandja est une sauce au gombo très appréciée. Elle se sert avec du riz blanc.",
+      "anecdoteEn": "Soupou kandja is a much-loved okra sauce. It is served with white rice.",
+      "stepsFr": [
+        "Couper le gombo.",
+        "Cuire viande et poisson.",
+        "Ajouter gombo et huile de palme.",
+        "Mijoter et servir avec du riz."
+      ],
+      "stepsEn": [
+        "Chop the okra.",
+        "Cook meat and fish.",
+        "Add okra and palm oil.",
+        "Simmer and serve with rice."
+      ]
+    },
+    {
+      "id": "caldou",
+      "business": "restaurant_teranga",
+      "unlockLevel": 25,
+      "nameFr": "Caldou",
+      "nameEn": "Caldou",
+      "nameWo": "Kaldu (à valider)",
+      "anecdoteFr": "Le caldou est un poisson cuit dans un bouillon citronné. C'est un plat léger et parfumé.",
+      "anecdoteEn": "Caldou is fish cooked in a lemony broth. It is a light, fragrant dish.",
+      "stepsFr": [
+        "Faire revenir oignon et piment.",
+        "Ajouter eau et citron.",
+        "Pocher le poisson.",
+        "Servir avec du riz."
+      ],
+      "stepsEn": [
+        "Fry onion and chili.",
+        "Add water and lemon.",
+        "Poach the fish.",
+        "Serve with rice."
+      ]
+    },
+    {
+      "id": "thiakry",
+      "business": "restaurant_teranga",
+      "unlockLevel": 50,
+      "nameFr": "Thiakry",
+      "nameEn": "Thiakry",
+      "nameWo": "Caakiri",
+      "anecdoteFr": "Le thiakry est un dessert de semoule de mil au lait caillé. Il se sert bien frais.",
+      "anecdoteEn": "Thiakry is a millet couscous dessert with curdled milk. It is served chilled.",
+      "stepsFr": [
+        "Cuire la semoule de mil à la vapeur.",
+        "Mélanger avec lait caillé et sucre.",
+        "Parfumer et servir frais."
+      ],
+      "stepsEn": [
+        "Steam the millet couscous.",
+        "Mix with curdled milk and sugar.",
+        "Flavour and serve chilled."
+      ]
+    },
+    {
+      "id": "thiere",
+      "business": "traiteur_evenements",
+      "unlockLevel": 1,
+      "nameFr": "Thiéré",
+      "nameEn": "Millet couscous",
+      "nameWo": "Cere",
+      "anecdoteFr": "Le thiéré, couscous de mil, accompagne de nombreuses fêtes familiales. Il se sert avec une sauce à la viande.",
+      "anecdoteEn": "Thiere, millet couscous, accompanies many family celebrations. It is served with a meat sauce.",
+      "stepsFr": [
+        "Cuire la semoule de mil à la vapeur.",
+        "Préparer une sauce à la viande.",
+        "Servir ensemble."
+      ],
+      "stepsEn": [
+        "Steam the millet couscous.",
+        "Make a meat sauce.",
+        "Serve together."
+      ]
+    },
+    {
+      "id": "ngalakh",
+      "business": "traiteur_evenements",
+      "unlockLevel": 25,
+      "nameFr": "Ngalakh",
+      "nameEn": "Ngalakh",
+      "nameWo": "Ngalax",
+      "anecdoteFr": "Le ngalakh est un dessert de mil à l'arachide et au pain de singe. Il se partage entre voisins lors des fêtes.",
+      "anecdoteEn": "Ngalakh is a millet dessert with peanut and baobab fruit. It is shared between neighbours during celebrations.",
+      "stepsFr": [
+        "Cuire la semoule de mil.",
+        "Préparer une crème d'arachide et de pain de singe.",
+        "Mélanger et servir."
+      ],
+      "stepsEn": [
+        "Cook the millet.",
+        "Make a peanut and baobab cream.",
+        "Mix and serve."
+      ]
+    },
+    {
+      "id": "mechoui",
+      "business": "traiteur_evenements",
+      "unlockLevel": 50,
+      "nameFr": "Méchoui",
+      "nameEn": "Roast lamb",
+      "nameWo": "Mesuwi (à valider)",
+      "anecdoteFr": "Le mouton rôti entier est le roi des grandes fêtes. Préparer un méchoui demande des heures de patience.",
+      "anecdoteEn": "Whole roast lamb is the king of big celebrations. A mechoui takes hours of patience.",
+      "stepsFr": [
+        "Assaisonner le mouton.",
+        "Rôtir lentement sur le feu.",
+        "Arroser régulièrement.",
+        "Servir avec oignons et frites."
+      ],
+      "stepsEn": [
+        "Season the lamb.",
+        "Roast slowly over the fire.",
+        "Baste regularly.",
+        "Serve with onions and fries."
+      ]
+    }
+  ],
+  "album": {
+    "cityBonusMultiplier": 1.05
+  },
+  "achievements": [
+    {
+      "id": "lvl_forokh_thiaya",
+      "nameFr": "Roi du Forokh",
+      "nameEn": "Forokh King",
+      "stat": "business_level",
+      "business": "forokh_thiaya",
+      "tiers": [
+        100,
+        750,
+        3000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "serve_forokh_thiaya",
+      "nameFr": "Habitués du Forokh",
+      "nameEn": "Forokh Regulars",
+      "stat": "business_customers",
+      "business": "forokh_thiaya",
+      "tiers": [
+        5000,
+        500000,
+        50000000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "ms_forokh_thiaya",
+      "nameFr": "Paliers du Forokh",
+      "nameEn": "Forokh Milestones",
+      "stat": "business_milestones",
+      "business": "forokh_thiaya",
+      "tiers": [
+        3,
+        8,
+        14
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "mgr_forokh_thiaya",
+      "nameFr": "Équipe du Forokh",
+      "nameEn": "Forokh Crew",
+      "stat": "business_manager_level",
+      "business": "forokh_thiaya",
+      "tiers": [
+        3,
+        6,
+        10
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "lvl_tangana",
+      "nameFr": "Roi du Tangana",
+      "nameEn": "Tangana King",
+      "stat": "business_level",
+      "business": "tangana",
+      "tiers": [
+        100,
+        750,
+        3000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "serve_tangana",
+      "nameFr": "Habitués du Tangana",
+      "nameEn": "Tangana Regulars",
+      "stat": "business_customers",
+      "business": "tangana",
+      "tiers": [
+        5000,
+        500000,
+        50000000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "ms_tangana",
+      "nameFr": "Paliers du Tangana",
+      "nameEn": "Tangana Milestones",
+      "stat": "business_milestones",
+      "business": "tangana",
+      "tiers": [
+        3,
+        8,
+        14
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "mgr_tangana",
+      "nameFr": "Équipe du Tangana",
+      "nameEn": "Tangana Crew",
+      "stat": "business_manager_level",
+      "business": "tangana",
+      "tiers": [
+        3,
+        6,
+        10
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "lvl_maiga",
+      "nameFr": "Roi du Maïga",
+      "nameEn": "Maiga King",
+      "stat": "business_level",
+      "business": "maiga",
+      "tiers": [
+        100,
+        750,
+        3000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "serve_maiga",
+      "nameFr": "Habitués du Maïga",
+      "nameEn": "Maiga Regulars",
+      "stat": "business_customers",
+      "business": "maiga",
+      "tiers": [
+        5000,
+        500000,
+        50000000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "ms_maiga",
+      "nameFr": "Paliers du Maïga",
+      "nameEn": "Maiga Milestones",
+      "stat": "business_milestones",
+      "business": "maiga",
+      "tiers": [
+        3,
+        8,
+        14
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "mgr_maiga",
+      "nameFr": "Équipe du Maïga",
+      "nameEn": "Maiga Crew",
+      "stat": "business_manager_level",
+      "business": "maiga",
+      "tiers": [
+        3,
+        6,
+        10
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "lvl_gargote",
+      "nameFr": "Roi de la Gargote",
+      "nameEn": "Gargote King",
+      "stat": "business_level",
+      "business": "gargote",
+      "tiers": [
+        100,
+        750,
+        3000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "serve_gargote",
+      "nameFr": "Habitués de la Gargote",
+      "nameEn": "Gargote Regulars",
+      "stat": "business_customers",
+      "business": "gargote",
+      "tiers": [
+        5000,
+        500000,
+        50000000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "ms_gargote",
+      "nameFr": "Paliers de la Gargote",
+      "nameEn": "Gargote Milestones",
+      "stat": "business_milestones",
+      "business": "gargote",
+      "tiers": [
+        3,
+        8,
+        14
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "mgr_gargote",
+      "nameFr": "Équipe de la Gargote",
+      "nameEn": "Gargote Crew",
+      "stat": "business_manager_level",
+      "business": "gargote",
+      "tiers": [
+        3,
+        6,
+        10
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "lvl_dibiterie",
+      "nameFr": "Roi du Dibi",
+      "nameEn": "Dibi King",
+      "stat": "business_level",
+      "business": "dibiterie",
+      "tiers": [
+        100,
+        750,
+        3000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "serve_dibiterie",
+      "nameFr": "Habitués du Dibi",
+      "nameEn": "Dibi Regulars",
+      "stat": "business_customers",
+      "business": "dibiterie",
+      "tiers": [
+        5000,
+        500000,
+        50000000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "ms_dibiterie",
+      "nameFr": "Paliers du Dibi",
+      "nameEn": "Dibi Milestones",
+      "stat": "business_milestones",
+      "business": "dibiterie",
+      "tiers": [
+        3,
+        8,
+        14
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "mgr_dibiterie",
+      "nameFr": "Équipe du Dibi",
+      "nameEn": "Dibi Crew",
+      "stat": "business_manager_level",
+      "business": "dibiterie",
+      "tiers": [
+        3,
+        6,
+        10
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "lvl_fataya_nems",
+      "nameFr": "Roi des Fatayas",
+      "nameEn": "Fataya King",
+      "stat": "business_level",
+      "business": "fataya_nems",
+      "tiers": [
+        100,
+        750,
+        3000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "serve_fataya_nems",
+      "nameFr": "Habitués des Fatayas",
+      "nameEn": "Fataya Regulars",
+      "stat": "business_customers",
+      "business": "fataya_nems",
+      "tiers": [
+        5000,
+        500000,
+        50000000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "ms_fataya_nems",
+      "nameFr": "Paliers des Fatayas",
+      "nameEn": "Fataya Milestones",
+      "stat": "business_milestones",
+      "business": "fataya_nems",
+      "tiers": [
+        3,
+        8,
+        14
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "mgr_fataya_nems",
+      "nameFr": "Équipe des Fatayas",
+      "nameEn": "Fataya Crew",
+      "stat": "business_manager_level",
+      "business": "fataya_nems",
+      "tiers": [
+        3,
+        6,
+        10
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "lvl_restaurant_teranga",
+      "nameFr": "Roi de la Teranga",
+      "nameEn": "Teranga King",
+      "stat": "business_level",
+      "business": "restaurant_teranga",
+      "tiers": [
+        100,
+        750,
+        3000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "serve_restaurant_teranga",
+      "nameFr": "Habitués de la Teranga",
+      "nameEn": "Teranga Regulars",
+      "stat": "business_customers",
+      "business": "restaurant_teranga",
+      "tiers": [
+        5000,
+        500000,
+        50000000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "ms_restaurant_teranga",
+      "nameFr": "Paliers de la Teranga",
+      "nameEn": "Teranga Milestones",
+      "stat": "business_milestones",
+      "business": "restaurant_teranga",
+      "tiers": [
+        3,
+        8,
+        14
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "mgr_restaurant_teranga",
+      "nameFr": "Équipe de la Teranga",
+      "nameEn": "Teranga Crew",
+      "stat": "business_manager_level",
+      "business": "restaurant_teranga",
+      "tiers": [
+        3,
+        6,
+        10
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "lvl_traiteur_evenements",
+      "nameFr": "Roi des Fêtes",
+      "nameEn": "Party King",
+      "stat": "business_level",
+      "business": "traiteur_evenements",
+      "tiers": [
+        100,
+        750,
+        3000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "serve_traiteur_evenements",
+      "nameFr": "Habitués des Fêtes",
+      "nameEn": "Party Regulars",
+      "stat": "business_customers",
+      "business": "traiteur_evenements",
+      "tiers": [
+        5000,
+        500000,
+        50000000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "ms_traiteur_evenements",
+      "nameFr": "Paliers des Fêtes",
+      "nameEn": "Party Milestones",
+      "stat": "business_milestones",
+      "business": "traiteur_evenements",
+      "tiers": [
+        3,
+        8,
+        14
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "mgr_traiteur_evenements",
+      "nameFr": "Équipe des Fêtes",
+      "nameEn": "Party Crew",
+      "stat": "business_manager_level",
+      "business": "traiteur_evenements",
+      "tiers": [
+        3,
+        6,
+        10
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "earn",
+      "nameFr": "Le milliard",
+      "nameEn": "The Billion",
+      "stat": "lifetime_earnings",
+      "business": "",
+      "tiers": [
+        1000000000.0,
+        1000000000000.0,
+        1000000000000000.0
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "customers",
+      "nameFr": "Toute la ville a mangé",
+      "nameEn": "The Whole City Ate",
+      "stat": "customers",
+      "business": "",
+      "tiers": [
+        100000.0,
+        10000000.0,
+        1000000000.0
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "taps",
+      "nameFr": "Doigts de fée",
+      "nameEn": "Magic Fingers",
+      "stat": "taps",
+      "business": "",
+      "tiers": [
+        500,
+        5000,
+        50000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "levels",
+      "nameFr": "Bâtisseur",
+      "nameEn": "Builder",
+      "stat": "levels_bought",
+      "business": "",
+      "tiers": [
+        500,
+        10000,
+        100000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "unlocks",
+      "nameFr": "La rue s'anime",
+      "nameEn": "The Street Wakes Up",
+      "stat": "businesses_unlocked",
+      "business": "",
+      "tiers": [
+        8,
+        16,
+        40
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "managers_hired",
+      "nameFr": "Bon patron",
+      "nameEn": "Good Boss",
+      "stat": "managers_hired",
+      "business": "",
+      "tiers": [
+        8,
+        16,
+        40
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "milestones",
+      "nameFr": "Plus vite !",
+      "nameEn": "Faster!",
+      "stat": "milestones",
+      "business": "",
+      "tiers": [
+        25,
+        150,
+        600
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "upgrades",
+      "nameFr": "Bien équipé",
+      "nameEn": "Well Equipped",
+      "stat": "cash_upgrades",
+      "business": "",
+      "tiers": [
+        20,
+        100,
+        400
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "prestige",
+      "nameFr": "Recommencer en mieux",
+      "nameEn": "Better Every Time",
+      "stat": "prestiges",
+      "business": "",
+      "tiers": [
+        3,
+        20,
+        80
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "stars",
+      "nameFr": "Teranga absolue",
+      "nameEn": "Absolute Teranga",
+      "stat": "stars",
+      "business": "",
+      "tiers": [
+        100,
+        2000,
+        40000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "cities",
+      "nameFr": "Tour de l'Afrique de l'Ouest",
+      "nameEn": "West Africa Tour",
+      "stat": "cities_visited",
+      "business": "",
+      "tiers": [
+        2,
+        3,
+        5
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "chests",
+      "nameFr": "Chasseur de coffres",
+      "nameEn": "Chest Hunter",
+      "stat": "chests_opened",
+      "business": "",
+      "tiers": [
+        20,
+        150,
+        600
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "collection",
+      "nameFr": "Collectionneur",
+      "nameEn": "Collector",
+      "stat": "managers_owned",
+      "business": "",
+      "tiers": [
+        16,
+        24,
+        32
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "rare",
+      "nameFr": "Talents rares",
+      "nameEn": "Rare Talents",
+      "stat": "rare_owned",
+      "business": "",
+      "tiers": [
+        2,
+        4,
+        6
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "epic",
+      "nameFr": "Épique !",
+      "nameEn": "Epic!",
+      "stat": "epic_owned",
+      "business": "",
+      "tiers": [
+        1,
+        3,
+        6
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "legend",
+      "nameFr": "Légende de la rue",
+      "nameEn": "Street Legend",
+      "stat": "legendary_owned",
+      "business": "",
+      "tiers": [
+        1,
+        2,
+        4
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "mgr_levels",
+      "nameFr": "École des gérants",
+      "nameEn": "Manager School",
+      "stat": "manager_levels",
+      "business": "",
+      "tiers": [
+        20,
+        100,
+        250
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "missions",
+      "nameFr": "Mission accomplie",
+      "nameEn": "Mission Accomplished",
+      "stat": "missions_completed",
+      "business": "",
+      "tiers": [
+        20,
+        150,
+        600
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "challenges",
+      "nameFr": "Défi relevé",
+      "nameEn": "Challenge Met",
+      "stat": "challenges_completed",
+      "business": "",
+      "tiers": [
+        10,
+        60,
+        200
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "streak",
+      "nameFr": "Fidèle au poste",
+      "nameEn": "Always There",
+      "stat": "best_streak",
+      "business": "",
+      "tiers": [
+        3,
+        7,
+        30
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "logins",
+      "nameFr": "Habitué",
+      "nameEn": "Regular",
+      "stat": "login_days",
+      "business": "",
+      "tiers": [
+        7,
+        30,
+        90
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "wheel",
+      "nameFr": "La roue tourne",
+      "nameEn": "The Wheel Turns",
+      "stat": "wheel_spins",
+      "business": "",
+      "tiers": [
+        20,
+        100,
+        400
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "specials",
+      "nameFr": "Bon accueil",
+      "nameEn": "Warm Welcome",
+      "stat": "specials_tapped",
+      "business": "",
+      "tiers": [
+        20,
+        200,
+        1000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "boosts",
+      "nameFr": "Coup de boost",
+      "nameEn": "Power Boost",
+      "stat": "manager_boosts",
+      "business": "",
+      "tiers": [
+        20,
+        200,
+        1000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "recipes",
+      "nameFr": "Album gourmand",
+      "nameEn": "Gourmet Album",
+      "stat": "recipes",
+      "business": "",
+      "tiers": [
+        6,
+        12,
+        22
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "player_level",
+      "nameFr": "Grand patron",
+      "nameEn": "Big Boss",
+      "stat": "player_level",
+      "business": "",
+      "tiers": [
+        10,
+        20,
+        40
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "cauris",
+      "nameFr": "Collier de cauris",
+      "nameEn": "Cowrie Necklace",
+      "stat": "cauris_earned",
+      "business": "",
+      "tiers": [
+        2000,
+        20000,
+        100000
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "global_ms",
+      "nameFr": "Toute la rue avance",
+      "nameEn": "The Whole Street Moves",
+      "stat": "global_milestones",
+      "business": "",
+      "tiers": [
+        2,
+        5,
+        9
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "offline",
+      "nameFr": "Ça tourne sans moi",
+      "nameEn": "Runs Without Me",
+      "stat": "offline_claims",
+      "business": "",
+      "tiers": [
+        20,
+        150,
+        500
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    },
+    {
+      "id": "ads",
+      "nameFr": "Merci les sponsors",
+      "nameEn": "Thanks, Sponsors",
+      "stat": "rewarded_watched",
+      "business": "",
+      "tiers": [
+        20,
+        150,
+        600
+      ],
+      "cauris": [
+        5,
+        15,
+        40
+      ]
+    }
+  ],
+  "notifications": {
+    "maxPerDay": 2,
+    "quietStartHour": 22,
+    "quietEndHour": 8,
+    "askPermissionAfterFirstFreeChest": true
+  },
+  "cauris": {
+    "startingCauris": 0,
+    "offlineCapExtensionCauris": 50,
+    "offlineCapExtensionSeconds": 14400,
+    "offlineCapExtensionDurationSeconds": 86400
+  },
+  "redDots": {
+    "minSecondsBetweenReminders": 60
+  },
+  "visitedCityIncomeRatio": 0.05
+}

@@ -25,12 +25,41 @@ MonoBehaviour:
     displayName: "G\xE9rants fid\xE8les"
     effect: 1
     costStars: 5
+    value: 0
   - id: commis_automatique
     displayName: Commis automatique
     effect: 2
     costStars: 10
+    value: 0
   - id: comme_avant
     displayName: Comme avant
     effect: 3
     costStars: 20
+    value: 0
+  - id: thermos_grand_pere
+    displayName: "Le thermos du grand-p\xE8re"
+    effect: 4
+    costStars: 40
+    value: 0.1
+  - id: veilleur_de_nuit
+    displayName: Veilleur de nuit
+    effect: 5
+    costStars: 1500
+    value: 3600
+  - id: veilleur_de_nuit_2
+    displayName: Deux veilleurs de nuit
+    effect: 5
+    costStars: 6000
+    value: 3600
+  - id: fourneau_ameliore
+    displayName: "Fourneau am\xE9lior\xE9"
+    effect: 6
+    costStars: 80
+    value: 1.05
+  - id: grossiste_ami
+    displayName: Le grossiste ami
+    effect: 7
+    costStars: 120
+    value: 0.95
   rebuyStartingFundSeconds: 28800
+  visitedCityIncomeRatio: 0.05

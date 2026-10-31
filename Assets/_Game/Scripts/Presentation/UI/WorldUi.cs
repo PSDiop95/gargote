@@ -34,6 +34,13 @@ namespace Gargote.Presentation
         private Tween _bannerTween, _bubbleTween;
 
         public bool BubbleVisible => _bubble.gameObject.activeSelf;
+        /// <summary>Zones réservées : les labels sortent de la rue = masqués, bulle et client spécial = repoussés dedans.</summary>
+        public UiLayout Layout;
+        public RectTransform SpecialRect => _special;
+        public RectTransform BubbleRect => _bubble;
+        public RectTransform BannerRect => _banner;
+        public RectTransform BadgeRect(int index) => _labels[index].Badge;
+        public RectTransform CostRect(int index) => _labels[index].Cost;
 
         public WorldUi(RectTransform root, Camera camera, HudConfig hud, JuiceConfig juice, StreetAssets assets, int businessCount)
         {
@@ -80,11 +87,17 @@ namespace Gargote.Presentation
             _banner.gameObject.SetActive(false);
         }
 
-        private bool Place(RectTransform rt, Vector3 world, Vector2 offset)
+        private bool Place(RectTransform rt, Vector3 world, Vector2 offset, bool clamp = false)
         {
             Vector3 screen = _camera.WorldToScreenPoint(world);
             if (screen.z < 0f || !RectTransformUtility.ScreenPointToLocalPointInRectangle(_root, screen, null, out var local)) return false;
-            rt.anchoredPosition = local + offset;
+            Vector2 p = local + offset;
+            if (Layout != null)
+            {
+                if (clamp) p = Layout.ClampToStreet(p, rt.sizeDelta, rt.pivot);
+                else if (!Layout.InStreet(p)) return false;
+            }
+            rt.anchoredPosition = p;
             return true;
         }
 
@@ -98,10 +111,10 @@ namespace Gargote.Presentation
             if (showCost)
             {
                 l.CostBuffer.Clear().Append(unlockCost).Append(" FCFA").ApplyIfChanged(l.CostText);
-                Place(l.Cost, view.transform.position + new Vector3(0f, 1.1f, -1.4f), Vector2.zero);
+                if (!Place(l.Cost, view.transform.position + new Vector3(0f, 1.1f, -1.4f), Vector2.zero)) l.Cost.gameObject.SetActive(false);
             }
 
-            bool showBadge = visible && !locked && badge > 0;
+            bool showBadge = visible && !locked && badge > 0 && (Layout == null || OnScreenInStreet(view.labelAnchor.position, UiLayout.BadgeOffset));
             if (l.Badge.gameObject.activeSelf != showBadge) l.Badge.gameObject.SetActive(showBadge);
             if (showBadge)
             {
@@ -110,7 +123,7 @@ namespace Gargote.Presentation
                     l.BadgeShown = badge;
                     l.BadgeText.text = badge == 1 ? _morning : _night;
                 }
-                Place(l.Badge, view.labelAnchor.position, new Vector2(0f, 40f));
+                Place(l.Badge, view.labelAnchor.position, new Vector2(0f, UiLayout.BadgeOffset));
             }
 
             bool hand = visible && showHand;
@@ -119,8 +132,18 @@ namespace Gargote.Presentation
             {
                 float pulse = 1f + 0.15f * Mathf.Sin(time * 6f);
                 l.Hand.localScale = new Vector3(pulse, pulse, 1f);
-                Place(l.Hand, view.PickCenter, new Vector2(30f, -10f + 14f * Mathf.Sin(time * 6f)));
+                if (!Place(l.Hand, view.PickCenter, new Vector2(30f, -10f + 14f * Mathf.Sin(time * 6f)))) l.Hand.gameObject.SetActive(false);
             }
+        }
+
+        /// <summary>Le badge d'un commerce est-il affiché (les popups se placent alors au-dessus) ?</summary>
+        public bool IsBadgeShown(int index) => _labels[index].Badge.gameObject.activeSelf;
+
+        private bool OnScreenInStreet(Vector3 world, float yOffset)
+        {
+            Vector3 screen = _camera.WorldToScreenPoint(world);
+            if (screen.z < 0f || !RectTransformUtility.ScreenPointToLocalPointInRectangle(_root, screen, null, out var local)) return false;
+            return Layout.InStreet(local + new Vector2(0f, yOffset));
         }
 
         /// <summary>Affiche une réplique de gérant ; refusé si une bulle est déjà à l'écran.</summary>
@@ -154,12 +177,12 @@ namespace Gargote.Presentation
             float now = Time.unscaledTime;
             if (BubbleVisible)
             {
-                bool placed = _bubbleAnchor != null && Place(_bubble, _bubbleAnchor.position + Vector3.up * 1.5f, Vector2.zero);
+                bool placed = _bubbleAnchor != null && Place(_bubble, _bubbleAnchor.position + Vector3.up * 1.5f, Vector2.zero, true);
                 if (now >= _bubbleUntil || !placed) _bubble.gameObject.SetActive(false);
             }
             if (_specialShown)
             {
-                bool placed = Place(_special, _specialWorld + Vector3.up * 1.6f, Vector2.zero);
+                bool placed = Place(_special, _specialWorld + Vector3.up * 1.6f, Vector2.zero, true);
                 if (_special.gameObject.activeSelf != placed) _special.gameObject.SetActive(placed);
             }
             if (_banner.gameObject.activeSelf)

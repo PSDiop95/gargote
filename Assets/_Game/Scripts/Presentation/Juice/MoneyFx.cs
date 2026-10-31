@@ -160,9 +160,21 @@ namespace Gargote.Presentation
         }
 
         /// <summary>Popup « +1,2K » (préfixe optionnel, ex. « x12 ») au-dessus d'un point du monde.</summary>
-        public void PopupAtWorld(Vector3 world, BigDouble amount, long cycles)
+        private Vector2 PopupSize => new Vector2(500f, _juice.popupFontSize * 1.4f);
+
+        /// <summary>Zones réservées : un popup hors de la rue n'est pas affiché, sinon il y est maintenu.</summary>
+        public UiLayout Layout;
+
+        public void PopupAtWorld(Vector3 world, BigDouble amount, long cycles, float yOffset = 0f)
         {
             if (!WorldToLocal(world, out var local)) return;
+            local.y += yOffset;
+            if (Layout != null)
+            {
+                if (!Layout.InStreet(local)) return;
+                // La montée du popup reste dans la rue : on part plus bas si besoin.
+                local = Layout.ClampToStreet(local, new Vector2(PopupSize.x, PopupSize.y + _juice.popupRise), new Vector2(0.5f, 0f));
+            }
             int i = -1;
             for (int k = 0; k < _popups.Length; k++) if (!_popups[k].Active) { i = k; break; }
             if (i < 0)

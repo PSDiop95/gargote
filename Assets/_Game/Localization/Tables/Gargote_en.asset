@@ -266,6 +266,2354 @@ MonoBehaviour:
     m_Localized: x2 (ad)
     m_Metadata:
       m_Items: []
+  - m_Id: 708215620542464
+    m_Localized: Cowries
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314624
+    m_Localized: Teranga Stars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314625
+    m_Localized: Tokens
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314626
+    m_Localized: Lv. {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314627
+    m_Localized: x2 {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314628
+    m_Localized: Common
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314629
+    m_Localized: Rare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314630
+    m_Localized: Epic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314631
+    m_Localized: Legendary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215788314632
+    m_Localized: Restart {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508928
+    m_Localized: You will earn {0} stars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508929
+    m_Localized: "Income x{0} \u2192 x{1}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508930
+    m_Localized: You keep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508931
+    m_Localized: Stars, collection managers, cowries, chests, album, achievements
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508932
+    m_Localized: Starts over
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508933
+    m_Localized: FCFA, business levels, FCFA upgrades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508934
+    m_Localized: Restart the city
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508935
+    m_Localized: Not yet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508936
+    m_Localized: Open in {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508937
+    m_Localized: 'Goal reached! Your empire grows: new city, new food.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508938
+    m_Localized: Leave for {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508939
+    m_Localized: Restart = replay this city stronger. Travel = open the next city.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508940
+    m_Localized: Skip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508941
+    m_Localized: Welcome to {0}!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508942
+    m_Localized: Cities
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508943
+    m_Localized: You are here
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508944
+    m_Localized: Visit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508945
+    m_Localized: 'Goal: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508946
+    m_Localized: Passive income {0}/s
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508947
+    m_Localized: Dakar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508948
+    m_Localized: Abidjan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508949
+    m_Localized: Upgrades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508950
+    m_Localized: FCFA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508951
+    m_Localized: Stars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508952
+    m_Localized: NEW
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508953
+    m_Localized: Owned
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508954
+    m_Localized: Whole street
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508955
+    m_Localized: Managers stay after a restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508956
+    m_Localized: Auto-buy up to the 1st milestone
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508957
+    m_Localized: Rebuy like before
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508958
+    m_Localized: Offline earnings +{0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508959
+    m_Localized: Offline cap +{0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508960
+    m_Localized: Service x{0} everywhere
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508961
+    m_Localized: Levels {0} cheaper
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508962
+    m_Localized: Managers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508963
+    m_Localized: Collection {0}/{1}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508964
+    m_Localized: ???
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508965
+    m_Localized: Level {0}/{1}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508966
+    m_Localized: Cards {0}/{1}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508967
+    m_Localized: Level up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508968
+    m_Localized: +{0} income for their business
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508969
+    m_Localized: +{0} income everywhere
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508970
+    m_Localized: Boost x{0} for {1}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508971
+    m_Localized: BOOST!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508972
+    m_Localized: Ready
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508973
+    m_Localized: Active {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508974
+    m_Localized: Recharging {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508975
+    m_Localized: Recharge (ad)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508976
+    m_Localized: Assign
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508977
+    m_Localized: On duty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508978
+    m_Localized: Find in chests
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508979
+    m_Localized: Wooden chest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508980
+    m_Localized: Bronze chest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508981
+    m_Localized: Gold chest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508982
+    m_Localized: Teranga chest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508983
+    m_Localized: Open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508984
+    m_Localized: Free
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508985
+    m_Localized: Free in {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508986
+    m_Localized: Bonus chest (ad)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508987
+    m_Localized: '{0} cards'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508988
+    m_Localized: Odds per card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508989
+    m_Localized: '{0} guaranteed in {1} chests'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508990
+    m_Localized: '{0} guaranteed next one!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508991
+    m_Localized: Tap to open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508992
+    m_Localized: Reveal all
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508993
+    m_Localized: NEW!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508994
+    m_Localized: 'Duplicate: +{0} cowries'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508995
+    m_Localized: Boost x{0} {1}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508996
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508997
+    m_Localized: Shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508998
+    m_Localized: Chests
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792508999
+    m_Localized: Offers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509000
+    m_Localized: Soon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509001
+    m_Localized: Offline cap +{0} for 24 h
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509002
+    m_Localized: '{0} cowries'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509003
+    m_Localized: Starter pack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509004
+    m_Localized: Cowrie packs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509005
+    m_Localized: No forced ads
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509006
+    m_Localized: Missions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509007
+    m_Localized: Claim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509008
+    m_Localized: x2 (ad)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509009
+    m_Localized: Swap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509010
+    m_Localized: Swap (free)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509011
+    m_Localized: Swap (ad)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509012
+    m_Localized: New mission in {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509013
+    m_Localized: Get {0} to level {1}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509014
+    m_Localized: Hire the {0} manager
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509015
+    m_Localized: Serve {0} customers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509016
+    m_Localized: Reach {0} milestones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509017
+    m_Localized: Use {0} manager boosts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509018
+    m_Localized: Serve {0} special customers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509019
+    m_Localized: Buy {0} upgrade(s)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509020
+    m_Localized: Open {0} chest(s)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509021
+    m_Localized: Earn {0} FCFA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509022
+    m_Localized: Complete {0} missions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509023
+    m_Localized: Daily gifts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509024
+    m_Localized: Login
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509025
+    m_Localized: Day {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509026
+    m_Localized: Claim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509027
+    m_Localized: Come back tomorrow!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509028
+    m_Localized: '{0}-day streak'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509029
+    m_Localized: Your streak is in danger!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509030
+    m_Localized: Streak shield
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509031
+    m_Localized: Shield (ad)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509032
+    m_Localized: Your shield saved your streak!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509033
+    m_Localized: Teranga Wheel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509034
+    m_Localized: Spin (free)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509035
+    m_Localized: Spin (ad) {0}/{1}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509036
+    m_Localized: Come back tomorrow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509037
+    m_Localized: Odds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509038
+    m_Localized: Daily challenges
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509039
+    m_Localized: 'All challenges: bonus chest'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509040
+    m_Localized: New challenges in {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509041
+    m_Localized: +{0} cowries
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509042
+    m_Localized: +{0} tokens
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509043
+    m_Localized: +{0} cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509044
+    m_Localized: x2 boost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509045
+    m_Localized: +{0} XP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509046
+    m_Localized: Recipe album
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509047
+    m_Localized: '{0}/{1} recipes'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509048
+    m_Localized: 'Album complete: income x{0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509049
+    m_Localized: Serve this dish to discover it
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509050
+    m_Localized: The recipe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509051
+    m_Localized: New recipe!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509052
+    m_Localized: Achievements
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509053
+    m_Localized: +{0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509054
+    m_Localized: Bronze
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509055
+    m_Localized: Silver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509056
+    m_Localized: Gold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509057
+    m_Localized: 'Achievement: {0}!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509058
+    m_Localized: Level {0}!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509059
+    m_Localized: Level reward
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509060
+    m_Localized: 'Missions unlocked: 3 goals at a time!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509061
+    m_Localized: 'Chests unlocked: find rare managers!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509062
+    m_Localized: The shop is open.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509063
+    m_Localized: Come back every day for a gift.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509064
+    m_Localized: Spend your stars on permanent upgrades.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509065
+    m_Localized: 'Teranga Wheel: one free spin a day!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509066
+    m_Localized: 'Album: every dish served joins your collection.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509067
+    m_Localized: 'Achievements: cowries for your feats.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509068
+    m_Localized: 'Daily challenges: new every midnight.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509069
+    m_Localized: Your chest is ready!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509070
+    m_Localized: Your offline earnings are full.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509071
+    m_Localized: "Your streak is in danger \U0001F525"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509072
+    m_Localized: Want a heads-up when your chest is ready?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509073
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509074
+    m_Localized: No thanks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509075
+    m_Localized: Notifications
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509076
+    m_Localized: Close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509077
+    m_Localized: OK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509078
+    m_Localized: i
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509079
+    m_Localized: '{0} h'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509080
+    m_Localized: '{0} min'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509081
+    m_Localized: '{0} s'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509082
+    m_Localized: Earn {0} FCFA in total
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509083
+    m_Localized: Serve {0} customers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509084
+    m_Localized: Tap {0} times
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509085
+    m_Localized: Buy {0} levels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509086
+    m_Localized: Open {0} businesses
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509087
+    m_Localized: Hire {0} managers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509088
+    m_Localized: Reach {0} milestones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509089
+    m_Localized: Buy {0} FCFA upgrades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509090
+    m_Localized: Restart {0} times
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509091
+    m_Localized: Earn {0} stars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509092
+    m_Localized: Visit {0} cities
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509093
+    m_Localized: Open {0} chests
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509094
+    m_Localized: Own {0} managers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509095
+    m_Localized: Own {0} rare managers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509096
+    m_Localized: Own {0} epic managers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509097
+    m_Localized: Own {0} legendary managers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215792509098
+    m_Localized: Earn {0} manager levels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703232
+    m_Localized: Complete {0} missions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703233
+    m_Localized: Complete {0} daily challenges
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703234
+    m_Localized: '{0}-day streak'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703235
+    m_Localized: Log in {0} days
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703236
+    m_Localized: Spin the wheel {0} times
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703237
+    m_Localized: Serve {0} special customers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703238
+    m_Localized: Use {0} boosts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703239
+    m_Localized: Discover {0} recipes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703240
+    m_Localized: Reach level {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703241
+    m_Localized: Earn {0} cowries
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703242
+    m_Localized: Reach {0} street milestones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703243
+    m_Localized: Collect offline earnings {0} times
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703244
+    m_Localized: Watch {0} rewarded ads
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703245
+    m_Localized: '{1} to level {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703246
+    m_Localized: Serve {0} customers at {1}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703247
+    m_Localized: '{0} milestones at {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703248
+    m_Localized: '{1} manager level {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703249
+    m_Localized: Uncle Modou
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703250
+    m_Localized: Hot bread, hot meat, happy customer!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703251
+    m_Localized: Badara the Baye Fall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703252
+    m_Localized: The Touba coffee is ready, the day can begin.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703253
+    m_Localized: Ndeye, Queen of the Night
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703254
+    m_Localized: The night is young, so are the skewers!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703255
+    m_Localized: Adja Fatou
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703256
+    m_Localized: Sit down, eat, you're home here.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703257
+    m_Localized: Oustaz Grill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703258
+    m_Localized: The charcoal is singing, good sign.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703259
+    m_Localized: Aida Pastels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703260
+    m_Localized: One for you, one for the road!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703261
+    m_Localized: Mister Teranga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703262
+    m_Localized: Welcome, hospitality comes first.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703263
+    m_Localized: Mother Coumba the Caterer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703264
+    m_Localized: Three hundred guests? The pots are ready.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703265
+    m_Localized: Pape the Touba Coffee Man
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703266
+    m_Localized: One cup and you'll run all the way to Rufisque!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703267
+    m_Localized: Fatou Bissap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703268
+    m_Localized: Ice-cold bissap to go with your sandwich!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703269
+    m_Localized: Ousmane the Jakarta Rider
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703270
+    m_Localized: Delivered before it cools down, promise.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703271
+    m_Localized: Yaye the Chef
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703272
+    m_Localized: People talk about my thieb all the way to Saint-Louis.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703273
+    m_Localized: The Car Rapide Driver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703274
+    m_Localized: 'Last stop: Ndeye''s skewers!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703275
+    m_Localized: Mame the Sandaga Trader
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703276
+    m_Localized: The best price, for the best customer.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703277
+    m_Localized: King of the Arena
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703278
+    m_Localized: After the fight, the whole neighbourhood eats here!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703279
+    m_Localized: The Great Griotte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703280
+    m_Localized: I sing your praises, and the whole street comes running.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703281
+    m_Localized: Auntie Alloco
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703282
+    m_Localized: Golden alloco, come and taste!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703283
+    m_Localized: The Garba Boss
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703284
+    m_Localized: This garba is the best in the area!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703285
+    m_Localized: Mama Attieke
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703286
+    m_Localized: Fresh attieke, nicely grilled fish.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703287
+    m_Localized: Mama Maquis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703288
+    m_Localized: Take a seat, the maquis is open!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703289
+    m_Localized: The Choukouya King
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703290
+    m_Localized: The meat is tender, the night is lovely.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703291
+    m_Localized: Uncle Tchapalo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703292
+    m_Localized: A calabash to celebrate?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703293
+    m_Localized: Auntie Kedjenou
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703294
+    m_Localized: The clay pot has been simmering since morning.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703295
+    m_Localized: Mister Plateau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703296
+    m_Localized: Table reserved for the big bosses!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703297
+    m_Localized: The Gbaka Driver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703298
+    m_Localized: Adjame to Yopougon, garba included!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703299
+    m_Localized: Aya the Juice Seller
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703300
+    m_Localized: Ice-cold ginger juice, that wakes you up!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703301
+    m_Localized: Koffi the Delivery Man
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703302
+    m_Localized: I know every street in Cocody.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703303
+    m_Localized: Queen of the Maquis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703304
+    m_Localized: At my place you eat, you dance, you come back.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703305
+    m_Localized: The Zouglou Singer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703306
+    m_Localized: A song for every customer!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703307
+    m_Localized: Granny Woro-woro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703308
+    m_Localized: My taxi always stops at the best spots.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703309
+    m_Localized: The Coupe-Decale DJ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703310
+    m_Localized: The music is on, the street is partying!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703311
+    m_Localized: The Star Footballer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703312
+    m_Localized: After the match, everyone to the choukouya!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703313
+    m_Localized: Grilled meat sandwich
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703314
+    m_Localized: The cart grill sets up on the corner at dusk. Grilled meat is tucked
+      into still-warm bread.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703315
+    m_Localized: Marinate the meat with onion, garlic and pepper.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703316
+    m_Localized: Grill over charcoal, turning often.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703317
+    m_Localized: Open the bread, add onions and mustard.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703318
+    m_Localized: Fill with meat and serve hot.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703319
+    m_Localized: Tangana omelette
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703320
+    m_Localized: At the tangana, the omelette comes in bread to start the day right.
+      Everyone has a favourite seasoning.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703321
+    m_Localized: Beat the eggs with salt and pepper.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703322
+    m_Localized: Fry onion and chili.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703323
+    m_Localized: Cook the omelette on high heat.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703324
+    m_Localized: Serve in bread.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703325
+    m_Localized: Spaghetti in bread
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703326
+    m_Localized: Spaghetti in a sandwich surprises visitors and delights regulars.
+      It is a street-breakfast classic.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703327
+    m_Localized: Cook the pasta.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703328
+    m_Localized: Make a tomato-onion sauce.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703329
+    m_Localized: Mix pasta and sauce.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703330
+    m_Localized: Serve in bread.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703331
+    m_Localized: Black-eyed peas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703332
+    m_Localized: Slow-cooked black-eyed peas are filling and cheap. They are often
+      eaten with bread at the tangana.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703333
+    m_Localized: Soak then cook the beans.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703334
+    m_Localized: Make an onion-tomato sauce.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703335
+    m_Localized: Simmer together.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703336
+    m_Localized: Serve with bread.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703337
+    m_Localized: Tuna sandwich
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703338
+    m_Localized: Quick and cheap, the tuna sandwich is the friend of rushed mornings.
+      It often gets mayonnaise and chili.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703339
+    m_Localized: Flake the tuna.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703340
+    m_Localized: Add onion, mayonnaise and chili.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703341
+    m_Localized: Fill the bread.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703342
+    m_Localized: Macaroni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703343
+    m_Localized: Macaroni in sauce is another tangana star. It is sometimes served
+      with an egg.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703344
+    m_Localized: Cook the macaroni.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703345
+    m_Localized: Make the onion-tomato sauce.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703346
+    m_Localized: Mix and serve.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703347
+    m_Localized: Green peas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703348
+    m_Localized: Peas in sauce fill the morning bread. A simple, warming dish.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703349
+    m_Localized: Fry onion and tomato.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703350
+    m_Localized: Add the peas.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703351
+    m_Localized: Simmer and serve in bread.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703352
+    m_Localized: Skewers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703353
+    m_Localized: At night, skewers grill under the maiga's light bulb. The smell
+      draws the whole neighbourhood.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703354
+    m_Localized: Dice the meat.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703355
+    m_Localized: Marinate with spices and onion.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703356
+    m_Localized: Thread onto skewers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703357
+    m_Localized: Grill over charcoal.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703358
+    m_Localized: Maiga fries
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703359
+    m_Localized: Fries come with the evening skewers and omelette. Crispy, they go
+      fast.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703360
+    m_Localized: Peel and cut the potatoes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703361
+    m_Localized: Fry once.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703362
+    m_Localized: Fry again hotter.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703363
+    m_Localized: Salt and serve.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703364
+    m_Localized: Thieboudienne
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703365
+    m_Localized: Rice with fish and vegetables, thieboudienne is often called Senegal's
+      national dish. The crispy rice from the bottom of the pot is a treat.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703366
+    m_Localized: Stuff the fish with parsley, garlic and chili paste.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703367
+    m_Localized: Fry onion and tomato paste.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703368
+    m_Localized: Cook fish and vegetables in the sauce.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703369
+    m_Localized: Cook the rice in the broth.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703370
+    m_Localized: Serve the rice with fish and vegetables.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703371
+    m_Localized: Yassa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703372
+    m_Localized: Yassa combines lemon and slow-cooked onions. It comes with chicken
+      or fish.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703373
+    m_Localized: Marinate the chicken with lemon, onions and mustard.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703374
+    m_Localized: Grill the chicken.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703375
+    m_Localized: Slow-cook the marinade onions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703376
+    m_Localized: Simmer the chicken in the onions and serve with rice.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703377
+    m_Localized: Mafe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703378
+    m_Localized: Mafe is a peanut-butter based sauce. It is loved across West Africa.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703379
+    m_Localized: Brown the meat and onion.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703380
+    m_Localized: Add tomato and thinned peanut butter.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703381
+    m_Localized: Simmer with vegetables.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703382
+    m_Localized: Serve with rice.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703383
+    m_Localized: Lamb dibi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703384
+    m_Localized: At the dibiterie, grilled lamb is ordered by weight. It is shared
+      with onions and mustard.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703385
+    m_Localized: Cut the lamb into pieces.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703386
+    m_Localized: Grill over charcoal.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703387
+    m_Localized: Season with salt and pepper.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703388
+    m_Localized: Serve with onions and mustard.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703389
+    m_Localized: Fatayas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703390
+    m_Localized: Fatayas are fried stuffed turnovers. They are eaten with a spicy
+      tomato sauce.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703391
+    m_Localized: Make a soft dough.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703392
+    m_Localized: Fill with meat or fish.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703393
+    m_Localized: Fold into a turnover.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703394
+    m_Localized: Fry until golden.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703395
+    m_Localized: Spring rolls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703396
+    m_Localized: Spring rolls are part of party snacks in Senegal. They recall a
+      history of cuisines meeting.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703397
+    m_Localized: Make the filling.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703398
+    m_Localized: Roll in the wrappers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703399
+    m_Localized: Fry and serve hot.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703400
+    m_Localized: Pastels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703401
+    m_Localized: Pastels are small fish turnovers. Parties are not complete without
+      them.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703402
+    m_Localized: Flake the fish with onion and chili.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703403
+    m_Localized: Fill small rounds of dough.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703404
+    m_Localized: Fry and serve with sauce.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703405
+    m_Localized: Soupou kandja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703406
+    m_Localized: Soupou kandja is a much-loved okra sauce. It is served with white
+      rice.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703407
+    m_Localized: Chop the okra.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703408
+    m_Localized: Cook meat and fish.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703409
+    m_Localized: Add okra and palm oil.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703410
+    m_Localized: Simmer and serve with rice.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703411
+    m_Localized: Caldou
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703412
+    m_Localized: Caldou is fish cooked in a lemony broth. It is a light, fragrant
+      dish.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703413
+    m_Localized: Fry onion and chili.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703414
+    m_Localized: Add water and lemon.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703415
+    m_Localized: Poach the fish.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703416
+    m_Localized: Serve with rice.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703417
+    m_Localized: Thiakry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703418
+    m_Localized: Thiakry is a millet couscous dessert with curdled milk. It is served
+      chilled.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703419
+    m_Localized: Steam the millet couscous.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703420
+    m_Localized: Mix with curdled milk and sugar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703421
+    m_Localized: Flavour and serve chilled.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703422
+    m_Localized: Millet couscous
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703423
+    m_Localized: Thiere, millet couscous, accompanies many family celebrations. It
+      is served with a meat sauce.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703424
+    m_Localized: Steam the millet couscous.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703425
+    m_Localized: Make a meat sauce.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703426
+    m_Localized: Serve together.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703427
+    m_Localized: Ngalakh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703428
+    m_Localized: Ngalakh is a millet dessert with peanut and baobab fruit. It is
+      shared between neighbours during celebrations.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703429
+    m_Localized: Cook the millet.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703430
+    m_Localized: Make a peanut and baobab cream.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703431
+    m_Localized: Mix and serve.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703432
+    m_Localized: Roast lamb
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703433
+    m_Localized: Whole roast lamb is the king of big celebrations. A mechoui takes
+      hours of patience.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703434
+    m_Localized: Season the lamb.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703435
+    m_Localized: Roast slowly over the fire.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703436
+    m_Localized: Baste regularly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703437
+    m_Localized: Serve with onions and fries.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703438
+    m_Localized: Forokh King
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703439
+    m_Localized: Forokh Regulars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703440
+    m_Localized: Forokh Milestones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703441
+    m_Localized: Forokh Crew
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703442
+    m_Localized: Tangana King
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703443
+    m_Localized: Tangana Regulars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703444
+    m_Localized: Tangana Milestones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703445
+    m_Localized: Tangana Crew
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703446
+    m_Localized: Maiga King
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703447
+    m_Localized: Maiga Regulars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703448
+    m_Localized: Maiga Milestones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703449
+    m_Localized: Maiga Crew
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703450
+    m_Localized: Gargote King
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703451
+    m_Localized: Gargote Regulars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703452
+    m_Localized: Gargote Milestones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703453
+    m_Localized: Gargote Crew
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703454
+    m_Localized: Dibi King
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703455
+    m_Localized: Dibi Regulars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703456
+    m_Localized: Dibi Milestones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703457
+    m_Localized: Dibi Crew
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703458
+    m_Localized: Fataya King
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703459
+    m_Localized: Fataya Regulars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703460
+    m_Localized: Fataya Milestones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703461
+    m_Localized: Fataya Crew
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703462
+    m_Localized: Teranga King
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703463
+    m_Localized: Teranga Regulars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703464
+    m_Localized: Teranga Milestones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703465
+    m_Localized: Teranga Crew
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703466
+    m_Localized: Party King
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703467
+    m_Localized: Party Regulars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703468
+    m_Localized: Party Milestones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703469
+    m_Localized: Party Crew
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703470
+    m_Localized: The Billion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703471
+    m_Localized: The Whole City Ate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703472
+    m_Localized: Magic Fingers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703473
+    m_Localized: Builder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703474
+    m_Localized: The Street Wakes Up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703475
+    m_Localized: Good Boss
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703476
+    m_Localized: Faster!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703477
+    m_Localized: Well Equipped
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703478
+    m_Localized: Better Every Time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703479
+    m_Localized: Absolute Teranga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703480
+    m_Localized: West Africa Tour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703481
+    m_Localized: Chest Hunter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703482
+    m_Localized: Collector
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703483
+    m_Localized: Rare Talents
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703484
+    m_Localized: Epic!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703485
+    m_Localized: Street Legend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703486
+    m_Localized: Manager School
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703487
+    m_Localized: Mission Accomplished
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703488
+    m_Localized: Challenge Met
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703489
+    m_Localized: Always There
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703490
+    m_Localized: Regular
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703491
+    m_Localized: The Wheel Turns
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703492
+    m_Localized: Warm Welcome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703493
+    m_Localized: Power Boost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703494
+    m_Localized: Gourmet Album
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703495
+    m_Localized: Big Boss
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703496
+    m_Localized: Cowrie Necklace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703497
+    m_Localized: The Whole Street Moves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703498
+    m_Localized: Runs Without Me
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703499
+    m_Localized: Thanks, Sponsors
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703500
+    m_Localized: Pain frais de la boulangerie du quartier
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703501
+    m_Localized: Brouette aux roues neuves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703502
+    m_Localized: "Thermos de caf\xE9 Touba"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703503
+    m_Localized: Banc en bois pour les clients
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703504
+    m_Localized: Ampoule de 100 watts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703505
+    m_Localized: "Glaci\xE8re pleine de bissap"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703506
+    m_Localized: Bouteille de gaz neuve
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703507
+    m_Localized: "Grille en fer forg\xE9 du forgeron"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703508
+    m_Localized: Grande marmite de Sandaga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703509
+    m_Localized: Car rapide de livraison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703510
+    m_Localized: "T\xE9l\xE9phone pour les commandes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703511
+    m_Localized: "Charbon de qualit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703512
+    m_Localized: Sauce oignon de Tonton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703513
+    m_Localized: "Pancarte peinte \xE0 la main"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703514
+    m_Localized: "Gros sac de ni\xE9b\xE9 du march\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703515
+    m_Localized: "Pagne wax pour l'\xE9quipe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703516
+    m_Localized: Agneau du foirail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703517
+    m_Localized: "Rouleau \xE0 p\xE2tisserie de Tata"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703518
+    m_Localized: "Kink\xE9liba du matin"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703519
+    m_Localized: "Brochettes marin\xE9es la veille"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703520
+    m_Localized: Huile de friture neuve
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703521
+    m_Localized: Nappes en wax
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703522
+    m_Localized: Chaises en plastique en plus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703523
+    m_Localized: "Riz parfum\xE9 de la vall\xE9e"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703524
+    m_Localized: Climatiseur qui marche
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703525
+    m_Localized: "B\xE2ches et chaises lou\xE9es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703526
+    m_Localized: "Tamarin et n\xE9t\xE9tou de Mamie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703527
+    m_Localized: "Annonce \xE0 la radio du quartier"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703528
+    m_Localized: Groupe WhatsApp des clients
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703529
+    m_Localized: "Moutarde et oignons \xE0 volont\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703530
+    m_Localized: Camion frigorifique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703531
+    m_Localized: Fourgon des grossistes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703532
+    m_Localized: "Bouche-\xE0-oreille de Dakar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703533
+    m_Localized: Papier kraft pour emporter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703534
+    m_Localized: Sauce piment maison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703535
+    m_Localized: "Commande de 1 000 pi\xE8ces"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703536
+    m_Localized: Serveur en tenue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703537
+    m_Localized: Carte des desserts thiakry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703538
+    m_Localized: "\xC9quipe de cuisini\xE8res du quartier"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703539
+    m_Localized: Tambours de sabar pour l'accueil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703540
+    m_Localized: "Vendeuse d\u2019alloco"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215796703541
+    m_Localized: Garbadrome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897536
+    m_Localized: "Atti\xE9k\xE9-poisson"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897537
+    m_Localized: Maquis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897538
+    m_Localized: Choukouya
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897539
+    m_Localized: Tchapalo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897540
+    m_Localized: "K\xE9dj\xE9nou"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897541
+    m_Localized: Restaurant du Plateau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897542
+    m_Localized: "Am\xE9lioration Abidjan 01 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897543
+    m_Localized: "Am\xE9lioration Abidjan 02 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897544
+    m_Localized: "Am\xE9lioration Abidjan 03 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897545
+    m_Localized: "Am\xE9lioration Abidjan 04 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897546
+    m_Localized: "Am\xE9lioration Abidjan 05 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897547
+    m_Localized: "Am\xE9lioration Abidjan 06 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897548
+    m_Localized: "Am\xE9lioration Abidjan 07 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897549
+    m_Localized: "Am\xE9lioration Abidjan 08 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897550
+    m_Localized: "Am\xE9lioration Abidjan 09 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897551
+    m_Localized: "Am\xE9lioration Abidjan 10 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897552
+    m_Localized: "Am\xE9lioration Abidjan 11 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897553
+    m_Localized: "Am\xE9lioration Abidjan 12 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897554
+    m_Localized: "Am\xE9lioration Abidjan 13 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897555
+    m_Localized: "Am\xE9lioration Abidjan 14 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897556
+    m_Localized: "Am\xE9lioration Abidjan 15 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897557
+    m_Localized: "Am\xE9lioration Abidjan 16 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897558
+    m_Localized: "Am\xE9lioration Abidjan 17 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897559
+    m_Localized: "Am\xE9lioration Abidjan 18 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897560
+    m_Localized: "Am\xE9lioration Abidjan 19 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897561
+    m_Localized: "Am\xE9lioration Abidjan 20 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897562
+    m_Localized: "Am\xE9lioration Abidjan 21 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897563
+    m_Localized: "Am\xE9lioration Abidjan 22 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897564
+    m_Localized: "Am\xE9lioration Abidjan 23 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897565
+    m_Localized: "Am\xE9lioration Abidjan 24 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897566
+    m_Localized: "Am\xE9lioration Abidjan 25 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897567
+    m_Localized: "Am\xE9lioration Abidjan 26 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897568
+    m_Localized: "Am\xE9lioration Abidjan 27 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897569
+    m_Localized: "Am\xE9lioration Abidjan 28 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897570
+    m_Localized: "Am\xE9lioration Abidjan 29 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897571
+    m_Localized: "Am\xE9lioration Abidjan 30 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897572
+    m_Localized: "Am\xE9lioration Abidjan 31 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897573
+    m_Localized: "Am\xE9lioration Abidjan 32 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897574
+    m_Localized: "Am\xE9lioration Abidjan 33 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897575
+    m_Localized: "Am\xE9lioration Abidjan 34 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897576
+    m_Localized: "Am\xE9lioration Abidjan 35 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897577
+    m_Localized: "Am\xE9lioration Abidjan 36 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897578
+    m_Localized: "Am\xE9lioration Abidjan 37 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897579
+    m_Localized: "Am\xE9lioration Abidjan 38 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897580
+    m_Localized: "Am\xE9lioration Abidjan 39 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897581
+    m_Localized: "Am\xE9lioration Abidjan 40 (\xE0 nommer)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897582
+    m_Localized: "G\xE9rants fid\xE8les"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897583
+    m_Localized: Commis automatique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897584
+    m_Localized: Comme avant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897585
+    m_Localized: "Le thermos du grand-p\xE8re"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897586
+    m_Localized: Veilleur de nuit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897587
+    m_Localized: Deux veilleurs de nuit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897588
+    m_Localized: "Fourneau am\xE9lior\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 708215800897589
+    m_Localized: Le grossiste ami
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922028077056
+    m_Localized: 'City restarted: income x{0}!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768832
+    m_Localized: Restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768833
+    m_Localized: Revenue {0} / {1}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768834
+    m_Localized: '{0} stars to spend'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768835
+    m_Localized: '{0} stars'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768836
+    m_Localized: '{0} cowries'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768837
+    m_Localized: Free chest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768838
+    m_Localized: 'Stored: {0}/{1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768839
+    m_Localized: '{0} left today'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768840
+    m_Localized: Watch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768841
+    m_Localized: Active for {0}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 731922107768842
+    m_Localized: 'Current cap: {0}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000221425664
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226304
+    m_Localized: On
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226305
+    m_Localized: Off
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226306
+    m_Localized: 2 a day max, never at night
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226307
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226308
+    m_Localized: Sounds and voices
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226309
+    m_Localized: Reduced effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226310
+    m_Localized: Fewer particles and shakes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226311
+    m_Localized: Graphics quality
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226312
+    m_Localized: Auto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226313
+    m_Localized: Low
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226314
+    m_Localized: Medium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226315
+    m_Localized: High
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226316
+    m_Localized: 'Next up: {0} at level {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226317
+    m_Localized: 'Level {0}: everything unlocked!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226318
+    m_Localized: Missions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226319
+    m_Localized: Chests
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226320
+    m_Localized: Shop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226321
+    m_Localized: Daily gifts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226322
+    m_Localized: Star upgrades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226323
+    m_Localized: Teranga Wheel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226324
+    m_Localized: Recipe album
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226325
+    m_Localized: Achievements
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007000368226326
+    m_Localized: Daily challenges
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1024176252821504
+    m_Localized: '{0} goal:'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

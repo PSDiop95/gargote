@@ -14,6 +14,8 @@ namespace Gargote.Data
             public string displayName;
             public StarUpgradeEffect effect;
             public long costStars;
+            [Tooltip("Valeur de l'effet : +ratio (gains hors ligne), +secondes (plafond), x (vitesse, coût). Ignorée pour le confort.")]
+            public double value;
         }
 
         [Tooltip("Étoiles = k × sqrt(gains_de_la_ville / threshold)")]
@@ -31,10 +33,12 @@ namespace Gargote.Data
         [Tooltip("À l'arrivée dans une ville, le multiplicateur ne descend pas sous ce ratio de sa valeur avant le voyage")]
         [Range(0, 1)] public double travelMultiplierFloorRatio = 0.3;
 
-        [Header("Upgrades d'étoiles (confort du prestige)")]
+        [Header("Upgrades d'étoiles (confort et puissance)")]
         public StarUpgradeEntry[] starUpgrades = new StarUpgradeEntry[0];
         [Tooltip("Avec « racheter comme avant » : fonds de départ = N secondes du revenu d'avant la relance")]
         public double rebuyStartingFundSeconds;
+        [Tooltip("Part du revenu géré d'une ville quittée qui continue de rentrer")]
+        [Range(0, 1)] public double visitedCityIncomeRatio = 0.05;
 
         public PrestigeConfig ToConfig()
         {
@@ -49,6 +53,7 @@ namespace Gargote.Data
                 CityCarryOver = cityCarryOver,
                 TravelMultiplierFloorRatio = travelMultiplierFloorRatio,
                 RebuyStartingFundSeconds = rebuyStartingFundSeconds,
+                VisitedCityIncomeRatio = visitedCityIncomeRatio,
                 StarUpgrades = new StarUpgradeDefinition[starUpgrades.Length],
             };
             for (int i = 0; i < starUpgrades.Length; i++)
@@ -57,6 +62,7 @@ namespace Gargote.Data
                     Id = starUpgrades[i].id,
                     Effect = starUpgrades[i].effect,
                     CostStars = starUpgrades[i].costStars,
+                    Value = starUpgrades[i].value,
                 };
             return cfg;
         }

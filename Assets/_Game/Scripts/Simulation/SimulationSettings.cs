@@ -64,6 +64,16 @@ namespace Gargote.Simulation
         public double MaxRecoveryMinutes = 10;
         /// <summary>Seules les relances qui augmentent le multiplicateur d'au moins ce ratio sont mesurées.</summary>
         public double RecoveryMinMultiplierGain = 0.1;
+
+        // --- Méta (M3), joueur de référence ---
+        /// <summary>Solde moyen de cauris ≤ N jours de dépenses typiques (la monnaie circule, elle ne dort pas).</summary>
+        public double MaxCaurisBalanceDays = 3;
+        public double FirstEpicMaxDay = 3;
+        public double FirstLegendaryMinDay = 10;
+        public double FirstLegendaryMaxDay = 20;
+        public int CollectionDay = 30;
+        public double CollectionMin = 0.6;
+        public double CollectionMax = 0.75;
     }
 
     public sealed class ProxyCityScaling

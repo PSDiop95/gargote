@@ -85,9 +85,45 @@
         "displayName": "Comme avant",
         "effect": "rebuy_previous",
         "costStars": 20
+      },
+      {
+        "id": "thermos_grand_pere",
+        "displayName": "Le thermos du grand-père",
+        "effect": "offline_earnings",
+        "costStars": 40,
+        "value": 0.1
+      },
+      {
+        "id": "veilleur_de_nuit",
+        "displayName": "Veilleur de nuit",
+        "effect": "offline_cap",
+        "costStars": 1500,
+        "value": 3600
+      },
+      {
+        "id": "veilleur_de_nuit_2",
+        "displayName": "Deux veilleurs de nuit",
+        "effect": "offline_cap",
+        "costStars": 6000,
+        "value": 3600
+      },
+      {
+        "id": "fourneau_ameliore",
+        "displayName": "Fourneau amélioré",
+        "effect": "global_speed",
+        "costStars": 80,
+        "value": 1.05
+      },
+      {
+        "id": "grossiste_ami",
+        "displayName": "Le grossiste ami",
+        "effect": "cost_reduction",
+        "costStars": 120,
+        "value": 0.95
       }
     ],
-    "rebuyStartingFundSeconds": 28800
+    "rebuyStartingFundSeconds": 28800,
+    "visitedCityIncomeRatio": 0.05
   },
   "cities": [
     {
@@ -180,132 +216,657 @@
       "upgrades": [
         {
           "id": "dakar_up_01",
-          "displayName": "Upgrade 01 (à nommer)",
+          "displayName": "Pain frais de la boulangerie du quartier",
           "business": "forokh_thiaya",
-          "multiplier": 1.5,
+          "multiplier": 1.25,
           "cost": 50000.0
         },
         {
           "id": "dakar_up_02",
-          "displayName": "Upgrade 02 (à nommer)",
-          "business": "tangana",
-          "multiplier": 1.5,
-          "cost": 160000.0
+          "displayName": "Brouette aux roues neuves",
+          "business": "forokh_thiaya",
+          "multiplier": 1.2,
+          "cost": 100000.0
         },
         {
           "id": "dakar_up_03",
-          "displayName": "Upgrade 03 (à nommer)",
-          "business": "maiga",
-          "multiplier": 1.5,
-          "cost": 512000.0
+          "displayName": "Thermos de café Touba",
+          "business": "tangana",
+          "multiplier": 1.25,
+          "cost": 160000.0
         },
         {
           "id": "dakar_up_04",
-          "displayName": "Upgrade 04 (à nommer)",
-          "business": "gargote",
-          "multiplier": 1.5,
-          "cost": 1638000.0
+          "displayName": "Banc en bois pour les clients",
+          "business": "tangana",
+          "multiplier": 1.2,
+          "cost": 320000.0
         },
         {
           "id": "dakar_up_05",
-          "displayName": "Upgrade 05 (à nommer)",
-          "business": "forokh_thiaya",
-          "multiplier": 1.5,
-          "cost": 3125000.0
+          "displayName": "Ampoule de 100 watts",
+          "business": "maiga",
+          "multiplier": 1.25,
+          "cost": 512000.0
         },
         {
           "id": "dakar_up_06",
-          "displayName": "Upgrade 06 (à nommer)",
-          "business": "all",
-          "multiplier": 1.25,
-          "cost": 5243000.0
+          "displayName": "Glacière pleine de bissap",
+          "business": "maiga",
+          "multiplier": 1.2,
+          "cost": 1020000.0
         },
         {
           "id": "dakar_up_07",
-          "displayName": "Upgrade 07 (à nommer)",
-          "business": "dibiterie",
-          "multiplier": 1.5,
-          "cost": 5243000.0
+          "displayName": "Bouteille de gaz neuve",
+          "business": "gargote",
+          "multiplier": 1.25,
+          "cost": 1640000.0
         },
         {
           "id": "dakar_up_08",
-          "displayName": "Upgrade 08 (à nommer)",
-          "business": "tangana",
-          "multiplier": 1.5,
-          "cost": 10000000.0
+          "displayName": "Grille en fer forgé du forgeron",
+          "business": "forokh_thiaya",
+          "multiplier": 1.25,
+          "cost": 3120000.0
         },
         {
           "id": "dakar_up_09",
-          "displayName": "Upgrade 09 (à nommer)",
-          "business": "fataya_nems",
-          "multiplier": 1.5,
-          "cost": 16777000.0
+          "displayName": "Grande marmite de Sandaga",
+          "business": "gargote",
+          "multiplier": 1.2,
+          "cost": 3280000.0
         },
         {
           "id": "dakar_up_10",
-          "displayName": "Upgrade 10 (à nommer)",
-          "business": "maiga",
-          "multiplier": 1.5,
-          "cost": 32000000.0
+          "displayName": "Car rapide de livraison",
+          "business": "all",
+          "multiplier": 1.06,
+          "cost": 3930000.0
         },
         {
           "id": "dakar_up_11",
-          "displayName": "Upgrade 11 (à nommer)",
-          "business": "restaurant_teranga",
-          "multiplier": 1.5,
-          "cost": 53687000.0
+          "displayName": "Téléphone pour les commandes",
+          "business": "all",
+          "multiplier": 1.06,
+          "cost": 5240000.0
         },
         {
           "id": "dakar_up_12",
-          "displayName": "Upgrade 12 (à nommer)",
-          "business": "gargote",
-          "multiplier": 1.5,
-          "cost": 102400000.0
+          "displayName": "Charbon de qualité",
+          "business": "dibiterie",
+          "multiplier": 1.25,
+          "cost": 5240000.0
         },
         {
           "id": "dakar_up_13",
-          "displayName": "Upgrade 13 (à nommer)",
-          "business": "traiteur_evenements",
-          "multiplier": 1.5,
-          "cost": 171799000.0
+          "displayName": "Sauce oignon de Tonton",
+          "business": "forokh_thiaya",
+          "multiplier": 1.2,
+          "cost": 6250000.0
         },
         {
           "id": "dakar_up_14",
-          "displayName": "Upgrade 14 (à nommer)",
+          "displayName": "Pancarte peinte à la main",
           "business": "all",
-          "multiplier": 1.25,
-          "cost": 327680000.0
+          "multiplier": 1.06,
+          "cost": 7860000.0
         },
         {
           "id": "dakar_up_15",
-          "displayName": "Upgrade 15 (à nommer)",
-          "business": "dibiterie",
-          "multiplier": 1.5,
-          "cost": 327680000.0
+          "displayName": "Gros sac de niébé du marché",
+          "business": "tangana",
+          "multiplier": 1.25,
+          "cost": 10000000.0
         },
         {
           "id": "dakar_up_16",
-          "displayName": "Upgrade 16 (à nommer)",
-          "business": "fataya_nems",
-          "multiplier": 1.5,
-          "cost": 1048576000.0
+          "displayName": "Pagne wax pour l'équipe",
+          "business": "all",
+          "multiplier": 1.05,
+          "cost": 10500000.0
         },
         {
           "id": "dakar_up_17",
-          "displayName": "Upgrade 17 (à nommer)",
-          "business": "restaurant_teranga",
-          "multiplier": 1.5,
-          "cost": 3355443000.0
+          "displayName": "Agneau du foirail",
+          "business": "dibiterie",
+          "multiplier": 1.2,
+          "cost": 10500000.0
         },
         {
           "id": "dakar_up_18",
-          "displayName": "Upgrade 18 (à nommer)",
+          "displayName": "Rouleau à pâtisserie de Tata",
+          "business": "fataya_nems",
+          "multiplier": 1.25,
+          "cost": 16800000.0
+        },
+        {
+          "id": "dakar_up_19",
+          "displayName": "Kinkéliba du matin",
+          "business": "tangana",
+          "multiplier": 1.2,
+          "cost": 20000000.0
+        },
+        {
+          "id": "dakar_up_20",
+          "displayName": "Brochettes marinées la veille",
+          "business": "maiga",
+          "multiplier": 1.25,
+          "cost": 32000000.0
+        },
+        {
+          "id": "dakar_up_21",
+          "displayName": "Huile de friture neuve",
+          "business": "fataya_nems",
+          "multiplier": 1.2,
+          "cost": 33600000.0
+        },
+        {
+          "id": "dakar_up_22",
+          "displayName": "Nappes en wax",
+          "business": "restaurant_teranga",
+          "multiplier": 1.25,
+          "cost": 53700000.0
+        },
+        {
+          "id": "dakar_up_23",
+          "displayName": "Chaises en plastique en plus",
+          "business": "maiga",
+          "multiplier": 1.2,
+          "cost": 64000000.0
+        },
+        {
+          "id": "dakar_up_24",
+          "displayName": "Riz parfumé de la vallée",
+          "business": "gargote",
+          "multiplier": 1.25,
+          "cost": 102000000.0
+        },
+        {
+          "id": "dakar_up_25",
+          "displayName": "Climatiseur qui marche",
+          "business": "restaurant_teranga",
+          "multiplier": 1.2,
+          "cost": 107000000.0
+        },
+        {
+          "id": "dakar_up_26",
+          "displayName": "Bâches et chaises louées",
           "business": "traiteur_evenements",
-          "multiplier": 1.5,
-          "cost": 10737418000.0
+          "multiplier": 1.25,
+          "cost": 172000000.0
+        },
+        {
+          "id": "dakar_up_27",
+          "displayName": "Tamarin et nététou de Mamie",
+          "business": "gargote",
+          "multiplier": 1.2,
+          "cost": 205000000.0
+        },
+        {
+          "id": "dakar_up_28",
+          "displayName": "Annonce à la radio du quartier",
+          "business": "all",
+          "multiplier": 1.06,
+          "cost": 246000000.0
+        },
+        {
+          "id": "dakar_up_29",
+          "displayName": "Groupe WhatsApp des clients",
+          "business": "all",
+          "multiplier": 1.06,
+          "cost": 328000000.0
+        },
+        {
+          "id": "dakar_up_30",
+          "displayName": "Moutarde et oignons à volonté",
+          "business": "dibiterie",
+          "multiplier": 1.25,
+          "cost": 328000000.0
+        },
+        {
+          "id": "dakar_up_31",
+          "displayName": "Camion frigorifique",
+          "business": "traiteur_evenements",
+          "multiplier": 1.2,
+          "cost": 344000000.0
+        },
+        {
+          "id": "dakar_up_32",
+          "displayName": "Fourgon des grossistes",
+          "business": "all",
+          "multiplier": 1.06,
+          "cost": 492000000.0
+        },
+        {
+          "id": "dakar_up_33",
+          "displayName": "Bouche-à-oreille de Dakar",
+          "business": "all",
+          "multiplier": 1.05,
+          "cost": 655000000.0
+        },
+        {
+          "id": "dakar_up_34",
+          "displayName": "Papier kraft pour emporter",
+          "business": "dibiterie",
+          "multiplier": 1.2,
+          "cost": 655000000.0
+        },
+        {
+          "id": "dakar_up_35",
+          "displayName": "Sauce piment maison",
+          "business": "fataya_nems",
+          "multiplier": 1.25,
+          "cost": 1050000000.0
+        },
+        {
+          "id": "dakar_up_36",
+          "displayName": "Commande de 1 000 pièces",
+          "business": "fataya_nems",
+          "multiplier": 1.2,
+          "cost": 2100000000.0
+        },
+        {
+          "id": "dakar_up_37",
+          "displayName": "Serveur en tenue",
+          "business": "restaurant_teranga",
+          "multiplier": 1.25,
+          "cost": 3360000000.0
+        },
+        {
+          "id": "dakar_up_38",
+          "displayName": "Carte des desserts thiakry",
+          "business": "restaurant_teranga",
+          "multiplier": 1.2,
+          "cost": 6710000000.0
+        },
+        {
+          "id": "dakar_up_39",
+          "displayName": "Équipe de cuisinières du quartier",
+          "business": "traiteur_evenements",
+          "multiplier": 1.25,
+          "cost": 10700000000.0
+        },
+        {
+          "id": "dakar_up_40",
+          "displayName": "Tambours de sabar pour l'accueil",
+          "business": "traiteur_evenements",
+          "multiplier": 1.2,
+          "cost": 21500000000.0
         }
       ],
       "goalLifetimeEarnings": 3600000000000.0
+    },
+    {
+      "id": "abidjan",
+      "displayName": "Abidjan",
+      "startingMoney": 3125.0,
+      "starThreshold": 150000000.0,
+      "goalLifetimeEarnings": 34000000000000.0,
+      "businesses": [
+        {
+          "id": "alloco",
+          "displayName": "Vendeuse d’alloco",
+          "baseCost": 3125.0,
+          "growth": 1.15,
+          "baseRevenue": 1000.0,
+          "baseCycleSeconds": 3.2,
+          "managerCost": 77500.0,
+          "affinity": "none"
+        },
+        {
+          "id": "garbadrome",
+          "displayName": "Garbadrome",
+          "baseCost": 10000.0,
+          "growth": 1.16,
+          "baseRevenue": 1000.0,
+          "baseCycleSeconds": 2.284,
+          "managerCost": 80000.0,
+          "affinity": "morning"
+        },
+        {
+          "id": "attieke_poisson",
+          "displayName": "Attiéké-poisson",
+          "baseCost": 32000.0,
+          "growth": 1.17,
+          "baseRevenue": 2500.0,
+          "baseCycleSeconds": 4.08,
+          "managerCost": 255000.0,
+          "affinity": "night"
+        },
+        {
+          "id": "maquis",
+          "displayName": "Maquis",
+          "baseCost": 102400.0,
+          "growth": 1.18,
+          "baseRevenue": 6000.0,
+          "baseCycleSeconds": 6.9959999999999996,
+          "managerCost": 820000.0,
+          "affinity": "none"
+        },
+        {
+          "id": "choukouya",
+          "displayName": "Choukouya",
+          "baseCost": 327500.0,
+          "growth": 1.19,
+          "baseRevenue": 12000.0,
+          "baseCycleSeconds": 9.995999999999999,
+          "managerCost": 2622500.0,
+          "affinity": "night"
+        },
+        {
+          "id": "tchapalo",
+          "displayName": "Tchapalo",
+          "baseCost": 1047500.0,
+          "growth": 1.2,
+          "baseRevenue": 25000.0,
+          "baseCycleSeconds": 14.876,
+          "managerCost": 8387500.0,
+          "affinity": "none"
+        },
+        {
+          "id": "kedjenou",
+          "displayName": "Kédjénou",
+          "baseCost": 3355000.0,
+          "growth": 1.21,
+          "baseRevenue": 40000.0,
+          "baseCycleSeconds": 17.0,
+          "managerCost": 26842500.0,
+          "affinity": "none"
+        },
+        {
+          "id": "restaurant_plateau",
+          "displayName": "Restaurant du Plateau",
+          "baseCost": 10737500.0,
+          "growth": 1.22,
+          "baseRevenue": 1500000.0,
+          "baseCycleSeconds": 455.34799999999996,
+          "managerCost": 85900000.0,
+          "affinity": "none"
+        }
+      ],
+      "upgrades": [
+        {
+          "id": "abidjan_up_01",
+          "displayName": "Amélioration Abidjan 01 (à nommer)",
+          "business": "alloco",
+          "multiplier": 1.25,
+          "cost": 125000.0
+        },
+        {
+          "id": "abidjan_up_02",
+          "displayName": "Amélioration Abidjan 02 (à nommer)",
+          "business": "alloco",
+          "multiplier": 1.2,
+          "cost": 250000.0
+        },
+        {
+          "id": "abidjan_up_03",
+          "displayName": "Amélioration Abidjan 03 (à nommer)",
+          "business": "garbadrome",
+          "multiplier": 1.25,
+          "cost": 400000.0
+        },
+        {
+          "id": "abidjan_up_04",
+          "displayName": "Amélioration Abidjan 04 (à nommer)",
+          "business": "garbadrome",
+          "multiplier": 1.2,
+          "cost": 800000.0
+        },
+        {
+          "id": "abidjan_up_05",
+          "displayName": "Amélioration Abidjan 05 (à nommer)",
+          "business": "attieke_poisson",
+          "multiplier": 1.25,
+          "cost": 1280000.0
+        },
+        {
+          "id": "abidjan_up_06",
+          "displayName": "Amélioration Abidjan 06 (à nommer)",
+          "business": "attieke_poisson",
+          "multiplier": 1.2,
+          "cost": 2550000.0
+        },
+        {
+          "id": "abidjan_up_07",
+          "displayName": "Amélioration Abidjan 07 (à nommer)",
+          "business": "maquis",
+          "multiplier": 1.25,
+          "cost": 4100000.0
+        },
+        {
+          "id": "abidjan_up_08",
+          "displayName": "Amélioration Abidjan 08 (à nommer)",
+          "business": "alloco",
+          "multiplier": 1.25,
+          "cost": 7800000.0
+        },
+        {
+          "id": "abidjan_up_09",
+          "displayName": "Amélioration Abidjan 09 (à nommer)",
+          "business": "maquis",
+          "multiplier": 1.2,
+          "cost": 8200000.0
+        },
+        {
+          "id": "abidjan_up_10",
+          "displayName": "Amélioration Abidjan 10 (à nommer)",
+          "business": "all",
+          "multiplier": 1.06,
+          "cost": 9825000.0
+        },
+        {
+          "id": "abidjan_up_11",
+          "displayName": "Amélioration Abidjan 11 (à nommer)",
+          "business": "all",
+          "multiplier": 1.06,
+          "cost": 13100000.0
+        },
+        {
+          "id": "abidjan_up_12",
+          "displayName": "Amélioration Abidjan 12 (à nommer)",
+          "business": "choukouya",
+          "multiplier": 1.25,
+          "cost": 13100000.0
+        },
+        {
+          "id": "abidjan_up_13",
+          "displayName": "Amélioration Abidjan 13 (à nommer)",
+          "business": "alloco",
+          "multiplier": 1.2,
+          "cost": 15625000.0
+        },
+        {
+          "id": "abidjan_up_14",
+          "displayName": "Amélioration Abidjan 14 (à nommer)",
+          "business": "all",
+          "multiplier": 1.06,
+          "cost": 19650000.0
+        },
+        {
+          "id": "abidjan_up_15",
+          "displayName": "Amélioration Abidjan 15 (à nommer)",
+          "business": "garbadrome",
+          "multiplier": 1.25,
+          "cost": 25000000.0
+        },
+        {
+          "id": "abidjan_up_16",
+          "displayName": "Amélioration Abidjan 16 (à nommer)",
+          "business": "all",
+          "multiplier": 1.05,
+          "cost": 26250000.0
+        },
+        {
+          "id": "abidjan_up_17",
+          "displayName": "Amélioration Abidjan 17 (à nommer)",
+          "business": "choukouya",
+          "multiplier": 1.2,
+          "cost": 26250000.0
+        },
+        {
+          "id": "abidjan_up_18",
+          "displayName": "Amélioration Abidjan 18 (à nommer)",
+          "business": "tchapalo",
+          "multiplier": 1.25,
+          "cost": 42000000.0
+        },
+        {
+          "id": "abidjan_up_19",
+          "displayName": "Amélioration Abidjan 19 (à nommer)",
+          "business": "garbadrome",
+          "multiplier": 1.2,
+          "cost": 50000000.0
+        },
+        {
+          "id": "abidjan_up_20",
+          "displayName": "Amélioration Abidjan 20 (à nommer)",
+          "business": "attieke_poisson",
+          "multiplier": 1.25,
+          "cost": 80000000.0
+        },
+        {
+          "id": "abidjan_up_21",
+          "displayName": "Amélioration Abidjan 21 (à nommer)",
+          "business": "tchapalo",
+          "multiplier": 1.2,
+          "cost": 84000000.0
+        },
+        {
+          "id": "abidjan_up_22",
+          "displayName": "Amélioration Abidjan 22 (à nommer)",
+          "business": "kedjenou",
+          "multiplier": 1.25,
+          "cost": 134250000.0
+        },
+        {
+          "id": "abidjan_up_23",
+          "displayName": "Amélioration Abidjan 23 (à nommer)",
+          "business": "attieke_poisson",
+          "multiplier": 1.2,
+          "cost": 160000000.0
+        },
+        {
+          "id": "abidjan_up_24",
+          "displayName": "Amélioration Abidjan 24 (à nommer)",
+          "business": "maquis",
+          "multiplier": 1.25,
+          "cost": 255000000.0
+        },
+        {
+          "id": "abidjan_up_25",
+          "displayName": "Amélioration Abidjan 25 (à nommer)",
+          "business": "kedjenou",
+          "multiplier": 1.2,
+          "cost": 267500000.0
+        },
+        {
+          "id": "abidjan_up_26",
+          "displayName": "Amélioration Abidjan 26 (à nommer)",
+          "business": "restaurant_plateau",
+          "multiplier": 1.25,
+          "cost": 430000000.0
+        },
+        {
+          "id": "abidjan_up_27",
+          "displayName": "Amélioration Abidjan 27 (à nommer)",
+          "business": "maquis",
+          "multiplier": 1.2,
+          "cost": 512500000.0
+        },
+        {
+          "id": "abidjan_up_28",
+          "displayName": "Amélioration Abidjan 28 (à nommer)",
+          "business": "all",
+          "multiplier": 1.06,
+          "cost": 615000000.0
+        },
+        {
+          "id": "abidjan_up_29",
+          "displayName": "Amélioration Abidjan 29 (à nommer)",
+          "business": "all",
+          "multiplier": 1.06,
+          "cost": 820000000.0
+        },
+        {
+          "id": "abidjan_up_30",
+          "displayName": "Amélioration Abidjan 30 (à nommer)",
+          "business": "choukouya",
+          "multiplier": 1.25,
+          "cost": 820000000.0
+        },
+        {
+          "id": "abidjan_up_31",
+          "displayName": "Amélioration Abidjan 31 (à nommer)",
+          "business": "restaurant_plateau",
+          "multiplier": 1.2,
+          "cost": 860000000.0
+        },
+        {
+          "id": "abidjan_up_32",
+          "displayName": "Amélioration Abidjan 32 (à nommer)",
+          "business": "all",
+          "multiplier": 1.06,
+          "cost": 1230000000.0
+        },
+        {
+          "id": "abidjan_up_33",
+          "displayName": "Amélioration Abidjan 33 (à nommer)",
+          "business": "all",
+          "multiplier": 1.05,
+          "cost": 1637500000.0
+        },
+        {
+          "id": "abidjan_up_34",
+          "displayName": "Amélioration Abidjan 34 (à nommer)",
+          "business": "choukouya",
+          "multiplier": 1.2,
+          "cost": 1637500000.0
+        },
+        {
+          "id": "abidjan_up_35",
+          "displayName": "Amélioration Abidjan 35 (à nommer)",
+          "business": "tchapalo",
+          "multiplier": 1.25,
+          "cost": 2625000000.0
+        },
+        {
+          "id": "abidjan_up_36",
+          "displayName": "Amélioration Abidjan 36 (à nommer)",
+          "business": "tchapalo",
+          "multiplier": 1.2,
+          "cost": 5250000000.0
+        },
+        {
+          "id": "abidjan_up_37",
+          "displayName": "Amélioration Abidjan 37 (à nommer)",
+          "business": "kedjenou",
+          "multiplier": 1.25,
+          "cost": 8400000000.0
+        },
+        {
+          "id": "abidjan_up_38",
+          "displayName": "Amélioration Abidjan 38 (à nommer)",
+          "business": "kedjenou",
+          "multiplier": 1.2,
+          "cost": 16775000000.0
+        },
+        {
+          "id": "abidjan_up_39",
+          "displayName": "Amélioration Abidjan 39 (à nommer)",
+          "business": "restaurant_plateau",
+          "multiplier": 1.25,
+          "cost": 26750000000.0
+        },
+        {
+          "id": "abidjan_up_40",
+          "displayName": "Amélioration Abidjan 40 (à nommer)",
+          "business": "restaurant_plateau",
+          "multiplier": 1.2,
+          "cost": 53750000000.0
+        }
+      ]
     }
   ],
   "simulation": {
@@ -317,7 +878,7 @@
     "adBoostRewatchBelowHours": 1,
     "maxBoostAdsPerDay": 2,
     "offlineAdMinAwayMinutes": 60,
-    "proxyCities": 4,
+    "proxyCities": 3,
     "profiles": [
       {
         "name": "occasionnel_pub",
@@ -461,7 +1022,7 @@
       "starThresholdMultiplier": 1.5,
       "goalMultipliers": [
         9,
-        7,
+        7.5,
         4
       ],
       "upgradeCostMultiplier": 1

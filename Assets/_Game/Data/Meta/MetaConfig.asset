@@ -1,0 +1,896 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d85731a42f7ad96459263a6bc5712cb1, type: 3}
+  m_Name: MetaConfig
+  m_EditorClassIdentifier: Gargote.Data::Gargote.Data.MetaConfigAsset
+  managers:
+  - {fileID: 11400000, guid: b570d973d2bea874996f8d83a0f680ca, type: 2}
+  - {fileID: 11400000, guid: b0edd9f8bf806554eb719626a2b5444b, type: 2}
+  - {fileID: 11400000, guid: 9d1621734c1c44e4eb6256ba35a5c2b0, type: 2}
+  - {fileID: 11400000, guid: 65e4970cb82b5db49b0954ef93c28a36, type: 2}
+  - {fileID: 11400000, guid: e04b6814ecfc578429b8b08f63d897e1, type: 2}
+  - {fileID: 11400000, guid: 3fd7f4f0605147a4d91430148b763e80, type: 2}
+  - {fileID: 11400000, guid: 670149eb0aff4294a9fd13fa40e06ee2, type: 2}
+  - {fileID: 11400000, guid: 1d1873cdf6ab38d4abaec93b5f5ff199, type: 2}
+  - {fileID: 11400000, guid: bf8b6ec62e3f61e489098ecce2bf730e, type: 2}
+  - {fileID: 11400000, guid: 9275173a1a48341418dfb3ab3e02b9e6, type: 2}
+  - {fileID: 11400000, guid: f8e97aab64601ac45b0cb15ef23c75cc, type: 2}
+  - {fileID: 11400000, guid: 4d1edffba9dbe4a4bb29f983398727ab, type: 2}
+  - {fileID: 11400000, guid: 79e0733ebded5de48aaec050d695d975, type: 2}
+  - {fileID: 11400000, guid: 98cc235572fc66e4a8d758f39d892b0b, type: 2}
+  - {fileID: 11400000, guid: bd6653b929c331b478bb5f7715910378, type: 2}
+  - {fileID: 11400000, guid: 502cc4cd1871c774fad3e5bb65b926c1, type: 2}
+  - {fileID: 11400000, guid: 89d265661d2240e42b9fb8e87f52bf63, type: 2}
+  - {fileID: 11400000, guid: e46b9684f5bb42048b824135980b4786, type: 2}
+  - {fileID: 11400000, guid: 878fa83f89c8ccb41adf11714b34f918, type: 2}
+  - {fileID: 11400000, guid: 12508bb38f6a7804e927c7e8eb4db50f, type: 2}
+  - {fileID: 11400000, guid: 8c1842e632d44ce479ef811abc0027bb, type: 2}
+  - {fileID: 11400000, guid: d7134204b0b73794b8ce3367c95b4066, type: 2}
+  - {fileID: 11400000, guid: 5fa5f8c8004ad66449d078930e33e3d5, type: 2}
+  - {fileID: 11400000, guid: f80aeffe6942618489cdf98e1f254fd8, type: 2}
+  - {fileID: 11400000, guid: d1f17b42792ce6c4bb3902d54b011f21, type: 2}
+  - {fileID: 11400000, guid: ee625a2b6a4aefa40b194c1b8b4279b2, type: 2}
+  - {fileID: 11400000, guid: a13302c1d0bffc64e93211bb1cc4aa1f, type: 2}
+  - {fileID: 11400000, guid: 5aabc11271794204d84338198eb63cc7, type: 2}
+  - {fileID: 11400000, guid: 714bb1164aff4304e9faba948ad3cfcf, type: 2}
+  - {fileID: 11400000, guid: 6de0a6603127b074e85184bf7733d6e2, type: 2}
+  - {fileID: 11400000, guid: 8a107531809c1b746be5fa2c33ef5f44, type: 2}
+  - {fileID: 11400000, guid: 3012fcc1949ca7145a1d1e6b428562c1, type: 2}
+  managerLevels:
+    MaxLevel: 10
+    CardsToNext: 0200000004000000060000000a0000000f000000140000001e0000002800000032000000
+    FcfaSecondsToNext:
+    - 30
+    - 60
+    - 120
+    - 240
+    - 420
+    - 600
+    - 900
+    - 1200
+    - 1800
+    DuplicateCaurisAtMax: 01000000030000000800000014000000
+    AccelerateBoostCauris: 20
+  chests:
+  - {fileID: 11400000, guid: db322c16d54c00d4ba6e5f1a16ad0043, type: 2}
+  - {fileID: 11400000, guid: 2de514771232e6843ab1168e7fde5297, type: 2}
+  - {fileID: 11400000, guid: 73df608cb9b55c04aa281585db7a73df, type: 2}
+  - {fileID: 11400000, guid: 535d919eecf56554cb3413305a1cde41, type: 2}
+  chestRules:
+    FreeChestId: wood
+    FreeEverySeconds: 14400
+    FreeMaxStored: 2
+    RewardedChestId: bronze
+    RewardedPerDay: 1
+    BoostMultiplier: 1.5
+    BoostSeconds: 300
+    BoostMaxStackSeconds: 3600
+  missions:
+  - Id: m_level
+    Kind: 0
+    Weight: 30
+    Amount: 1
+    Xp: 30
+    Cauris: 4
+    Tokens: 0
+    ChestId: 
+  - Id: m_manager
+    Kind: 1
+    Weight: 20
+    Amount: 1
+    Xp: 30
+    Cauris: 4
+    Tokens: 0
+    ChestId: 
+  - Id: m_serve
+    Kind: 2
+    Weight: 25
+    Amount: 300
+    Xp: 25
+    Cauris: 3
+    Tokens: 0
+    ChestId: 
+  - Id: m_milestone
+    Kind: 3
+    Weight: 15
+    Amount: 1
+    Xp: 30
+    Cauris: 5
+    Tokens: 0
+    ChestId: 
+  - Id: m_boost
+    Kind: 4
+    Weight: 10
+    Amount: 2
+    Xp: 20
+    Cauris: 3
+    Tokens: 0
+    ChestId: 
+  - Id: m_specials
+    Kind: 5
+    Weight: 10
+    Amount: 3
+    Xp: 25
+    Cauris: 4
+    Tokens: 0
+    ChestId: 
+  - Id: m_upgrade
+    Kind: 6
+    Weight: 12
+    Amount: 1
+    Xp: 25
+    Cauris: 4
+    Tokens: 0
+    ChestId: 
+  - Id: m_chest
+    Kind: 7
+    Weight: 8
+    Amount: 1
+    Xp: 20
+    Cauris: 3
+    Tokens: 0
+    ChestId: 
+  - Id: m_earn
+    Kind: 8
+    Weight: 15
+    Amount: 600
+    Xp: 30
+    Cauris: 0
+    Tokens: 0
+    ChestId: wood
+  challenges:
+  - Id: c_serve
+    Kind: 2
+    Weight: 25
+    Amount: 1800
+    Xp: 80
+    Cauris: 0
+    Tokens: 30
+    ChestId: 
+  - Id: c_level
+    Kind: 0
+    Weight: 20
+    Amount: 2
+    Xp: 80
+    Cauris: 0
+    Tokens: 25
+    ChestId: 
+  - Id: c_earn
+    Kind: 8
+    Weight: 20
+    Amount: 3600
+    Xp: 80
+    Cauris: 0
+    Tokens: 30
+    ChestId: 
+  - Id: c_specials
+    Kind: 5
+    Weight: 12
+    Amount: 8
+    Xp: 80
+    Cauris: 0
+    Tokens: 25
+    ChestId: 
+  - Id: c_boost
+    Kind: 4
+    Weight: 12
+    Amount: 4
+    Xp: 80
+    Cauris: 0
+    Tokens: 25
+    ChestId: 
+  - Id: c_missions
+    Kind: 9
+    Weight: 15
+    Amount: 4
+    Xp: 100
+    Cauris: 0
+    Tokens: 40
+    ChestId: 
+  - Id: c_chests
+    Kind: 7
+    Weight: 10
+    Amount: 3
+    Xp: 80
+    Cauris: 0
+    Tokens: 25
+    ChestId: 
+  missionRules:
+    ActiveSlots: 3
+    FreeReplacesPerDay: 1
+    ReplaceCauris: 10
+    ChallengeSlots: 3
+    RefillDelaySeconds: 1800
+    ChallengeBonusChestId: bronze
+    AccelerateRewardedPerDay: 3
+  login:
+    Days:
+    - Cauris: 20
+      Tokens: 0
+      ChestId: 
+      Boost: 0
+      Cards: 0
+    - Cauris: 0
+      Tokens: 0
+      ChestId: wood
+      Boost: 0
+      Cards: 0
+    - Cauris: 30
+      Tokens: 0
+      ChestId: 
+      Boost: 0
+      Cards: 0
+    - Cauris: 0
+      Tokens: 0
+      ChestId: bronze
+      Boost: 0
+      Cards: 0
+    - Cauris: 40
+      Tokens: 0
+      ChestId: 
+      Boost: 0
+      Cards: 0
+    - Cauris: 20
+      Tokens: 0
+      ChestId: bronze
+      Boost: 0
+      Cards: 0
+    - Cauris: 0
+      Tokens: 0
+      ChestId: gold
+      Boost: 0
+      Cards: 0
+    - Cauris: 25
+      Tokens: 0
+      ChestId: 
+      Boost: 0
+      Cards: 0
+    - Cauris: 0
+      Tokens: 0
+      ChestId: wood
+      Boost: 0
+      Cards: 0
+    - Cauris: 35
+      Tokens: 0
+      ChestId: 
+      Boost: 0
+      Cards: 0
+    - Cauris: 0
+      Tokens: 0
+      ChestId: bronze
+      Boost: 0
+      Cards: 0
+    - Cauris: 45
+      Tokens: 0
+      ChestId: 
+      Boost: 0
+      Cards: 0
+    - Cauris: 25
+      Tokens: 0
+      ChestId: bronze
+      Boost: 0
+      Cards: 0
+    - Cauris: 0
+      Tokens: 0
+      ChestId: teranga
+      Boost: 0
+      Cards: 0
+    ShieldsPerWeek: 1
+    MaxShields: 1
+    ResetToleranceHours: 3
+  wheel:
+    FreePerDay: 1
+    RewardedPerDay: 3
+    Segments:
+    - Id: w_cauris_s
+      Weight: 26
+      Reward:
+        Cauris: 10
+        Tokens: 0
+        ChestId: 
+        Boost: 0
+        Cards: 0
+    - Id: w_cauris_m
+      Weight: 14
+      Reward:
+        Cauris: 25
+        Tokens: 0
+        ChestId: 
+        Boost: 0
+        Cards: 0
+    - Id: w_cauris_l
+      Weight: 3
+      Reward:
+        Cauris: 80
+        Tokens: 0
+        ChestId: 
+        Boost: 0
+        Cards: 0
+    - Id: w_wood
+      Weight: 20
+      Reward:
+        Cauris: 0
+        Tokens: 0
+        ChestId: wood
+        Boost: 0
+        Cards: 0
+    - Id: w_bronze
+      Weight: 8
+      Reward:
+        Cauris: 0
+        Tokens: 0
+        ChestId: bronze
+        Boost: 0
+        Cards: 0
+    - Id: w_gold
+      Weight: 1
+      Reward:
+        Cauris: 0
+        Tokens: 0
+        ChestId: gold
+        Boost: 0
+        Cards: 0
+    - Id: w_boost
+      Weight: 10
+      Reward:
+        Cauris: 0
+        Tokens: 0
+        ChestId: 
+        Boost: 1
+        Cards: 0
+    - Id: w_cards
+      Weight: 10
+      Reward:
+        Cauris: 0
+        Tokens: 0
+        ChestId: 
+        Boost: 0
+        Cards: 5
+  playerLevels:
+    XpToReach: 000000000000000064000000000000002c010000000000008a02000000000000b004000000000000d007000000000000800c00000000000088130000000000004c1d00000000000004290000000000004c3600000000000024450000000000008c5500000000000084670000000000000c7b0000000000002490000000000000cca600000000000004bf000000000000ccd800000000000024f40000000000000c11010000000000842f0100000000008c4f01000000000024710100000000004c9401000000000004b90100000000004cdf01000000000024070200000000008c30020000000000845b0200000000000c8802000000000024b6020000000000cce50200000000000417030000000000cc49030000000000247e0300000000000cb403000000000084eb0300000000008c24040000000000245f0400000000004c9b04000000000004d90400000000004c1805000000000024590500000000008c9b05000000000084df0500000000000c25060000000000246c060000000000ccb406000000000004ff060000000000cc4a07000000000024980700000000000ce707000000000084370800000000008c8908000000000024dd0800000000004c3209000000000004890900000000004ce1090000000000243b0a0000000000
+    CaurisPerLevel: 10
+    ChestEvery: 5
+    ChestOnLevel: bronze
+    FeatureLevels: 020000000300000003000000040000000400000005000000060000000600000007000000
+    Xp: 010000000000000019000000000000001e000000000000000f000000000000000a000000000000000a0000000000000064000000000000002c0100000000000005000000000000000500000000000000140000000000000005000000000000000f000000000000001900000000000000140000000000000000000000000000000000000000000000
+  recipes:
+  - {fileID: 11400000, guid: 14872f63bd90d754390d5380134e9987, type: 2}
+  - {fileID: 11400000, guid: 216889951f8602a4abad7811dee9f781, type: 2}
+  - {fileID: 11400000, guid: d554cf0383d34c748adbce226465da89, type: 2}
+  - {fileID: 11400000, guid: 7155d15b659dfcd4bbd02a4af7161aff, type: 2}
+  - {fileID: 11400000, guid: e5dcdc11b1dd3f4479a952903bbdefe8, type: 2}
+  - {fileID: 11400000, guid: 7ed6682eb70022c45a382237ddbed0d6, type: 2}
+  - {fileID: 11400000, guid: 9c7bfeeca265def478e2d2042827fefb, type: 2}
+  - {fileID: 11400000, guid: f2ffe37618bc5d444b26b1e148d599b5, type: 2}
+  - {fileID: 11400000, guid: 7501e80a7a8e06c4b95f0d8a45335a01, type: 2}
+  - {fileID: 11400000, guid: a43493778ab660545bb1b3ce9d19f81d, type: 2}
+  - {fileID: 11400000, guid: ccd799a5b7c47a9438316e9123a80b16, type: 2}
+  - {fileID: 11400000, guid: ee18ce1f785d2cc4bb6f892d2f0e5145, type: 2}
+  - {fileID: 11400000, guid: 7f40507d46278b143b36b4ca680f46a5, type: 2}
+  - {fileID: 11400000, guid: f404fd082770eaa498fb5e3cae687237, type: 2}
+  - {fileID: 11400000, guid: b61c3bedd45378848a7e671f655a413e, type: 2}
+  - {fileID: 11400000, guid: 523478dd8fdc0304482a68706cbac900, type: 2}
+  - {fileID: 11400000, guid: a90c8662776fef141b24164942d0c54d, type: 2}
+  - {fileID: 11400000, guid: 2b406cae940d52340bcf9cf453280b23, type: 2}
+  - {fileID: 11400000, guid: b8c03ad2c6a6fec43b0256d08f7ecfef, type: 2}
+  - {fileID: 11400000, guid: f0530ddf5ec58f843914cedc719e7989, type: 2}
+  - {fileID: 11400000, guid: 2c2b5924b31a07049bdc906b3d55bb73, type: 2}
+  - {fileID: 11400000, guid: 31c0339cc9bd2bd43bb5f5ac62ac1c59, type: 2}
+  albumCityBonusMultiplier: 1.05
+  achievements:
+  - Id: lvl_forokh_thiaya
+    Stat: 100
+    BusinessId: forokh_thiaya
+    Tiers:
+    - 100
+    - 750
+    - 3000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: serve_forokh_thiaya
+    Stat: 101
+    BusinessId: forokh_thiaya
+    Tiers:
+    - 5000
+    - 500000
+    - 50000000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: ms_forokh_thiaya
+    Stat: 102
+    BusinessId: forokh_thiaya
+    Tiers:
+    - 3
+    - 8
+    - 14
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: mgr_forokh_thiaya
+    Stat: 103
+    BusinessId: forokh_thiaya
+    Tiers:
+    - 3
+    - 6
+    - 10
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: lvl_tangana
+    Stat: 100
+    BusinessId: tangana
+    Tiers:
+    - 100
+    - 750
+    - 3000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: serve_tangana
+    Stat: 101
+    BusinessId: tangana
+    Tiers:
+    - 5000
+    - 500000
+    - 50000000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: ms_tangana
+    Stat: 102
+    BusinessId: tangana
+    Tiers:
+    - 3
+    - 8
+    - 14
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: mgr_tangana
+    Stat: 103
+    BusinessId: tangana
+    Tiers:
+    - 3
+    - 6
+    - 10
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: lvl_maiga
+    Stat: 100
+    BusinessId: maiga
+    Tiers:
+    - 100
+    - 750
+    - 3000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: serve_maiga
+    Stat: 101
+    BusinessId: maiga
+    Tiers:
+    - 5000
+    - 500000
+    - 50000000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: ms_maiga
+    Stat: 102
+    BusinessId: maiga
+    Tiers:
+    - 3
+    - 8
+    - 14
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: mgr_maiga
+    Stat: 103
+    BusinessId: maiga
+    Tiers:
+    - 3
+    - 6
+    - 10
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: lvl_gargote
+    Stat: 100
+    BusinessId: gargote
+    Tiers:
+    - 100
+    - 750
+    - 3000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: serve_gargote
+    Stat: 101
+    BusinessId: gargote
+    Tiers:
+    - 5000
+    - 500000
+    - 50000000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: ms_gargote
+    Stat: 102
+    BusinessId: gargote
+    Tiers:
+    - 3
+    - 8
+    - 14
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: mgr_gargote
+    Stat: 103
+    BusinessId: gargote
+    Tiers:
+    - 3
+    - 6
+    - 10
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: lvl_dibiterie
+    Stat: 100
+    BusinessId: dibiterie
+    Tiers:
+    - 100
+    - 750
+    - 3000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: serve_dibiterie
+    Stat: 101
+    BusinessId: dibiterie
+    Tiers:
+    - 5000
+    - 500000
+    - 50000000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: ms_dibiterie
+    Stat: 102
+    BusinessId: dibiterie
+    Tiers:
+    - 3
+    - 8
+    - 14
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: mgr_dibiterie
+    Stat: 103
+    BusinessId: dibiterie
+    Tiers:
+    - 3
+    - 6
+    - 10
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: lvl_fataya_nems
+    Stat: 100
+    BusinessId: fataya_nems
+    Tiers:
+    - 100
+    - 750
+    - 3000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: serve_fataya_nems
+    Stat: 101
+    BusinessId: fataya_nems
+    Tiers:
+    - 5000
+    - 500000
+    - 50000000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: ms_fataya_nems
+    Stat: 102
+    BusinessId: fataya_nems
+    Tiers:
+    - 3
+    - 8
+    - 14
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: mgr_fataya_nems
+    Stat: 103
+    BusinessId: fataya_nems
+    Tiers:
+    - 3
+    - 6
+    - 10
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: lvl_restaurant_teranga
+    Stat: 100
+    BusinessId: restaurant_teranga
+    Tiers:
+    - 100
+    - 750
+    - 3000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: serve_restaurant_teranga
+    Stat: 101
+    BusinessId: restaurant_teranga
+    Tiers:
+    - 5000
+    - 500000
+    - 50000000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: ms_restaurant_teranga
+    Stat: 102
+    BusinessId: restaurant_teranga
+    Tiers:
+    - 3
+    - 8
+    - 14
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: mgr_restaurant_teranga
+    Stat: 103
+    BusinessId: restaurant_teranga
+    Tiers:
+    - 3
+    - 6
+    - 10
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: lvl_traiteur_evenements
+    Stat: 100
+    BusinessId: traiteur_evenements
+    Tiers:
+    - 100
+    - 750
+    - 3000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: serve_traiteur_evenements
+    Stat: 101
+    BusinessId: traiteur_evenements
+    Tiers:
+    - 5000
+    - 500000
+    - 50000000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: ms_traiteur_evenements
+    Stat: 102
+    BusinessId: traiteur_evenements
+    Tiers:
+    - 3
+    - 8
+    - 14
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: mgr_traiteur_evenements
+    Stat: 103
+    BusinessId: traiteur_evenements
+    Tiers:
+    - 3
+    - 6
+    - 10
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: earn
+    Stat: 0
+    BusinessId: 
+    Tiers:
+    - 1000000000
+    - 1000000000000
+    - 1000000000000000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: customers
+    Stat: 1
+    BusinessId: 
+    Tiers:
+    - 100000
+    - 10000000
+    - 1000000000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: taps
+    Stat: 2
+    BusinessId: 
+    Tiers:
+    - 500
+    - 5000
+    - 50000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: levels
+    Stat: 3
+    BusinessId: 
+    Tiers:
+    - 500
+    - 10000
+    - 100000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: unlocks
+    Stat: 4
+    BusinessId: 
+    Tiers:
+    - 8
+    - 16
+    - 40
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: managers_hired
+    Stat: 5
+    BusinessId: 
+    Tiers:
+    - 8
+    - 16
+    - 40
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: milestones
+    Stat: 6
+    BusinessId: 
+    Tiers:
+    - 25
+    - 150
+    - 600
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: upgrades
+    Stat: 7
+    BusinessId: 
+    Tiers:
+    - 20
+    - 100
+    - 400
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: prestige
+    Stat: 8
+    BusinessId: 
+    Tiers:
+    - 3
+    - 20
+    - 80
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: stars
+    Stat: 9
+    BusinessId: 
+    Tiers:
+    - 100
+    - 2000
+    - 40000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: cities
+    Stat: 10
+    BusinessId: 
+    Tiers:
+    - 2
+    - 3
+    - 5
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: chests
+    Stat: 11
+    BusinessId: 
+    Tiers:
+    - 20
+    - 150
+    - 600
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: collection
+    Stat: 12
+    BusinessId: 
+    Tiers:
+    - 16
+    - 24
+    - 32
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: rare
+    Stat: 13
+    BusinessId: 
+    Tiers:
+    - 2
+    - 4
+    - 6
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: epic
+    Stat: 14
+    BusinessId: 
+    Tiers:
+    - 1
+    - 3
+    - 6
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: legend
+    Stat: 15
+    BusinessId: 
+    Tiers:
+    - 1
+    - 2
+    - 4
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: mgr_levels
+    Stat: 16
+    BusinessId: 
+    Tiers:
+    - 20
+    - 100
+    - 250
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: missions
+    Stat: 17
+    BusinessId: 
+    Tiers:
+    - 20
+    - 150
+    - 600
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: challenges
+    Stat: 18
+    BusinessId: 
+    Tiers:
+    - 10
+    - 60
+    - 200
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: streak
+    Stat: 19
+    BusinessId: 
+    Tiers:
+    - 3
+    - 7
+    - 30
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: logins
+    Stat: 20
+    BusinessId: 
+    Tiers:
+    - 7
+    - 30
+    - 90
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: wheel
+    Stat: 21
+    BusinessId: 
+    Tiers:
+    - 20
+    - 100
+    - 400
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: specials
+    Stat: 22
+    BusinessId: 
+    Tiers:
+    - 20
+    - 200
+    - 1000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: boosts
+    Stat: 23
+    BusinessId: 
+    Tiers:
+    - 20
+    - 200
+    - 1000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: recipes
+    Stat: 24
+    BusinessId: 
+    Tiers:
+    - 6
+    - 12
+    - 22
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: player_level
+    Stat: 25
+    BusinessId: 
+    Tiers:
+    - 10
+    - 20
+    - 40
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: cauris
+    Stat: 26
+    BusinessId: 
+    Tiers:
+    - 2000
+    - 20000
+    - 100000
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: global_ms
+    Stat: 27
+    BusinessId: 
+    Tiers:
+    - 2
+    - 5
+    - 9
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: offline
+    Stat: 28
+    BusinessId: 
+    Tiers:
+    - 20
+    - 150
+    - 500
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  - Id: ads
+    Stat: 29
+    BusinessId: 
+    Tiers:
+    - 20
+    - 150
+    - 600
+    CaurisRewards: 05000000000000000f000000000000002800000000000000
+  notifications:
+    MaxPerDay: 2
+    QuietStartHour: 22
+    QuietEndHour: 8
+    AskPermissionAfterFirstFreeChest: 1
+  cauris:
+    StartingCauris: 0
+    OfflineCapExtensionCauris: 50
+    OfflineCapExtensionSeconds: 14400
+    OfflineCapExtensionDurationSeconds: 86400
+  minSecondsBetweenReminders: 60

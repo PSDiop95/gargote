@@ -1,0 +1,229 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7716649f2d6e60848822d1815de4fe7e, type: 3}
+  m_Name: Abidjan
+  m_EditorClassIdentifier: Gargote.Data::Gargote.Data.CityDefinitionAsset
+  id: abidjan
+  displayName: Abidjan
+  goalLifetimeEarnings: 34000000000000
+  startingMoney: 3125
+  starThreshold: 150000000
+  businesses:
+  - {fileID: 11400000, guid: c27e7257885bf024b995e7e6c29510c6, type: 2}
+  - {fileID: 11400000, guid: d32c00a8868fab54e90371be59594b6c, type: 2}
+  - {fileID: 11400000, guid: c5f65ebe0185f304eb68ada159626e5f, type: 2}
+  - {fileID: 11400000, guid: 28185d6a98fd2404b8b71a1c6fab250f, type: 2}
+  - {fileID: 11400000, guid: 72a97c0b67b1e8542bcdb78aef47d00a, type: 2}
+  - {fileID: 11400000, guid: 90566c156bdb1234c87bd374aafbd08c, type: 2}
+  - {fileID: 11400000, guid: 39d8d98bfd6947846ad98a23f4461454, type: 2}
+  - {fileID: 11400000, guid: 369957bbdf990b64da91a75573a3a61e, type: 2}
+  upgrades:
+  - id: abidjan_up_01
+    displayName: "Am\xE9lioration Abidjan 01 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: c27e7257885bf024b995e7e6c29510c6, type: 2}
+    multiplier: 1.25
+    cost: 125000
+  - id: abidjan_up_02
+    displayName: "Am\xE9lioration Abidjan 02 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: c27e7257885bf024b995e7e6c29510c6, type: 2}
+    multiplier: 1.2
+    cost: 250000
+  - id: abidjan_up_03
+    displayName: "Am\xE9lioration Abidjan 03 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: d32c00a8868fab54e90371be59594b6c, type: 2}
+    multiplier: 1.25
+    cost: 400000
+  - id: abidjan_up_04
+    displayName: "Am\xE9lioration Abidjan 04 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: d32c00a8868fab54e90371be59594b6c, type: 2}
+    multiplier: 1.2
+    cost: 800000
+  - id: abidjan_up_05
+    displayName: "Am\xE9lioration Abidjan 05 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: c5f65ebe0185f304eb68ada159626e5f, type: 2}
+    multiplier: 1.25
+    cost: 1280000
+  - id: abidjan_up_06
+    displayName: "Am\xE9lioration Abidjan 06 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: c5f65ebe0185f304eb68ada159626e5f, type: 2}
+    multiplier: 1.2
+    cost: 2550000
+  - id: abidjan_up_07
+    displayName: "Am\xE9lioration Abidjan 07 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 28185d6a98fd2404b8b71a1c6fab250f, type: 2}
+    multiplier: 1.25
+    cost: 4100000
+  - id: abidjan_up_08
+    displayName: "Am\xE9lioration Abidjan 08 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: c27e7257885bf024b995e7e6c29510c6, type: 2}
+    multiplier: 1.25
+    cost: 7800000
+  - id: abidjan_up_09
+    displayName: "Am\xE9lioration Abidjan 09 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 28185d6a98fd2404b8b71a1c6fab250f, type: 2}
+    multiplier: 1.2
+    cost: 8200000
+  - id: abidjan_up_10
+    displayName: "Am\xE9lioration Abidjan 10 (\xE0 nommer)"
+    business: {fileID: 0}
+    multiplier: 1.06
+    cost: 9825000
+  - id: abidjan_up_11
+    displayName: "Am\xE9lioration Abidjan 11 (\xE0 nommer)"
+    business: {fileID: 0}
+    multiplier: 1.06
+    cost: 13100000
+  - id: abidjan_up_12
+    displayName: "Am\xE9lioration Abidjan 12 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 72a97c0b67b1e8542bcdb78aef47d00a, type: 2}
+    multiplier: 1.25
+    cost: 13100000
+  - id: abidjan_up_13
+    displayName: "Am\xE9lioration Abidjan 13 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: c27e7257885bf024b995e7e6c29510c6, type: 2}
+    multiplier: 1.2
+    cost: 15625000
+  - id: abidjan_up_14
+    displayName: "Am\xE9lioration Abidjan 14 (\xE0 nommer)"
+    business: {fileID: 0}
+    multiplier: 1.06
+    cost: 19650000
+  - id: abidjan_up_15
+    displayName: "Am\xE9lioration Abidjan 15 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: d32c00a8868fab54e90371be59594b6c, type: 2}
+    multiplier: 1.25
+    cost: 25000000
+  - id: abidjan_up_16
+    displayName: "Am\xE9lioration Abidjan 16 (\xE0 nommer)"
+    business: {fileID: 0}
+    multiplier: 1.05
+    cost: 26250000
+  - id: abidjan_up_17
+    displayName: "Am\xE9lioration Abidjan 17 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 72a97c0b67b1e8542bcdb78aef47d00a, type: 2}
+    multiplier: 1.2
+    cost: 26250000
+  - id: abidjan_up_18
+    displayName: "Am\xE9lioration Abidjan 18 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 90566c156bdb1234c87bd374aafbd08c, type: 2}
+    multiplier: 1.25
+    cost: 42000000
+  - id: abidjan_up_19
+    displayName: "Am\xE9lioration Abidjan 19 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: d32c00a8868fab54e90371be59594b6c, type: 2}
+    multiplier: 1.2
+    cost: 50000000
+  - id: abidjan_up_20
+    displayName: "Am\xE9lioration Abidjan 20 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: c5f65ebe0185f304eb68ada159626e5f, type: 2}
+    multiplier: 1.25
+    cost: 80000000
+  - id: abidjan_up_21
+    displayName: "Am\xE9lioration Abidjan 21 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 90566c156bdb1234c87bd374aafbd08c, type: 2}
+    multiplier: 1.2
+    cost: 84000000
+  - id: abidjan_up_22
+    displayName: "Am\xE9lioration Abidjan 22 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 39d8d98bfd6947846ad98a23f4461454, type: 2}
+    multiplier: 1.25
+    cost: 134250000
+  - id: abidjan_up_23
+    displayName: "Am\xE9lioration Abidjan 23 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: c5f65ebe0185f304eb68ada159626e5f, type: 2}
+    multiplier: 1.2
+    cost: 160000000
+  - id: abidjan_up_24
+    displayName: "Am\xE9lioration Abidjan 24 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 28185d6a98fd2404b8b71a1c6fab250f, type: 2}
+    multiplier: 1.25
+    cost: 255000000
+  - id: abidjan_up_25
+    displayName: "Am\xE9lioration Abidjan 25 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 39d8d98bfd6947846ad98a23f4461454, type: 2}
+    multiplier: 1.2
+    cost: 267500000
+  - id: abidjan_up_26
+    displayName: "Am\xE9lioration Abidjan 26 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 369957bbdf990b64da91a75573a3a61e, type: 2}
+    multiplier: 1.25
+    cost: 430000000
+  - id: abidjan_up_27
+    displayName: "Am\xE9lioration Abidjan 27 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 28185d6a98fd2404b8b71a1c6fab250f, type: 2}
+    multiplier: 1.2
+    cost: 512500000
+  - id: abidjan_up_28
+    displayName: "Am\xE9lioration Abidjan 28 (\xE0 nommer)"
+    business: {fileID: 0}
+    multiplier: 1.06
+    cost: 615000000
+  - id: abidjan_up_29
+    displayName: "Am\xE9lioration Abidjan 29 (\xE0 nommer)"
+    business: {fileID: 0}
+    multiplier: 1.06
+    cost: 820000000
+  - id: abidjan_up_30
+    displayName: "Am\xE9lioration Abidjan 30 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 72a97c0b67b1e8542bcdb78aef47d00a, type: 2}
+    multiplier: 1.25
+    cost: 820000000
+  - id: abidjan_up_31
+    displayName: "Am\xE9lioration Abidjan 31 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 369957bbdf990b64da91a75573a3a61e, type: 2}
+    multiplier: 1.2
+    cost: 860000000
+  - id: abidjan_up_32
+    displayName: "Am\xE9lioration Abidjan 32 (\xE0 nommer)"
+    business: {fileID: 0}
+    multiplier: 1.06
+    cost: 1230000000
+  - id: abidjan_up_33
+    displayName: "Am\xE9lioration Abidjan 33 (\xE0 nommer)"
+    business: {fileID: 0}
+    multiplier: 1.05
+    cost: 1637500000
+  - id: abidjan_up_34
+    displayName: "Am\xE9lioration Abidjan 34 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 72a97c0b67b1e8542bcdb78aef47d00a, type: 2}
+    multiplier: 1.2
+    cost: 1637500000
+  - id: abidjan_up_35
+    displayName: "Am\xE9lioration Abidjan 35 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 90566c156bdb1234c87bd374aafbd08c, type: 2}
+    multiplier: 1.25
+    cost: 2625000000
+  - id: abidjan_up_36
+    displayName: "Am\xE9lioration Abidjan 36 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 90566c156bdb1234c87bd374aafbd08c, type: 2}
+    multiplier: 1.2
+    cost: 5250000000
+  - id: abidjan_up_37
+    displayName: "Am\xE9lioration Abidjan 37 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 39d8d98bfd6947846ad98a23f4461454, type: 2}
+    multiplier: 1.25
+    cost: 8400000000
+  - id: abidjan_up_38
+    displayName: "Am\xE9lioration Abidjan 38 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 39d8d98bfd6947846ad98a23f4461454, type: 2}
+    multiplier: 1.2
+    cost: 16775000000
+  - id: abidjan_up_39
+    displayName: "Am\xE9lioration Abidjan 39 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 369957bbdf990b64da91a75573a3a61e, type: 2}
+    multiplier: 1.25
+    cost: 26750000000
+  - id: abidjan_up_40
+    displayName: "Am\xE9lioration Abidjan 40 (\xE0 nommer)"
+    business: {fileID: 11400000, guid: 369957bbdf990b64da91a75573a3a61e, type: 2}
+    multiplier: 1.2
+    cost: 53750000000

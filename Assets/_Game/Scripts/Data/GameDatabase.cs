@@ -10,6 +10,10 @@ namespace Gargote.Data
         public CityDefinitionAsset[] cities = new CityDefinitionAsset[0];
         public EconomyConfigAsset economy;
         public PrestigeConfigAsset prestige;
+        public MetaConfigAsset meta;
+
+        /// <summary>Contenu méta validé contre les commerces des villes.</summary>
+        public MetaDefinitions ToMetaDefinitions(GameDefinitions game) => meta != null ? meta.ToDefinitions(game) : null;
 
         public GameDefinitions ToDefinitions()
         {

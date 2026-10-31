@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-Locales
   m_GUID: 61e3ff1c9fd2d594d899615391b4d721
   m_SerializeEntries:
+  - m_GUID: 04379435741688340a0a9cd0454dacdf
+    m_Address: wo
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 062af1678546f2f40a949da635d1dfde
     m_Address: English
     m_ReadOnly: 1

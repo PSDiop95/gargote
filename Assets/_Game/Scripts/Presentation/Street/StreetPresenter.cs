@@ -256,7 +256,8 @@ namespace Gargote.Presentation
 
         private void OnSpecialSpawned(int index)
         {
-            _specialView.Begin(index, _rig.VisibleMinZ, _rig.VisibleMaxZ, 0.6f);
+            // Jamais sous le HUD ni sous le panneau : plage Z de la zone de rue seulement.
+            _specialView.Begin(index, _rig.StreetMinZ, _rig.StreetMaxZ, 0.6f, -1f);
             _worldUi.ShowSpecial(index < _specialNames.Length ? _specialNames[index] : string.Empty);
             _audio.Play(SoundId.Horn, 1.2f, 0.6f);
         }
@@ -386,7 +387,8 @@ namespace Gargote.Presentation
                 {
                     Vector3 from = view.CounterPosition + Vector3.up * 1.2f;
                     _money.LaunchFromWorld(from, burst.Bills, burst.Cycles);
-                    if (!_juice.reducedEffects || burst.IsGrouped) _money.PopupAtWorld(view.labelAnchor.position, burst.Amount, burst.Cycles);
+                    if (!_juice.reducedEffects || burst.IsGrouped)
+                        _money.PopupAtWorld(view.labelAnchor.position, burst.Amount, burst.Cycles, UiLayout.PopupOffset(_worldUi.IsBadgeShown(i)));
                     view.SetPile(view.PileCount + 1, _juice.pileMaxBills);
                     _audio.Play(SoundId.Cash, 1f, 0.7f);
                 }

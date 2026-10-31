@@ -25,7 +25,15 @@ namespace Gargote.Systems
         /// <summary>Bonus de bienvenue restant dans la ville en cours (secondes).</summary>
         public double WelcomeRemainingSeconds { get; private set; }
         public double WelcomeMultiplier => WelcomeRemainingSeconds > 0d ? _config.Welcome.Multiplier : 1d;
-        public double GlobalRevenueMultiplier => PermanentMultiplier * AdBoostMultiplier * WelcomeMultiplier;
+        /// <summary>Multiplicateur permanent de la méta (gérants légendaires, album complet), conservé partout.</summary>
+        public double MetaMultiplier { get; internal set; } = 1d;
+        /// <summary>Boost x2 temporaire gagné en jeu (coffres, roue), distinct du boost rewarded.</summary>
+        public double TimedBoostRemainingSeconds { get; private set; }
+        public double TimedBoostMultiplier => TimedBoostRemainingSeconds > 0d ? _timedBoostMultiplier : 1d;
+        private double _timedBoostMultiplier = 1d;
+        /// <summary>Boosts temporaires seuls (pub, bienvenue, boost gagné) : à retirer pour un revenu « de fond ».</summary>
+        public double TemporaryMultiplier => AdBoostMultiplier * WelcomeMultiplier * TimedBoostMultiplier;
+        public double GlobalRevenueMultiplier => PermanentMultiplier * MetaMultiplier * TemporaryMultiplier;
 
         public event Action<BigDouble> MoneyChanged;
 
@@ -76,6 +84,21 @@ namespace Gargote.Systems
             if (seconds <= 0d) return;
             AdBoostRemainingSeconds = Math.Max(0d, AdBoostRemainingSeconds - seconds);
             WelcomeRemainingSeconds = Math.Max(0d, WelcomeRemainingSeconds - seconds);
+            TimedBoostRemainingSeconds = Math.Max(0d, TimedBoostRemainingSeconds - seconds);
+        }
+
+        /// <summary>Ajoute un boost temporaire gagné (la force ne se cumule pas ; la durée s'additionne jusqu'au plafond).</summary>
+        internal void AddTimedBoost(double multiplier, double seconds, double maxStackSeconds)
+        {
+            if (multiplier <= 1d || seconds <= 0d) return;
+            _timedBoostMultiplier = multiplier;
+            TimedBoostRemainingSeconds = Math.Min(Math.Max(seconds, maxStackSeconds), TimedBoostRemainingSeconds + seconds);
+        }
+
+        internal void RestoreTimedBoost(double multiplier, double remaining)
+        {
+            _timedBoostMultiplier = multiplier > 1d ? multiplier : 1d;
+            TimedBoostRemainingSeconds = Math.Max(0d, remaining);
         }
 
         internal void StartWelcomeBonus() => WelcomeRemainingSeconds = Math.Max(0d, _config.Welcome.DurationSeconds);

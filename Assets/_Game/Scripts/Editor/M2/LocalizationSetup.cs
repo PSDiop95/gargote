@@ -88,6 +88,9 @@ namespace Gargote.EditorTools
             ("offline.double", "x2 (pub)", "x2 (ad)"),
         };
 
+        /// <summary>Français (référence), anglais, wolof (répliques ; sinon repli sur le français).</summary>
+        public static readonly string[] Codes = { "fr", "en", "wo" };
+
         public static void Setup()
         {
             Directory.CreateDirectory(Folder + "/Locales");
@@ -106,8 +109,25 @@ namespace Gargote.EditorTools
                 LocalizationEditorSettings.ActiveLocalizationSettings = settings;
             }
 
+            var locales = EnsureLocales();
+
+            // Repli : français (langue de référence du jeu) si la langue système n'est pas supportée.
+            foreach (var selector in settings.GetStartupLocaleSelectors())
+                if (selector is SpecificLocaleSelector specific) specific.LocaleId = new LocaleIdentifier("fr");
+            EditorUtility.SetDirty(settings);
+
+            var collection = LocalizationEditorSettings.GetStringTableCollection("Gargote") ??
+                             LocalizationEditorSettings.CreateStringTableCollection("Gargote", Folder + "/Tables", locales);
+            EditorUtility.SetDirty(collection);
+            var all = new List<(string, string, string, string)>(Entries.Length);
+            foreach (var e in Entries) all.Add((e.Key, e.Fr, e.En, null));
+            Write(all);
+        }
+
+        private static List<Locale> EnsureLocales()
+        {
             var locales = new List<Locale>();
-            foreach (var code in new[] { "fr", "en" })
+            foreach (var code in Codes)
             {
                 var id = new LocaleIdentifier(code);
                 var locale = LocalizationEditorSettings.GetLocale(id);
@@ -119,21 +139,23 @@ namespace Gargote.EditorTools
                 }
                 locales.Add(locale);
             }
+            return locales;
+        }
 
-            // Repli : français (langue de référence du jeu) si la langue système n'est pas supportée.
-            foreach (var selector in settings.GetStartupLocaleSelectors())
-                if (selector is SpecificLocaleSelector specific) specific.LocaleId = new LocaleIdentifier("fr");
-            EditorUtility.SetDirty(settings);
-
-            var collection = LocalizationEditorSettings.GetStringTableCollection("Gargote") ??
-                             LocalizationEditorSettings.CreateStringTableCollection("Gargote", Folder + "/Tables", locales);
-            foreach (var locale in locales)
+        /// <summary>Écrit (ou met à jour) des entrées clé → (FR, EN, WO). WO vide : repli sur le français.</summary>
+        public static void Write(IReadOnlyList<(string Key, string Fr, string En, string Wo)> entries)
+        {
+            EnsureLocales();
+            var collection = LocalizationEditorSettings.GetStringTableCollection("Gargote");
+            if (collection == null) { Setup(); collection = LocalizationEditorSettings.GetStringTableCollection("Gargote"); }
+            foreach (var code in Codes)
             {
-                var table = collection.GetTable(locale.Identifier) as StringTable;
-                if (table == null) table = collection.AddNewTable(locale.Identifier) as StringTable;
-                foreach (var e in Entries)
+                var id = new LocaleIdentifier(code);
+                var table = collection.GetTable(id) as StringTable;
+                if (table == null) table = collection.AddNewTable(id) as StringTable;
+                foreach (var e in entries)
                 {
-                    string value = locale.Identifier.Code == "fr" ? e.Fr : e.En;
+                    string value = code == "fr" ? e.Fr : code == "en" ? e.En : string.IsNullOrEmpty(e.Wo) ? e.Fr : e.Wo;
                     var entry = table.GetEntry(e.Key);
                     if (entry == null) table.AddEntry(e.Key, value);
                     else entry.Value = value;
@@ -141,7 +163,6 @@ namespace Gargote.EditorTools
                 EditorUtility.SetDirty(table);
             }
             EditorUtility.SetDirty(collection.SharedData);
-            EditorUtility.SetDirty(collection);
             AssetDatabase.SaveAssets();
         }
     }

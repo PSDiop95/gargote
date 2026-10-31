@@ -39,6 +39,10 @@ namespace Gargote.Systems
         public event Action<int, int> MilestoneReached;
         public event Action<int> ManagerHired;
         public event Action<int, BigDouble> CycleCompleted;
+        /// <summary>(index du commerce, clients servis) : un client par cycle terminé.</summary>
+        public event Action<int, long> Served;
+        /// <summary>Tap du joueur qui a lancé un cycle.</summary>
+        public event Action<int> Tapped;
         /// <summary>Nombre de paliers globaux atteints (tous les commerces au niveau requis).</summary>
         public event Action<int> GlobalMilestoneReached;
 
@@ -51,6 +55,17 @@ namespace Gargote.Systems
 
         /// <summary>Upgrade FCFA acheté (index).</summary>
         public event Action<int> UpgradeBought;
+
+        private double _costMultiplier = 1d;
+
+        /// <summary>Multiplicateur des coûts de niveaux (upgrades d'étoiles « coût réduit »).</summary>
+        public double CostMultiplier
+        {
+            get => _costMultiplier;
+            internal set => _costMultiplier = value > 0d ? value : 1d;
+        }
+
+        private double BaseCost(BusinessState s) => s.Definition.BaseCost * _costMultiplier;
 
         public int GlobalMilestonesReached { get; private set; }
         /// <summary>Multiplicateur de revenus des paliers globaux (appliqué à tous les commerces).</summary>
@@ -106,11 +121,12 @@ namespace Gargote.Systems
                     s.IsRunning = false;
                 }
 
-                double multiplier = completions * _economy.GlobalRevenueMultiplier * _allMultiplier *
+                double multiplier = completions * _economy.GlobalRevenueMultiplier * _allMultiplier * s.BoostMultiplier *
                                     DayNight.Multiplier(s.Definition.Affinity, hourOfDay, _config.DayNight);
                 BigDouble earned = s.RevenuePerCycle * multiplier;
                 _economy.Earn(earned);
                 CycleCompleted?.Invoke(i, earned);
+                Served?.Invoke(i, completions);
             }
         }
 
@@ -121,6 +137,7 @@ namespace Gargote.Systems
             if (s.Level <= 0 || s.HasManager || s.IsRunning) return false;
             s.IsRunning = true;
             s.Progress = 0d;
+            Tapped?.Invoke(index);
             return true;
         }
 
@@ -134,7 +151,7 @@ namespace Gargote.Systems
                 case BuyMode.Ten: count = 10; break;
                 case BuyMode.Hundred: count = 100; break;
                 case BuyMode.Max:
-                    count = EconomyMath.MaxAffordable(def.BaseCost, def.Growth, s.Level, _economy.Money);
+                    count = EconomyMath.MaxAffordable(BaseCost(s), def.Growth, s.Level, _economy.Money);
                     if (count == 0) count = 1;
                     break;
                 case BuyMode.NextMilestone:
@@ -149,7 +166,7 @@ namespace Gargote.Systems
         public BuyQuote QuoteLevels(int index, long count)
         {
             var s = _states[index];
-            BigDouble cost = EconomyMath.CostForLevels(s.Definition.BaseCost, s.Definition.Growth, s.Level, count);
+            BigDouble cost = EconomyMath.CostForLevels(BaseCost(s), s.Definition.Growth, s.Level, count);
             return new BuyQuote(count, cost, _economy.CanAfford(cost));
         }
 
@@ -230,7 +247,7 @@ namespace Gargote.Systems
                 if (!s.HasManager || s.Level <= 0) continue;
                 total += s.RevenuePerSecond * DayNight.AverageMultiplier(s.Definition.Affinity, _config.DayNight);
             }
-            return total * (_economy.PermanentMultiplier * _allMultiplier);
+            return total * (_economy.PermanentMultiplier * _economy.MetaMultiplier * _allMultiplier);
         }
 
         /// <summary>Revenu par seconde de tous les commerces débloqués (joueur actif), multiplicateurs globaux inclus.</summary>
@@ -241,10 +258,35 @@ namespace Gargote.Systems
             {
                 var s = _states[i];
                 if (s.Level <= 0) continue;
-                total += s.RevenuePerSecond * DayNight.AverageMultiplier(s.Definition.Affinity, _config.DayNight);
+                total += s.RevenuePerSecond * (s.BoostMultiplier * DayNight.AverageMultiplier(s.Definition.Affinity, _config.DayNight));
             }
             return total * (_economy.GlobalRevenueMultiplier * _allMultiplier);
         }
+
+        /// <summary>Vitesse de tous les commerces (upgrades d'étoiles), conservée aux relances.</summary>
+        internal void SetSpeedMultiplier(double multiplier)
+        {
+            if (multiplier <= 0d) multiplier = 1d;
+            for (int i = 0; i < _states.Length; i++)
+            {
+                if (_states[i].LocalSpeedMultiplier == multiplier) continue;
+                _states[i].LocalSpeedMultiplier = multiplier;
+                _states[i].Recompute(_config);
+            }
+        }
+
+        /// <summary>Bonus permanent d'un commerce (gérants de collection), conservé aux relances.</summary>
+        internal void SetMetaRevenueMultiplier(int index, double multiplier)
+        {
+            var s = _states[index];
+            if (multiplier <= 0d) multiplier = 1d;
+            if (s.MetaRevenueMultiplier == multiplier) return;
+            s.MetaRevenueMultiplier = multiplier;
+            s.Recompute(_config);
+        }
+
+        /// <summary>Boost actif temporaire d'un commerce (1 = aucun).</summary>
+        internal void SetBoostMultiplier(int index, double multiplier) => _states[index].BoostMultiplier = multiplier >= 1d ? multiplier : 1d;
 
         internal void ResetAll(bool keepManagers = false)
         {
@@ -379,7 +421,7 @@ namespace Gargote.Systems
         {
             var s = _states[index];
             if (s.Level >= target) return false;
-            long n = EconomyMath.MaxAffordable(s.Definition.BaseCost, s.Definition.Growth, s.Level, _economy.Money);
+            long n = EconomyMath.MaxAffordable(BaseCost(s), s.Definition.Growth, s.Level, _economy.Money);
             if (n <= 0) return false;
             return BuyLevels(index, Math.Min(n, target - s.Level));
         }
